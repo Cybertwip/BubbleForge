@@ -1,3 +1,7 @@
+# v0.30 conditional direct-feed study
+
+The live simulation now screens an already-compatible 42.72 V DC source with an assumed total 1 mΩ distribution path, 0.5 mW protection/monitoring budget and 10% extra pulse-driver energy debit. No switching buck is used in this candidate. Existing buck files remain historical; the source, protection path and array have no validated schematic or measured losses. Source regulation and generation preceding the DC terminals must be accounted for separately. The 224-cell receiver remains at 8 Hz per cell.
+
 # v0.29 expando architecture screening
 
 The modeled receiver is now 224 isolated microbubble cells, seven independent

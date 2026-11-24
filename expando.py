@@ -5,8 +5,9 @@ be phase staggered, but cannot share a single incident energy budget. The
 Bond number screens gravity versus surface tension; it contributes no power.
 The grouped PMIC architecture and acoustic isolation are unverified.
 """
-from dataclasses import replace
+from dataclasses import asdict, dataclass, replace
 from functools import lru_cache
+from math import sqrt
 
 from electronics.microsystem import DEFAULT_MICROSYSTEM
 from live_runtime import (DESIGN_CIRCUIT, DESIGN_COMPRESSION, LiveSession,
@@ -23,6 +24,72 @@ POWER_PATH_CONTROL_W = 10e-6
 EXPANDO_COMPRESSION = replace(DESIGN_COMPRESSION, pulse_energy_j=.5e-6,
                              active_wave_source_j=.05e-6, plasma_source_j=1.1e-6,
                              wall_impedance_pa_s_m=1400.)
+
+
+# Native DC-feed study: the load must accept an already compatible source
+# voltage. Upstream source production/regulation is outside the DC-terminal
+# boundary and must be separately qualified. Resistance and bias are design
+# assumptions, not measured part performance or efficiency fitting.
+@dataclass(frozen=True)
+class DirectFeed:
+    vin_V: float = 42.72
+    power_target_W: float = 72.
+    frequency_Hz: float = 0.
+    path_resistance_ohm: float = .001
+    protection_monitor_W: float = .0005
+
+    def electrical(self):
+        # Solve Vout = Vin - I*R, Pout = Vout*I. All series dissipation
+        # and independent monitoring power are debited at the input.
+        current = 2*self.power_target_W/(self.vin_V + sqrt(
+            self.vin_V**2 - 4*self.path_resistance_ohm*self.power_target_W))
+        conduction = current**2*self.path_resistance_ohm
+        losses = {'path_conduction_J': conduction,
+                  'protection_monitor_J': self.protection_monitor_W}
+        source = self.power_target_W + sum(losses.values())
+        return {'circuit': asdict(self), 'violations': [],
+                'part_numbers': {'bridge': 'Passive protected DC feed (unqualified)',
+                                 'inductor': 'Low-resistance DC distribution (assumed 1 mΩ total)',
+                                 'controller': 'Protection / monitor budget (assumed)'},
+                'time_domain': {'window_duration_s': 1.},
+                'energy': {'source_W': source, 'load_W': self.power_target_W,
+                           'loss_stages_J': losses, 'net_loss_pct': 100*sum(losses.values())/source},
+                'model_class': 'native-voltage direct DC feed, steady resistive path',
+                'source_boundary': 'Compatible DC source terminals; upstream conversion excluded',
+                'output_V': self.vin_V-current*self.path_resistance_ohm,
+                'hardware_validated': False}
+
+DIRECT_FEED = DirectFeed()
+DIRECT_BANKS = 7
+MIN_SCREENED_RATE_HZ = 8.
+# Explicit additional drive electronics allowance, over and above the event
+# source energy already debited in the radial model. Needs bench validation.
+DRIVER_OVERHEAD_FRACTION = .10
+
+
+def direct_array(case):
+    base = validate_operating_point(DIRECT_FEED, case, _electrical=DIRECT_FEED.electrical())
+    op = scale_operating_point(base, DIRECT_BANKS)
+    overhead = op['pulse_drive_W'] * DRIVER_OVERHEAD_FRACTION
+    op['controller_bus_W'] += overhead
+    op['microsystem']['controller_bus_W'] += overhead
+    op['microsystem']['additional_drive_electronics_W'] = overhead
+    op['main_load_W'] -= overhead
+    op['ideal_pulse_return_net_bound_pct'] -= 100*overhead/op['input_W']
+    op['power_architecture'] = 'direct_dc_feed'
+    op['source_boundary'] = op['electrical']['source_boundary']
+    op['bubble_array']['repetition_hz_per_cell'] = case.repetition_hz
+    op['bubble_array']['drive_overhead_fraction_assumed'] = DRIVER_OVERHEAD_FRACTION
+    # Maximum upstream loss consistent with the target, if an upstream
+    # converter is needed. It cannot be silently excluded from a full-system claim.
+    useful = op['main_load_W'] + LiveSession._useful_recovery_rate(op)
+    upstream_budget = max(0., useful/(1-NET_LOSS_TARGET_PCT/100)-op['input_W'])
+    op['upstream_loss_budget_W'] = upstream_budget
+    op['minimum_upstream_efficiency_pct'] = 100*op['input_W']/(op['input_W']+upstream_budget)
+    op['validity'] += ('; conditional native-voltage DC feed; 1 mΩ total distribution, '
+                       '0.5 mW protection/monitor and 10% extra driver loss assumed; '
+                       'upstream source regulation is excluded and unverified')
+    return op
 
 
 def scale_operating_point(base, banks, *, microsystem=DEFAULT_MICROSYSTEM):
@@ -106,36 +173,30 @@ def smallest_array(base):
 
 @lru_cache(maxsize=1)
 def design_expando_operating_point():
-    return smallest_array(validate_operating_point(compression=EXPANDO_COMPRESSION))
+    return direct_array(replace(EXPANDO_COMPRESSION, repetition_hz=MIN_SCREENED_RATE_HZ))
 
 
 @lru_cache(maxsize=1)
 def optimize_expando():
-    """Search passive mechanical loading, keeping the required contraction and return."""
-    baseline = design_expando_operating_point()
-    best = baseline
+    """Minimize net loss on fixed 224-cell hardware at nonzero event rates."""
+    best = design_expando_operating_point()
     tested = 1
-
-    def rank(op):
-        recovery = recovery_pct(op)
-        return (recovery < RECOVERY_TARGET_PCT,
-                max(0., RECOVERY_TARGET_PCT - recovery), LiveSession._loss_pct(op))
-
-    cases = [replace(EXPANDO_COMPRESSION, wall_impedance_pa_s_m=z)
-             for z in (900., 1200., 1600.)]
-    cases += [replace(DESIGN_COMPRESSION, wall_impedance_pa_s_m=650.),
-              replace(EXPANDO_COMPRESSION, plasma_source_j=1e-6, wall_impedance_pa_s_m=900.)]
+    # Keep the source voltage, load rating, distribution and extra driver
+    # overhead constant. Never change the denominator to dilute bubble losses.
+    cases = [replace(EXPANDO_COMPRESSION, repetition_hz=MIN_SCREENED_RATE_HZ,
+                     wall_impedance_pa_s_m=z) for z in (900., 1200., 1600.)]
+    cases += [replace(EXPANDO_COMPRESSION, repetition_hz=rate)
+              for rate in (10., 25., 100., 1000.)]
     for case in cases:
         tested += 1
         try:
-            base = validate_operating_point(DESIGN_CIRCUIT, case, _electrical=baseline['electrical'])
-            depth = 100 * (1 - base['bubble']['minimum_radius_m'] / case.radius_m)
-            if depth < MIN_REQUIRED_CONTRACTION_PCT:
-                continue
-            trial = smallest_array(base)
+            trial = direct_array(case)
         except (ValueError, ArithmeticError, OverflowError):
             continue
-        if rank(trial) < rank(best):
+        depth = 100*(1-trial['bubble']['minimum_radius_m']/case.radius_m)
+        if depth < MIN_REQUIRED_CONTRACTION_PCT:
+            continue
+        if LiveSession._loss_pct(trial) < LiveSession._loss_pct(best):
             best = trial
     loss = LiveSession._loss_pct(best)
     return {'found': True, 'tested': tested, 'operating': best,
@@ -145,4 +206,7 @@ def optimize_expando():
             'cell_count': best['bubble_array']['cell_count'],
             'compression_depth_pct': 100 * (1 - best['bubble']['minimum_radius_m'] / best['bubble']['radius_m']),
             'wall_impedance_pa_s_m': best['compression']['wall_impedance_pa_s_m'],
-            'converter_loss_floor_pct': best['converter_loss_pct']}
+            'converter_loss_floor_pct': best['converter_loss_pct'],
+            'repetition_hz_per_cell': best['compression']['repetition_hz'],
+            'source_boundary': best['source_boundary'],
+            'upstream_loss_budget_W': best['upstream_loss_budget_W']}

@@ -40,7 +40,7 @@ function cardShape(o,p){const chosen=selected===o.id;const w=(o.id==='BRIDGE'?63
  ctx.beginPath();ctx.moveTo(p.x-w/2,p.y-h/2);ctx.lineTo(p.x-w/2+top,p.y-h/2-top);ctx.lineTo(p.x+w/2+top,p.y-h/2-top);ctx.lineTo(p.x+w/2,p.y-h/2);ctx.closePath();ctx.fill();ctx.stroke();
  ctx.fillStyle=o.type==='loss'?(chosen?'#7b4525':'#43261c'):(chosen?'#236b4b':'#173b30');ctx.fillRect(p.x-w/2,p.y-h/2,w,h);ctx.strokeRect(p.x-w/2,p.y-h/2,w,h);
  ctx.fillStyle=o.type==='loss'?'#301d1b':'#102d27';ctx.beginPath();ctx.moveTo(p.x+w/2,p.y-h/2);ctx.lineTo(p.x+w/2+top,p.y-h/2-top);ctx.lineTo(p.x+w/2+top,p.y+h/2-top);ctx.lineTo(p.x+w/2,p.y+h/2);ctx.closePath();ctx.fill();ctx.stroke();ctx.restore();
- const label={SOURCE:'48V',BRIDGE:'GaN',INDUCTOR:'L1 ∥ L2',LOAD:'LOAD',PULSE:'PULSE',PLASMA:'PLASMA',CONTROL:'MCU',PIEZO:'ARRAY',WALL:'WALL',BUFFER:'PMIC',BATTERY:'CELL'}[o.id]||o.id;
+ const label={SOURCE:state?.power_architecture==='direct_dc_feed'?'42.72V':'48V',BRIDGE:state?.power_architecture==='direct_dc_feed'?'PROTECT':'GaN',INDUCTOR:state?.power_architecture==='direct_dc_feed'?'DC BUS':'L1 ∥ L2',LOAD:'LOAD',PULSE:'PULSE',PLASMA:'PLASMA',CONTROL:'MCU',PIEZO:'ARRAY',WALL:'WALL',BUFFER:'PMIC',BATTERY:'CELL'}[o.id]||o.id;
  text(label,p.x,p.y+4,'#f3f8ff',10);text(o.name,p.x,p.y-28*zoom,chosen?'#e5eaff':'#aca5bf',9);
  return {x:p.x,y:p.y,r:Math.max(28,w*.6),id:o.id};}
 function eventMicros(){return ((visualClockMs/5500)%1+1)%1*10;}
@@ -144,7 +144,7 @@ function inspect(id){selected=id;const name=nMap[id]?.name||'Bubble chamber';$('
  BRIDGE:state?.converter_loss_pct!==undefined?`${fmt(state.converter_loss_pct,5)}% loss · ${state.converter_parts?.bridge||'GaN bridge'}`:'GaN half-bridge',
  INDUCTOR:state?.converter_parts?.inductor||'Catalog SMD power inductor',LOAD:state?.main_load_W!==undefined?fmt(state.main_load_W,3)+' W delivered':'Main DC load',
  PULSE:state?.pulse_power_W!==undefined?fmt((state.pulse_power_W-state.plasma_source_power_W)*1000,3)+' mW from DC bus (main + wave)':'Finite reservoir',
- CONTROL:state?.microcomponent_power_budget?`${state.microcontroller_part} · ${fmt(state.microcontroller_bus_W*1e6,2)} µW source-funded (includes Hall, TPS62740, and upstream rail losses)`:'Ultralow-power supervisory controller',
+ CONTROL:state?.microcomponent_power_budget?`${state.microcontroller_part} · ${fmt(state.microcontroller_bus_W*1e6,2)} µW source-funded (includes Hall, TPS62740, rail and additional drive overhead where modeled)`:'Ultralow-power supervisory controller',
  PLASMA:b?`${energy(b.plasma_source_j)}/event debited · ${fmt(b.plasma_capture_fraction_assumed*100,0)}% confinement ASSUMED · ${energy(b.plasma_cooling_j)} cooled`:'Unmeasured plasma trapping',
  BUBBLE:b?`${state.bubble_array?.cell_count||1} cells · ${fmt(b.precompression_radius_um,3)} → ${fmt(b.min_radius_um,3)} µm · ${fmt(state.compression_depth_pct,2)}% contraction · ${fmt(b.plasma_peak_pressure_pa/1000,1)} kPa plasma proxy`:'Preparatory expansion → compression',
  PIEZO:b?`${energy(b.acoustic_receiver_j_per_event)}/event · ${fmt((b.acoustic_receiver_efficiency||0)*100,1)}% radiated sound recovered (assumed)`: 'Distributed acoustic harvesting',
@@ -153,18 +153,21 @@ function inspect(id){selected=id;const name=nMap[id]?.name||'Bubble chamber';$('
  BATTERY:state?`Δ${energy(state.battery_delta_J)} · ${fmt(state.battery_soc_pct,3)}% SOC`:'Stored battery energy'};
  $('probeValue').textContent=values[id]||'';}
 function update(s){if(!s||!s.model_valid)throw Error('Invalid computed model');state=s;ready=true;
- $('bus').textContent=fmt(s.reference_circuit.vbus_V,0)+' V';$('frequency').textContent=fmt(s.reference_circuit.pwm_Hz/1000,1)+' kHz';
+ const direct=s.power_architecture==='direct_dc_feed';
+ nMap.BRIDGE.name=direct?'Passive DC protection · assumed':'GaN switching bridge · dissipative';
+ nMap.INDUCTOR.name=direct?'DC distribution · resistive losses':'Matched LC filter · winding/core losses';
+ $('bus').textContent=fmt(s.reference_circuit.vbus_V,2)+' V';$('frequency').textContent=direct?'Direct DC':fmt(s.reference_circuit.pwm_Hz/1000,1)+' kHz';
  $('radius').textContent=fmt(s.bubble.min_radius_um,2)+'–'+fmt(s.bubble.max_radius_um,2)+' µm';
  $('forcing').textContent=fmt(s.bubble.active_wave_peak_pa/1000,2)+' kPa';
  $('net').textContent=fmt(s.instantaneous_loss_pct,5)+'%';
  $('net').className=s.target_0p01_loss_met?'positive':'negative';
- $('verdict').textContent=`Useful recovery ${fmt(s.current_useful_recovery_pct,5)}% · ≥0.01% recovery ${s.target_0p01_recovery_met?'met':'not met'} · ≤0.01% net loss ${s.target_0p01_loss_met?'met':'not met'}`;
- $('rate').textContent=`${s.bubble_array?.cell_count||1} isolated cells (assumed) · `+s.microcontroller_part+' · locked '+String(s.bubble.waveform||'cosine')+' wave';
+ $('verdict').textContent=`≤0.01% DC-terminal loss ${s.target_0p01_loss_met?'met':'not met'} · Useful recovery ${fmt(s.current_useful_recovery_pct,5)}% of input (0.01% recovery ${s.target_0p01_recovery_met?'met':'not met'}) · ${fmt(s.bubble_recovery_fraction_pct,2)}% of pulse energy`+(direct?' · Upstream supply excluded; unverified':'');
+ $('rate').textContent=`${s.bubble_array?.cell_count||1} isolated cells (assumed) · ${fmt(s.bubble_array?.repetition_hz_per_cell||1000,0)} Hz/cell · `+s.microcontroller_part+' · locked '+String(s.bubble.waveform||'cosine')+' wave';
  $('cumulativeLoss').textContent=s.cumulative_net_loss_pct===null?'—':fmt(s.cumulative_net_loss_pct,5)+'%';
  $('cumulativeDeficit').textContent=energy(Math.max(0,-s.cumulative_net_balance_J));
  $('breakEven').textContent=s.break_even_status==='achieved'?'Cumulative break-even reached':
    s.break_even_status==='approaching'?'Time to break-even (model): '+elapsed(s.break_even_eta_simulation_s):
-   `No break-even at current rates · converter floor ${fmt(s.converter_loss_pct,5)}% · Bond number ${fmt(s.bubble_array?.max_radius_bond_number||0,5)}`;
+   `No break-even at current rates · DC path loss ${fmt(s.converter_loss_pct,5)}% · Bond number ${fmt(s.bubble_array?.max_radius_bond_number||0,5)}`+(direct?` · Upstream loss allowance ${fmt(s.upstream_loss_budget_W*1000,3)} mW`:'');
 
  $('source').textContent=energy(s.source_energy_J);$('useful').textContent=energy(s.useful_energy_J);
  $('battery').textContent=energy(s.battery_delta_J);$('soc').textContent=fmt(s.battery_soc_pct,5)+'%';
@@ -183,13 +186,13 @@ $('optimize').addEventListener('click',async()=>{if(!session||optimizing)return;
  optimizing=true;const btn=$('optimize');btn.disabled=true;
  const before=state?.instantaneous_loss_pct;
  $('runningLabel').textContent='OPTIMIZING';
- $('optimizerNote').textContent='Searching isolated receiver banks and passive wall loading for ≥0.01% useful recovery and minimum net loss…';
+ $('optimizerNote').textContent='Searching event rates and passive wall loading for minimum net loss at fixed cell count…';
  try{
   const res=await api('/api/live/optimize',{session});update(res.simulation);const o=res.optimization;
   if(o.found){const improvement=(before??o.instantaneous_loss_pct)-res.simulation.instantaneous_loss_pct;
    $('optimizerNote').textContent=o.applied?
-    `Loss reduced by ${fmt(Math.max(0,improvement),6)} percentage points to ${fmt(o.instantaneous_loss_pct,5)}% · ${fmt(o.compression_depth_pct,3)}% contraction · ${o.cell_count} cells · ${fmt(o.recovery_pct,5)}% useful recovery · wall loading ${fmt(o.wall_impedance_pa_s_m,0)} Pa·s/m. Converter floor ${fmt(o.converter_loss_floor_pct,5)}%.`:
-    `Already at the best screened profile (${fmt(o.instantaneous_loss_pct,5)}% loss). No higher-loss profile was applied. Hardware floor ${fmt(o.converter_loss_floor_pct,5)}%.`;
+    `Loss reduced by ${fmt(Math.max(0,improvement),6)} percentage points to ${fmt(o.instantaneous_loss_pct,5)}% · ${fmt(o.compression_depth_pct,3)}% contraction · ${o.cell_count} cells · ${fmt(o.recovery_pct,5)}% useful recovery · wall loading ${fmt(o.wall_impedance_pa_s_m,0)} Pa·s/m. DC path loss ${fmt(o.converter_loss_floor_pct,5)}%.`:
+    `Already at the best screened profile (${fmt(o.instantaneous_loss_pct,5)}% loss). No higher-loss profile was applied. DC path loss ${fmt(o.converter_loss_floor_pct,5)}%.`;
   }else $('optimizerNote').textContent=o.message;
  }catch(e){$('optimizerNote').textContent='Optimization unavailable: '+e.message;}
  finally{optimizing=false;btn.disabled=false;$('runningLabel').textContent=state?.running?'RUNNING':'PAUSED';}});

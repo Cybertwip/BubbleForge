@@ -37,3 +37,6 @@ EXPANDO v0.29,WALL[1:224],224,Passive coupled wall transducer,Concept transducer
 EXPANDO v0.29,RX_TILE,32256,Distributed acoustic collection tiles,144 concept tiles per cell,,Model quantity,224 separate shells; coupling and assembly unverified,
 EXPANDO v0.29,BANK[1:7],7,32-cell grouped receiver and supervisory electronics,BQ25570 / Ambiq Apollo / TPS62740 / TLV3691 / MLX92216 candidates,,Model quantity,One complete microcomponent budget per bank; input voltage and aggregation not validated,
 EXPANDO v0.29,POWER_PATH,1,Storage and auxiliary useful-load selection,Regulated power-path concept,,Model assumption,10 mW auxiliary demand after battery full; 85% conversion and 10 uW control budget assumed,
+EXPANDO v0.30,DIRECT_SOURCE,1,Native compatible DC supply,42.72 V DC source candidate,,Unqualified,72 W nominal bus output; upstream generation/regulation excluded from terminal ledger,
+EXPANDO v0.30,DIRECT_PATH,1,Protected low-resistance DC distribution,Concept only,,Assumed,1 mOhm total series resistance; 0.5 mW protection/monitor debit; no qualified parts or circuit,
+EXPANDO v0.30,DRIVER_BUDGET,224,Additional drive electronics power allowance,Concept only,,Assumed,10% of event source draw; 8 Hz per cell; same receiver banks as v0.29,

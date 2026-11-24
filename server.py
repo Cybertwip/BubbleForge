@@ -1,4 +1,4 @@
-"""BubbleForge v0.29: minimal continuous 3D simulator HTTP backend.
+"""BubbleForge v0.30: minimal continuous 3D simulator HTTP backend.
 
 No legacy study endpoints, flat-efficiency predictions, browser-generated
 energy data, or historical tabbed UI. Binds localhost only.
@@ -74,5 +74,5 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--port',type=int,default=8765)
     port=parser.parse_args().port
-    print(f'BubbleForge v0.29 | http://127.0.0.1:{port}',flush=True)
+    print(f'BubbleForge v0.30 | http://127.0.0.1:{port}',flush=True)
     ThreadingHTTPServer(('127.0.0.1',port),Handler).serve_forever()

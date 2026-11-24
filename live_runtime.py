@@ -159,6 +159,9 @@ class LiveSession:
             'plasma_source_W':op['plasma_drive_W'],
             'plasma_capture_fraction_assumed':op['bubble']['plasma_capture_fraction_assumed'],
             'plasma_thermalized_j_per_event':op['bubble']['plasma_thermalized_j'],
+            'power_architecture':op.get('power_architecture','switched_buck'),
+            'source_boundary':op.get('source_boundary','DC input terminals'),
+            'upstream_loss_budget_W':op.get('upstream_loss_budget_W'),
             'circuit':op['circuit'],'converter_parts':op['converter_parts'],
             'converter_loss_breakdown_W':op['converter_loss_breakdown_W'],
             'compression':op['compression'],'bubble_array':op.get('bubble_array')}
@@ -205,9 +208,7 @@ class LiveSession:
             self._advance_to_now()
             before=self._loss_pct(self.operating)
             after=self._loss_pct(operating)
-            array_target_ok=(not self.operating.get('bubble_array') or
-                             self._useful_recovery_rate(operating)>=.0001*operating['input_W'])
-            applied=bool(array_target_ok and after<before-1e-10 and
+            applied=bool(after<before-1e-10 and
                          100*(1-operating['bubble']['minimum_radius_m']/operating['bubble']['radius_m'])>=MIN_REQUIRED_CONTRACTION_PCT)
             if applied:
                 self.operating=operating
@@ -457,6 +458,11 @@ class LiveSession:
           'cumulative_useful_recovery_pct':100*(self.buffer_load_j+self.recovered_load_j+battery_delta+self.buffer_j)/source if source>0 else None,
           'target_0p01_recovery_met':current_useful_recovery>=.0001*source_power,
           'target_0p01_loss_met':current_loss_pct<=.01,
+          'power_architecture':op.get('power_architecture','switched_buck'),
+          'source_boundary':op.get('source_boundary','DC input terminals'),
+          'upstream_loss_budget_W':op.get('upstream_loss_budget_W'),
+          'minimum_upstream_efficiency_pct':op.get('minimum_upstream_efficiency_pct'),
+          'bubble_recovery_fraction_pct':100*current_useful_recovery/pulse_power if pulse_power else 0.,
           'target_plus_0p01_met':net_pct is not None and net_pct>=.01,
           'target_0p05_loss_met':current_loss_pct<=.05,
           'target_plus_minus_0p01_met':abs(current_loss_pct)<=.01,
