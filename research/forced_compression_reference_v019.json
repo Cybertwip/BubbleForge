@@ -1,0 +1,43 @@
+{
+  "model_version": "0.19.0-alpha",
+  "reference": {
+    "inputs": 1e-06,
+    "profile": "tensile preparation, delayed positive-pressure compression",
+    "equilibrium_radius_um": 96.586,
+    "precompression_max_radius_um": 96.91207019306712,
+    "min_radius_um": 94.95333136574361,
+    "max_radius_um": 98.19118430344818,
+    "compressive_peak_kpa": 46.613473227289816,
+    "acoustic_j_per_event": 3.5574339250225264e-10,
+    "piezo_rectified_j_per_event": 3.321140117467194e-14,
+    "incident_wave_j": 5e-08,
+    "source_pulse_j": 1e-06,
+    "pressure_work_tensile_j": 1.005156986444752e-10,
+    "pressure_work_compressive_j": 6.357827865924621e-10,
+    "viscous_dissipation_j": 3.967385142522649e-11,
+    "signed_energy_residual_j": 2.187275535105857e-12,
+    "shock_resolved": false
+  },
+  "continuous_120_s": {
+    "simulation_time_s": 120.0,
+    "source_energy_J": 8680.758019526565,
+    "useful_energy_J": 8640.1936800357,
+    "total_loss_energy_J": 40.56433949086568,
+    "net_change_pct": -0.4672902919263494,
+    "battery_delta_J": 0.0,
+    "energy_residual_J": -5.613287612504791e-13,
+    "converter_loss_pct": 0.4659079241684849
+  },
+  "optimized": {
+    "found": true,
+    "tested": 12,
+    "valid": 12,
+    "compression_depth_pct": 1.426011101839778,
+    "pulse_energy_j": 4e-07,
+    "source_distance_m": 0.0015,
+    "receiver_gap_m": 0.001,
+    "net_gain_target_achieved": false,
+    "message": "Optimized for lowest supplied pulse energy meeting 1% forced compression; it does not imply surplus energy."
+  },
+  "limitations": "These are conditional numerical predictions. Unverified plasma transfer, piezo, battery controller, magnetics, no resolved shock CFD."
+}

@@ -1,0 +1,130 @@
+{
+  "model": "Bubble Forge \u2014 Banana Model",
+  "release": "0.25.0-alpha",
+  "simulation_only": true,
+  "not_calibrated": true,
+  "wall_load_is_reciprocal_velocity_damping": true,
+  "wall_damping_work_never_credited_twice": true,
+  "physics_scope": "weakly compressible spherical screening + lumped passive wall load + radiative passive acoustic array",
+  "waveform_locked": "cosine",
+  "unmeasured_coefficients": {
+    "wall_surface_coverage": 0.55,
+    "wall_electromechanical_efficiency": 0.62,
+    "wall_rectifier_efficiency": 0.88
+  },
+  "converter_loss_floor_pct": 0.4659079241684849,
+  "wall_impedance_sweep_reference_source": {
+    "0": {
+      "valid": true,
+      "contraction_pct": 16.248606028145208,
+      "acoustic_emission_J": 3.1402014034637556e-08,
+      "wall_extracted_mechanical_J": 0.0,
+      "acoustic_electrical_raw_J": 1.4396486630441954e-08,
+      "wall_electrical_raw_J": 0.0,
+      "combined_electrical_raw_J": 1.4396486630441954e-08,
+      "bubble_energy_residual_J": -2.0111780782926196e-10
+    },
+    "80": {
+      "valid": true,
+      "contraction_pct": 16.03125244271545,
+      "acoustic_emission_J": 3.0150014722976475e-08,
+      "wall_extracted_mechanical_J": 4.957151415024354e-09,
+      "acoustic_electrical_raw_J": 1.3822498244481432e-08,
+      "wall_electrical_raw_J": 2.7046218120372876e-09,
+      "combined_electrical_raw_J": 1.6527120056518718e-08,
+      "bubble_energy_residual_J": -1.7938561338674856e-10
+    },
+    "200": {
+      "valid": true,
+      "contraction_pct": 15.709937598246892,
+      "acoustic_emission_J": 2.8405112665654147e-08,
+      "wall_extracted_mechanical_J": 1.1695245451494784e-08,
+      "acoustic_electrical_raw_J": 1.302253493283006e-08,
+      "wall_electrical_raw_J": 6.380925918335554e-09,
+      "combined_electrical_raw_J": 1.9403460851165614e-08,
+      "bubble_energy_residual_J": -1.5155628472698628e-10
+    },
+    "400": {
+      "valid": true,
+      "contraction_pct": 15.187133512923923,
+      "acoustic_emission_J": 2.581382260591062e-08,
+      "wall_extracted_mechanical_J": 2.129793759083232e-08,
+      "acoustic_electrical_raw_J": 1.1834538753363812e-08,
+      "wall_electrical_raw_J": 1.1620154749558115e-08,
+      "combined_electrical_raw_J": 2.3454693502921927e-08,
+      "bubble_energy_residual_J": -1.1736356092333316e-10
+    },
+    "650": {
+      "valid": true,
+      "contraction_pct": 14.555097349294376,
+      "acoustic_emission_J": 2.3046660045256185e-08,
+      "wall_extracted_mechanical_J": 3.093609266304285e-08,
+      "acoustic_electrical_raw_J": 1.0565912519238225e-08,
+      "wall_electrical_raw_J": 1.687873215695618e-08,
+      "combined_electrical_raw_J": 2.7444644676194407e-08,
+      "bubble_energy_residual_J": -8.710856138000022e-11
+    },
+    "900": {
+      "valid": true,
+      "contraction_pct": 13.946581651982793,
+      "acoustic_emission_J": 2.0711510636299756e-08,
+      "wall_extracted_mechanical_J": 3.849939038213827e-08,
+      "acoustic_electrical_raw_J": 9.495345924081498e-09,
+      "wall_electrical_raw_J": 2.100526739249464e-08,
+      "combined_electrical_raw_J": 3.050061331657614e-08,
+      "bubble_energy_residual_J": -6.80570463246448e-11
+    },
+    "1200": {
+      "valid": true,
+      "contraction_pct": 13.246083865300607,
+      "acoustic_emission_J": 1.836756192641875e-08,
+      "wall_extracted_mechanical_J": 4.548172526470253e-08,
+      "acoustic_electrical_raw_J": 8.420745224042896e-09,
+      "wall_electrical_raw_J": 2.48148293044217e-08,
+      "combined_electrical_raw_J": 3.3235574528464594e-08,
+      "bubble_energy_residual_J": -5.231285297247258e-11
+    }
+  },
+  "initial": {
+    "event_source_j": 2.2e-06,
+    "compression_contraction_pct": 16.03125244271545,
+    "wall_impedance_pa_s_m": 80.0,
+    "wall_work_extracted_J": 4.957151415024354e-09,
+    "wall_electrical_raw_J": 2.7046218120372876e-09,
+    "acoustic_emission_J": 3.0150014722976475e-08,
+    "acoustic_electrical_raw_J": 1.3822498244481432e-08,
+    "combined_electrical_raw_J": 1.6527120056518718e-08,
+    "net_loss_pct": 0.4689337305034687,
+    "after_500_s": {
+      "source_energy_J": 36169.825081360694,
+      "battery_gain_J": 0.0053896330662439595,
+      "cumulative_wall_receiver_raw_J": 0.0013523109060186438,
+      "cumulative_acoustic_receiver_raw_J": 0.006911249122240716,
+      "cumulative_net_loss_pct": 0.4689337297662364,
+      "cumulative_net_balance_J": -169.61250980394834,
+      "ledger_residual_J": 1.2448708730516955e-11
+    }
+  },
+  "optimized": {
+    "event_source_j": 1.55e-06,
+    "compression_contraction_pct": 14.436362141691239,
+    "wall_impedance_pa_s_m": 900.0,
+    "wall_work_extracted_J": 4.114124830669436e-08,
+    "wall_electrical_raw_J": 2.2446665076132444e-08,
+    "acoustic_emission_J": 2.207011740596789e-08,
+    "acoustic_electrical_raw_J": 1.0118209291188486e-08,
+    "combined_electrical_raw_J": 3.256487436732093e-08,
+    "net_loss_pct": 0.4680197389189439,
+    "after_500_s": {
+      "source_energy_J": 36169.825081360694,
+      "battery_gain_J": 0.010978779487800239,
+      "cumulative_wall_receiver_raw_J": 0.011223332538066223,
+      "cumulative_acoustic_receiver_raw_J": 0.005059104645594243,
+      "cumulative_net_loss_pct": 0.46801973817705733,
+      "cumulative_net_balance_J": -169.28192064488394,
+      "ledger_residual_J": 5.9969806898152456e-12
+    }
+  },
+  "target_less_equal_0p05_pct_met": false,
+  "disclaimer": "Energy capture and coupling are optimistic unmeasured proxies, not a built harvester or proof of electromagnetic shock or net gain."
+}

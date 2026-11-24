@@ -1,0 +1,4733 @@
+{
+  "status": "conditional_model",
+  "electrical": {
+    "circuit": {
+      "vin_V": 48,
+      "vout_target_V": 42.72,
+      "power_target_W": 72,
+      "frequency_Hz": 22000,
+      "inductor": "VISHAY_100u_lowDCR",
+      "stage": "gan_100v",
+      "output_cap_F": 0.00047,
+      "cap_esr_ohm": 0.015,
+      "leakage_ohm": 10000000.0,
+      "trace_ohm": 0.01,
+      "sense_ohm": 0.005,
+      "ambient_C": 25.0,
+      "core_coeff_W": 0.06,
+      "unmeasured_layout_W": 0.02,
+      "controller_bias_multiplier": 1.0,
+      "inductance_scale": 1.0,
+      "edge_time_scale": 1.0
+    },
+    "part_numbers": {
+      "bridge": "LMG2100R026",
+      "inductor": "IHLP8787MZER101M5A"
+    },
+    "waveform": [
+      {
+        "phase": 0.002777777777777778,
+        "inductor_A": 0.6370371934364275,
+        "output_V": 42.719960450963846,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.011111111111111112,
+        "inductor_A": 0.6568964786121904,
+        "output_V": 42.71942144613928,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.019444444444444445,
+        "inductor_A": 0.6767534199484481,
+        "output_V": 42.718898427328085,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.027777777777777776,
+        "inductor_A": 0.6966079574190218,
+        "output_V": 42.71839139120848,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.03611111111111111,
+        "inductor_A": 0.7164600310235685,
+        "output_V": 42.71790033441078,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.044444444444444446,
+        "inductor_A": 0.7363095807877555,
+        "output_V": 42.71742525351749,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.05277777777777778,
+        "inductor_A": 0.7561565467634369,
+        "output_V": 42.71696614506327,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.06111111111111111,
+        "inductor_A": 0.7760008690288279,
+        "output_V": 42.71652300553498,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.06944444444444445,
+        "inductor_A": 0.7958424876886808,
+        "output_V": 42.716095831371725,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.07777777777777778,
+        "inductor_A": 0.8156813428744598,
+        "output_V": 42.71568461896485,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.08611111111111111,
+        "inductor_A": 0.8355173747445158,
+        "output_V": 42.71528936465799,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.09444444444444444,
+        "inductor_A": 0.8553505234842615,
+        "output_V": 42.71491006474708,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.10277777777777777,
+        "inductor_A": 0.8751807293063459,
+        "output_V": 42.71454671548038,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.1111111111111111,
+        "inductor_A": 0.8950079324508288,
+        "output_V": 42.714199313058515,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.11944444444444445,
+        "inductor_A": 0.914832073185355,
+        "output_V": 42.7138678536345,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.12777777777777777,
+        "inductor_A": 0.9346530918053289,
+        "output_V": 42.71355233331374,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.1361111111111111,
+        "inductor_A": 0.9544709286340883,
+        "output_V": 42.7132527481541,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.14444444444444443,
+        "inductor_A": 0.9742855240230787,
+        "output_V": 42.7129690941659,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.1527777777777778,
+        "inductor_A": 0.9940968183520267,
+        "output_V": 42.712701367311944,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.16111111111111112,
+        "inductor_A": 1.0139047520291142,
+        "output_V": 42.712449563507576,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.16944444444444445,
+        "inductor_A": 1.0337092654911515,
+        "output_V": 42.71221367862064,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.17777777777777778,
+        "inductor_A": 1.0535102992037508,
+        "output_V": 42.7119937084716,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.18611111111111112,
+        "inductor_A": 1.0733077936614996,
+        "output_V": 42.7117896488335,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.19444444444444445,
+        "inductor_A": 1.093101689388134,
+        "output_V": 42.71160149543199,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.20277777777777778,
+        "inductor_A": 1.1128919269367108,
+        "output_V": 42.711429243945425,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2111111111111111,
+        "inductor_A": 1.1326784468897817,
+        "output_V": 42.71127289000479,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.21944444444444444,
+        "inductor_A": 1.152461189859565,
+        "output_V": 42.71113242919382,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.22777777777777777,
+        "inductor_A": 1.172240096488118,
+        "output_V": 42.71100785704895,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2361111111111111,
+        "inductor_A": 1.192015107447511,
+        "output_V": 42.71089916905941,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.24444444444444444,
+        "inductor_A": 1.211786163439997,
+        "output_V": 42.71080636066721,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.25277777777777777,
+        "inductor_A": 1.2315532051981855,
+        "output_V": 42.71072942726721,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2611111111111111,
+        "inductor_A": 1.251316173485215,
+        "output_V": 42.71066836420709,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.26944444444444443,
+        "inductor_A": 1.2710750090949232,
+        "output_V": 42.710623166787414,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2777777777777778,
+        "inductor_A": 1.2908296528520198,
+        "output_V": 42.71059383026167,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2861111111111111,
+        "inductor_A": 1.3105800456122578,
+        "output_V": 42.710580349836285,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.29444444444444445,
+        "inductor_A": 1.3303261282626044,
+        "output_V": 42.710582720670644,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.30277777777777776,
+        "inductor_A": 1.3500678417214127,
+        "output_V": 42.710600937877125,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3111111111111111,
+        "inductor_A": 1.3698051269385925,
+        "output_V": 42.71063499652116,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3194444444444444,
+        "inductor_A": 1.3895379248957822,
+        "output_V": 42.71068489162118,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3277777777777778,
+        "inductor_A": 1.409266176606518,
+        "output_V": 42.710750618148765,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.33611111111111114,
+        "inductor_A": 1.4289898231164062,
+        "output_V": 42.710832171028585,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.34444444444444444,
+        "inductor_A": 1.4487088055032915,
+        "output_V": 42.710929545138455,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3527777777777778,
+        "inductor_A": 1.46842306487743,
+        "output_V": 42.711042735309356,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3611111111111111,
+        "inductor_A": 1.488132542381657,
+        "output_V": 42.71117173632548,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.36944444444444446,
+        "inductor_A": 1.507837179191559,
+        "output_V": 42.711316542924266,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.37777777777777777,
+        "inductor_A": 1.5275369165156423,
+        "output_V": 42.71147714979642,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3861111111111111,
+        "inductor_A": 1.5472316955955026,
+        "output_V": 42.71165355158594,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.39444444444444443,
+        "inductor_A": 1.5669214577059956,
+        "output_V": 42.71184574289014,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4027777777777778,
+        "inductor_A": 1.5866061441554058,
+        "output_V": 42.712053718259696,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4111111111111111,
+        "inductor_A": 1.6062856962856156,
+        "output_V": 42.71227747219869,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.41944444444444445,
+        "inductor_A": 1.6259600554722744,
+        "output_V": 42.71251699916461,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.42777777777777776,
+        "inductor_A": 1.6456291631249684,
+        "output_V": 42.71277229356843,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4361111111111111,
+        "inductor_A": 1.6652929606873885,
+        "output_V": 42.71304334977454,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4444444444444444,
+        "inductor_A": 1.6849513896374992,
+        "output_V": 42.71333016210091,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4527777777777778,
+        "inductor_A": 1.7046043914877074,
+        "output_V": 42.713632724819036,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.46111111111111114,
+        "inductor_A": 1.7242519077850296,
+        "output_V": 42.71395103215398,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.46944444444444444,
+        "inductor_A": 1.7438938801112613,
+        "output_V": 42.714285078284426,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4777777777777778,
+        "inductor_A": 1.7635302500831451,
+        "output_V": 42.7146348573427,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4861111111111111,
+        "inductor_A": 1.7831609593525377,
+        "output_V": 42.7150003634148,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.49444444444444446,
+        "inductor_A": 1.8027859496065777,
+        "output_V": 42.71538159054044,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5027777777777778,
+        "inductor_A": 1.8224051625678537,
+        "output_V": 42.715778532713074,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5111111111111111,
+        "inductor_A": 1.8420185399945712,
+        "output_V": 42.716191183879914,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5194444444444445,
+        "inductor_A": 1.8616260236807198,
+        "output_V": 42.71661953794199,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5277777777777778,
+        "inductor_A": 1.8812275554562408,
+        "output_V": 42.71706358875417,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5361111111111111,
+        "inductor_A": 1.9008230771871932,
+        "output_V": 42.71752333012519,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5444444444444444,
+        "inductor_A": 1.9204125307759217,
+        "output_V": 42.717998755817696,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5527777777777778,
+        "inductor_A": 1.9399958581612213,
+        "output_V": 42.71848985954826,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5611111111111111,
+        "inductor_A": 1.9595730013185062,
+        "output_V": 42.71899663498743,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5694444444444444,
+        "inductor_A": 1.9791439022599737,
+        "output_V": 42.719519075759756,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5777777777777777,
+        "inductor_A": 1.9987085030347718,
+        "output_V": 42.720057175443856,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5861111111111111,
+        "inductor_A": 2.0182667457291643,
+        "output_V": 42.72061092757237,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5944444444444444,
+        "inductor_A": 2.0378185724666977,
+        "output_V": 42.72118032563209,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6027777777777777,
+        "inductor_A": 2.0573639254083647,
+        "output_V": 42.72176536306391,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6111111111111112,
+        "inductor_A": 2.076902746752772,
+        "output_V": 42.72236603326292,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6194444444444445,
+        "inductor_A": 2.096434978736304,
+        "output_V": 42.722982329578414,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6277777777777778,
+        "inductor_A": 2.115960563633288,
+        "output_V": 42.72361424531395,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6361111111111111,
+        "inductor_A": 2.1354794437561586,
+        "output_V": 42.724261773727314,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6444444444444445,
+        "inductor_A": 2.154991561455626,
+        "output_V": 42.72492490803065,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6527777777777778,
+        "inductor_A": 2.174496859120835,
+        "output_V": 42.72560364139042,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6611111111111111,
+        "inductor_A": 2.193995279179534,
+        "output_V": 42.7262979669275,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6694444444444444,
+        "inductor_A": 2.2134867640982363,
+        "output_V": 42.72700787771715,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6777777777777778,
+        "inductor_A": 2.2329712563823865,
+        "output_V": 42.727733366789096,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6861111111111111,
+        "inductor_A": 2.252448698576522,
+        "output_V": 42.728474427127566,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6944444444444444,
+        "inductor_A": 2.2719190332644397,
+        "output_V": 42.72923105167128,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7027777777777777,
+        "inductor_A": 2.2913822030693565,
+        "output_V": 42.73000323331355,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7111111111111111,
+        "inductor_A": 2.3108381506540745,
+        "output_V": 42.73079096490227,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7194444444444444,
+        "inductor_A": 2.330286818721144,
+        "output_V": 42.731594239239946,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7277777777777777,
+        "inductor_A": 2.3497281500130254,
+        "output_V": 42.73241304908379,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7361111111111112,
+        "inductor_A": 2.369162087312254,
+        "output_V": 42.73324738714567,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7444444444444445,
+        "inductor_A": 2.3885885734416017,
+        "output_V": 42.73409724609221,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7527777777777778,
+        "inductor_A": 2.40800755126424,
+        "output_V": 42.73496261854485,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7611111111111111,
+        "inductor_A": 2.4274189636839,
+        "output_V": 42.73584349707977,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7694444444444445,
+        "inductor_A": 2.4468227536450384,
+        "output_V": 42.73673987422806,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7777777777777778,
+        "inductor_A": 2.466218864132997,
+        "output_V": 42.73765174247566,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7861111111111111,
+        "inductor_A": 2.4856072381741656,
+        "output_V": 42.738579094263436,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7944444444444444,
+        "inductor_A": 2.504987818836142,
+        "output_V": 42.73952192198723,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8027777777777778,
+        "inductor_A": 2.5243605492278953,
+        "output_V": 42.74048021799786,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8111111111111111,
+        "inductor_A": 2.5437253724999276,
+        "output_V": 42.74145397460121,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8194444444444444,
+        "inductor_A": 2.5630822318444326,
+        "output_V": 42.74244318405817,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8277777777777777,
+        "inductor_A": 2.58243107049546,
+        "output_V": 42.74344783858481,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8361111111111111,
+        "inductor_A": 2.6017718317290717,
+        "output_V": 42.74446793035231,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8444444444444444,
+        "inductor_A": 2.6211044588635075,
+        "output_V": 42.74550345148703,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8527777777777777,
+        "inductor_A": 2.640428895259342,
+        "output_V": 42.74655439407057,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8611111111111112,
+        "inductor_A": 2.659745084319646,
+        "output_V": 42.747620750139774,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8694444444444445,
+        "inductor_A": 2.6790529694901455,
+        "output_V": 42.748702511686794,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8777777777777778,
+        "inductor_A": 2.698352494259385,
+        "output_V": 42.74979967065912,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8861111111111111,
+        "inductor_A": 2.717643602158882,
+        "output_V": 42.750912218959606,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8944444444444445,
+        "inductor_A": 2.6855551347073554,
+        "output_V": 42.75126373607763,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9027777777777778,
+        "inductor_A": 2.523050525203263,
+        "output_V": 42.74956577087167,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9111111111111111,
+        "inductor_A": 2.3605882296935223,
+        "output_V": 42.74773754583688,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9194444444444444,
+        "inductor_A": 2.198168732166866,
+        "output_V": 42.745779106671314,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9277777777777778,
+        "inductor_A": 2.0357925163320836,
+        "output_V": 42.74369049945734,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9361111111111111,
+        "inductor_A": 1.8734600656166276,
+        "output_V": 42.74147177066132,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9444444444444444,
+        "inductor_A": 1.7111718631652213,
+        "output_V": 42.73912296713342,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9527777777777777,
+        "inductor_A": 1.5489283918384675,
+        "output_V": 42.736644136107294,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9611111111111111,
+        "inductor_A": 1.3867301342114586,
+        "output_V": 42.734035325199855,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9694444444444444,
+        "inductor_A": 1.2245775725723886,
+        "output_V": 42.731296582410984,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9777777777777777,
+        "inductor_A": 1.062471188921166,
+        "output_V": 42.728427956123305,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9861111111111112,
+        "inductor_A": 0.9004114649680275,
+        "output_V": 42.72542949510188,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9944444444444445,
+        "inductor_A": 0.7383988821321539,
+        "output_V": 42.722301248493956,
+        "high_side_on": false
+      },
+      {
+        "phase": 1.0,
+        "inductor_A": 0.6304169206900251,
+        "output_V": 42.72014367209487,
+        "high_side_on": false
+      }
+    ],
+    "time_domain": {
+      "timestep_s": 1.2626262626262626e-07,
+      "pwm_timer_ticks_per_period": 4096,
+      "cycles_computed": 160,
+      "window_cycles": 80,
+      "window_duration_s": 0.0036363636363636364,
+      "inductor_peak_A": 2.7309892122183888,
+      "inductor_min_A": 0.6337271127473806,
+      "inductor_avg_A": 1.685504910915214,
+      "inductor_ripple_pp_A": 2.097262099471008,
+      "output_v_min_V": 42.710579326658035,
+      "output_v_max_V": 42.751691170700106,
+      "output_v_final_V": 42.735977836650484,
+      "pwm_duty_final": 0.89208984375,
+      "start_LC_J": 0.4292153645267723,
+      "end_LC_J": 0.4292153646635447,
+      "delta_LC_J": 1.3677242671761292e-10
+    },
+    "energy": {
+      "source_J": 0.2631278942217609,
+      "load_J": 0.2618515663766653,
+      "dissipation_J": 0.001276316315345004,
+      "stored_delta_J": 1.3677242671761292e-10,
+      "residual_J": 1.1392978195405579e-08,
+      "loss_stages_J": {
+        "hs": 3.6461062831866306e-05,
+        "ls": 4.382681385006884e-06,
+        "winding": 0.00045978386346994584,
+        "trace": 0.00017504461807231489,
+        "capacitor": 2.0084968373637093e-05,
+        "leakage": 6.637203721984218e-07,
+        "gate_charge_J": 1.2639999999999998e-05,
+        "coss_hard_switch_J": 0.000129024,
+        "edge_overlap_J": 5.8251049721229794e-05,
+        "controller_bias_J": 0.00021818181818181818,
+        "magnetic_core_proxy_J": 3.452580566425929e-05,
+        "layout_unmeasured_J": 0.00012727272727272728
+      },
+      "source_W": 72.36017091098425,
+      "load_W": 72.00918075358295,
+      "net_loss_pct": 0.485059878911942,
+      "transfer_pct": 99.51494012108806
+    },
+    "violations": [],
+    "target_0p5_met": true,
+    "model_class": "switched-state buck + source-side device loss + proxy magnetics",
+    "cautions": [
+      "Not SPICE-validated or hardware measured",
+      "Gate/transition/core coefficients may vary with board, temperature and phase current",
+      "DC transfer is externally supplied electricity; not harvested bubble energy"
+    ]
+  },
+  "environment": {
+    "chamber_pressure_pa": 88477.0,
+    "internal_headspace_pressure_pa": 88477.0,
+    "internal_liquid_pressure_pa": 88477.0,
+    "vessel_mode": "sealed_liquid",
+    "bubble_model_available": true,
+    "bubble_unavailable_reason": "",
+    "state": "sealed pressurized liquid cell (internal liquid pressure independent of chamber vacuum)",
+    "mean_free_path_N2_m_at_293K": 7.72844629260444e-08,
+    "knudsen_number_1mm": 7.728446292604441e-05,
+    "flow_regime_1mm": "continuum",
+    "gas_temperature_reference_K": 293.15,
+    "water_vapor_pressure_20C_pa": 2339.0,
+    "water_surface_vaporization_risk": false,
+    "thermal_calibration_valid": true,
+    "external_pressure_changes_resonator_efficiency": false,
+    "orbital_environment_reproduced": false,
+    "caveats": [
+      "Pressure equivalence alone does NOT reproduce LEO microgravity, atomic oxygen, UV, orbital velocity, plasma or radiative heat transfer."
+    ],
+    "vacuum_source_electrical_power_W": 0.0,
+    "pressure_provenance": "user-set/illustrative; NOT live barometric or orbital telemetry"
+  },
+  "bubble": {
+    "available": true,
+    "candidate_radius_m": 0.00014021162656160333,
+    "reference_resonance_hz": 22000,
+    "receiver_gap_m": 0.002,
+    "independent_plasma_event_validation": false,
+    "reason": ""
+  },
+  "secondary": {
+    "mode": "hybrid",
+    "event_energy_source_J": 1e-06,
+    "pulse_repetition_hz": 1000.0,
+    "duration_s": 120.0,
+    "event_count_modeled": 120000.0,
+    "primary_input_total_J": 0.12,
+    "single_pulse_acoustic_dc_before_storage_J": 1.4989212936859176e-09,
+    "single_pulse_magnetic_field_budget_J": 1.9999999999999994e-08,
+    "single_pulse_magnetic_dc_before_storage_J": 1.3e-10,
+    "credited_acoustic_per_event_J": 1.4989212936859176e-09,
+    "credited_inductive_per_event_J": 1.3e-10,
+    "credited_secondary_dc_before_manager_per_event_J": 1.6289212936859176e-09,
+    "stored_per_event_after_controller_J": 8.357154608224523e-10,
+    "secondary_average_input_W": 1.6289212936859176e-06,
+    "secondary_average_storage_charge_W": 8.357154608224522e-07,
+    "primary_average_pulse_drive_W": 0.001,
+    "secondary_steady_state_voltage_V": 0.9051678756779136,
+    "capacitor_F": 1e-05,
+    "storage_max_voltage_V": 3.3,
+    "load_resistance_ohm": 1000000.0,
+    "stored": {
+      "stored_final_J": 4.0966444157006374e-06,
+      "stored_initial_J": 0,
+      "stored_delta_J": 4.0966444157006374e-06,
+      "voltage_final_V": 0.9051678756673412,
+      "voltage_equilibrium_V": 0.9051678756779136,
+      "time_constant_s": 4.901960784313726,
+      "load_energy_J": 9.430314792450357e-05,
+      "leakage_energy_J": 1.8860629584900712e-06,
+      "clamped_excess_J": 0.0,
+      "clamped": false,
+      "points": [
+        {
+          "time_s": 0.0,
+          "voltage_V": 0.0
+        },
+        {
+          "time_s": 1.2,
+          "voltage_V": 0.4217916270910687
+        },
+        {
+          "time_s": 2.4,
+          "voltage_V": 0.5631922998921145
+        },
+        {
+          "time_s": 3.6,
+          "voltage_V": 0.6528555863696551
+        },
+        {
+          "time_s": 4.8,
+          "voltage_V": 0.715247900167507
+        },
+        {
+          "time_s": 6.0,
+          "voltage_V": 0.7605287043123476
+        },
+        {
+          "time_s": 7.2,
+          "voltage_V": 0.794177621801958
+        },
+        {
+          "time_s": 8.4,
+          "voltage_V": 0.8195564867818709
+        },
+        {
+          "time_s": 9.6,
+          "voltage_V": 0.8388889721907896
+        },
+        {
+          "time_s": 10.8,
+          "voltage_V": 0.8537181621457216
+        },
+        {
+          "time_s": 12.0,
+          "voltage_V": 0.8651499917085221
+        },
+        {
+          "time_s": 13.2,
+          "voltage_V": 0.8739951820126413
+        },
+        {
+          "time_s": 14.4,
+          "voltage_V": 0.880857755386719
+        },
+        {
+          "time_s": 15.6,
+          "voltage_V": 0.8861931111962096
+        },
+        {
+          "time_s": 16.8,
+          "voltage_V": 0.8903476419205526
+        },
+        {
+          "time_s": 18.0,
+          "voltage_V": 0.8935865828149787
+        },
+        {
+          "time_s": 19.2,
+          "voltage_V": 0.8961140537999526
+        },
+        {
+          "time_s": 20.4,
+          "voltage_V": 0.8980877485842259
+        },
+        {
+          "time_s": 21.6,
+          "voltage_V": 0.8996298556306039
+        },
+        {
+          "time_s": 22.8,
+          "voltage_V": 0.9008352689620696
+        },
+        {
+          "time_s": 24.0,
+          "voltage_V": 0.9017778157014625
+        },
+        {
+          "time_s": 25.2,
+          "voltage_V": 0.9025150119264789
+        },
+        {
+          "time_s": 26.4,
+          "voltage_V": 0.9030917142116901
+        },
+        {
+          "time_s": 27.6,
+          "voltage_V": 0.9035429351161851
+        },
+        {
+          "time_s": 28.8,
+          "voltage_V": 0.9038960212148633
+        },
+        {
+          "time_s": 30.0,
+          "voltage_V": 0.9041723423608977
+        },
+        {
+          "time_s": 31.2,
+          "voltage_V": 0.904388604518156
+        },
+        {
+          "time_s": 32.4,
+          "voltage_V": 0.9045578716648273
+        },
+        {
+          "time_s": 33.6,
+          "voltage_V": 0.9046903622272959
+        },
+        {
+          "time_s": 34.8,
+          "voltage_V": 0.9047940703949015
+        },
+        {
+          "time_s": 36.0,
+          "voltage_V": 0.9048752511896662
+        },
+        {
+          "time_s": 37.2,
+          "voltage_V": 0.9049387993932408
+        },
+        {
+          "time_s": 38.4,
+          "voltage_V": 0.9049885456953417
+        },
+        {
+          "time_s": 39.6,
+          "voltage_V": 0.9050274882316309
+        },
+        {
+          "time_s": 40.8,
+          "voltage_V": 0.9050579736588753
+        },
+        {
+          "time_s": 42.0,
+          "voltage_V": 0.9050818387972366
+        },
+        {
+          "time_s": 43.2,
+          "voltage_V": 0.9051005214464413
+        },
+        {
+          "time_s": 44.4,
+          "voltage_V": 0.905115147096532
+        },
+        {
+          "time_s": 45.6,
+          "voltage_V": 0.9051265967840466
+        },
+        {
+          "time_s": 46.8,
+          "voltage_V": 0.9051355601978741
+        },
+        {
+          "time_s": 48.0,
+          "voltage_V": 0.9051425772438918
+        },
+        {
+          "time_s": 49.2,
+          "voltage_V": 0.9051480705782564
+        },
+        {
+          "time_s": 50.4,
+          "voltage_V": 0.9051523710727453
+        },
+        {
+          "time_s": 51.6,
+          "voltage_V": 0.90515573774831
+        },
+        {
+          "time_s": 52.8,
+          "voltage_V": 0.9051583733788897
+        },
+        {
+          "time_s": 54.0,
+          "voltage_V": 0.9051604367061752
+        },
+        {
+          "time_s": 55.2,
+          "voltage_V": 0.9051620520015505
+        },
+        {
+          "time_s": 56.4,
+          "voltage_V": 0.9051633165514448
+        },
+        {
+          "time_s": 57.6,
+          "voltage_V": 0.9051643065171266
+        },
+        {
+          "time_s": 58.8,
+          "voltage_V": 0.9051650815219886
+        },
+        {
+          "time_s": 60.0,
+          "voltage_V": 0.9051656882426802
+        },
+        {
+          "time_s": 61.2,
+          "voltage_V": 0.9051661632204212
+        },
+        {
+          "time_s": 62.4,
+          "voltage_V": 0.9051665350618416
+        },
+        {
+          "time_s": 63.6,
+          "voltage_V": 0.9051668261619167
+        },
+        {
+          "time_s": 64.8,
+          "voltage_V": 0.9051670540527746
+        },
+        {
+          "time_s": 66.0,
+          "voltage_V": 0.9051672324596212
+        },
+        {
+          "time_s": 67.2,
+          "voltage_V": 0.9051673721273757
+        },
+        {
+          "time_s": 68.4,
+          "voltage_V": 0.905167481467812
+        },
+        {
+          "time_s": 69.6,
+          "voltage_V": 0.9051675670661765
+        },
+        {
+          "time_s": 70.8,
+          "voltage_V": 0.9051676340778002
+        },
+        {
+          "time_s": 72.0,
+          "voltage_V": 0.9051676865385898
+        },
+        {
+          "time_s": 73.2,
+          "voltage_V": 0.9051677276080988
+        },
+        {
+          "time_s": 74.4,
+          "voltage_V": 0.9051677597598184
+        },
+        {
+          "time_s": 75.6,
+          "voltage_V": 0.9051677849301479
+        },
+        {
+          "time_s": 76.8,
+          "voltage_V": 0.9051678046350191
+        },
+        {
+          "time_s": 78.0,
+          "voltage_V": 0.9051678200611959
+        },
+        {
+          "time_s": 79.2,
+          "voltage_V": 0.9051678321377494
+        },
+        {
+          "time_s": 80.4,
+          "voltage_V": 0.9051678415920131
+        },
+        {
+          "time_s": 81.6,
+          "voltage_V": 0.9051678489933883
+        },
+        {
+          "time_s": 82.8,
+          "voltage_V": 0.905167854787637
+        },
+        {
+          "time_s": 84.0,
+          "voltage_V": 0.9051678593237289
+        },
+        {
+          "time_s": 85.2,
+          "voltage_V": 0.9051678628748586
+        },
+        {
+          "time_s": 86.4,
+          "voltage_V": 0.9051678656549
+        },
+        {
+          "time_s": 87.6,
+          "voltage_V": 0.9051678678312862
+        },
+        {
+          "time_s": 88.8,
+          "voltage_V": 0.9051678695350943
+        },
+        {
+          "time_s": 90.0,
+          "voltage_V": 0.9051678708689394
+        },
+        {
+          "time_s": 91.2,
+          "voltage_V": 0.9051678719131547
+        },
+        {
+          "time_s": 92.4,
+          "voltage_V": 0.9051678727306304
+        },
+        {
+          "time_s": 93.6,
+          "voltage_V": 0.9051678733706002
+        },
+        {
+          "time_s": 94.8,
+          "voltage_V": 0.9051678738716077
+        },
+        {
+          "time_s": 96.0,
+          "voltage_V": 0.9051678742638269
+        },
+        {
+          "time_s": 97.2,
+          "voltage_V": 0.9051678745708802
+        },
+        {
+          "time_s": 98.4,
+          "voltage_V": 0.9051678748112603
+        },
+        {
+          "time_s": 99.6,
+          "voltage_V": 0.9051678749994444
+        },
+        {
+          "time_s": 100.8,
+          "voltage_V": 0.9051678751467664
+        },
+        {
+          "time_s": 102.0,
+          "voltage_V": 0.9051678752620991
+        },
+        {
+          "time_s": 103.2,
+          "voltage_V": 0.9051678753523886
+        },
+        {
+          "time_s": 104.4,
+          "voltage_V": 0.9051678754230728
+        },
+        {
+          "time_s": 105.6,
+          "voltage_V": 0.9051678754784086
+        },
+        {
+          "time_s": 106.8,
+          "voltage_V": 0.9051678755217288
+        },
+        {
+          "time_s": 108.0,
+          "voltage_V": 0.9051678755556427
+        },
+        {
+          "time_s": 109.2,
+          "voltage_V": 0.9051678755821925
+        },
+        {
+          "time_s": 110.4,
+          "voltage_V": 0.9051678756029772
+        },
+        {
+          "time_s": 111.6,
+          "voltage_V": 0.9051678756192488
+        },
+        {
+          "time_s": 112.8,
+          "voltage_V": 0.9051678756319872
+        },
+        {
+          "time_s": 114.0,
+          "voltage_V": 0.9051678756419597
+        },
+        {
+          "time_s": 115.2,
+          "voltage_V": 0.9051678756497666
+        },
+        {
+          "time_s": 116.4,
+          "voltage_V": 0.9051678756558784
+        },
+        {
+          "time_s": 117.6,
+          "voltage_V": 0.9051678756606631
+        },
+        {
+          "time_s": 118.8,
+          "voltage_V": 0.9051678756644089
+        },
+        {
+          "time_s": 120.0,
+          "voltage_V": 0.9051678756673412
+        }
+      ]
+    },
+    "sinks": {
+      "primary_unrecovered_thermal_acoustic_radiative_field_J": 0.11980452944475768,
+      "secondary_rectifier_and_power_manager_loss_J": 3.518469994361584e-05,
+      "secondary_trigger_controller_energy_J": 6e-05,
+      "storage_leakage_J": 1.8860629584900712e-06,
+      "dc_load_delivered_J": 9.430314792450357e-05,
+      "storage_clamp_shunt_J": 0.0,
+      "stored_capacitor_energy_J": 4.0966444157006374e-06
+    },
+    "ledger_residual_J": 0.0,
+    "apparent_recovery_percent": 0.08199982695017018,
+    "net_energy_change_J": -0.11990160020765979,
+    "independent_pulse_approximation_valid": true,
+    "acoustic_geometry_valid": true,
+    "recovery_credit_valid": true,
+    "controller_energy_shortfall_per_event_J": 0.0,
+    "plasma": {
+      "status": "far_field_screen_valid",
+      "input_J": 1e-06,
+      "stored_electrical_reservoir_input_J": 1e-06,
+      "delivered_plasma_energy_J": 7.5e-07,
+      "driver_loss_J": 2.4999999999999994e-07,
+      "magnetic_field_energy_available_J": 1.9999999999999994e-08,
+      "ionization_upfront_J": 9e-08,
+      "recombination_radiation_J": 5.491778613827134e-10,
+      "recombination_heat_J": 3.661185742551423e-10,
+      "ionization_energy_remaining_J": 8.908470356436215e-08,
+      "direct_thermal_radiation_J": 5.28e-08,
+      "thermal_heat_J": 1.7820000000000002e-07,
+      "direct_acoustic_J": 2.97e-07,
+      "bubble_expansion_energy_J": 1.3200000000000002e-07,
+      "collapse_acoustic_J": 6.600000000000001e-08,
+      "outgoing_acoustic_J": 3.6300000000000006e-07,
+      "peak_radius_estimate_m": 0.00014609035708281382,
+      "initial_radius_m": 0.00014021162656160333,
+      "receiver_center_distance_m": 0.0021402116265616033,
+      "receiver_required_min_distance_m": 0.0014609035708281382,
+      "receiver_valid_for_uncoupled_model": true,
+      "geometric_capture_fraction": 0.016517039048880633,
+      "credited_capture_fraction": 0.016517039048880633,
+      "acoustic_intercepted_J": 5.9956851747436705e-09,
+      "recovered_J": 1.4989212936859176e-09,
+      "net_energy_change_J": -9.98501078706314e-07,
+      "conversion_efficiency_pct": 0.14989212936859175,
+      "energy_loss_and_storage_J": {
+        "plasma_discharge_loss": 2.2999999999999994e-07,
+        "plasma_magnetic_field_unrecovered": 1.9999999999999994e-08,
+        "plasma_ionization_stored": 8.908470356436215e-08,
+        "plasma_recombination_heat": 3.661185742551423e-10,
+        "plasma_recombination_radiation": 5.491778613827134e-10,
+        "plasma_thermal_heat": 1.7820000000000002e-07,
+        "plasma_thermal_radiation": 5.28e-08,
+        "plasma_collapse_heat": 3.9600000000000004e-08,
+        "plasma_remaining_bubble_energy": 2.6400000000000005e-08,
+        "plasma_uncaptured_sound": 3.570043148252564e-07,
+        "plasma_piezo_conversion_loss": 4.496763881057753e-09
+      },
+      "energy_balance_residual_J": 0.0,
+      "afterglow": {
+        "ion_pairs_initial": 44582207674.71974,
+        "ion_pairs_remaining": 44128808388.30266,
+        "initial_pair_number_density_m3": 3.861187386861773e+21,
+        "peak_radius_pair_number_density_m3_without_recombination": 3.4135660414064976e+21,
+        "final_pair_number_density_m3": 3.821919264055946e+21,
+        "recombination_fraction": 0.010169960395976174,
+        "bubble_expansion_collapse_reference_s": 2.8770156566810166e-05,
+        "recombination_coefficient_m3_s_assumed": 1e-19,
+        "density_interpretation": "number density of ionized pairs, not uncompensated net charge"
+      },
+      "assumptions": {
+        "discharge_to_water": 0.75,
+        "water_energy_to_ionization": 0.12,
+        "effective_ionization_eV": 12.6,
+        "recombination_rate_m3_s": 1e-19,
+        "thermal_to_expansion": 0.2,
+        "thermal_to_direct_acoustic": 0.45,
+        "thermal_to_direct_radiation": 0.08,
+        "collapse_to_sound": 0.5,
+        "receiver_aperture_m2": 1e-06,
+        "piezo_electric_conversion": 0.25,
+        "fractions_are_measured": false,
+        "ignition_or_plasma_formation_predicted": false,
+        "compressible_shock_or_receiver_back_reaction_resolved": false
+      },
+      "caveat": "Uncalibrated quasineutral ion-pair kinetics and prescribed radial trajectory. No validated plasma ignition, species chemistry, sheath fields, direct electrical plasma harvesting, shock CFD, 4-kV hardware, magnetic-field capture, or near-boundary receiver coupling. Magnetic field fraction is an energy-budget upper-bound placeholder, not evidence of measurable leakage or useful induced EMF."
+    },
+    "engineering_note": "Storage plateau is equilibrium between finite received power, load, leakage and clamp. The primary pulse generator and original resonator are externally powered. This is a hypothetical receiver feasibility model; magnetic coupling, rectifier efficiency, pulse formation, plasma kinetics, and reservoir charging must be measured. No claimed self-sustaining, net-positive, or validated high-voltage hardware.",
+    "assumptions": {
+      "manager_efficiency_unmeasured": 0.82,
+      "magnetic_capture_k_squared_unmeasured": 0.010000000000000002,
+      "inductive_rectifier_efficiency_unmeasured": 0.65,
+      "storage_leakage_resistance_ohm": 50000000.0,
+      "controller_energy_per_event_J": 5e-10,
+      "clamp_V_assumed": 3.3,
+      "steady_state_is_only_model_prediction": true
+    },
+    "battery_path": {
+      "time_series": [
+        {
+          "time_s": 0.0,
+          "cap_voltage_V": 0.0,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 0.0,
+          "harvest_energy_J": 0.0,
+          "secondary_load_energy_J": 0.0
+        },
+        {
+          "time_s": 0.75,
+          "cap_voltage_V": 0.3403770319801989,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 5.792826194982469e-07,
+          "harvest_energy_J": 6.267865956168389e-07,
+          "secondary_load_energy_J": 4.657800537180092e-08
+        },
+        {
+          "time_s": 1.5,
+          "cap_voltage_V": 0.4639305164014533,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.0761576202425955e-06,
+          "harvest_energy_J": 1.2535731912336767e-06,
+          "secondary_load_energy_J": 1.7395729986967363e-07
+        },
+        {
+          "time_s": 2.25,
+          "cap_voltage_V": 0.5481511013936584,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.502348149795404e-06,
+          "harvest_energy_J": 1.8803597868505145e-06,
+          "secondary_load_energy_J": 3.7064324925982685e-07
+        },
+        {
+          "time_s": 3.0,
+          "cap_voltage_V": 0.5964902811998657,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7790032778294745e-06,
+          "harvest_energy_J": 2.507146382467357e-06,
+          "secondary_load_energy_J": 6.25704106990901e-07
+        },
+        {
+          "time_s": 3.75,
+          "cap_voltage_V": 0.5998439846921023,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7990640298564957e-06,
+          "harvest_energy_J": 3.1339329780842003e-06,
+          "secondary_load_energy_J": 8.970358750320605e-07
+        },
+        {
+          "time_s": 4.5,
+          "cap_voltage_V": 0.5981365165185277,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7888364619645951e-06,
+          "harvest_energy_J": 3.7607195737010434e-06,
+          "secondary_load_energy_J": 1.1686503429192035e-06
+        },
+        {
+          "time_s": 5.25,
+          "cap_voltage_V": 0.5964365053308829,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7786825244565818e-06,
+          "harvest_energy_J": 4.387506169317877e-06,
+          "secondary_load_energy_J": 1.44019261566193e-06
+        },
+        {
+          "time_s": 6.0,
+          "cap_voltage_V": 0.5997981170751655,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7987889062345697e-06,
+          "harvest_energy_J": 5.014292764934709e-06,
+          "secondary_load_energy_J": 1.7114796433895555e-06
+        },
+        {
+          "time_s": 6.75,
+          "cap_voltage_V": 0.5980970618376273,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7886004768940131e-06,
+          "harvest_energy_J": 5.641079360551542e-06,
+          "secondary_load_energy_J": 1.983055735633149e-06
+        },
+        {
+          "time_s": 7.5,
+          "cap_voltage_V": 0.5964025670909128,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7784801101631534e-06,
+          "harvest_energy_J": 6.267865956168374e-06,
+          "secondary_load_energy_J": 2.2545650919767366e-06
+        },
+        {
+          "time_s": 8.25,
+          "cap_voltage_V": 0.5997691700987692,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7986152870048318e-06,
+          "harvest_energy_J": 6.894652551785207e-06,
+          "secondary_load_energy_J": 2.5258238859281416e-06
+        },
+        {
+          "time_s": 9.0,
+          "cap_voltage_V": 0.5980721622677669,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7884515563982109e-06,
+          "harvest_energy_J": 7.5214391474020394e-06,
+          "secondary_load_energy_J": 2.7973757608776056e-06
+        },
+        {
+          "time_s": 9.75,
+          "cap_voltage_V": 0.5963811490661716,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778352374807436e-06,
+          "harvest_energy_J": 8.14822574301889e-06,
+          "secondary_load_energy_J": 3.0688643450322263e-06
+        },
+        {
+          "time_s": 10.5,
+          "cap_voltage_V": 0.5997509021306054,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7985057230323756e-06,
+          "harvest_energy_J": 8.775012338635743e-06,
+          "secondary_load_energy_J": 3.340105321805866e-06
+        },
+        {
+          "time_s": 11.25,
+          "cap_voltage_V": 0.5980564486373131,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7883575787833756e-06,
+          "harvest_energy_J": 9.401798934252597e-06,
+          "secondary_load_energy_J": 3.6116419142146183e-06
+        },
+        {
+          "time_s": 12.0,
+          "cap_voltage_V": 0.5963676326336469,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778271766265302e-06,
+          "harvest_energy_J": 1.0028585529869451e-05,
+          "secondary_load_energy_J": 3.883117389893044e-06
+        },
+        {
+          "time_s": 12.75,
+          "cap_voltage_V": 0.5997393736790445,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7984365817046628e-06,
+          "harvest_energy_J": 1.0655372125486305e-05,
+          "secondary_load_energy_J": 4.154347122976815e-06
+        },
+        {
+          "time_s": 13.5,
+          "cap_voltage_V": 0.5980465321973641,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882982733664649e-06,
+          "harvest_energy_J": 1.1282158721103158e-05,
+          "secondary_load_energy_J": 4.425874071201152e-06
+        },
+        {
+          "time_s": 14.25,
+          "cap_voltage_V": 0.5963591028099853,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778220897521653e-06,
+          "harvest_energy_J": 1.1908945316720012e-05,
+          "secondary_load_energy_J": 4.6973412746580755e-06
+        },
+        {
+          "time_s": 15.0,
+          "cap_voltage_V": 0.5997320984322162,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983929494495474e-06,
+          "harvest_energy_J": 1.2535731912336866e-05,
+          "secondary_load_energy_J": 4.9685639123104915e-06
+        },
+        {
+          "time_s": 15.75,
+          "cap_voltage_V": 0.5980402742543512,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882608481510981e-06,
+          "harvest_energy_J": 1.316251850795372e-05,
+          "secondary_load_energy_J": 5.240084774485739e-06
+        },
+        {
+          "time_s": 16.5,
+          "cap_voltage_V": 0.5963537199254537,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778188796344633e-06,
+          "harvest_energy_J": 1.3789305103570573e-05,
+          "secondary_load_energy_J": 5.511546757683079e-06
+        },
+        {
+          "time_s": 17.25,
+          "cap_voltage_V": 0.5997275072770188,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983654149235333e-06,
+          "harvest_energy_J": 1.4416091699187427e-05,
+          "secondary_load_energy_J": 5.7827649176998835e-06
+        },
+        {
+          "time_s": 18.0,
+          "cap_voltage_V": 0.5980363250895718,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882372306332002e-06,
+          "harvest_energy_J": 1.504287829480428e-05,
+          "secondary_load_energy_J": 6.054281939219249e-06
+        },
+        {
+          "time_s": 18.75,
+          "cap_voltage_V": 0.5963503229828747,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781685386088951e-06,
+          "harvest_energy_J": 1.5669664890421107e-05,
+          "secondary_load_energy_J": 6.325740628124949e-06
+        },
+        {
+          "time_s": 19.5,
+          "cap_voltage_V": 0.5997246099692559,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983480390138804e-06,
+          "harvest_energy_J": 1.629645148603792e-05,
+          "secondary_load_energy_J": 6.596955962489633e-06
+        },
+        {
+          "time_s": 20.25,
+          "cap_voltage_V": 0.5980338329202887,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882223265866586e-06,
+          "harvest_energy_J": 1.692323808165473e-05,
+          "secondary_load_energy_J": 6.868470560328652e-06
+        },
+        {
+          "time_s": 21.0,
+          "cap_voltage_V": 0.596348179301828,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781557547830267e-06,
+          "harvest_energy_J": 1.755002467727154e-05,
+          "secondary_load_energy_J": 7.139927170342058e-06
+        },
+        {
+          "time_s": 21.75,
+          "cap_voltage_V": 0.5997227815899968,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983370737902154e-06,
+          "harvest_energy_J": 1.8176811272888352e-05,
+          "secondary_load_energy_J": 7.411140721553621e-06
+        },
+        {
+          "time_s": 22.5,
+          "cap_voltage_V": 0.5980322602091606,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882129212543857e-06,
+          "harvest_energy_J": 1.8803597868505164e-05,
+          "secondary_load_energy_J": 7.682653789907414e-06
+        },
+        {
+          "time_s": 23.25,
+          "cap_voltage_V": 0.596346826508707,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781476874350296e-06,
+          "harvest_energy_J": 1.9430384464121975e-05,
+          "secondary_load_energy_J": 7.954109088017186e-06
+        },
+        {
+          "time_s": 24.0,
+          "cap_voltage_V": 0.5997216277719946,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983301540874542e-06,
+          "harvest_energy_J": 2.0057171059738787e-05,
+          "secondary_load_energy_J": 8.225321513953975e-06
+        },
+        {
+          "time_s": 24.75,
+          "cap_voltage_V": 0.598031267733566,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882069859350807e-06,
+          "harvest_energy_J": 2.0683957655355598e-05,
+          "secondary_load_energy_J": 8.4968336171124e-06
+        },
+        {
+          "time_s": 25.5,
+          "cap_voltage_V": 0.5963459728148928,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781425964627044e-06,
+          "harvest_energy_J": 2.131074425097241e-05,
+          "secondary_load_energy_J": 8.768288087333616e-06
+        },
+        {
+          "time_s": 26.25,
+          "cap_voltage_V": 0.599720899643651,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983257873469509e-06,
+          "harvest_energy_J": 2.193753084658922e-05,
+          "secondary_load_energy_J": 9.03949980315567e-06
+        },
+        {
+          "time_s": 27.0,
+          "cap_voltage_V": 0.598030641422091,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882032403985876e-06,
+          "harvest_energy_J": 2.2564317442206032e-05,
+          "secondary_load_energy_J": 9.311011297218892e-06
+        },
+        {
+          "time_s": 27.75,
+          "cap_voltage_V": 0.5963454340831239,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781393837589474e-06,
+          "harvest_energy_J": 2.3191104037822843e-05,
+          "secondary_load_energy_J": 9.582465244993608e-06
+        },
+        {
+          "time_s": 28.5,
+          "cap_voltage_V": 0.5997204401512726,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983230316761805e-06,
+          "harvest_energy_J": 2.3817890633439655e-05,
+          "secondary_load_energy_J": 9.853676512691382e-06
+        },
+        {
+          "time_s": 29.25,
+          "cap_voltage_V": 0.5980302461822782,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7882008767441812e-06,
+          "harvest_energy_J": 2.4444677229056466e-05,
+          "secondary_load_energy_J": 1.0125187622379618e-05
+        },
+        {
+          "time_s": 30.0,
+          "cap_voltage_V": 0.5963450941113576,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.77813735635342e-06,
+          "harvest_energy_J": 2.5071463824673277e-05,
+          "secondary_load_energy_J": 1.0396641240459784e-05
+        },
+        {
+          "time_s": 30.75,
+          "cap_voltage_V": 0.5997201501843039,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.79832129268542e-06,
+          "harvest_energy_J": 2.569825042029009e-05,
+          "secondary_load_energy_J": 1.0667852225364712e-05
+        },
+        {
+          "time_s": 31.5,
+          "cap_voltage_V": 0.5980299967625142,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881993851388641e-06,
+          "harvest_energy_J": 2.63250370159069e-05,
+          "secondary_load_energy_J": 1.0939363092489665e-05
+        },
+        {
+          "time_s": 32.25,
+          "cap_voltage_V": 0.5963448795690248,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781360769409737e-06,
+          "harvest_energy_J": 2.695182361152371e-05,
+          "secondary_load_energy_J": 1.1210816502513124e-05
+        },
+        {
+          "time_s": 33.0,
+          "cap_voltage_V": 0.5997199671979748,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983201952797003e-06,
+          "harvest_energy_J": 2.7578610207140523e-05,
+          "secondary_load_energy_J": 1.1482027308959088e-05
+        },
+        {
+          "time_s": 33.75,
+          "cap_voltage_V": 0.5980298393638811,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881984438479474e-06,
+          "harvest_energy_J": 2.8205396802757334e-05,
+          "secondary_load_energy_J": 1.17535380230123e-05
+        },
+        {
+          "time_s": 34.5,
+          "cap_voltage_V": 0.5963447441801214,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781352695562723e-06,
+          "harvest_energy_J": 2.8832183398374145e-05,
+          "secondary_load_energy_J": 1.2024991301739715e-05
+        },
+        {
+          "time_s": 35.25,
+          "cap_voltage_V": 0.5997198517227816,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.798319502751976e-06,
+          "harvest_energy_J": 2.9458969993990957e-05,
+          "secondary_load_energy_J": 1.2296201995567553e-05
+        },
+        {
+          "time_s": 36.0,
+          "cap_voltage_V": 0.5980297400360404,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881978498378702e-06,
+          "harvest_energy_J": 3.0085756589607768e-05,
+          "secondary_load_energy_J": 1.2567712613023473e-05
+        },
+        {
+          "time_s": 36.75,
+          "cap_voltage_V": 0.5963446587417235,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781347600489135e-06,
+          "harvest_energy_J": 3.071254318522458e-05,
+          "secondary_load_energy_J": 1.2839165808895338e-05
+        },
+        {
+          "time_s": 37.5,
+          "cap_voltage_V": 0.5997197788511136,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983190657261434e-06,
+          "harvest_energy_J": 3.1339329780841394e-05,
+          "secondary_load_energy_J": 1.3110376431654497e-05
+        },
+        {
+          "time_s": 38.25,
+          "cap_voltage_V": 0.5980296773543071,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788197474982483e-06,
+          "harvest_energy_J": 3.1966116376458206e-05,
+          "secondary_load_energy_J": 1.3381886988151831e-05
+        },
+        {
+          "time_s": 39.0,
+          "cap_voltage_V": 0.59634460482505,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781344385197252e-06,
+          "harvest_energy_J": 3.259290297207502e-05,
+          "secondary_load_energy_J": 1.3653340131736959e-05
+        },
+        {
+          "time_s": 39.75,
+          "cap_voltage_V": 0.5997197328647893,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983187899370714e-06,
+          "harvest_energy_J": 3.321968956769183e-05,
+          "secondary_load_energy_J": 1.3924550709647587e-05
+        },
+        {
+          "time_s": 40.5,
+          "cap_voltage_V": 0.5980296377984334,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881972384266279e-06,
+          "harvest_energy_J": 3.384647616330864e-05,
+          "secondary_load_energy_J": 1.4196061227676457e-05
+        },
+        {
+          "time_s": 41.25,
+          "cap_voltage_V": 0.5963445708004467,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781342356158452e-06,
+          "harvest_energy_J": 3.447326275892545e-05,
+          "secondary_load_energy_J": 1.4467514338265565e-05
+        },
+        {
+          "time_s": 42.0,
+          "cap_voltage_V": 0.5997197038447049,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983186158979027e-06,
+          "harvest_energy_J": 3.510004935454226e-05,
+          "secondary_load_energy_J": 1.4738724887874127e-05
+        },
+        {
+          "time_s": 42.75,
+          "cap_voltage_V": 0.5980296128363433,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788197089145933e-06,
+          "harvest_energy_J": 3.5726835950159074e-05,
+          "secondary_load_energy_J": 1.5010235381627126e-05
+        },
+        {
+          "time_s": 43.5,
+          "cap_voltage_V": 0.5963445493289147,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781341075715316e-06,
+          "harvest_energy_J": 3.6353622545775885e-05,
+          "secondary_load_energy_J": 1.5281688471393805e-05
+        },
+        {
+          "time_s": 44.25,
+          "cap_voltage_V": 0.5997196855313196,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983185060689246e-06,
+          "harvest_energy_J": 3.6980409141392696e-05,
+          "secondary_load_energy_J": 1.5552899003142095e-05
+        },
+        {
+          "time_s": 45.0,
+          "cap_voltage_V": 0.5980295970837917,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196994941011e-06,
+          "harvest_energy_J": 3.760719573700951e-05,
+          "secondary_load_energy_J": 1.5824409481575593e-05
+        },
+        {
+          "time_s": 45.75,
+          "cap_voltage_V": 0.5963445357791113,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781340267680185e-06,
+          "harvest_energy_J": 3.823398233262632e-05,
+          "secondary_load_energy_J": 1.6095862558202097e-05
+        },
+        {
+          "time_s": 46.5,
+          "cap_voltage_V": 0.599719673974493,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983184367603611e-06,
+          "harvest_energy_J": 3.886076892824313e-05,
+          "secondary_load_energy_J": 1.6367073078679502e-05
+        },
+        {
+          "time_s": 47.25,
+          "cap_voltage_V": 0.5980295871430024,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881969354921493e-06,
+          "harvest_energy_J": 3.948755552385994e-05,
+          "secondary_load_energy_J": 1.6638583547445478e-05
+        },
+        {
+          "time_s": 48.0,
+          "cap_voltage_V": 0.5963445272283862,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781339757762372e-06,
+          "harvest_energy_J": 4.011434211947675e-05,
+          "secondary_load_energy_J": 1.6910036615779747e-05
+        },
+        {
+          "time_s": 48.75,
+          "cap_voltage_V": 0.5997196666814542,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183930225725e-06,
+          "harvest_energy_J": 4.0741128715093564e-05,
+          "secondary_load_energy_J": 1.718124712914456e-05
+        },
+        {
+          "time_s": 49.5,
+          "cap_voltage_V": 0.5980295808697783,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196897976414e-06,
+          "harvest_energy_J": 4.1367915310710376e-05,
+          "secondary_load_energy_J": 1.745275759180978e-05
+        },
+        {
+          "time_s": 50.25,
+          "cap_voltage_V": 0.5963445218323744,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781339435974163e-06,
+          "harvest_energy_J": 4.199470190632719e-05,
+          "secondary_load_energy_J": 1.7724210654911166e-05
+        },
+        {
+          "time_s": 51.0,
+          "cap_voltage_V": 0.5997196620791164,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.798318365421448e-06,
+          "harvest_energy_J": 4.2621488501944e-05,
+          "secondary_load_energy_J": 1.799542116378751e-05
+        },
+        {
+          "time_s": 51.75,
+          "cap_voltage_V": 0.5980295769110038,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968743017711e-06,
+          "harvest_energy_J": 4.324827509756081e-05,
+          "secondary_load_energy_J": 1.826693162260277e-05
+        },
+        {
+          "time_s": 52.5,
+          "cap_voltage_V": 0.5963445184271726,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781339232906823e-06,
+          "harvest_energy_J": 4.387506169317762e-05,
+          "secondary_load_energy_J": 1.8538384682401894e-05
+        },
+        {
+          "time_s": 53.25,
+          "cap_voltage_V": 0.59971965917477,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183480035112e-06,
+          "harvest_energy_J": 4.450184828879443e-05,
+          "secondary_load_energy_J": 1.8809595188445752e-05
+        },
+        {
+          "time_s": 54.0,
+          "cap_voltage_V": 0.5980295744127836,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196859361676e-06,
+          "harvest_energy_J": 4.5128634884411244e-05,
+          "secondary_load_energy_J": 1.9081105644831478e-05
+        },
+        {
+          "time_s": 54.75,
+          "cap_voltage_V": 0.5963445162782897,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781339104759363e-06,
+          "harvest_energy_J": 4.5755421480028055e-05,
+          "secondary_load_energy_J": 1.9352558702546674e-05
+        },
+        {
+          "time_s": 55.5,
+          "cap_voltage_V": 0.5997196573419559,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183370117652e-06,
+          "harvest_energy_J": 4.638220807564487e-05,
+          "secondary_load_energy_J": 1.962376920680307e-05
+        },
+        {
+          "time_s": 56.25,
+          "cap_voltage_V": 0.5980295728362595,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196849933595e-06,
+          "harvest_energy_J": 4.700899467126168e-05,
+          "secondary_load_energy_J": 1.9895279661655614e-05
+        },
+        {
+          "time_s": 57.0,
+          "cap_voltage_V": 0.5963445149222177,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778133902389076e-06,
+          "harvest_energy_J": 4.763578126687849e-05,
+          "secondary_load_energy_J": 2.0166732718055737e-05
+        },
+        {
+          "time_s": 57.75,
+          "cap_voltage_V": 0.5997196561853423,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.798318330075326e-06,
+          "harvest_energy_J": 4.82625678624953e-05,
+          "secondary_load_energy_J": 2.0437943221184132e-05
+        },
+        {
+          "time_s": 58.5,
+          "cap_voltage_V": 0.5980295718413797,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968439839198e-06,
+          "harvest_energy_J": 4.888935445811211e-05,
+          "secondary_load_energy_J": 2.070945367506915e-05
+        },
+        {
+          "time_s": 59.25,
+          "cap_voltage_V": 0.5963445140664564,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338972857902e-06,
+          "harvest_energy_J": 4.9516141053728923e-05,
+          "secondary_load_energy_J": 2.0980906730639383e-05
+        },
+        {
+          "time_s": 60.0,
+          "cap_voltage_V": 0.5997196554554508,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183256980236e-06,
+          "harvest_energy_J": 5.0142927649345735e-05,
+          "secondary_load_energy_J": 2.1252117233055944e-05
+        },
+        {
+          "time_s": 60.75,
+          "cap_voltage_V": 0.5980295712135519,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968402293239e-06,
+          "harvest_energy_J": 5.0769714244962546e-05,
+          "secondary_load_energy_J": 2.1523627686330393e-05
+        },
+        {
+          "time_s": 61.5,
+          "cap_voltage_V": 0.5963445135264204,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338940653148e-06,
+          "harvest_energy_J": 5.139650084057936e-05,
+          "secondary_load_energy_J": 2.1795080741376903e-05
+        },
+        {
+          "time_s": 62.25,
+          "cap_voltage_V": 0.5997196549948461,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183229356868e-06,
+          "harvest_energy_J": 5.202328743619617e-05,
+          "secondary_load_energy_J": 2.2066291243344246e-05
+        },
+        {
+          "time_s": 63.0,
+          "cap_voltage_V": 0.5980295708173555,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968378599525e-06,
+          "harvest_energy_J": 5.265007403181298e-05,
+          "secondary_load_energy_J": 2.2337801696233382e-05
+        },
+        {
+          "time_s": 63.75,
+          "cap_voltage_V": 0.5963445131856259,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338920330058e-06,
+          "harvest_energy_J": 5.327686062742979e-05,
+          "secondary_load_energy_J": 2.260925475094941e-05
+        },
+        {
+          "time_s": 64.5,
+          "cap_voltage_V": 0.5997196547041778,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183211924913e-06,
+          "harvest_energy_J": 5.39036472230466e-05,
+          "secondary_load_energy_J": 2.2880465252633295e-05
+        },
+        {
+          "time_s": 65.25,
+          "cap_voltage_V": 0.5980295705673322,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968363647392e-06,
+          "harvest_energy_J": 5.4530433818663414e-05,
+          "secondary_load_energy_J": 2.315197570527929e-05
+        },
+        {
+          "time_s": 66.0,
+          "cap_voltage_V": 0.5963445129705646,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338907504992e-06,
+          "harvest_energy_J": 5.5157220414280226e-05,
+          "secondary_load_energy_J": 2.3423428759786768e-05
+        },
+        {
+          "time_s": 66.75,
+          "cap_voltage_V": 0.5997196545207486,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183200924307e-06,
+          "harvest_energy_J": 5.578400700989704e-05,
+          "secondary_load_energy_J": 2.369463926129175e-05
+        },
+        {
+          "time_s": 67.5,
+          "cap_voltage_V": 0.5980295704095528,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968354211716e-06,
+          "harvest_energy_J": 5.641079360551385e-05,
+          "secondary_load_energy_J": 2.39661497137843e-05
+        },
+        {
+          "time_s": 68.25,
+          "cap_voltage_V": 0.596344512834848,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338899411614e-06,
+          "harvest_energy_J": 5.703758020113066e-05,
+          "secondary_load_energy_J": 2.423760276816016e-05
+        },
+        {
+          "time_s": 69.0,
+          "cap_voltage_V": 0.5997196544049941,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183193982277e-06,
+          "harvest_energy_J": 5.766436679674747e-05,
+          "secondary_load_energy_J": 2.4508813269552254e-05
+        },
+        {
+          "time_s": 69.75,
+          "cap_voltage_V": 0.5980295703099845,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968348257238e-06,
+          "harvest_energy_J": 5.829115339236428e-05,
+          "secondary_load_energy_J": 2.4780323721947967e-05
+        },
+        {
+          "time_s": 70.5,
+          "cap_voltage_V": 0.5963445127492029,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778133889430421e-06,
+          "harvest_energy_J": 5.8917939987981094e-05,
+          "secondary_load_energy_J": 2.5051776776240773e-05
+        },
+        {
+          "time_s": 71.25,
+          "cap_voltage_V": 0.5997196543319461,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183189601446e-06,
+          "harvest_energy_J": 5.9544726583597905e-05,
+          "secondary_load_energy_J": 2.5322987277561627e-05
+        },
+        {
+          "time_s": 72.0,
+          "cap_voltage_V": 0.5980295702471513,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968344499626e-06,
+          "harvest_energy_J": 6.0171513179214716e-05,
+          "secondary_load_energy_J": 2.5594497729896238e-05
+        },
+        {
+          "time_s": 72.75,
+          "cap_voltage_V": 0.5963445126951559,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338891081148e-06,
+          "harvest_energy_J": 6.079829977483153e-05,
+          "secondary_load_energy_J": 2.5865950784136617e-05
+        },
+        {
+          "time_s": 73.5,
+          "cap_voltage_V": 0.5997196542858485,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183186836883e-06,
+          "harvest_energy_J": 6.142508637044834e-05,
+          "secondary_load_energy_J": 2.6137161285412516e-05
+        },
+        {
+          "time_s": 74.25,
+          "cap_voltage_V": 0.5980295702074997,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968342128344e-06,
+          "harvest_energy_J": 6.205187296606515e-05,
+          "secondary_load_energy_J": 2.6408671737708564e-05
+        },
+        {
+          "time_s": 75.0,
+          "cap_voltage_V": 0.596344512661049,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338889047202e-06,
+          "harvest_energy_J": 6.267865956168196e-05,
+          "secondary_load_energy_J": 2.6680124791915874e-05
+        },
+        {
+          "time_s": 75.75,
+          "cap_voltage_V": 0.5997196542567582,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183185092281e-06,
+          "harvest_energy_J": 6.330544615729877e-05,
+          "secondary_load_energy_J": 2.69513352931634e-05
+        },
+        {
+          "time_s": 76.5,
+          "cap_voltage_V": 0.5980295701824772,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968340631919e-06,
+          "harvest_energy_J": 6.393223275291558e-05,
+          "secondary_load_energy_J": 2.722284574543511e-05
+        },
+        {
+          "time_s": 77.25,
+          "cap_voltage_V": 0.5963445126395254,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338887763655e-06,
+          "harvest_energy_J": 6.45590193485324e-05,
+          "secondary_load_energy_J": 2.7494298799621552e-05
+        },
+        {
+          "time_s": 78.0,
+          "cap_voltage_V": 0.5997196542384003,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183183991327e-06,
+          "harvest_energy_J": 6.518580594414921e-05,
+          "secondary_load_energy_J": 2.7765509300851176e-05
+        },
+        {
+          "time_s": 78.75,
+          "cap_voltage_V": 0.5980295701666865,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968339687587e-06,
+          "harvest_energy_J": 6.581259253976602e-05,
+          "secondary_load_energy_J": 2.803701975310753e-05
+        },
+        {
+          "time_s": 79.5,
+          "cap_voltage_V": 0.5963445126259427,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338886953658e-06,
+          "harvest_energy_J": 6.643937913538283e-05,
+          "secondary_load_energy_J": 2.8308472807280795e-05
+        },
+        {
+          "time_s": 80.25,
+          "cap_voltage_V": 0.5997196542268156,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183183296567e-06,
+          "harvest_energy_J": 6.706616573099964e-05,
+          "secondary_load_energy_J": 2.857968330849912e-05
+        },
+        {
+          "time_s": 81.0,
+          "cap_voltage_V": 0.5980295701567218,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196833909167e-06,
+          "harvest_energy_J": 6.769295232661645e-05,
+          "secondary_load_energy_J": 2.885119376074579e-05
+        },
+        {
+          "time_s": 81.75,
+          "cap_voltage_V": 0.5963445126173716,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338886442525e-06,
+          "harvest_energy_J": 6.831973892223326e-05,
+          "secondary_load_energy_J": 2.9122646814910748e-05
+        },
+        {
+          "time_s": 82.5,
+          "cap_voltage_V": 0.5997196542195051,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182858139e-06,
+          "harvest_energy_J": 6.894652551785008e-05,
+          "secondary_load_energy_J": 2.9393857316121948e-05
+        },
+        {
+          "time_s": 83.25,
+          "cap_voltage_V": 0.5980295701504333,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338715606e-06,
+          "harvest_energy_J": 6.957331211346689e-05,
+          "secondary_load_energy_J": 2.9665367768362498e-05
+        },
+        {
+          "time_s": 84.0,
+          "cap_voltage_V": 0.5963445126119624,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338886119951e-06,
+          "harvest_energy_J": 7.02000987090837e-05,
+          "secondary_load_energy_J": 2.993682082252221e-05
+        },
+        {
+          "time_s": 84.75,
+          "cap_voltage_V": 0.5997196542148915,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182581453e-06,
+          "harvest_energy_J": 7.082688530470051e-05,
+          "secondary_load_energy_J": 3.0208031323728916e-05
+        },
+        {
+          "time_s": 85.5,
+          "cap_voltage_V": 0.598029570146465,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338478287e-06,
+          "harvest_energy_J": 7.145367190031732e-05,
+          "secondary_load_energy_J": 3.0479541775965613e-05
+        },
+        {
+          "time_s": 86.25,
+          "cap_voltage_V": 0.5963445126085491,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.77813388859164e-06,
+          "harvest_energy_J": 7.208045849593413e-05,
+          "secondary_load_energy_J": 3.075099483012201e-05
+        },
+        {
+          "time_s": 87.0,
+          "cap_voltage_V": 0.5997196542119804,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182406865e-06,
+          "harvest_energy_J": 7.270724509155094e-05,
+          "secondary_load_energy_J": 3.102220533132588e-05
+        },
+        {
+          "time_s": 87.75,
+          "cap_voltage_V": 0.5980295701439609,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196833832853e-06,
+          "harvest_energy_J": 7.333403168716775e-05,
+          "secondary_load_energy_J": 3.129371578356011e-05
+        },
+        {
+          "time_s": 88.5,
+          "cap_voltage_V": 0.5963445126063949,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885787931e-06,
+          "harvest_energy_J": 7.396081828278457e-05,
+          "secondary_load_energy_J": 3.156516883771441e-05
+        },
+        {
+          "time_s": 89.25,
+          "cap_voltage_V": 0.599719654210143,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182296676e-06,
+          "harvest_energy_J": 7.458760487840138e-05,
+          "secondary_load_energy_J": 3.183637933891647e-05
+        },
+        {
+          "time_s": 90.0,
+          "cap_voltage_V": 0.5980295701423805,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196833823402e-06,
+          "harvest_energy_J": 7.521439147401819e-05,
+          "secondary_load_energy_J": 3.2107889791149184e-05
+        },
+        {
+          "time_s": 90.75,
+          "cap_voltage_V": 0.5963445126050355,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885706866e-06,
+          "harvest_energy_J": 7.5841178069635e-05,
+          "secondary_load_energy_J": 3.2379342845302186e-05
+        },
+        {
+          "time_s": 91.5,
+          "cap_voltage_V": 0.5997196542089835,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182227144e-06,
+          "harvest_energy_J": 7.646796466525181e-05,
+          "secondary_load_energy_J": 3.265055334650309e-05
+        },
+        {
+          "time_s": 92.25,
+          "cap_voltage_V": 0.598029570141383,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338174371e-06,
+          "harvest_energy_J": 7.709475126086862e-05,
+          "secondary_load_energy_J": 3.292206379873483e-05
+        },
+        {
+          "time_s": 93.0,
+          "cap_voltage_V": 0.5963445126041778,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885655716e-06,
+          "harvest_energy_J": 7.772153785648543e-05,
+          "secondary_load_energy_J": 3.3193516852887e-05
+        },
+        {
+          "time_s": 93.75,
+          "cap_voltage_V": 0.5997196542082519,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182183265e-06,
+          "harvest_energy_J": 7.834832445210225e-05,
+          "secondary_load_energy_J": 3.3464727354087215e-05
+        },
+        {
+          "time_s": 94.5,
+          "cap_voltage_V": 0.5980295701407539,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338136742e-06,
+          "harvest_energy_J": 7.897511104771906e-05,
+          "secondary_load_energy_J": 3.3736237806318356e-05
+        },
+        {
+          "time_s": 95.25,
+          "cap_voltage_V": 0.5963445126036364,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885623433e-06,
+          "harvest_energy_J": 7.960189764333587e-05,
+          "secondary_load_energy_J": 3.400769086046998e-05
+        },
+        {
+          "time_s": 96.0,
+          "cap_voltage_V": 0.5997196542077902,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182155574e-06,
+          "harvest_energy_J": 8.022868423895268e-05,
+          "secondary_load_energy_J": 3.427890136166975e-05
+        },
+        {
+          "time_s": 96.75,
+          "cap_voltage_V": 0.5980295701403566,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338112989e-06,
+          "harvest_energy_J": 8.085547083456949e-05,
+          "secondary_load_energy_J": 3.4550411813900505e-05
+        },
+        {
+          "time_s": 97.5,
+          "cap_voltage_V": 0.5963445126032948,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778133888560306e-06,
+          "harvest_energy_J": 8.14822574301863e-05,
+          "secondary_load_energy_J": 3.482186486805181e-05
+        },
+        {
+          "time_s": 98.25,
+          "cap_voltage_V": 0.599719654207499,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182138106e-06,
+          "harvest_energy_J": 8.210904402580311e-05,
+          "secondary_load_energy_J": 3.5093075369251304e-05
+        },
+        {
+          "time_s": 99.0,
+          "cap_voltage_V": 0.5980295701401062,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338098007e-06,
+          "harvest_energy_J": 8.273583062141992e-05,
+          "secondary_load_energy_J": 3.5364585821481815e-05
+        },
+        {
+          "time_s": 99.75,
+          "cap_voltage_V": 0.5963445126030793,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885590213e-06,
+          "harvest_energy_J": 8.336261721703674e-05,
+          "secondary_load_energy_J": 3.563603887563292e-05
+        },
+        {
+          "time_s": 100.5,
+          "cap_voltage_V": 0.599719654207315,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182127075e-06,
+          "harvest_energy_J": 8.398940381265355e-05,
+          "secondary_load_energy_J": 3.5907249376832214e-05
+        },
+        {
+          "time_s": 101.25,
+          "cap_voltage_V": 0.5980295701399478,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196833808854e-06,
+          "harvest_energy_J": 8.461619040827036e-05,
+          "secondary_load_energy_J": 3.6178759829062555e-05
+        },
+        {
+          "time_s": 102.0,
+          "cap_voltage_V": 0.5963445126029431,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778133888558209e-06,
+          "harvest_energy_J": 8.524297700388717e-05,
+          "secondary_load_energy_J": 3.645021288321353e-05
+        },
+        {
+          "time_s": 102.75,
+          "cap_voltage_V": 0.599719654207199,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182120115e-06,
+          "harvest_energy_J": 8.586976359950398e-05,
+          "secondary_load_energy_J": 3.6721423384412744e-05
+        },
+        {
+          "time_s": 103.5,
+          "cap_voltage_V": 0.598029570139848,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196833808257e-06,
+          "harvest_energy_J": 8.649655019512079e-05,
+          "secondary_load_energy_J": 3.6992933836643e-05
+        },
+        {
+          "time_s": 104.25,
+          "cap_voltage_V": 0.5963445126028573,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885576974e-06,
+          "harvest_energy_J": 8.71233367907376e-05,
+          "secondary_load_energy_J": 3.7264386890793865e-05
+        },
+        {
+          "time_s": 105.0,
+          "cap_voltage_V": 0.5997196542071258,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182115727e-06,
+          "harvest_energy_J": 8.775012338635442e-05,
+          "secondary_load_energy_J": 3.753559739199297e-05
+        },
+        {
+          "time_s": 105.75,
+          "cap_voltage_V": 0.5980295701397852,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338078811e-06,
+          "harvest_energy_J": 8.837690998197123e-05,
+          "secondary_load_energy_J": 3.780710784422315e-05
+        },
+        {
+          "time_s": 106.5,
+          "cap_voltage_V": 0.5963445126028032,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885573749e-06,
+          "harvest_energy_J": 8.900369657758804e-05,
+          "secondary_load_energy_J": 3.807856089837397e-05
+        },
+        {
+          "time_s": 107.25,
+          "cap_voltage_V": 0.5997196542070796,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182112957e-06,
+          "harvest_energy_J": 8.963048317320485e-05,
+          "secondary_load_energy_J": 3.8349771399573045e-05
+        },
+        {
+          "time_s": 108.0,
+          "cap_voltage_V": 0.5980295701397454,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338076435e-06,
+          "harvest_energy_J": 9.025726976882166e-05,
+          "secondary_load_energy_J": 3.862128185180321e-05
+        },
+        {
+          "time_s": 108.75,
+          "cap_voltage_V": 0.5963445126027691,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885571711e-06,
+          "harvest_energy_J": 9.088405636443847e-05,
+          "secondary_load_energy_J": 3.8892734905954024e-05
+        },
+        {
+          "time_s": 109.5,
+          "cap_voltage_V": 0.5997196542070505,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182111212e-06,
+          "harvest_energy_J": 9.151084296005528e-05,
+          "secondary_load_energy_J": 3.916394540715308e-05
+        },
+        {
+          "time_s": 110.25,
+          "cap_voltage_V": 0.5980295701397204,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338074936e-06,
+          "harvest_energy_J": 9.21376295556721e-05,
+          "secondary_load_energy_J": 3.943545585938322e-05
+        },
+        {
+          "time_s": 111.0,
+          "cap_voltage_V": 0.5963445126027473,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885570418e-06,
+          "harvest_energy_J": 9.27644161512889e-05,
+          "secondary_load_energy_J": 3.970690891353401e-05
+        },
+        {
+          "time_s": 111.75,
+          "cap_voltage_V": 0.5997196542070319,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182110098e-06,
+          "harvest_energy_J": 9.339120274690572e-05,
+          "secondary_load_energy_J": 3.997811941473306e-05
+        },
+        {
+          "time_s": 112.5,
+          "cap_voltage_V": 0.5980295701397043,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338073977e-06,
+          "harvest_energy_J": 9.401798934252253e-05,
+          "secondary_load_energy_J": 4.0249629866963186e-05
+        },
+        {
+          "time_s": 113.25,
+          "cap_voltage_V": 0.5963445126027336,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885569594e-06,
+          "harvest_energy_J": 9.464477593813934e-05,
+          "secondary_load_energy_J": 4.0521082921113966e-05
+        },
+        {
+          "time_s": 114.0,
+          "cap_voltage_V": 0.5997196542070201,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182109393e-06,
+          "harvest_energy_J": 9.527156253375615e-05,
+          "secondary_load_energy_J": 4.0792293422313e-05
+        },
+        {
+          "time_s": 114.75,
+          "cap_voltage_V": 0.5980295701396943,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338073373e-06,
+          "harvest_energy_J": 9.589834912937296e-05,
+          "secondary_load_energy_J": 4.106380387454311e-05
+        },
+        {
+          "time_s": 115.5,
+          "cap_voltage_V": 0.5963445126027248,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885569073e-06,
+          "harvest_energy_J": 9.652513572498977e-05,
+          "secondary_load_energy_J": 4.133525692869388e-05
+        },
+        {
+          "time_s": 116.25,
+          "cap_voltage_V": 0.5997196542070126,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.798318318210894e-06,
+          "harvest_energy_J": 9.715192232060659e-05,
+          "secondary_load_energy_J": 4.1606467429892916e-05
+        },
+        {
+          "time_s": 117.0,
+          "cap_voltage_V": 0.5980295701396877,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7881968338072986e-06,
+          "harvest_energy_J": 9.77787089162234e-05,
+          "secondary_load_energy_J": 4.187797788212301e-05
+        },
+        {
+          "time_s": 117.75,
+          "cap_voltage_V": 0.5963445126027193,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.778133888556874e-06,
+          "harvest_energy_J": 9.840549551184021e-05,
+          "secondary_load_energy_J": 4.214943093627377e-05
+        },
+        {
+          "time_s": 118.5,
+          "cap_voltage_V": 0.5997196542070079,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7983183182108658e-06,
+          "harvest_energy_J": 9.903228210745702e-05,
+          "secondary_load_energy_J": 4.2420641437472795e-05
+        },
+        {
+          "time_s": 119.25,
+          "cap_voltage_V": 0.5980295701396836,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.788196833807274e-06,
+          "harvest_energy_J": 9.965906870307383e-05,
+          "secondary_load_energy_J": 4.2692151889702886e-05
+        },
+        {
+          "time_s": 120.0,
+          "cap_voltage_V": 0.5963445126027158,
+          "battery_soc_pct": 50.0,
+          "battery_energy_J": 133.20000000000002,
+          "battery_delta_J": 0.0,
+          "buffer_energy_J": 1.7781338885568533e-06,
+          "harvest_energy_J": 0.00010028585529869064,
+          "secondary_load_energy_J": 4.296360494385363e-05
+        }
+      ],
+      "duration_s": 120.0,
+      "capacitor_F": 1e-05,
+      "storage_voltage_V": 0.5963445126027158,
+      "buffer_final_J": 1.7781338885568533e-06,
+      "buffer_delta_J": 1.7781338885568533e-06,
+      "capacity_mAh": 20.0,
+      "capacity_J": 266.40000000000003,
+      "initial_soc_pct": 50.0,
+      "final_soc_pct": 50.0,
+      "battery_initial_J": 133.20000000000002,
+      "battery_final_J": 133.20000000000002,
+      "battery_delta_J": 0.0,
+      "secondary_load_J": 4.296360494385363e-05,
+      "charger_input_J": 0.0,
+      "net_charge_power_W": 0.0,
+      "received_energy_J": 0.00010028585529869064,
+      "useful_J": 4.4741738832410485e-05,
+      "conversion_and_storage_losses_J": 5.554411646628283e-05,
+      "ledger_residual_J": -2.6698478497455547e-18,
+      "charger_active": false,
+      "startup_reached": false,
+      "energy_sinks_J": {
+        "received_J": 0.00010028585529869064,
+        "buffer_load_J": 4.296360494385363e-05,
+        "buffer_leak_J": 8.541164662838077e-07,
+        "charger_idle_J": 5.468999999999902e-05,
+        "charger_input_J": 0.0,
+        "charge_conversion_loss_J": 0.0,
+        "battery_load_J": 0.0,
+        "cap_clamp_J": 0.0,
+        "battery_full_shunt_J": 0.0
+      },
+      "parameters": {
+        "charger_eta_assumed": 0.75,
+        "charger_idle_W_assumed": 1e-06,
+        "charger_startup_threshold_V_assumed": 0.6,
+        "battery_nominal_V_assumed": 3.7,
+        "cap_clamp_V_assumed": 3.3,
+        "chemistry": "single cell Li-ion (nominal-energy model only)"
+      },
+      "warning": "Estimated charge-controller efficiency, threshold, quiescent draw and cell energy; no manufacturer switching / cell OCV / protection model. Positive battery SOC is stored recovered energy, not net system energy creation."
+    },
+    "legacy_capacitor_only_not_credited": true
+  },
+  "battery": {
+    "time_series": [
+      {
+        "time_s": 0.0,
+        "cap_voltage_V": 0.0,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 0.0,
+        "harvest_energy_J": 0.0,
+        "secondary_load_energy_J": 0.0
+      },
+      {
+        "time_s": 0.75,
+        "cap_voltage_V": 0.3403770319801989,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 5.792826194982469e-07,
+        "harvest_energy_J": 6.267865956168389e-07,
+        "secondary_load_energy_J": 4.657800537180092e-08
+      },
+      {
+        "time_s": 1.5,
+        "cap_voltage_V": 0.4639305164014533,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.0761576202425955e-06,
+        "harvest_energy_J": 1.2535731912336767e-06,
+        "secondary_load_energy_J": 1.7395729986967363e-07
+      },
+      {
+        "time_s": 2.25,
+        "cap_voltage_V": 0.5481511013936584,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.502348149795404e-06,
+        "harvest_energy_J": 1.8803597868505145e-06,
+        "secondary_load_energy_J": 3.7064324925982685e-07
+      },
+      {
+        "time_s": 3.0,
+        "cap_voltage_V": 0.5964902811998657,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7790032778294745e-06,
+        "harvest_energy_J": 2.507146382467357e-06,
+        "secondary_load_energy_J": 6.25704106990901e-07
+      },
+      {
+        "time_s": 3.75,
+        "cap_voltage_V": 0.5998439846921023,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7990640298564957e-06,
+        "harvest_energy_J": 3.1339329780842003e-06,
+        "secondary_load_energy_J": 8.970358750320605e-07
+      },
+      {
+        "time_s": 4.5,
+        "cap_voltage_V": 0.5981365165185277,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7888364619645951e-06,
+        "harvest_energy_J": 3.7607195737010434e-06,
+        "secondary_load_energy_J": 1.1686503429192035e-06
+      },
+      {
+        "time_s": 5.25,
+        "cap_voltage_V": 0.5964365053308829,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7786825244565818e-06,
+        "harvest_energy_J": 4.387506169317877e-06,
+        "secondary_load_energy_J": 1.44019261566193e-06
+      },
+      {
+        "time_s": 6.0,
+        "cap_voltage_V": 0.5997981170751655,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7987889062345697e-06,
+        "harvest_energy_J": 5.014292764934709e-06,
+        "secondary_load_energy_J": 1.7114796433895555e-06
+      },
+      {
+        "time_s": 6.75,
+        "cap_voltage_V": 0.5980970618376273,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7886004768940131e-06,
+        "harvest_energy_J": 5.641079360551542e-06,
+        "secondary_load_energy_J": 1.983055735633149e-06
+      },
+      {
+        "time_s": 7.5,
+        "cap_voltage_V": 0.5964025670909128,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7784801101631534e-06,
+        "harvest_energy_J": 6.267865956168374e-06,
+        "secondary_load_energy_J": 2.2545650919767366e-06
+      },
+      {
+        "time_s": 8.25,
+        "cap_voltage_V": 0.5997691700987692,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7986152870048318e-06,
+        "harvest_energy_J": 6.894652551785207e-06,
+        "secondary_load_energy_J": 2.5258238859281416e-06
+      },
+      {
+        "time_s": 9.0,
+        "cap_voltage_V": 0.5980721622677669,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7884515563982109e-06,
+        "harvest_energy_J": 7.5214391474020394e-06,
+        "secondary_load_energy_J": 2.7973757608776056e-06
+      },
+      {
+        "time_s": 9.75,
+        "cap_voltage_V": 0.5963811490661716,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778352374807436e-06,
+        "harvest_energy_J": 8.14822574301889e-06,
+        "secondary_load_energy_J": 3.0688643450322263e-06
+      },
+      {
+        "time_s": 10.5,
+        "cap_voltage_V": 0.5997509021306054,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7985057230323756e-06,
+        "harvest_energy_J": 8.775012338635743e-06,
+        "secondary_load_energy_J": 3.340105321805866e-06
+      },
+      {
+        "time_s": 11.25,
+        "cap_voltage_V": 0.5980564486373131,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7883575787833756e-06,
+        "harvest_energy_J": 9.401798934252597e-06,
+        "secondary_load_energy_J": 3.6116419142146183e-06
+      },
+      {
+        "time_s": 12.0,
+        "cap_voltage_V": 0.5963676326336469,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778271766265302e-06,
+        "harvest_energy_J": 1.0028585529869451e-05,
+        "secondary_load_energy_J": 3.883117389893044e-06
+      },
+      {
+        "time_s": 12.75,
+        "cap_voltage_V": 0.5997393736790445,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7984365817046628e-06,
+        "harvest_energy_J": 1.0655372125486305e-05,
+        "secondary_load_energy_J": 4.154347122976815e-06
+      },
+      {
+        "time_s": 13.5,
+        "cap_voltage_V": 0.5980465321973641,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882982733664649e-06,
+        "harvest_energy_J": 1.1282158721103158e-05,
+        "secondary_load_energy_J": 4.425874071201152e-06
+      },
+      {
+        "time_s": 14.25,
+        "cap_voltage_V": 0.5963591028099853,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778220897521653e-06,
+        "harvest_energy_J": 1.1908945316720012e-05,
+        "secondary_load_energy_J": 4.6973412746580755e-06
+      },
+      {
+        "time_s": 15.0,
+        "cap_voltage_V": 0.5997320984322162,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983929494495474e-06,
+        "harvest_energy_J": 1.2535731912336866e-05,
+        "secondary_load_energy_J": 4.9685639123104915e-06
+      },
+      {
+        "time_s": 15.75,
+        "cap_voltage_V": 0.5980402742543512,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882608481510981e-06,
+        "harvest_energy_J": 1.316251850795372e-05,
+        "secondary_load_energy_J": 5.240084774485739e-06
+      },
+      {
+        "time_s": 16.5,
+        "cap_voltage_V": 0.5963537199254537,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778188796344633e-06,
+        "harvest_energy_J": 1.3789305103570573e-05,
+        "secondary_load_energy_J": 5.511546757683079e-06
+      },
+      {
+        "time_s": 17.25,
+        "cap_voltage_V": 0.5997275072770188,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983654149235333e-06,
+        "harvest_energy_J": 1.4416091699187427e-05,
+        "secondary_load_energy_J": 5.7827649176998835e-06
+      },
+      {
+        "time_s": 18.0,
+        "cap_voltage_V": 0.5980363250895718,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882372306332002e-06,
+        "harvest_energy_J": 1.504287829480428e-05,
+        "secondary_load_energy_J": 6.054281939219249e-06
+      },
+      {
+        "time_s": 18.75,
+        "cap_voltage_V": 0.5963503229828747,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781685386088951e-06,
+        "harvest_energy_J": 1.5669664890421107e-05,
+        "secondary_load_energy_J": 6.325740628124949e-06
+      },
+      {
+        "time_s": 19.5,
+        "cap_voltage_V": 0.5997246099692559,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983480390138804e-06,
+        "harvest_energy_J": 1.629645148603792e-05,
+        "secondary_load_energy_J": 6.596955962489633e-06
+      },
+      {
+        "time_s": 20.25,
+        "cap_voltage_V": 0.5980338329202887,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882223265866586e-06,
+        "harvest_energy_J": 1.692323808165473e-05,
+        "secondary_load_energy_J": 6.868470560328652e-06
+      },
+      {
+        "time_s": 21.0,
+        "cap_voltage_V": 0.596348179301828,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781557547830267e-06,
+        "harvest_energy_J": 1.755002467727154e-05,
+        "secondary_load_energy_J": 7.139927170342058e-06
+      },
+      {
+        "time_s": 21.75,
+        "cap_voltage_V": 0.5997227815899968,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983370737902154e-06,
+        "harvest_energy_J": 1.8176811272888352e-05,
+        "secondary_load_energy_J": 7.411140721553621e-06
+      },
+      {
+        "time_s": 22.5,
+        "cap_voltage_V": 0.5980322602091606,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882129212543857e-06,
+        "harvest_energy_J": 1.8803597868505164e-05,
+        "secondary_load_energy_J": 7.682653789907414e-06
+      },
+      {
+        "time_s": 23.25,
+        "cap_voltage_V": 0.596346826508707,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781476874350296e-06,
+        "harvest_energy_J": 1.9430384464121975e-05,
+        "secondary_load_energy_J": 7.954109088017186e-06
+      },
+      {
+        "time_s": 24.0,
+        "cap_voltage_V": 0.5997216277719946,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983301540874542e-06,
+        "harvest_energy_J": 2.0057171059738787e-05,
+        "secondary_load_energy_J": 8.225321513953975e-06
+      },
+      {
+        "time_s": 24.75,
+        "cap_voltage_V": 0.598031267733566,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882069859350807e-06,
+        "harvest_energy_J": 2.0683957655355598e-05,
+        "secondary_load_energy_J": 8.4968336171124e-06
+      },
+      {
+        "time_s": 25.5,
+        "cap_voltage_V": 0.5963459728148928,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781425964627044e-06,
+        "harvest_energy_J": 2.131074425097241e-05,
+        "secondary_load_energy_J": 8.768288087333616e-06
+      },
+      {
+        "time_s": 26.25,
+        "cap_voltage_V": 0.599720899643651,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983257873469509e-06,
+        "harvest_energy_J": 2.193753084658922e-05,
+        "secondary_load_energy_J": 9.03949980315567e-06
+      },
+      {
+        "time_s": 27.0,
+        "cap_voltage_V": 0.598030641422091,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882032403985876e-06,
+        "harvest_energy_J": 2.2564317442206032e-05,
+        "secondary_load_energy_J": 9.311011297218892e-06
+      },
+      {
+        "time_s": 27.75,
+        "cap_voltage_V": 0.5963454340831239,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781393837589474e-06,
+        "harvest_energy_J": 2.3191104037822843e-05,
+        "secondary_load_energy_J": 9.582465244993608e-06
+      },
+      {
+        "time_s": 28.5,
+        "cap_voltage_V": 0.5997204401512726,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983230316761805e-06,
+        "harvest_energy_J": 2.3817890633439655e-05,
+        "secondary_load_energy_J": 9.853676512691382e-06
+      },
+      {
+        "time_s": 29.25,
+        "cap_voltage_V": 0.5980302461822782,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7882008767441812e-06,
+        "harvest_energy_J": 2.4444677229056466e-05,
+        "secondary_load_energy_J": 1.0125187622379618e-05
+      },
+      {
+        "time_s": 30.0,
+        "cap_voltage_V": 0.5963450941113576,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.77813735635342e-06,
+        "harvest_energy_J": 2.5071463824673277e-05,
+        "secondary_load_energy_J": 1.0396641240459784e-05
+      },
+      {
+        "time_s": 30.75,
+        "cap_voltage_V": 0.5997201501843039,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.79832129268542e-06,
+        "harvest_energy_J": 2.569825042029009e-05,
+        "secondary_load_energy_J": 1.0667852225364712e-05
+      },
+      {
+        "time_s": 31.5,
+        "cap_voltage_V": 0.5980299967625142,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881993851388641e-06,
+        "harvest_energy_J": 2.63250370159069e-05,
+        "secondary_load_energy_J": 1.0939363092489665e-05
+      },
+      {
+        "time_s": 32.25,
+        "cap_voltage_V": 0.5963448795690248,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781360769409737e-06,
+        "harvest_energy_J": 2.695182361152371e-05,
+        "secondary_load_energy_J": 1.1210816502513124e-05
+      },
+      {
+        "time_s": 33.0,
+        "cap_voltage_V": 0.5997199671979748,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983201952797003e-06,
+        "harvest_energy_J": 2.7578610207140523e-05,
+        "secondary_load_energy_J": 1.1482027308959088e-05
+      },
+      {
+        "time_s": 33.75,
+        "cap_voltage_V": 0.5980298393638811,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881984438479474e-06,
+        "harvest_energy_J": 2.8205396802757334e-05,
+        "secondary_load_energy_J": 1.17535380230123e-05
+      },
+      {
+        "time_s": 34.5,
+        "cap_voltage_V": 0.5963447441801214,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781352695562723e-06,
+        "harvest_energy_J": 2.8832183398374145e-05,
+        "secondary_load_energy_J": 1.2024991301739715e-05
+      },
+      {
+        "time_s": 35.25,
+        "cap_voltage_V": 0.5997198517227816,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.798319502751976e-06,
+        "harvest_energy_J": 2.9458969993990957e-05,
+        "secondary_load_energy_J": 1.2296201995567553e-05
+      },
+      {
+        "time_s": 36.0,
+        "cap_voltage_V": 0.5980297400360404,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881978498378702e-06,
+        "harvest_energy_J": 3.0085756589607768e-05,
+        "secondary_load_energy_J": 1.2567712613023473e-05
+      },
+      {
+        "time_s": 36.75,
+        "cap_voltage_V": 0.5963446587417235,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781347600489135e-06,
+        "harvest_energy_J": 3.071254318522458e-05,
+        "secondary_load_energy_J": 1.2839165808895338e-05
+      },
+      {
+        "time_s": 37.5,
+        "cap_voltage_V": 0.5997197788511136,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983190657261434e-06,
+        "harvest_energy_J": 3.1339329780841394e-05,
+        "secondary_load_energy_J": 1.3110376431654497e-05
+      },
+      {
+        "time_s": 38.25,
+        "cap_voltage_V": 0.5980296773543071,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788197474982483e-06,
+        "harvest_energy_J": 3.1966116376458206e-05,
+        "secondary_load_energy_J": 1.3381886988151831e-05
+      },
+      {
+        "time_s": 39.0,
+        "cap_voltage_V": 0.59634460482505,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781344385197252e-06,
+        "harvest_energy_J": 3.259290297207502e-05,
+        "secondary_load_energy_J": 1.3653340131736959e-05
+      },
+      {
+        "time_s": 39.75,
+        "cap_voltage_V": 0.5997197328647893,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983187899370714e-06,
+        "harvest_energy_J": 3.321968956769183e-05,
+        "secondary_load_energy_J": 1.3924550709647587e-05
+      },
+      {
+        "time_s": 40.5,
+        "cap_voltage_V": 0.5980296377984334,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881972384266279e-06,
+        "harvest_energy_J": 3.384647616330864e-05,
+        "secondary_load_energy_J": 1.4196061227676457e-05
+      },
+      {
+        "time_s": 41.25,
+        "cap_voltage_V": 0.5963445708004467,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781342356158452e-06,
+        "harvest_energy_J": 3.447326275892545e-05,
+        "secondary_load_energy_J": 1.4467514338265565e-05
+      },
+      {
+        "time_s": 42.0,
+        "cap_voltage_V": 0.5997197038447049,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983186158979027e-06,
+        "harvest_energy_J": 3.510004935454226e-05,
+        "secondary_load_energy_J": 1.4738724887874127e-05
+      },
+      {
+        "time_s": 42.75,
+        "cap_voltage_V": 0.5980296128363433,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788197089145933e-06,
+        "harvest_energy_J": 3.5726835950159074e-05,
+        "secondary_load_energy_J": 1.5010235381627126e-05
+      },
+      {
+        "time_s": 43.5,
+        "cap_voltage_V": 0.5963445493289147,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781341075715316e-06,
+        "harvest_energy_J": 3.6353622545775885e-05,
+        "secondary_load_energy_J": 1.5281688471393805e-05
+      },
+      {
+        "time_s": 44.25,
+        "cap_voltage_V": 0.5997196855313196,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983185060689246e-06,
+        "harvest_energy_J": 3.6980409141392696e-05,
+        "secondary_load_energy_J": 1.5552899003142095e-05
+      },
+      {
+        "time_s": 45.0,
+        "cap_voltage_V": 0.5980295970837917,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196994941011e-06,
+        "harvest_energy_J": 3.760719573700951e-05,
+        "secondary_load_energy_J": 1.5824409481575593e-05
+      },
+      {
+        "time_s": 45.75,
+        "cap_voltage_V": 0.5963445357791113,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781340267680185e-06,
+        "harvest_energy_J": 3.823398233262632e-05,
+        "secondary_load_energy_J": 1.6095862558202097e-05
+      },
+      {
+        "time_s": 46.5,
+        "cap_voltage_V": 0.599719673974493,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983184367603611e-06,
+        "harvest_energy_J": 3.886076892824313e-05,
+        "secondary_load_energy_J": 1.6367073078679502e-05
+      },
+      {
+        "time_s": 47.25,
+        "cap_voltage_V": 0.5980295871430024,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881969354921493e-06,
+        "harvest_energy_J": 3.948755552385994e-05,
+        "secondary_load_energy_J": 1.6638583547445478e-05
+      },
+      {
+        "time_s": 48.0,
+        "cap_voltage_V": 0.5963445272283862,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781339757762372e-06,
+        "harvest_energy_J": 4.011434211947675e-05,
+        "secondary_load_energy_J": 1.6910036615779747e-05
+      },
+      {
+        "time_s": 48.75,
+        "cap_voltage_V": 0.5997196666814542,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183930225725e-06,
+        "harvest_energy_J": 4.0741128715093564e-05,
+        "secondary_load_energy_J": 1.718124712914456e-05
+      },
+      {
+        "time_s": 49.5,
+        "cap_voltage_V": 0.5980295808697783,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196897976414e-06,
+        "harvest_energy_J": 4.1367915310710376e-05,
+        "secondary_load_energy_J": 1.745275759180978e-05
+      },
+      {
+        "time_s": 50.25,
+        "cap_voltage_V": 0.5963445218323744,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781339435974163e-06,
+        "harvest_energy_J": 4.199470190632719e-05,
+        "secondary_load_energy_J": 1.7724210654911166e-05
+      },
+      {
+        "time_s": 51.0,
+        "cap_voltage_V": 0.5997196620791164,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.798318365421448e-06,
+        "harvest_energy_J": 4.2621488501944e-05,
+        "secondary_load_energy_J": 1.799542116378751e-05
+      },
+      {
+        "time_s": 51.75,
+        "cap_voltage_V": 0.5980295769110038,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968743017711e-06,
+        "harvest_energy_J": 4.324827509756081e-05,
+        "secondary_load_energy_J": 1.826693162260277e-05
+      },
+      {
+        "time_s": 52.5,
+        "cap_voltage_V": 0.5963445184271726,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781339232906823e-06,
+        "harvest_energy_J": 4.387506169317762e-05,
+        "secondary_load_energy_J": 1.8538384682401894e-05
+      },
+      {
+        "time_s": 53.25,
+        "cap_voltage_V": 0.59971965917477,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183480035112e-06,
+        "harvest_energy_J": 4.450184828879443e-05,
+        "secondary_load_energy_J": 1.8809595188445752e-05
+      },
+      {
+        "time_s": 54.0,
+        "cap_voltage_V": 0.5980295744127836,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196859361676e-06,
+        "harvest_energy_J": 4.5128634884411244e-05,
+        "secondary_load_energy_J": 1.9081105644831478e-05
+      },
+      {
+        "time_s": 54.75,
+        "cap_voltage_V": 0.5963445162782897,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781339104759363e-06,
+        "harvest_energy_J": 4.5755421480028055e-05,
+        "secondary_load_energy_J": 1.9352558702546674e-05
+      },
+      {
+        "time_s": 55.5,
+        "cap_voltage_V": 0.5997196573419559,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183370117652e-06,
+        "harvest_energy_J": 4.638220807564487e-05,
+        "secondary_load_energy_J": 1.962376920680307e-05
+      },
+      {
+        "time_s": 56.25,
+        "cap_voltage_V": 0.5980295728362595,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196849933595e-06,
+        "harvest_energy_J": 4.700899467126168e-05,
+        "secondary_load_energy_J": 1.9895279661655614e-05
+      },
+      {
+        "time_s": 57.0,
+        "cap_voltage_V": 0.5963445149222177,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778133902389076e-06,
+        "harvest_energy_J": 4.763578126687849e-05,
+        "secondary_load_energy_J": 2.0166732718055737e-05
+      },
+      {
+        "time_s": 57.75,
+        "cap_voltage_V": 0.5997196561853423,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.798318330075326e-06,
+        "harvest_energy_J": 4.82625678624953e-05,
+        "secondary_load_energy_J": 2.0437943221184132e-05
+      },
+      {
+        "time_s": 58.5,
+        "cap_voltage_V": 0.5980295718413797,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968439839198e-06,
+        "harvest_energy_J": 4.888935445811211e-05,
+        "secondary_load_energy_J": 2.070945367506915e-05
+      },
+      {
+        "time_s": 59.25,
+        "cap_voltage_V": 0.5963445140664564,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338972857902e-06,
+        "harvest_energy_J": 4.9516141053728923e-05,
+        "secondary_load_energy_J": 2.0980906730639383e-05
+      },
+      {
+        "time_s": 60.0,
+        "cap_voltage_V": 0.5997196554554508,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183256980236e-06,
+        "harvest_energy_J": 5.0142927649345735e-05,
+        "secondary_load_energy_J": 2.1252117233055944e-05
+      },
+      {
+        "time_s": 60.75,
+        "cap_voltage_V": 0.5980295712135519,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968402293239e-06,
+        "harvest_energy_J": 5.0769714244962546e-05,
+        "secondary_load_energy_J": 2.1523627686330393e-05
+      },
+      {
+        "time_s": 61.5,
+        "cap_voltage_V": 0.5963445135264204,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338940653148e-06,
+        "harvest_energy_J": 5.139650084057936e-05,
+        "secondary_load_energy_J": 2.1795080741376903e-05
+      },
+      {
+        "time_s": 62.25,
+        "cap_voltage_V": 0.5997196549948461,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183229356868e-06,
+        "harvest_energy_J": 5.202328743619617e-05,
+        "secondary_load_energy_J": 2.2066291243344246e-05
+      },
+      {
+        "time_s": 63.0,
+        "cap_voltage_V": 0.5980295708173555,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968378599525e-06,
+        "harvest_energy_J": 5.265007403181298e-05,
+        "secondary_load_energy_J": 2.2337801696233382e-05
+      },
+      {
+        "time_s": 63.75,
+        "cap_voltage_V": 0.5963445131856259,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338920330058e-06,
+        "harvest_energy_J": 5.327686062742979e-05,
+        "secondary_load_energy_J": 2.260925475094941e-05
+      },
+      {
+        "time_s": 64.5,
+        "cap_voltage_V": 0.5997196547041778,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183211924913e-06,
+        "harvest_energy_J": 5.39036472230466e-05,
+        "secondary_load_energy_J": 2.2880465252633295e-05
+      },
+      {
+        "time_s": 65.25,
+        "cap_voltage_V": 0.5980295705673322,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968363647392e-06,
+        "harvest_energy_J": 5.4530433818663414e-05,
+        "secondary_load_energy_J": 2.315197570527929e-05
+      },
+      {
+        "time_s": 66.0,
+        "cap_voltage_V": 0.5963445129705646,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338907504992e-06,
+        "harvest_energy_J": 5.5157220414280226e-05,
+        "secondary_load_energy_J": 2.3423428759786768e-05
+      },
+      {
+        "time_s": 66.75,
+        "cap_voltage_V": 0.5997196545207486,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183200924307e-06,
+        "harvest_energy_J": 5.578400700989704e-05,
+        "secondary_load_energy_J": 2.369463926129175e-05
+      },
+      {
+        "time_s": 67.5,
+        "cap_voltage_V": 0.5980295704095528,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968354211716e-06,
+        "harvest_energy_J": 5.641079360551385e-05,
+        "secondary_load_energy_J": 2.39661497137843e-05
+      },
+      {
+        "time_s": 68.25,
+        "cap_voltage_V": 0.596344512834848,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338899411614e-06,
+        "harvest_energy_J": 5.703758020113066e-05,
+        "secondary_load_energy_J": 2.423760276816016e-05
+      },
+      {
+        "time_s": 69.0,
+        "cap_voltage_V": 0.5997196544049941,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183193982277e-06,
+        "harvest_energy_J": 5.766436679674747e-05,
+        "secondary_load_energy_J": 2.4508813269552254e-05
+      },
+      {
+        "time_s": 69.75,
+        "cap_voltage_V": 0.5980295703099845,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968348257238e-06,
+        "harvest_energy_J": 5.829115339236428e-05,
+        "secondary_load_energy_J": 2.4780323721947967e-05
+      },
+      {
+        "time_s": 70.5,
+        "cap_voltage_V": 0.5963445127492029,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778133889430421e-06,
+        "harvest_energy_J": 5.8917939987981094e-05,
+        "secondary_load_energy_J": 2.5051776776240773e-05
+      },
+      {
+        "time_s": 71.25,
+        "cap_voltage_V": 0.5997196543319461,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183189601446e-06,
+        "harvest_energy_J": 5.9544726583597905e-05,
+        "secondary_load_energy_J": 2.5322987277561627e-05
+      },
+      {
+        "time_s": 72.0,
+        "cap_voltage_V": 0.5980295702471513,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968344499626e-06,
+        "harvest_energy_J": 6.0171513179214716e-05,
+        "secondary_load_energy_J": 2.5594497729896238e-05
+      },
+      {
+        "time_s": 72.75,
+        "cap_voltage_V": 0.5963445126951559,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338891081148e-06,
+        "harvest_energy_J": 6.079829977483153e-05,
+        "secondary_load_energy_J": 2.5865950784136617e-05
+      },
+      {
+        "time_s": 73.5,
+        "cap_voltage_V": 0.5997196542858485,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183186836883e-06,
+        "harvest_energy_J": 6.142508637044834e-05,
+        "secondary_load_energy_J": 2.6137161285412516e-05
+      },
+      {
+        "time_s": 74.25,
+        "cap_voltage_V": 0.5980295702074997,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968342128344e-06,
+        "harvest_energy_J": 6.205187296606515e-05,
+        "secondary_load_energy_J": 2.6408671737708564e-05
+      },
+      {
+        "time_s": 75.0,
+        "cap_voltage_V": 0.596344512661049,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338889047202e-06,
+        "harvest_energy_J": 6.267865956168196e-05,
+        "secondary_load_energy_J": 2.6680124791915874e-05
+      },
+      {
+        "time_s": 75.75,
+        "cap_voltage_V": 0.5997196542567582,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183185092281e-06,
+        "harvest_energy_J": 6.330544615729877e-05,
+        "secondary_load_energy_J": 2.69513352931634e-05
+      },
+      {
+        "time_s": 76.5,
+        "cap_voltage_V": 0.5980295701824772,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968340631919e-06,
+        "harvest_energy_J": 6.393223275291558e-05,
+        "secondary_load_energy_J": 2.722284574543511e-05
+      },
+      {
+        "time_s": 77.25,
+        "cap_voltage_V": 0.5963445126395254,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338887763655e-06,
+        "harvest_energy_J": 6.45590193485324e-05,
+        "secondary_load_energy_J": 2.7494298799621552e-05
+      },
+      {
+        "time_s": 78.0,
+        "cap_voltage_V": 0.5997196542384003,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183183991327e-06,
+        "harvest_energy_J": 6.518580594414921e-05,
+        "secondary_load_energy_J": 2.7765509300851176e-05
+      },
+      {
+        "time_s": 78.75,
+        "cap_voltage_V": 0.5980295701666865,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968339687587e-06,
+        "harvest_energy_J": 6.581259253976602e-05,
+        "secondary_load_energy_J": 2.803701975310753e-05
+      },
+      {
+        "time_s": 79.5,
+        "cap_voltage_V": 0.5963445126259427,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338886953658e-06,
+        "harvest_energy_J": 6.643937913538283e-05,
+        "secondary_load_energy_J": 2.8308472807280795e-05
+      },
+      {
+        "time_s": 80.25,
+        "cap_voltage_V": 0.5997196542268156,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183183296567e-06,
+        "harvest_energy_J": 6.706616573099964e-05,
+        "secondary_load_energy_J": 2.857968330849912e-05
+      },
+      {
+        "time_s": 81.0,
+        "cap_voltage_V": 0.5980295701567218,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196833909167e-06,
+        "harvest_energy_J": 6.769295232661645e-05,
+        "secondary_load_energy_J": 2.885119376074579e-05
+      },
+      {
+        "time_s": 81.75,
+        "cap_voltage_V": 0.5963445126173716,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338886442525e-06,
+        "harvest_energy_J": 6.831973892223326e-05,
+        "secondary_load_energy_J": 2.9122646814910748e-05
+      },
+      {
+        "time_s": 82.5,
+        "cap_voltage_V": 0.5997196542195051,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182858139e-06,
+        "harvest_energy_J": 6.894652551785008e-05,
+        "secondary_load_energy_J": 2.9393857316121948e-05
+      },
+      {
+        "time_s": 83.25,
+        "cap_voltage_V": 0.5980295701504333,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338715606e-06,
+        "harvest_energy_J": 6.957331211346689e-05,
+        "secondary_load_energy_J": 2.9665367768362498e-05
+      },
+      {
+        "time_s": 84.0,
+        "cap_voltage_V": 0.5963445126119624,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338886119951e-06,
+        "harvest_energy_J": 7.02000987090837e-05,
+        "secondary_load_energy_J": 2.993682082252221e-05
+      },
+      {
+        "time_s": 84.75,
+        "cap_voltage_V": 0.5997196542148915,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182581453e-06,
+        "harvest_energy_J": 7.082688530470051e-05,
+        "secondary_load_energy_J": 3.0208031323728916e-05
+      },
+      {
+        "time_s": 85.5,
+        "cap_voltage_V": 0.598029570146465,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338478287e-06,
+        "harvest_energy_J": 7.145367190031732e-05,
+        "secondary_load_energy_J": 3.0479541775965613e-05
+      },
+      {
+        "time_s": 86.25,
+        "cap_voltage_V": 0.5963445126085491,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.77813388859164e-06,
+        "harvest_energy_J": 7.208045849593413e-05,
+        "secondary_load_energy_J": 3.075099483012201e-05
+      },
+      {
+        "time_s": 87.0,
+        "cap_voltage_V": 0.5997196542119804,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182406865e-06,
+        "harvest_energy_J": 7.270724509155094e-05,
+        "secondary_load_energy_J": 3.102220533132588e-05
+      },
+      {
+        "time_s": 87.75,
+        "cap_voltage_V": 0.5980295701439609,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196833832853e-06,
+        "harvest_energy_J": 7.333403168716775e-05,
+        "secondary_load_energy_J": 3.129371578356011e-05
+      },
+      {
+        "time_s": 88.5,
+        "cap_voltage_V": 0.5963445126063949,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885787931e-06,
+        "harvest_energy_J": 7.396081828278457e-05,
+        "secondary_load_energy_J": 3.156516883771441e-05
+      },
+      {
+        "time_s": 89.25,
+        "cap_voltage_V": 0.599719654210143,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182296676e-06,
+        "harvest_energy_J": 7.458760487840138e-05,
+        "secondary_load_energy_J": 3.183637933891647e-05
+      },
+      {
+        "time_s": 90.0,
+        "cap_voltage_V": 0.5980295701423805,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196833823402e-06,
+        "harvest_energy_J": 7.521439147401819e-05,
+        "secondary_load_energy_J": 3.2107889791149184e-05
+      },
+      {
+        "time_s": 90.75,
+        "cap_voltage_V": 0.5963445126050355,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885706866e-06,
+        "harvest_energy_J": 7.5841178069635e-05,
+        "secondary_load_energy_J": 3.2379342845302186e-05
+      },
+      {
+        "time_s": 91.5,
+        "cap_voltage_V": 0.5997196542089835,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182227144e-06,
+        "harvest_energy_J": 7.646796466525181e-05,
+        "secondary_load_energy_J": 3.265055334650309e-05
+      },
+      {
+        "time_s": 92.25,
+        "cap_voltage_V": 0.598029570141383,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338174371e-06,
+        "harvest_energy_J": 7.709475126086862e-05,
+        "secondary_load_energy_J": 3.292206379873483e-05
+      },
+      {
+        "time_s": 93.0,
+        "cap_voltage_V": 0.5963445126041778,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885655716e-06,
+        "harvest_energy_J": 7.772153785648543e-05,
+        "secondary_load_energy_J": 3.3193516852887e-05
+      },
+      {
+        "time_s": 93.75,
+        "cap_voltage_V": 0.5997196542082519,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182183265e-06,
+        "harvest_energy_J": 7.834832445210225e-05,
+        "secondary_load_energy_J": 3.3464727354087215e-05
+      },
+      {
+        "time_s": 94.5,
+        "cap_voltage_V": 0.5980295701407539,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338136742e-06,
+        "harvest_energy_J": 7.897511104771906e-05,
+        "secondary_load_energy_J": 3.3736237806318356e-05
+      },
+      {
+        "time_s": 95.25,
+        "cap_voltage_V": 0.5963445126036364,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885623433e-06,
+        "harvest_energy_J": 7.960189764333587e-05,
+        "secondary_load_energy_J": 3.400769086046998e-05
+      },
+      {
+        "time_s": 96.0,
+        "cap_voltage_V": 0.5997196542077902,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182155574e-06,
+        "harvest_energy_J": 8.022868423895268e-05,
+        "secondary_load_energy_J": 3.427890136166975e-05
+      },
+      {
+        "time_s": 96.75,
+        "cap_voltage_V": 0.5980295701403566,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338112989e-06,
+        "harvest_energy_J": 8.085547083456949e-05,
+        "secondary_load_energy_J": 3.4550411813900505e-05
+      },
+      {
+        "time_s": 97.5,
+        "cap_voltage_V": 0.5963445126032948,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778133888560306e-06,
+        "harvest_energy_J": 8.14822574301863e-05,
+        "secondary_load_energy_J": 3.482186486805181e-05
+      },
+      {
+        "time_s": 98.25,
+        "cap_voltage_V": 0.599719654207499,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182138106e-06,
+        "harvest_energy_J": 8.210904402580311e-05,
+        "secondary_load_energy_J": 3.5093075369251304e-05
+      },
+      {
+        "time_s": 99.0,
+        "cap_voltage_V": 0.5980295701401062,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338098007e-06,
+        "harvest_energy_J": 8.273583062141992e-05,
+        "secondary_load_energy_J": 3.5364585821481815e-05
+      },
+      {
+        "time_s": 99.75,
+        "cap_voltage_V": 0.5963445126030793,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885590213e-06,
+        "harvest_energy_J": 8.336261721703674e-05,
+        "secondary_load_energy_J": 3.563603887563292e-05
+      },
+      {
+        "time_s": 100.5,
+        "cap_voltage_V": 0.599719654207315,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182127075e-06,
+        "harvest_energy_J": 8.398940381265355e-05,
+        "secondary_load_energy_J": 3.5907249376832214e-05
+      },
+      {
+        "time_s": 101.25,
+        "cap_voltage_V": 0.5980295701399478,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196833808854e-06,
+        "harvest_energy_J": 8.461619040827036e-05,
+        "secondary_load_energy_J": 3.6178759829062555e-05
+      },
+      {
+        "time_s": 102.0,
+        "cap_voltage_V": 0.5963445126029431,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778133888558209e-06,
+        "harvest_energy_J": 8.524297700388717e-05,
+        "secondary_load_energy_J": 3.645021288321353e-05
+      },
+      {
+        "time_s": 102.75,
+        "cap_voltage_V": 0.599719654207199,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182120115e-06,
+        "harvest_energy_J": 8.586976359950398e-05,
+        "secondary_load_energy_J": 3.6721423384412744e-05
+      },
+      {
+        "time_s": 103.5,
+        "cap_voltage_V": 0.598029570139848,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196833808257e-06,
+        "harvest_energy_J": 8.649655019512079e-05,
+        "secondary_load_energy_J": 3.6992933836643e-05
+      },
+      {
+        "time_s": 104.25,
+        "cap_voltage_V": 0.5963445126028573,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885576974e-06,
+        "harvest_energy_J": 8.71233367907376e-05,
+        "secondary_load_energy_J": 3.7264386890793865e-05
+      },
+      {
+        "time_s": 105.0,
+        "cap_voltage_V": 0.5997196542071258,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182115727e-06,
+        "harvest_energy_J": 8.775012338635442e-05,
+        "secondary_load_energy_J": 3.753559739199297e-05
+      },
+      {
+        "time_s": 105.75,
+        "cap_voltage_V": 0.5980295701397852,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338078811e-06,
+        "harvest_energy_J": 8.837690998197123e-05,
+        "secondary_load_energy_J": 3.780710784422315e-05
+      },
+      {
+        "time_s": 106.5,
+        "cap_voltage_V": 0.5963445126028032,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885573749e-06,
+        "harvest_energy_J": 8.900369657758804e-05,
+        "secondary_load_energy_J": 3.807856089837397e-05
+      },
+      {
+        "time_s": 107.25,
+        "cap_voltage_V": 0.5997196542070796,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182112957e-06,
+        "harvest_energy_J": 8.963048317320485e-05,
+        "secondary_load_energy_J": 3.8349771399573045e-05
+      },
+      {
+        "time_s": 108.0,
+        "cap_voltage_V": 0.5980295701397454,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338076435e-06,
+        "harvest_energy_J": 9.025726976882166e-05,
+        "secondary_load_energy_J": 3.862128185180321e-05
+      },
+      {
+        "time_s": 108.75,
+        "cap_voltage_V": 0.5963445126027691,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885571711e-06,
+        "harvest_energy_J": 9.088405636443847e-05,
+        "secondary_load_energy_J": 3.8892734905954024e-05
+      },
+      {
+        "time_s": 109.5,
+        "cap_voltage_V": 0.5997196542070505,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182111212e-06,
+        "harvest_energy_J": 9.151084296005528e-05,
+        "secondary_load_energy_J": 3.916394540715308e-05
+      },
+      {
+        "time_s": 110.25,
+        "cap_voltage_V": 0.5980295701397204,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338074936e-06,
+        "harvest_energy_J": 9.21376295556721e-05,
+        "secondary_load_energy_J": 3.943545585938322e-05
+      },
+      {
+        "time_s": 111.0,
+        "cap_voltage_V": 0.5963445126027473,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885570418e-06,
+        "harvest_energy_J": 9.27644161512889e-05,
+        "secondary_load_energy_J": 3.970690891353401e-05
+      },
+      {
+        "time_s": 111.75,
+        "cap_voltage_V": 0.5997196542070319,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182110098e-06,
+        "harvest_energy_J": 9.339120274690572e-05,
+        "secondary_load_energy_J": 3.997811941473306e-05
+      },
+      {
+        "time_s": 112.5,
+        "cap_voltage_V": 0.5980295701397043,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338073977e-06,
+        "harvest_energy_J": 9.401798934252253e-05,
+        "secondary_load_energy_J": 4.0249629866963186e-05
+      },
+      {
+        "time_s": 113.25,
+        "cap_voltage_V": 0.5963445126027336,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885569594e-06,
+        "harvest_energy_J": 9.464477593813934e-05,
+        "secondary_load_energy_J": 4.0521082921113966e-05
+      },
+      {
+        "time_s": 114.0,
+        "cap_voltage_V": 0.5997196542070201,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182109393e-06,
+        "harvest_energy_J": 9.527156253375615e-05,
+        "secondary_load_energy_J": 4.0792293422313e-05
+      },
+      {
+        "time_s": 114.75,
+        "cap_voltage_V": 0.5980295701396943,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338073373e-06,
+        "harvest_energy_J": 9.589834912937296e-05,
+        "secondary_load_energy_J": 4.106380387454311e-05
+      },
+      {
+        "time_s": 115.5,
+        "cap_voltage_V": 0.5963445126027248,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885569073e-06,
+        "harvest_energy_J": 9.652513572498977e-05,
+        "secondary_load_energy_J": 4.133525692869388e-05
+      },
+      {
+        "time_s": 116.25,
+        "cap_voltage_V": 0.5997196542070126,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.798318318210894e-06,
+        "harvest_energy_J": 9.715192232060659e-05,
+        "secondary_load_energy_J": 4.1606467429892916e-05
+      },
+      {
+        "time_s": 117.0,
+        "cap_voltage_V": 0.5980295701396877,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7881968338072986e-06,
+        "harvest_energy_J": 9.77787089162234e-05,
+        "secondary_load_energy_J": 4.187797788212301e-05
+      },
+      {
+        "time_s": 117.75,
+        "cap_voltage_V": 0.5963445126027193,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.778133888556874e-06,
+        "harvest_energy_J": 9.840549551184021e-05,
+        "secondary_load_energy_J": 4.214943093627377e-05
+      },
+      {
+        "time_s": 118.5,
+        "cap_voltage_V": 0.5997196542070079,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7983183182108658e-06,
+        "harvest_energy_J": 9.903228210745702e-05,
+        "secondary_load_energy_J": 4.2420641437472795e-05
+      },
+      {
+        "time_s": 119.25,
+        "cap_voltage_V": 0.5980295701396836,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.788196833807274e-06,
+        "harvest_energy_J": 9.965906870307383e-05,
+        "secondary_load_energy_J": 4.2692151889702886e-05
+      },
+      {
+        "time_s": 120.0,
+        "cap_voltage_V": 0.5963445126027158,
+        "battery_soc_pct": 50.0,
+        "battery_energy_J": 133.20000000000002,
+        "battery_delta_J": 0.0,
+        "buffer_energy_J": 1.7781338885568533e-06,
+        "harvest_energy_J": 0.00010028585529869064,
+        "secondary_load_energy_J": 4.296360494385363e-05
+      }
+    ],
+    "duration_s": 120.0,
+    "capacitor_F": 1e-05,
+    "storage_voltage_V": 0.5963445126027158,
+    "buffer_final_J": 1.7781338885568533e-06,
+    "buffer_delta_J": 1.7781338885568533e-06,
+    "capacity_mAh": 20.0,
+    "capacity_J": 266.40000000000003,
+    "initial_soc_pct": 50.0,
+    "final_soc_pct": 50.0,
+    "battery_initial_J": 133.20000000000002,
+    "battery_final_J": 133.20000000000002,
+    "battery_delta_J": 0.0,
+    "secondary_load_J": 4.296360494385363e-05,
+    "charger_input_J": 0.0,
+    "net_charge_power_W": 0.0,
+    "received_energy_J": 0.00010028585529869064,
+    "useful_J": 4.4741738832410485e-05,
+    "conversion_and_storage_losses_J": 5.554411646628283e-05,
+    "ledger_residual_J": -2.6698478497455547e-18,
+    "charger_active": false,
+    "startup_reached": false,
+    "energy_sinks_J": {
+      "received_J": 0.00010028585529869064,
+      "buffer_load_J": 4.296360494385363e-05,
+      "buffer_leak_J": 8.541164662838077e-07,
+      "charger_idle_J": 5.468999999999902e-05,
+      "charger_input_J": 0.0,
+      "charge_conversion_loss_J": 0.0,
+      "battery_load_J": 0.0,
+      "cap_clamp_J": 0.0,
+      "battery_full_shunt_J": 0.0
+    },
+    "parameters": {
+      "charger_eta_assumed": 0.75,
+      "charger_idle_W_assumed": 1e-06,
+      "charger_startup_threshold_V_assumed": 0.6,
+      "battery_nominal_V_assumed": 3.7,
+      "cap_clamp_V_assumed": 3.3,
+      "chemistry": "single cell Li-ion (nominal-energy model only)"
+    },
+    "warning": "Estimated charge-controller efficiency, threshold, quiescent draw and cell energy; no manufacturer switching / cell OCV / protection model. Positive battery SOC is stored recovered energy, not net system energy creation."
+  },
+  "combined": {
+    "duration_s": 120.0,
+    "dc_source_J": 8683.220509318111,
+    "buck_delivered_before_pulses_J": 8641.101690429954,
+    "pulse_reservoir_debited_from_buck_J": 0.12,
+    "main_dc_load_after_pulses_J": 8640.981690429953,
+    "secondary_dc_load_J": 4.296360494385363e-05,
+    "secondary_stored_delta_J": 1.7781338885568533e-06,
+    "secondary_battery_delta_J": 0.0,
+    "secondary_battery_initial_energy_J": 133.20000000000002,
+    "secondary_battery_final_energy_J": 133.20000000000002,
+    "battery_state_of_charge_pct": 50.0,
+    "secondary_useful_J": 4.4741738832410485e-05,
+    "total_useful_J": 8640.981735171692,
+    "total_net_loss_J": 42.23877414641902,
+    "total_net_loss_pct": 0.4864413393750841,
+    "total_transfer_pct": 99.51355866062491,
+    "dc_stage_losses_J": {
+      "hs": 1.203215073451588,
+      "ls": 0.14462848570522716,
+      "winding": 15.172867494508212,
+      "trace": 5.776472396386391,
+      "capacitor": 0.6628039563300241,
+      "leakage": 0.021902772282547917,
+      "gate_charge_J": 0.41711999999999994,
+      "coss_hard_switch_J": 4.257791999999999,
+      "edge_overlap_J": 1.9222846408005831,
+      "controller_bias_J": 7.199999999999999,
+      "magnetic_core_proxy_J": 1.1393515869205566,
+      "layout_unmeasured_J": 4.2
+    },
+    "dc_stored_delta_J": 4.513490081681226e-06,
+    "pulse_unrecovered_J": 0.11995525826116758,
+    "integrated_ledger_residual_J": 0.00037596828263986026,
+    "circuit_ledger_residual_scaled_J": 0.0003759682804483841,
+    "target_0p5_met": true,
+    "source_of_pulse_energy": "Buck DC output: pulse reservoir reduces main DC load before any acoustic/pickup recovery credit"
+  },
+  "warnings": [],
+  "model_limits": [
+    "The switched-state buck is not a manufacturer transistor/SPICE/PCB-validated power model",
+    "The 3D circuit is an interactive functional schematic, not a manufacturable wiring diagram",
+    "Buck PWM is averaged at the current operating point, while battery/buffer states are time-stepped; not real hardware telemetry",
+    "The acoustic sizing frequency is hypothetical: PWM oscillation does not prove a pressure wave exists",
+    "Plasma ignition, plasma-to-acoustic fraction, coupling, pickup conversion, and storage efficiency are uncalibrated",
+    "External vacuum does not change sealed-liquid pressure or reproduce LEO radiation/microgravity",
+    "Neither the electrical DC transfer nor bubble recovery is experimentally verified"
+  ]
+}

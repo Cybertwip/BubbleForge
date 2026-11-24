@@ -1,0 +1,2609 @@
+{
+  "model": "Bubble Forge \u2014 Banana Model",
+  "simulation_only": true,
+  "waveform_locked": "cosine",
+  "plasma_capture_is_assumed_not_measured": true,
+  "recovery_credit_policy": "Every plasma joule is debited on source injection. Only energy collected from radiated bubble sound and delivered by the modeled distributed receiver and power manager is credited. No potential or pending plasma energy is counted as recovered.",
+  "em_to_acoustic_coupling_measured": false,
+  "shock_resolved": false,
+  "target_loss_pct": 0.05,
+  "profile_history": [
+    {
+      "revision": 0,
+      "reason": "initial",
+      "started_simulation_time_s": 0.0,
+      "instantaneous_loss_pct": 0.4689357833467315,
+      "compression_depth_pct": 16.248631131396596,
+      "input_W": 72.33965016272138,
+      "main_load_W": 72.0004140002975,
+      "pulse_drive_W": 0.0022,
+      "receiver_storage_W": 1.1305156523123594e-05,
+      "receiver_architecture": "distributed_spherical_acoustic_array_screen",
+      "receiver_radiated_capture_fraction": 0.4584574293407457,
+      "waveform": "cosine",
+      "plasma_source_W": 0.001,
+      "plasma_capture_fraction_assumed": 0.85,
+      "plasma_thermalized_j_per_event": 5.52500000000001e-07,
+      "circuit": {
+        "vin_V": 48.0,
+        "vout_target_V": 42.72,
+        "power_target_W": 72.0,
+        "frequency_Hz": 32000.0,
+        "inductor": "VISHAY_100u_pair_study",
+        "stage": "gan_100v",
+        "output_cap_F": 0.00047,
+        "cap_esr_ohm": 0.015,
+        "leakage_ohm": 10000000.0,
+        "trace_ohm": 0.01,
+        "sense_ohm": 0.005,
+        "ambient_C": 25.0,
+        "core_coeff_W": 0.06,
+        "unmeasured_layout_W": 0.02,
+        "controller_bias_multiplier": 1.0,
+        "inductance_scale": 1.0,
+        "edge_time_scale": 1.0
+      },
+      "compression": {
+        "radius_m": 9.6586e-05,
+        "liquid_pressure_pa": 88477.0,
+        "pulse_energy_j": 1e-06,
+        "active_wave_source_j": 2e-07,
+        "plasma_source_j": 1e-06,
+        "active_wave_fraction": 0.05,
+        "active_rise_s": 8e-08,
+        "active_decay_s": 2.3e-07,
+        "active_spacing_s": 3.8e-07,
+        "active_delay_s": 0.0,
+        "wave_fraction": 0.05,
+        "source_distance_m": 0.002,
+        "receiver_gap_m": 0.012,
+        "pulse_sigma_s": 3.5e-07,
+        "tensile_fraction": 0.3,
+        "repetition_hz": 1000.0,
+        "liquid_density": 998.0,
+        "liquid_sound_speed_m_s": 1480.0,
+        "viscosity_pa_s": 0.001,
+        "surface_tension_n_m": 0.072,
+        "vapor_pressure_pa": 2339.0,
+        "gamma": 1.4,
+        "duration_s": 0.0002,
+        "steps_per_sigma": 8,
+        "plasma_confinement_fraction": 0.85,
+        "plasma_thermalization_fraction": 0.65,
+        "plasma_cooling_time_s": 1.8e-05
+      }
+    },
+    {
+      "revision": 1,
+      "reason": "optimizer_improvement",
+      "started_simulation_time_s": 0.0,
+      "instantaneous_loss_pct": 0.46803629767488564,
+      "compression_depth_pct": 16.80464694964079,
+      "input_W": 72.33965016272138,
+      "main_load_W": 72.0010640002975,
+      "pulse_drive_W": 0.00155,
+      "receiver_storage_W": 1.2110789781663345e-05,
+      "receiver_architecture": "distributed_spherical_acoustic_array_screen",
+      "receiver_radiated_capture_fraction": 0.4584574293407458,
+      "waveform": "cosine",
+      "plasma_source_W": 0.001,
+      "plasma_capture_fraction_assumed": 0.85,
+      "plasma_thermalized_j_per_event": 5.52500000000001e-07,
+      "circuit": {
+        "vin_V": 48.0,
+        "vout_target_V": 42.72,
+        "power_target_W": 72.0,
+        "frequency_Hz": 32000.0,
+        "inductor": "VISHAY_100u_pair_study",
+        "stage": "gan_100v",
+        "output_cap_F": 0.00047,
+        "cap_esr_ohm": 0.015,
+        "leakage_ohm": 10000000.0,
+        "trace_ohm": 0.01,
+        "sense_ohm": 0.005,
+        "ambient_C": 25.0,
+        "core_coeff_W": 0.06,
+        "unmeasured_layout_W": 0.02,
+        "controller_bias_multiplier": 1.0,
+        "inductance_scale": 1.0,
+        "edge_time_scale": 1.0
+      },
+      "compression": {
+        "radius_m": 9.6586e-05,
+        "liquid_pressure_pa": 88477.0,
+        "pulse_energy_j": 5e-07,
+        "active_wave_source_j": 5e-08,
+        "plasma_source_j": 1e-06,
+        "active_wave_fraction": 0.05,
+        "active_rise_s": 8e-08,
+        "active_decay_s": 2.3e-07,
+        "active_spacing_s": 3.8e-07,
+        "active_delay_s": 0.0,
+        "wave_fraction": 0.05,
+        "source_distance_m": 0.002,
+        "receiver_gap_m": 0.012,
+        "pulse_sigma_s": 3.5e-07,
+        "tensile_fraction": 0.3,
+        "repetition_hz": 1000.0,
+        "liquid_density": 998.0,
+        "liquid_sound_speed_m_s": 1480.0,
+        "viscosity_pa_s": 0.001,
+        "surface_tension_n_m": 0.072,
+        "vapor_pressure_pa": 2339.0,
+        "gamma": 1.4,
+        "duration_s": 0.0002,
+        "steps_per_sigma": 8,
+        "plasma_confinement_fraction": 0.85,
+        "plasma_thermalization_fraction": 0.65,
+        "plasma_cooling_time_s": 1.8e-05
+      }
+    }
+  ],
+  "optimization_attempts": [
+    {
+      "simulation_time_s": 0.0,
+      "previous_loss_pct": 0.4689357833467315,
+      "candidate_loss_pct": 0.46803629767488564,
+      "applied": true
+    }
+  ],
+  "cumulative_accounting": {
+    "session": "9f588d980be549ceb5d6613928e6edf8",
+    "revision": 1,
+    "speed": 1.0,
+    "running": true,
+    "simulation_time_s": 0.0,
+    "model_valid": true,
+    "model_warning": "uncalibrated optimistic distributed acoustic collector around spherical bubble; no coupled shell back-action, plasma MHD, acoustic FEM, resolved shocks or measured energy return",
+    "stage": "externally funded plasma heating + finite-energy compression and cosine acoustic wave train",
+    "source_W": 72.33965016272138,
+    "main_load_W": 72.0010640002975,
+    "pulse_power_W": 0.00155,
+    "active_wave_power_W": 4.9999999999999996e-05,
+    "plasma_source_power_W": 0.001,
+    "plasma_source_energy_J": 0.0,
+    "plasma_captured_energy_J_assumed": 0.0,
+    "plasma_thermalized_energy_J_assumed": 0.0,
+    "plasma_cooling_energy_J_assumed": 0.0,
+    "plasma_escaped_energy_J_assumed": 0.0,
+    "plasma_nonthermal_energy_J_assumed": 0.0,
+    "receiver_raw_W": 1.537901192885774e-05,
+    "receiver_legacy_raw_W": 3.1316972809568595e-09,
+    "receiver_architecture": "distributed_spherical_acoustic_array_screen",
+    "receiver_radiated_capture_fraction": 0.4584574293407458,
+    "receiver_shell_radius_m": 0.012096586,
+    "receiver_tile_count": 144,
+    "receiver_assumptions_calibrated": false,
+    "storage_charge_W": 1.2110789781663345e-05,
+    "source_energy_J": 0.0,
+    "useful_energy_J": 0.0,
+    "cumulative_net_balance_J": 0.0,
+    "cumulative_net_loss_pct": null,
+    "cumulative_receiver_raw_energy_J": 0.0,
+    "cumulative_managed_recovery_energy_J": 0.0,
+    "cumulative_charger_loss_J": 0.0,
+    "cumulative_pulse_source_energy_J": 0.0,
+    "cumulative_converter_loss_energy_J": 0.0,
+    "cumulative_converter_loss_pct": null,
+    "cumulative_ideal_pulse_recovery_bound_J": 0.0,
+    "cumulative_ideal_pulse_recovery_remaining_deficit_J": 0.0,
+    "cumulative_ideal_pulse_recovery_best_loss_pct": null,
+    "cumulative_achieved_break_even": false,
+    "break_even_status": "not_started",
+    "break_even_eta_simulation_s": null,
+    "current_net_balance_W": -0.33857582037256556,
+    "current_converter_loss_W": 0.33703616242388534,
+    "current_ideal_max_pulse_recovery_W": 0.00155,
+    "current_managed_recovery_W": 1.2110789781663345e-05,
+    "current_steady_useful_recovery_W": 1.0342051314413842e-05,
+    "battery_full": false,
+    "current_additional_recovery_needed_W": 0.33857582037256556,
+    "current_additional_recovery_needed_for_0p05_W": 0.3024059952912049,
+    "current_unrecoverable_converter_gap_W": 0.33703616242388534,
+    "recovery_limit_reason": "The spherical receiver can improve capture of radiated sound, not exceed the emitted acoustics or offset upstream converter dissipation. Ideal pulse recovery remains bounded by converter output.",
+    "main_load_energy_J": 0.0,
+    "buffer_load_energy_J": 0.0,
+    "buffer_energy_J": 0.0,
+    "buffer_voltage_V": 0.0,
+    "battery_soc_pct": 50.0,
+    "battery_delta_J": 0.0,
+    "net_change_pct": null,
+    "net_loss_pct": null,
+    "total_loss_energy_J": 0.0,
+    "energy_residual_J": 0.0,
+    "target_plus_0p01_met": false,
+    "target_0p05_loss_met": false,
+    "target_plus_minus_0p01_met": false,
+    "instantaneous_loss_pct": 0.46803629767488564,
+    "converter_loss_pct": 0.4659079241684849,
+    "instantaneous_net_change_pct": -0.46803629767488564,
+    "compression_depth_pct": 16.80464694964079,
+    "ideal_pulse_return_net_bound_pct": -0.46590792416849336,
+    "bubble": {
+      "min_radius_um": 80.35506369721995,
+      "max_radius_um": 122.6909055759579,
+      "precompression_radius_um": 102.81980230014022,
+      "equilibrium_radius_um": 96.586,
+      "acoustic_energy_j_per_event": 3.354512533687698e-08,
+      "receiver_j_per_event": 1.5379011928857738e-08,
+      "legacy_receiver_j_per_event": 3.1316972809568593e-12,
+      "acoustic_receiver_efficiency": 0.4584574293407458,
+      "receiver_architecture": "distributed_spherical_acoustic_array_screen",
+      "receiver_loss_channels_j": {
+        "propagation_j": 8.114648235385649e-12,
+        "uncovered_j": 3.353701068864161e-09,
+        "impedance_reflection_j": 5.432995731559938e-09,
+        "unabsorbed_j": 4.9500627776434966e-09,
+        "mechanical_damping_j": 2.712460078509845e-09,
+        "rectification_j": 1.7087791032064131e-09
+      },
+      "compressive_pressure_pa": 28182.36009886375,
+      "active_wave_peak_pa": 12345.731005365753,
+      "active_wave_source_j": 5e-08,
+      "plasma_source_j": 1e-06,
+      "plasma_capture_fraction_assumed": 0.85,
+      "plasma_thermalization_fraction_assumed": 0.65,
+      "plasma_captured_j": 8.499999999999999e-07,
+      "plasma_thermalized_j": 5.52500000000001e-07,
+      "plasma_cooling_j": 4.5818454708307505e-07,
+      "plasma_escaped_j": 1.5000000000000005e-07,
+      "plasma_nonthermal_j": 2.974999999999999e-07,
+      "plasma_internal_remaining_j": 8.879424672256401e-12,
+      "plasma_peak_pressure_pa": 92851.24739365626,
+      "plasma_ignition_verified": false,
+      "waveform": "cosine",
+      "em_to_acoustic_coupling_measured": false,
+      "active_wave_arrived_j": 2.49997696532187e-09,
+      "active_wave_arrival_times_s": [
+        4.2999999999999995e-06,
+        4.679999999999999e-06,
+        5.06e-06
+      ],
+      "active_wave_travel_time_s": 1.3513513513513513e-06,
+      "active_wave_steepening_length_m": 6.4193039826732115,
+      "wave_count": 3,
+      "wall_mach_max": 0.0025727980340282805,
+      "shock_resolved": false
+    },
+    "event_duration_s": 0.0002,
+    "event_trajectory": [
+      {
+        "time_s": 0.0,
+        "radius_um": 96.586,
+        "wall_velocity_m_s": 0.0,
+        "pressure_pa": -2.8362385737779183,
+        "base_pressure_pa": -2.8362385737779183,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 0.0
+      },
+      {
+        "time_s": 6.999999999999999e-08,
+        "radius_um": 96.58600275869327,
+        "wall_velocity_m_s": 0.00010134072008392635,
+        "pressure_pa": -6.187175787032698,
+        "base_pressure_pa": -6.187175787032698,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 97.51382188971147
+      },
+      {
+        "time_s": 1.4e-07,
+        "radius_um": 96.58601912449559,
+        "wall_velocity_m_s": 0.0004185792484627952,
+        "pressure_pa": -12.967921466461455,
+        "base_pressure_pa": -12.967921466461455,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 335.2952954463475
+      },
+      {
+        "time_s": 2.1000000000000008e-07,
+        "radius_um": 96.58607227375406,
+        "wall_velocity_m_s": 0.0012108209904243433,
+        "pressure_pa": -26.11418696335132,
+        "base_pressure_pa": -26.11418696335132,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 864.5620168613335
+      },
+      {
+        "time_s": 2.800000000000001e-07,
+        "radius_um": 96.58621063553683,
+        "wall_velocity_m_s": 0.0029562754304027334,
+        "pressure_pa": -50.525528755833555,
+        "base_pressure_pa": -50.525528755833555,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1939.3686414964857
+      },
+      {
+        "time_s": 3.500000000000002e-07,
+        "radius_um": 96.5865265351782,
+        "wall_velocity_m_s": 0.006445154555863625,
+        "pressure_pa": -93.92332223333291,
+        "base_pressure_pa": -93.92332223333291,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3930.3070166161046
+      },
+      {
+        "time_s": 4.2000000000000027e-07,
+        "radius_um": 96.58718045609659,
+        "wall_velocity_m_s": 0.01283876103399277,
+        "pressure_pa": -167.75066305245525,
+        "base_pressure_pa": -167.75066305245525,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 7293.949202507768
+      },
+      {
+        "time_s": 4.900000000000003e-07,
+        "radius_um": 96.58842663340278,
+        "wall_velocity_m_s": 0.023639020326917785,
+        "pressure_pa": -287.8612889340732,
+        "base_pressure_pa": -287.8612889340732,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 12476.511325058318
+      },
+      {
+        "time_s": 5.600000000000004e-07,
+        "radius_um": 96.59063198384874,
+        "wall_velocity_m_s": 0.04052409596135833,
+        "pressure_pa": -474.6030300767621,
+        "base_pressure_pa": -474.6030300767621,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 19757.812524631747
+      },
+      {
+        "time_s": 6.300000000000004e-07,
+        "radius_um": 96.59427875725606,
+        "wall_velocity_m_s": 0.0650540081939482,
+        "pressure_pa": -751.8063131441527,
+        "base_pressure_pa": -751.8063131441527,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 29084.44921322103
+      },
+      {
+        "time_s": 7.000000000000005e-07,
+        "radius_um": 96.5999439951687,
+        "wall_velocity_m_s": 0.09832030262667357,
+        "pressure_pa": -1144.220305876785,
+        "base_pressure_pa": -1144.220305876785,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 39973.013916870324
+      },
+      {
+        "time_s": 7.700000000000006e-07,
+        "radius_um": 96.60825611238212,
+        "wall_velocity_m_s": 0.14066518307821954,
+        "pressure_pa": -1673.1757202013373,
+        "base_pressure_pa": -1673.1757202013373,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 51554.05178788798
+      },
+      {
+        "time_s": 8.400000000000006e-07,
+        "radius_um": 96.6198378174295,
+        "wall_velocity_m_s": 0.19158694937151272,
+        "pressure_pa": -2350.7241966863744,
+        "base_pressure_pa": -2350.7241966863744,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 62766.976802690064
+      },
+      {
+        "time_s": 9.100000000000007e-07,
+        "radius_um": 96.63525044730535,
+        "wall_velocity_m_s": 0.249873277754267,
+        "pressure_pa": -3173.1457610791267,
+        "base_pressure_pa": -3173.1457610791267,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 72636.1642566254
+      },
+      {
+        "time_s": 9.800000000000006e-07,
+        "radius_um": 96.65495411664632,
+        "wall_velocity_m_s": 0.31390231502953303,
+        "pressure_pa": -4115.348206919475,
+        "base_pressure_pa": -4115.348206919475,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 80511.75623119462
+      },
+      {
+        "time_s": 1.05e-06,
+        "radius_um": 96.67929119076173,
+        "wall_velocity_m_s": 0.3819849804857952,
+        "pressure_pa": -5128.039638906847,
+        "base_pressure_pa": -5128.039638906847,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 86178.87413251791
+      },
+      {
+        "time_s": 1.1199999999999992e-06,
+        "radius_um": 96.70849146397369,
+        "wall_velocity_m_s": 0.4526265623803755,
+        "pressure_pa": -6139.378094476167,
+        "base_pressure_pa": -6139.378094476167,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 89811.49501335995
+      },
+      {
+        "time_s": 1.1899999999999986e-06,
+        "radius_um": 96.74269086376128,
+        "wall_velocity_m_s": 0.5246482770379474,
+        "pressure_pa": -7061.965763353939,
+        "base_pressure_pa": -7061.965763353939,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 91822.12949015481
+      },
+      {
+        "time_s": 1.2599999999999979e-06,
+        "radius_um": 96.78195401095107,
+        "wall_velocity_m_s": 0.5971832116416588,
+        "pressure_pa": -7804.679186104666,
+        "base_pressure_pa": -7804.679186104666,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 92691.04441121973
+      },
+      {
+        "time_s": 1.3299999999999972e-06,
+        "radius_um": 96.826293735272,
+        "wall_velocity_m_s": 0.6696042528790509,
+        "pressure_pa": -8287.293593867833,
+        "base_pressure_pa": -8287.293593867833,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 92841.08248185118
+      },
+      {
+        "time_s": 1.3999999999999965e-06,
+        "radius_um": 96.87568494015447,
+        "wall_velocity_m_s": 0.7414428764755228,
+        "pressure_pa": -8454.708029659125,
+        "base_pressure_pa": -8454.708029659125,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 92581.31997731405
+      },
+      {
+        "time_s": 1.4699999999999959e-06,
+        "radius_um": 96.93007354543602,
+        "wall_velocity_m_s": 0.8123328838446668,
+        "pressure_pa": -8287.293593867864,
+        "base_pressure_pa": -8287.293593867864,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 92106.4226042479
+      },
+      {
+        "time_s": 1.5399999999999952e-06,
+        "radius_um": 96.98938261252422,
+        "wall_velocity_m_s": 0.8819853906745246,
+        "pressure_pa": -7804.679186104723,
+        "base_pressure_pa": -7804.679186104723,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 91524.1478334904
+      },
+      {
+        "time_s": 1.6099999999999945e-06,
+        "radius_um": 97.05351753211711,
+        "wall_velocity_m_s": 0.9501846637442006,
+        "pressure_pa": -7061.965763354006,
+        "base_pressure_pa": -7061.965763354006,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 90887.66903775732
+      },
+      {
+        "time_s": 1.6799999999999939e-06,
+        "radius_um": 97.122371228005,
+        "wall_velocity_m_s": 1.0167905594711943,
+        "pressure_pa": -6139.37809447619,
+        "base_pressure_pa": -6139.37809447619,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 90220.75814812696
+      },
+      {
+        "time_s": 1.7499999999999932e-06,
+        "radius_um": 97.19582944558529,
+        "wall_velocity_m_s": 1.0817373144952052,
+        "pressure_pa": -5128.039638906591,
+        "base_pressure_pa": -5128.039638906591,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 89533.34236288258
+      },
+      {
+        "time_s": 1.8199999999999925e-06,
+        "radius_um": 97.27377569246218,
+        "wall_velocity_m_s": 1.1450246142256812,
+        "pressure_pa": -4115.348206917838,
+        "base_pressure_pa": -4115.348206917838,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 88829.57740021194
+      },
+      {
+        "time_s": 1.8899999999999919e-06,
+        "radius_um": 97.35609529890446,
+        "wall_velocity_m_s": 1.2067018138881873,
+        "pressure_pa": -3173.1457610711363,
+        "base_pressure_pa": -3173.1457610711363,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 88111.46158246415
+      },
+      {
+        "time_s": 1.9599999999999914e-06,
+        "radius_um": 97.44267823229421,
+        "wall_velocity_m_s": 1.2668487922267646,
+        "pressure_pa": -2350.7241966502347,
+        "base_pressure_pa": -2350.7241966502347,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 87380.25195920611
+      },
+      {
+        "time_s": 2.0299999999999907e-06,
+        "radius_um": 97.53342057049203,
+        "wall_velocity_m_s": 1.3255573934018896,
+        "pressure_pa": -1673.1757200454326,
+        "base_pressure_pa": -1673.1757200454326,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 86636.95511734275
+      },
+      {
+        "time_s": 2.09999999999999e-06,
+        "radius_um": 97.6282247893065,
+        "wall_velocity_m_s": 1.3829164872316075,
+        "pressure_pa": -1144.2203052315447,
+        "base_pressure_pa": -1144.2203052315447,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 85882.4802233167
+      },
+      {
+        "time_s": 2.1699999999999894e-06,
+        "radius_um": 97.72699917933144,
+        "wall_velocity_m_s": 1.4390021521654623,
+        "pressure_pa": -751.8063105791913,
+        "base_pressure_pa": -751.8063105791913,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 85117.68451829997
+      },
+      {
+        "time_s": 2.2399999999999887e-06,
+        "radius_um": 97.82965675934375,
+        "wall_velocity_m_s": 1.493873010412944,
+        "pressure_pa": -474.6030202809156,
+        "base_pressure_pa": -474.6030202809156,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 84343.38880640642
+      },
+      {
+        "time_s": 2.309999999999988e-06,
+        "radius_um": 97.93611401630763,
+        "wall_velocity_m_s": 1.547569717309283,
+        "pressure_pa": -287.8612529901007,
+        "base_pressure_pa": -287.8612529901007,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 83560.38524458758
+      },
+      {
+        "time_s": 2.3799999999999874e-06,
+        "radius_um": 98.04628971302029,
+        "wall_velocity_m_s": 1.6001171532013647,
+        "pressure_pa": -167.75053633473206,
+        "base_pressure_pa": -167.75053633473206,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 82769.44271014382
+      },
+      {
+        "time_s": 2.4499999999999867e-06,
+        "radius_um": 98.16010390169295,
+        "wall_velocity_m_s": 1.651527901149736,
+        "pressure_pa": -93.92289301656979,
+        "base_pressure_pa": -93.92289301656979,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 81971.31068291086
+      },
+      {
+        "time_s": 2.519999999999986e-06,
+        "radius_um": 98.27747719308246,
+        "wall_velocity_m_s": 1.7018059251489293,
+        "pressure_pa": -50.52413192384492,
+        "base_pressure_pa": -50.52413192384492,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 81166.72180895267
+      },
+      {
+        "time_s": 2.5899999999999854e-06,
+        "radius_um": 98.3983302697187,
+        "wall_velocity_m_s": 1.7509497910287943,
+        "pressure_pa": -26.10981939326149,
+        "base_pressure_pa": -26.10981939326149,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 80356.39332518478
+      },
+      {
+        "time_s": 2.6599999999999847e-06,
+        "radius_um": 98.52258359955368,
+        "wall_velocity_m_s": 1.798955151201472,
+        "pressure_pa": -12.954800560781482,
+        "base_pressure_pa": -12.954800560781482,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 79541.02760385285
+      },
+      {
+        "time_s": 2.729999999999984e-06,
+        "radius_um": 98.65015729674438,
+        "wall_velocity_m_s": 1.8458164756918096,
+        "pressure_pa": -6.149303985520294,
+        "base_pressure_pa": -6.149303985520294,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 78721.31209225715
+      },
+      {
+        "time_s": 2.7999999999999834e-06,
+        "radius_um": 98.78097108048873,
+        "wall_velocity_m_s": 1.891528147986166,
+        "pressure_pa": -2.731212692119383,
+        "base_pressure_pa": -2.731212692119383,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 77897.91888723653
+      },
+      {
+        "time_s": 2.8699999999999827e-06,
+        "radius_um": 98.91494429292582,
+        "wall_velocity_m_s": 1.9360850821617817,
+        "pressure_pa": -0.9693323816723514,
+        "base_pressure_pa": -0.9693323816723514,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 77071.50412706468
+      },
+      {
+        "time_s": 2.939999999999982e-06,
+        "radius_um": 99.05199594747484,
+        "wall_velocity_m_s": 1.9794829932741238,
+        "pressure_pa": 0.18777611700570407,
+        "base_pressure_pa": 0.18777611700570407,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 76242.7073292351
+      },
+      {
+        "time_s": 3.0000773394636272e-06,
+        "radius_um": 99.17201329353011,
+        "wall_velocity_m_s": 2.015802258500843,
+        "pressure_pa": 1.30998722535329,
+        "base_pressure_pa": 1.30998722535329,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 75529.96813675515
+      },
+      {
+        "time_s": 3.0700773394636266e-06,
+        "radius_um": 99.31456949196134,
+        "wall_velocity_m_s": 2.0570375651017048,
+        "pressure_pa": 3.598839104065532,
+        "base_pressure_pa": 3.598839104065532,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 74698.38397798174
+      },
+      {
+        "time_s": 3.140077339463626e-06,
+        "radius_um": 99.45997129778405,
+        "wall_velocity_m_s": 2.097104771085043,
+        "pressure_pa": 8.400885888956092,
+        "base_pressure_pa": 8.400885888956092,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 73866.14894410875
+      },
+      {
+        "time_s": 3.2100773394636252e-06,
+        "radius_um": 99.60813680891769,
+        "wall_velocity_m_s": 2.1359996916719424,
+        "pressure_pa": 18.496964709230475,
+        "base_pressure_pa": 18.496964709230475,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 73033.8338615013
+      },
+      {
+        "time_s": 3.2800773394636246e-06,
+        "radius_um": 99.75898373505994,
+        "wall_velocity_m_s": 2.1737149960062645,
+        "pressure_pa": 39.01204601449155,
+        "base_pressure_pa": 39.01204601449155,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 72201.99174010228
+      },
+      {
+        "time_s": 3.350077339463624e-06,
+        "radius_um": 99.91242907211732,
+        "wall_velocity_m_s": 2.2102369471679353,
+        "pressure_pa": 79.01507612691833,
+        "base_pressure_pa": 79.01507612691833,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 71371.15876717585
+      },
+      {
+        "time_s": 3.420077339463623e-06,
+        "radius_um": 100.06838849044536,
+        "wall_velocity_m_s": 2.245540410025162,
+        "pressure_pa": 153.74954993360177,
+        "base_pressure_pa": 153.74954993360177,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 70541.85626468426
+      },
+      {
+        "time_s": 3.4900773394636225e-06,
+        "radius_um": 100.22677530157296,
+        "wall_velocity_m_s": 2.2795817578181903,
+        "pressure_pa": 287.4352885735617,
+        "base_pressure_pa": 287.4352885735617,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 69714.59398631087
+      },
+      {
+        "time_s": 3.560077339463622e-06,
+        "radius_um": 100.38749885244664,
+        "wall_velocity_m_s": 2.3122896496793484,
+        "pressure_pa": 516.2898262106553,
+        "base_pressure_pa": 516.2898262106553,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 68889.87513534812
+      },
+      {
+        "time_s": 3.630077339463621e-06,
+        "radius_um": 100.5504622159003,
+        "wall_velocity_m_s": 2.343554329582249,
+        "pressure_pa": 890.9946754069955,
+        "base_pressure_pa": 890.9946754069955,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 68068.2033656064
+      },
+      {
+        "time_s": 3.7000773394636205e-06,
+        "radius_um": 100.71555912570538,
+        "wall_velocity_m_s": 2.3732171237999933,
+        "pressure_pa": 1477.3549255474627,
+        "base_pressure_pa": 1477.3549255474627,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 67250.091718741
+      },
+      {
+        "time_s": 3.77007733946362e-06,
+        "radius_um": 100.88267026461189,
+        "wall_velocity_m_s": 2.401063043772992,
+        "pressure_pa": 2353.546572026486,
+        "base_pressure_pa": 2353.546572026486,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 66436.07291352467
+      },
+      {
+        "time_s": 3.840077339463619e-06,
+        "radius_um": 101.0516592573013,
+        "wall_velocity_m_s": 2.4268204786160443,
+        "pressure_pa": 3602.3754033846385,
+        "base_pressure_pa": 3602.3754033846385,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 65626.70966179896
+      },
+      {
+        "time_s": 3.9100773394636185e-06,
+        "radius_um": 101.22236901823625,
+        "wall_velocity_m_s": 2.450172341674446,
+        "pressure_pa": 5297.651207482472,
+        "base_pressure_pa": 5297.651207482472,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 64822.6028702867
+      },
+      {
+        "time_s": 3.980077339463618e-06,
+        "radius_um": 101.39461938711054,
+        "wall_velocity_m_s": 2.4707821268416588,
+        "pressure_pa": 7485.244223089101,
+        "base_pressure_pa": 7485.244223089101,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 64024.39493783779
+      },
+      {
+        "time_s": 4.050077339463617e-06,
+        "radius_um": 101.56820714637465,
+        "wall_velocity_m_s": 2.488335754583787,
+        "pressure_pa": 10161.476307096804,
+        "base_pressure_pa": 10161.476307096804,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 63232.76518884198
+      },
+      {
+        "time_s": 4.1200773394636165e-06,
+        "radius_um": 101.74290944046653,
+        "wall_velocity_m_s": 2.502595982393836,
+        "pressure_pa": 13253.661172187802,
+        "base_pressure_pa": 13253.661172187802,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 62448.41508823764
+      },
+      {
+        "time_s": 4.190077339463616e-06,
+        "radius_um": 101.91849122278542,
+        "wall_velocity_m_s": 2.51346121464205,
+        "pressure_pa": 16609.19984725868,
+        "base_pressure_pa": 16608.986775332443,
+        "active_wave_pressure_pa": 0.2130719262352269,
+        "plasma_pressure_pa": 61672.04239890698
+      },
+      {
+        "time_s": 4.250613521865671e-06,
+        "radius_um": 102.07084857329866,
+        "wall_velocity_m_s": 2.5191198309000202,
+        "pressure_pa": 20863.835274587138,
+        "base_pressure_pa": 19547.556300458287,
+        "active_wave_pressure_pa": 1316.2789741288502,
+        "plasma_pressure_pa": 61007.615225640875
+      },
+      {
+        "time_s": 4.295976394780324e-06,
+        "radius_um": 102.1851132726175,
+        "wall_velocity_m_s": 2.517856845594123,
+        "pressure_pa": 27736.044910179167,
+        "base_pressure_pa": 21656.739397813308,
+        "active_wave_pressure_pa": 6079.305512365858,
+        "plasma_pressure_pa": 60514.581003483174
+      },
+      {
+        "time_s": 4.352668042689384e-06,
+        "radius_um": 102.32769004241281,
+        "wall_velocity_m_s": 2.51169376209011,
+        "pressure_pa": 35777.45208544528,
+        "base_pressure_pa": 24040.93207723668,
+        "active_wave_pressure_pa": 11736.5200082086,
+        "plasma_pressure_pa": 59905.19771046475
+      },
+      {
+        "time_s": 4.390403871022351e-06,
+        "radius_um": 102.42239623255318,
+        "wall_velocity_m_s": 2.5080130069494007,
+        "pressure_pa": 37451.700144137736,
+        "base_pressure_pa": 25399.596730295118,
+        "active_wave_pressure_pa": 12052.103413842617,
+        "plasma_pressure_pa": 59503.872010817846
+      },
+      {
+        "time_s": 4.435902967802968e-06,
+        "radius_um": 102.53646014144205,
+        "wall_velocity_m_s": 2.506465363853241,
+        "pressure_pa": 34994.4088807908,
+        "base_pressure_pa": 26723.972741741247,
+        "active_wave_pressure_pa": 8270.436139049547,
+        "plasma_pressure_pa": 59024.25422641326
+      },
+      {
+        "time_s": 4.498264208821804e-06,
+        "radius_um": 102.69281100393061,
+        "wall_velocity_m_s": 2.50817208374062,
+        "pressure_pa": 29273.94248055308,
+        "base_pressure_pa": 27876.14731293652,
+        "active_wave_pressure_pa": 1397.7951676165608,
+        "plasma_pressure_pa": 58373.70795100732
+      },
+      {
+        "time_s": 4.54888909868707e-06,
+        "radius_um": 102.81980230014022,
+        "wall_velocity_m_s": 2.508409714439593,
+        "pressure_pa": 28185.68052454697,
+        "base_pressure_pa": 28182.21814044875,
+        "active_wave_pressure_pa": 3.462384098221182,
+        "plasma_pressure_pa": 57851.17945717423
+      },
+      {
+        "time_s": 4.617639863719689e-06,
+        "radius_um": 102.9922274199839,
+        "wall_velocity_m_s": 2.5072728827783237,
+        "pressure_pa": 28223.490099936975,
+        "base_pressure_pa": 27660.963724106743,
+        "active_wave_pressure_pa": 562.5263758302325,
+        "plasma_pressure_pa": 57149.83806488877
+      },
+      {
+        "time_s": 4.673907753522421e-06,
+        "radius_um": 103.13318452588406,
+        "wall_velocity_m_s": 2.5020327886856863,
+        "pressure_pa": 32294.93181895196,
+        "base_pressure_pa": 26470.486925209938,
+        "active_wave_pressure_pa": 5824.444893742025,
+        "plasma_pressure_pa": 56583.201452119596
+      },
+      {
+        "time_s": 4.742804511930747e-06,
+        "radius_um": 103.30521962897507,
+        "wall_velocity_m_s": 2.4922070264274865,
+        "pressure_pa": 36378.586781988546,
+        "base_pressure_pa": 24214.880880104432,
+        "active_wave_pressure_pa": 12163.705901884117,
+        "plasma_pressure_pa": 55899.25562737246
+      },
+      {
+        "time_s": 4.776955179449019e-06,
+        "radius_um": 103.3902753014647,
+        "wall_velocity_m_s": 2.489402807704271,
+        "pressure_pa": 34592.37484982786,
+        "base_pressure_pa": 22838.708824344685,
+        "active_wave_pressure_pa": 11753.666025483177,
+        "plasma_pressure_pa": 55564.18179494925
+      },
+      {
+        "time_s": 4.834439888315684e-06,
+        "radius_um": 103.53337873482177,
+        "wall_velocity_m_s": 2.4906285421472196,
+        "pressure_pa": 26280.49310164885,
+        "base_pressure_pa": 20256.332850805924,
+        "active_wave_pressure_pa": 6024.160250842927,
+        "plasma_pressure_pa": 55005.29345749463
+      },
+      {
+        "time_s": 4.893563836742288e-06,
+        "radius_um": 103.68080139155522,
+        "wall_velocity_m_s": 2.4964399026832726,
+        "pressure_pa": 17918.631016160845,
+        "base_pressure_pa": 17407.762254632133,
+        "active_wave_pressure_pa": 510.8687615287109,
+        "plasma_pressure_pa": 54436.247923460345
+      },
+      {
+        "time_s": 4.948783925587291e-06,
+        "radius_um": 103.81878735283102,
+        "wall_velocity_m_s": 2.5011910775849513,
+        "pressure_pa": 14725.944908303503,
+        "base_pressure_pa": 14725.782197149716,
+        "active_wave_pressure_pa": 0.1627111537873932,
+        "plasma_pressure_pa": 53909.813574603366
+      },
+      {
+        "time_s": 5.004718714673258e-06,
+        "radius_um": 103.95882922274461,
+        "wall_velocity_m_s": 2.505829207197948,
+        "pressure_pa": 13048.072608015178,
+        "base_pressure_pa": 12118.59082038869,
+        "active_wave_pressure_pa": 929.4817876264887,
+        "plasma_pressure_pa": 53381.54322846192
+      },
+      {
+        "time_s": 5.063684644534052e-06,
+        "radius_um": 104.10662091862724,
+        "wall_velocity_m_s": 2.5060483729654717,
+        "pressure_pa": 16626.925131005744,
+        "base_pressure_pa": 9599.087417513298,
+        "active_wave_pressure_pa": 7027.837713492448,
+        "plasma_pressure_pa": 52830.36038319071
+      },
+      {
+        "time_s": 5.125974019617135e-06,
+        "radius_um": 104.26264432323934,
+        "wall_velocity_m_s": 2.503865722289799,
+        "pressure_pa": 19522.826407043558,
+        "base_pressure_pa": 7276.3594150326235,
+        "active_wave_pressure_pa": 12246.466992010935,
+        "plasma_pressure_pa": 52255.109655200984
+      },
+      {
+        "time_s": 5.157983600969326e-06,
+        "radius_um": 104.34279686990885,
+        "wall_velocity_m_s": 2.504496618757895,
+        "pressure_pa": 17931.145991239977,
+        "base_pressure_pa": 6233.5437567595745,
+        "active_wave_pressure_pa": 11697.602234480402,
+        "plasma_pressure_pa": 51962.22771334311
+      },
+      {
+        "time_s": 5.212323134579071e-06,
+        "radius_um": 104.47902190136558,
+        "wall_velocity_m_s": 2.510280373322377,
+        "pressure_pa": 10987.98544484914,
+        "base_pressure_pa": 4702.990399344048,
+        "active_wave_pressure_pa": 6284.995045505093,
+        "plasma_pressure_pa": 51468.74318413811
+      },
+      {
+        "time_s": 5.265870035196982e-06,
+        "radius_um": 104.61367593580077,
+        "wall_velocity_m_s": 2.5191726015093936,
+        "pressure_pa": 4374.354616104603,
+        "base_pressure_pa": 3479.826187757639,
+        "active_wave_pressure_pa": 894.5284283469638,
+        "plasma_pressure_pa": 50986.45176576977
+      },
+      {
+        "time_s": 5.315737135633158e-06,
+        "radius_um": 104.73947898976617,
+        "wall_velocity_m_s": 2.5260748744403436,
+        "pressure_pa": 2574.560614568544,
+        "base_pressure_pa": 2573.887056915743,
+        "active_wave_pressure_pa": 0.6735576528014086,
+        "plasma_pressure_pa": 50540.77415734771
+      },
+      {
+        "time_s": 5.385737135633158e-06,
+        "radius_um": 104.91661185018184,
+        "wall_velocity_m_s": 2.5348025825401606,
+        "pressure_pa": 1628.8156445369239,
+        "base_pressure_pa": 1628.8156445369239,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 49921.05184077003
+      },
+      {
+        "time_s": 5.455737135633157e-06,
+        "radius_um": 105.09434104326682,
+        "wall_velocity_m_s": 2.5430900045645517,
+        "pressure_pa": 990.3360735473306,
+        "base_pressure_pa": 990.3360735473306,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 49308.23225375467
+      },
+      {
+        "time_s": 5.525737135633156e-06,
+        "radius_um": 105.27263148677226,
+        "wall_velocity_m_s": 2.5508232848638657,
+        "pressure_pa": 578.5241410851465,
+        "base_pressure_pa": 578.5241410851465,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 48702.333669746324
+      },
+      {
+        "time_s": 5.595737135633156e-06,
+        "radius_um": 105.45144170337628,
+        "wall_velocity_m_s": 2.5579319138530217,
+        "pressure_pa": 324.7047145593371,
+        "base_pressure_pa": 324.7047145593371,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 48103.38471210174
+      },
+      {
+        "time_s": 5.665737135633155e-06,
+        "radius_um": 105.63072646002938,
+        "wall_velocity_m_s": 2.564377188777378,
+        "pressure_pa": 175.0991038310708,
+        "base_pressure_pa": 175.0991038310708,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 47511.41755051703
+      },
+      {
+        "time_s": 5.735737135633154e-06,
+        "radius_um": 105.81043861794407,
+        "wall_velocity_m_s": 2.570141822092379,
+        "pressure_pa": 90.7209256892763,
+        "base_pressure_pa": 90.7209256892763,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 46926.46338526383
+      },
+      {
+        "time_s": 5.805737135633154e-06,
+        "radius_um": 105.99053033776327,
+        "wall_velocity_m_s": 2.575221966304352,
+        "pressure_pa": 45.160552172312386,
+        "base_pressure_pa": 45.160552172312386,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 46348.54970780667
+      },
+      {
+        "time_s": 5.875737135633153e-06,
+        "radius_um": 106.17095381279259,
+        "wall_velocity_m_s": 2.57962165896739,
+        "pressure_pa": 21.59927801119922,
+        "base_pressure_pa": 21.59927801119922,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 45777.69881007387
+      },
+      {
+        "time_s": 5.945737135633152e-06,
+        "radius_um": 106.35166168631268,
+        "wall_velocity_m_s": 2.5833492627828027,
+        "pressure_pa": 9.925386930154938,
+        "base_pressure_pa": 9.925386930154938,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 45213.927099977846
+      },
+      {
+        "time_s": 6.015737135633152e-06,
+        "radius_um": 106.53260727343488,
+        "wall_velocity_m_s": 2.5864153498414515,
+        "pressure_pa": 4.382116091854452,
+        "base_pressure_pa": 4.382116091854452,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 44657.24489811349
+      },
+      {
+        "time_s": 6.085737135633151e-06,
+        "radius_um": 106.71374467047696,
+        "wall_velocity_m_s": 2.588831529462299,
+        "pressure_pa": 1.8588679180406058,
+        "base_pressure_pa": 1.8588679180406058,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 44107.6565001124
+      },
+      {
+        "time_s": 6.15573713563315e-06,
+        "radius_um": 106.89502880386878,
+        "wall_velocity_m_s": 2.590609840471399,
+        "pressure_pa": 0.7576025120661393,
+        "base_pressure_pa": 0.7576025120661393,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 43565.160373793544
+      },
+      {
+        "time_s": 6.22573713563315e-06,
+        "radius_um": 107.07641544856726,
+        "wall_velocity_m_s": 2.5917624549817737,
+        "pressure_pa": 0.2966623965144371,
+        "base_pressure_pa": 0.2966623965144371,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 43029.74941774215
+      },
+      {
+        "time_s": 6.295737135633149e-06,
+        "radius_um": 107.25786123196497,
+        "wall_velocity_m_s": 2.5923015414371355,
+        "pressure_pa": 0.1116122379157348,
+        "base_pressure_pa": 0.1116122379157348,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 42501.41124315609
+      },
+      {
+        "time_s": 6.365737135633148e-06,
+        "radius_um": 107.43932363120025,
+        "wall_velocity_m_s": 2.5922392032477317,
+        "pressure_pa": 0.04034496586302689,
+        "base_pressure_pa": 0.04034496586302689,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 41980.12846050247
+      },
+      {
+        "time_s": 6.435737135633148e-06,
+        "radius_um": 107.62076096750367,
+        "wall_velocity_m_s": 2.5915874507760432,
+        "pressure_pa": 0.01401183805491626,
+        "base_pressure_pa": 0.01401183805491626,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 41465.87896267726
+      },
+      {
+        "time_s": 6.505737135633147e-06,
+        "radius_um": 107.80213239913687,
+        "wall_velocity_m_s": 2.5903581870484103,
+        "pressure_pa": 0.004675511040135458,
+        "base_pressure_pa": 0.004675511040135458,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 40958.63620119121
+      },
+      {
+        "time_s": 6.575737135633146e-06,
+        "radius_um": 107.9833979135479,
+        "wall_velocity_m_s": 2.588563198819779,
+        "pressure_pa": 0.0014989642845607918,
+        "base_pressure_pa": 0.0014989642845607918,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 40458.36945403474
+      },
+      {
+        "time_s": 6.6457371356331456e-06,
+        "radius_um": 108.16451831898526,
+        "wall_velocity_m_s": 2.5862141497304485,
+        "pressure_pa": 0.0004617232077602723,
+        "base_pressure_pa": 0.0004617232077602723,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 39965.044084745845
+      },
+      {
+        "time_s": 7.699999999999999e-06,
+        "radius_um": 110.85028276638992,
+        "wall_velocity_m_s": 2.4914080089802693,
+        "pressure_pa": 7.261909673751388e-14,
+        "base_pressure_pa": 7.261909673751388e-14,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 33341.388041652535
+      },
+      {
+        "time_s": 8.924999999999993e-06,
+        "radius_um": 113.77774160669384,
+        "wall_velocity_m_s": 2.2720456379637812,
+        "pressure_pa": 3.316812802590176e-30,
+        "base_pressure_pa": 3.316812802590176e-30,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 27341.667941716278
+      },
+      {
+        "time_s": 1.0149999999999988e-05,
+        "radius_um": 116.38495474966497,
+        "wall_velocity_m_s": 1.9742620402900453,
+        "pressure_pa": 7.249093078952011e-52,
+        "base_pressure_pa": 7.249093078952011e-52,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 22807.158864158857
+      },
+      {
+        "time_s": 1.1374999999999982e-05,
+        "radius_um": 118.5942984031262,
+        "wall_velocity_m_s": 1.6262259703160666,
+        "pressure_pa": 7.581218049745502e-79,
+        "base_pressure_pa": 7.581218049745502e-79,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 19394.571770872026
+      },
+      {
+        "time_s": 1.2599999999999976e-05,
+        "radius_um": 120.35622558967219,
+        "wall_velocity_m_s": 1.246169852425545,
+        "pressure_pa": 3.793908882949881e-111,
+        "base_pressure_pa": 3.793908882949881e-111,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 16830.62699761255
+      },
+      {
+        "time_s": 1.382499999999997e-05,
+        "radius_um": 121.63904353977871,
+        "wall_velocity_m_s": 0.8454653265583822,
+        "pressure_pa": 9.085051667081839e-149,
+        "base_pressure_pa": 9.085051667081839e-149,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 14911.521477483519
+      },
+      {
+        "time_s": 1.5049999999999964e-05,
+        "radius_um": 122.4220187654218,
+        "wall_velocity_m_s": 0.4309602412014468,
+        "pressure_pa": 1.0410234279952319e-191,
+        "base_pressure_pa": 1.0410234279952319e-191,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 13490.657136999384
+      },
+      {
+        "time_s": 1.627499999999997e-05,
+        "radius_um": 122.6909055759579,
+        "wall_velocity_m_s": 0.006626110511748259,
+        "pressure_pa": 5.708029406275101e-240,
+        "base_pressure_pa": 5.708029406275101e-240,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 12465.588229097913
+      },
+      {
+        "time_s": 1.7499999999999975e-05,
+        "radius_um": 122.4351692368292,
+        "wall_velocity_m_s": -0.4252876999858002,
+        "pressure_pa": 1.4976298823739533e-293,
+        "base_pressure_pa": 1.4976298823739533e-293,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 11767.590722269968
+      },
+      {
+        "time_s": 1.872499999999998e-05,
+        "radius_um": 121.64642425410207,
+        "wall_velocity_m_s": -0.8633927339099838,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 11354.43672857503
+      },
+      {
+        "time_s": 1.9949999999999987e-05,
+        "radius_um": 120.31784103881505,
+        "wall_velocity_m_s": -1.3064124717200152,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 11206.139590682875
+      },
+      {
+        "time_s": 2.1174999999999993e-05,
+        "radius_um": 118.44449270483251,
+        "wall_velocity_m_s": -1.7523641699664405,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 11323.369175290356
+      },
+      {
+        "time_s": 2.24e-05,
+        "radius_um": 116.0248567661489,
+        "wall_velocity_m_s": -2.1974477546955367,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 11728.397342388673
+      },
+      {
+        "time_s": 2.3625000000000005e-05,
+        "radius_um": 113.06401676156305,
+        "wall_velocity_m_s": -2.634314149193031,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 12468.54197624073
+      },
+      {
+        "time_s": 2.485000000000001e-05,
+        "radius_um": 109.57961558073377,
+        "wall_velocity_m_s": -3.0491980952464037,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 13621.743821539707
+      },
+      {
+        "time_s": 2.6075000000000017e-05,
+        "radius_um": 105.61239967379286,
+        "wall_velocity_m_s": -3.4171382597991897,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 15302.094020841658
+      },
+      {
+        "time_s": 2.7300000000000023e-05,
+        "radius_um": 101.24427148026516,
+        "wall_velocity_m_s": -3.6943595306139665,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 17657.002081027684
+      },
+      {
+        "time_s": 2.852500000000003e-05,
+        "radius_um": 96.62757412124002,
+        "wall_velocity_m_s": -3.807741090361855,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 20830.885502898112
+      },
+      {
+        "time_s": 2.9750000000000035e-05,
+        "radius_um": 92.02720263821583,
+        "wall_velocity_m_s": -3.6459597104553123,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 24835.668681550684
+      },
+      {
+        "time_s": 3.0975000000000035e-05,
+        "radius_um": 87.86419257660238,
+        "wall_velocity_m_s": -3.0708181573385995,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 29244.297791452085
+      },
+      {
+        "time_s": 3.220000000000002e-05,
+        "radius_um": 84.71385644848715,
+        "wall_velocity_m_s": -1.9872482772496571,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 32792.33894860356
+      },
+      {
+        "time_s": 3.3425e-05,
+        "radius_um": 83.17142644942473,
+        "wall_velocity_m_s": -0.4823610359533641,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 33582.865910203975
+      },
+      {
+        "time_s": 3.464999999999998e-05,
+        "radius_um": 83.5675183855088,
+        "wall_velocity_m_s": 1.1068611465961316,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 30636.9004421282
+      },
+      {
+        "time_s": 3.5874999999999964e-05,
+        "radius_um": 85.7520724306572,
+        "wall_velocity_m_s": 2.38308597847138,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 25156.665623185552
+      },
+      {
+        "time_s": 3.7099999999999946e-05,
+        "radius_um": 89.19653257129181,
+        "wall_velocity_m_s": 3.154541600366187,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 19301.01681513864
+      },
+      {
+        "time_s": 3.832499999999993e-05,
+        "radius_um": 93.28970340867816,
+        "wall_velocity_m_s": 3.4610864101563457,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 14407.72248635858
+      },
+      {
+        "time_s": 3.954999999999991e-05,
+        "radius_um": 97.54119242902904,
+        "wall_velocity_m_s": 3.4364189921660078,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 10771.283131910235
+      },
+      {
+        "time_s": 4.077499999999989e-05,
+        "radius_um": 101.62546950069375,
+        "wall_velocity_m_s": 3.2059784297332734,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 8196.694843766987
+      },
+      {
+        "time_s": 4.1999999999999876e-05,
+        "radius_um": 105.34803683885737,
+        "wall_velocity_m_s": 2.8573311536568697,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 6396.806372232071
+      },
+      {
+        "time_s": 4.322499999999986e-05,
+        "radius_um": 108.5999606182769,
+        "wall_velocity_m_s": 2.4443346734065448,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 5133.232659019119
+      },
+      {
+        "time_s": 4.444999999999984e-05,
+        "radius_um": 111.32324029208004,
+        "wall_velocity_m_s": 1.9980297818799133,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4236.955872401001
+      },
+      {
+        "time_s": 4.567499999999982e-05,
+        "radius_um": 113.48862255621528,
+        "wall_velocity_m_s": 1.5355167774250977,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3594.7224056534683
+      },
+      {
+        "time_s": 4.6899999999999805e-05,
+        "radius_um": 115.08235296651112,
+        "wall_velocity_m_s": 1.0657436938798572,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3132.0390377509393
+      },
+      {
+        "time_s": 4.812499999999979e-05,
+        "radius_um": 116.09851805444646,
+        "wall_velocity_m_s": 0.5930068378927282,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2800.1500068867413
+      },
+      {
+        "time_s": 4.934999999999977e-05,
+        "radius_um": 116.53473394031722,
+        "wall_velocity_m_s": 0.11903958075695119,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2567.3293247610627
+      },
+      {
+        "time_s": 5.057499999999975e-05,
+        "radius_um": 116.38985811183876,
+        "wall_velocity_m_s": -0.3556907954264818,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2413.3853956999706
+      },
+      {
+        "time_s": 5.1799999999999734e-05,
+        "radius_um": 115.66301937066335,
+        "wall_velocity_m_s": -0.8310730417536187,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2326.342180285206
+      },
+      {
+        "time_s": 5.302499999999972e-05,
+        "radius_um": 114.35367525762742,
+        "wall_velocity_m_s": -1.3065416654526194,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2300.5910925813623
+      },
+      {
+        "time_s": 5.42499999999997e-05,
+        "radius_um": 112.46273112021363,
+        "wall_velocity_m_s": -1.7801091355345222,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2336.096546346426
+      },
+      {
+        "time_s": 5.547499999999968e-05,
+        "radius_um": 109.99509480209804,
+        "wall_velocity_m_s": -2.246928384005827,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2438.4349437620062
+      },
+      {
+        "time_s": 5.6699999999999664e-05,
+        "radius_um": 106.96450554569626,
+        "wall_velocity_m_s": -2.696921390531434,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2619.5287734262215
+      },
+      {
+        "time_s": 5.7924999999999646e-05,
+        "radius_um": 103.40219415479709,
+        "wall_velocity_m_s": -3.1107477449582617,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2898.78956007617
+      },
+      {
+        "time_s": 5.914999999999963e-05,
+        "radius_um": 99.37200995360877,
+        "wall_velocity_m_s": -3.453093228045194,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3303.611258105642
+      },
+      {
+        "time_s": 6.037499999999961e-05,
+        "radius_um": 94.99588925806269,
+        "wall_velocity_m_s": -3.6624533257994227,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3865.708421723415
+      },
+      {
+        "time_s": 6.159999999999961e-05,
+        "radius_um": 90.49334567859678,
+        "wall_velocity_m_s": -3.639290825450919,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4603.771697373518
+      },
+      {
+        "time_s": 6.282499999999964e-05,
+        "radius_um": 86.23111022444537,
+        "wall_velocity_m_s": -3.2449362736792824,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 5474.203819122414
+      },
+      {
+        "time_s": 6.404999999999967e-05,
+        "radius_um": 82.75091817956307,
+        "wall_velocity_m_s": -2.3462986410089544,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 6283.774522061401
+      },
+      {
+        "time_s": 6.52749999999997e-05,
+        "radius_um": 80.6920866301437,
+        "wall_velocity_m_s": -0.9448573795481793,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 6658.460330472266
+      },
+      {
+        "time_s": 6.649999999999973e-05,
+        "radius_um": 80.53420080419278,
+        "wall_velocity_m_s": 0.6902759985089629,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 6281.605074399939
+      },
+      {
+        "time_s": 6.772499999999976e-05,
+        "radius_um": 82.29880803757293,
+        "wall_velocity_m_s": 2.124499456796487,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 5265.607901119437
+      },
+      {
+        "time_s": 6.894999999999979e-05,
+        "radius_um": 85.53450671326344,
+        "wall_velocity_m_s": 3.067614548074053,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4056.517136475534
+      },
+      {
+        "time_s": 7.017499999999982e-05,
+        "radius_um": 89.6040305039457,
+        "wall_velocity_m_s": 3.5001584939824144,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3003.766795131666
+      },
+      {
+        "time_s": 7.139999999999985e-05,
+        "radius_um": 93.95359550266204,
+        "wall_velocity_m_s": 3.549938886339099,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2214.016036943705
+      },
+      {
+        "time_s": 7.262499999999988e-05,
+        "radius_um": 98.2030097070904,
+        "wall_velocity_m_s": 3.357370902453538,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1657.935546140861
+      },
+      {
+        "time_s": 7.384999999999991e-05,
+        "radius_um": 102.12266728111385,
+        "wall_velocity_m_s": 3.0251451365673923,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1273.5756138927109
+      },
+      {
+        "time_s": 7.507499999999994e-05,
+        "radius_um": 105.58409756884204,
+        "wall_velocity_m_s": 2.6172907244018195,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1007.1328634854489
+      },
+      {
+        "time_s": 7.629999999999997e-05,
+        "radius_um": 108.51946448913466,
+        "wall_velocity_m_s": 2.1707790872740533,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 820.3231487631118
+      },
+      {
+        "time_s": 7.7525e-05,
+        "radius_um": 110.89516052066506,
+        "wall_velocity_m_s": 1.7059664780064618,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 687.7079665259645
+      },
+      {
+        "time_s": 7.875000000000003e-05,
+        "radius_um": 112.69604705351793,
+        "wall_velocity_m_s": 1.233544891702264,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 592.7443976672395
+      },
+      {
+        "time_s": 7.997500000000006e-05,
+        "radius_um": 113.9164117130266,
+        "wall_velocity_m_s": 0.7587405078707037,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 524.7147077237581
+      },
+      {
+        "time_s": 8.120000000000009e-05,
+        "radius_um": 114.55492106184816,
+        "wall_velocity_m_s": 0.28378989302550406,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 476.6831670466201
+      },
+      {
+        "time_s": 8.242500000000012e-05,
+        "radius_um": 114.61194974673894,
+        "wall_velocity_m_s": -0.1905567979371413,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 444.2146858884861
+      },
+      {
+        "time_s": 8.365000000000015e-05,
+        "radius_um": 114.08841145504955,
+        "wall_velocity_m_s": -0.6640231482131284,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 424.5986391206289
+      },
+      {
+        "time_s": 8.487500000000018e-05,
+        "radius_um": 112.98570044381097,
+        "wall_velocity_m_s": -1.135959413367987,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 416.4018973629759
+      },
+      {
+        "time_s": 8.610000000000021e-05,
+        "radius_um": 111.3067056024928,
+        "wall_velocity_m_s": -1.6043942698348392,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 419.24444267711766
+      },
+      {
+        "time_s": 8.732500000000024e-05,
+        "radius_um": 109.05819445454591,
+        "wall_velocity_m_s": -2.064690426910321,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 433.73681921475736
+      },
+      {
+        "time_s": 8.855000000000027e-05,
+        "radius_um": 106.25528739075884,
+        "wall_velocity_m_s": -2.507393390364245,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 461.53952976181364
+      },
+      {
+        "time_s": 8.97750000000003e-05,
+        "radius_um": 102.92936262877839,
+        "wall_velocity_m_s": -2.9146586005959727,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 505.4859453896811
+      },
+      {
+        "time_s": 9.100000000000033e-05,
+        "radius_um": 99.1416269570069,
+        "wall_velocity_m_s": -3.2544270203473475,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 569.5989003552531
+      },
+      {
+        "time_s": 9.222500000000036e-05,
+        "radius_um": 95.00556799194676,
+        "wall_velocity_m_s": -3.471725898151724,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 658.4880595129581
+      },
+      {
+        "time_s": 9.345000000000039e-05,
+        "radius_um": 90.72126886316968,
+        "wall_velocity_m_s": -3.4786777427746234,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 774.8033086760082
+      },
+      {
+        "time_s": 9.467500000000042e-05,
+        "radius_um": 86.61850976866184,
+        "wall_velocity_m_s": -3.1529803957474973,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 912.2783224884656
+      },
+      {
+        "time_s": 9.590000000000045e-05,
+        "radius_um": 83.18357841037528,
+        "wall_velocity_m_s": -2.3722786721475733,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1043.3661580516873
+      },
+      {
+        "time_s": 9.712500000000048e-05,
+        "radius_um": 81.00336305765033,
+        "wall_velocity_m_s": -1.1175677299238715,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1113.1490975398629
+      },
+      {
+        "time_s": 9.835000000000051e-05,
+        "radius_um": 80.55758984892853,
+        "wall_velocity_m_s": 0.4045127802015255,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1069.0059313604238
+      },
+      {
+        "time_s": 9.957500000000054e-05,
+        "radius_um": 81.94610485401792,
+        "wall_velocity_m_s": 1.811547677060784,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 916.8846648891782
+      },
+      {
+        "time_s": 0.00010080000000000057,
+        "radius_um": 84.82185940381336,
+        "wall_velocity_m_s": 2.8014782224426913,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 720.87703367824
+      },
+      {
+        "time_s": 0.0001020250000000006,
+        "radius_um": 88.61041170397306,
+        "wall_velocity_m_s": 3.308742913102413,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 541.2777909478534
+      },
+      {
+        "time_s": 0.00010325000000000063,
+        "radius_um": 92.76979757322167,
+        "wall_velocity_m_s": 3.428680598069326,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 402.0265943827563
+      },
+      {
+        "time_s": 0.00010447500000000066,
+        "radius_um": 96.90589567774029,
+        "wall_velocity_m_s": 3.2909175979187326,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 301.98173471241006
+      },
+      {
+        "time_s": 0.00010570000000000069,
+        "radius_um": 100.76992781238637,
+        "wall_velocity_m_s": 2.9985669665689643,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 232.01752300617505
+      },
+      {
+        "time_s": 0.00010692500000000072,
+        "radius_um": 104.21723739525918,
+        "wall_velocity_m_s": 2.6192393646704417,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 183.19836263840637
+      },
+      {
+        "time_s": 0.00010815000000000074,
+        "radius_um": 107.16831912731574,
+        "wall_velocity_m_s": 2.1934364780446622,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 148.84392822701147
+      },
+      {
+        "time_s": 0.00010937500000000077,
+        "radius_um": 109.58173370475801,
+        "wall_velocity_m_s": 1.7442187307130994,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 124.39881135986249
+      },
+      {
+        "time_s": 0.0001106000000000008,
+        "radius_um": 111.43732140695556,
+        "wall_velocity_m_s": 1.2841933265941516,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 106.85567492461418
+      },
+      {
+        "time_s": 0.00011182500000000083,
+        "radius_um": 112.72631821792065,
+        "wall_velocity_m_s": 0.8199226891146716,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 94.24713322727546
+      },
+      {
+        "time_s": 0.00011305000000000086,
+        "radius_um": 113.44572287663662,
+        "wall_velocity_m_s": 0.35459450678848603,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 85.28997279288137
+      },
+      {
+        "time_s": 0.0001142750000000009,
+        "radius_um": 113.59524633526289,
+        "wall_velocity_m_s": -0.11033350748483636,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 79.15560438254175
+      },
+      {
+        "time_s": 0.00011550000000000092,
+        "radius_um": 113.17590602114142,
+        "wall_velocity_m_s": -0.574027457427001,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 75.3279946290187
+      },
+      {
+        "time_s": 0.00011672500000000095,
+        "radius_um": 112.18982019459068,
+        "wall_velocity_m_s": -1.0353765991244157,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 73.51955897543785
+      },
+      {
+        "time_s": 0.00011795000000000098,
+        "radius_um": 110.6411167918145,
+        "wall_velocity_m_s": -1.492031219956145,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 73.62600682835877
+      },
+      {
+        "time_s": 0.00011917500000000101,
+        "radius_um": 108.53819798394653,
+        "wall_velocity_m_s": -1.9390998240891073,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 75.70853007207066
+      },
+      {
+        "time_s": 0.00012040000000000104,
+        "radius_um": 105.89798949988906,
+        "wall_velocity_m_s": -2.3671393833498477,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 79.99505132574583
+      },
+      {
+        "time_s": 0.00012162500000000107,
+        "radius_um": 102.75334028277038,
+        "wall_velocity_m_s": -2.758921152465965,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 86.8892003711465
+      },
+      {
+        "time_s": 0.00012285000000000103,
+        "radius_um": 99.16546388871738,
+        "wall_velocity_m_s": -3.08432549877102,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 96.95878234711962
+      },
+      {
+        "time_s": 0.00012407500000000097,
+        "radius_um": 95.24401375029399,
+        "wall_velocity_m_s": -3.293003590070956,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 110.82680018707006
+      },
+      {
+        "time_s": 0.0001253000000000009,
+        "radius_um": 91.17690236570675,
+        "wall_velocity_m_s": -3.3064280550811804,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 128.78133420954921
+      },
+      {
+        "time_s": 0.00012652500000000084,
+        "radius_um": 87.26659241400931,
+        "wall_velocity_m_s": -3.017595811543711,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 149.78931866147565
+      },
+      {
+        "time_s": 0.00012775000000000077,
+        "radius_um": 83.9517712393118,
+        "wall_velocity_m_s": -2.3200128412174204,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 169.83041298387292
+      },
+      {
+        "time_s": 0.0001289750000000007,
+        "radius_um": 81.76136448775036,
+        "wall_velocity_m_s": -1.1912971389913776,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 181.0789541333914
+      },
+      {
+        "time_s": 0.00013020000000000064,
+        "radius_um": 81.1447663803859,
+        "wall_velocity_m_s": 0.2045260675520607,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 175.69115877786618
+      },
+      {
+        "time_s": 0.00013142500000000058,
+        "radius_um": 82.23777204704705,
+        "wall_velocity_m_s": 1.5414823398032165,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 153.51105126454968
+      },
+      {
+        "time_s": 0.00013265000000000051,
+        "radius_um": 84.77718566471427,
+        "wall_velocity_m_s": 2.5327168532015754,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 123.18141756980219
+      },
+      {
+        "time_s": 0.00013387500000000045,
+        "radius_um": 88.26142445773773,
+        "wall_velocity_m_s": 3.0849056740122553,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 94.08694350245696
+      },
+      {
+        "time_s": 0.00013510000000000038,
+        "radius_um": 92.18126873923939,
+        "wall_velocity_m_s": 3.261492054249589,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 70.73175976509566
+      },
+      {
+        "time_s": 0.00013632500000000032,
+        "radius_um": 96.1450088223583,
+        "wall_velocity_m_s": 3.1751817480613815,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 53.53502368152615
+      },
+      {
+        "time_s": 0.00013755000000000025,
+        "radius_um": 99.89367795690181,
+        "wall_velocity_m_s": 2.9242413800307916,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 41.307179991976845
+      },
+      {
+        "time_s": 0.0001387750000000002,
+        "radius_um": 103.27036127601585,
+        "wall_velocity_m_s": 2.576834958872883,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 32.67991596271876
+      },
+      {
+        "time_s": 0.00014000000000000012,
+        "radius_um": 106.18515218351007,
+        "wall_velocity_m_s": 2.1755384313091515,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 26.563438496409102
+      },
+      {
+        "time_s": 0.00014122500000000006,
+        "radius_um": 108.58883800932814,
+        "wall_velocity_m_s": 1.745499998157837,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 22.18815438657305
+      },
+      {
+        "time_s": 0.00014245,
+        "radius_um": 110.45581699114987,
+        "wall_velocity_m_s": 1.3010240428781745,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 19.034785826069978
+      },
+      {
+        "time_s": 0.00014367499999999993,
+        "radius_um": 111.77370806920706,
+        "wall_velocity_m_s": 0.8499665911256722,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 16.758552714331948
+      },
+      {
+        "time_s": 0.00014489999999999986,
+        "radius_um": 112.53727507690867,
+        "wall_velocity_m_s": 0.396495173272706,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 15.132011957489418
+      },
+      {
+        "time_s": 0.0001461249999999998,
+        "radius_um": 112.74505199602606,
+        "wall_velocity_m_s": -0.05717048084922495,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 14.006674722896566
+      },
+      {
+        "time_s": 0.00014734999999999973,
+        "radius_um": 112.39771928355549,
+        "wall_velocity_m_s": -0.5095765000061421,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 13.288588492866069
+      },
+      {
+        "time_s": 0.00014857499999999967,
+        "radius_um": 111.49775763970332,
+        "wall_velocity_m_s": -0.9590841940663215,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 12.923481590625917
+      },
+      {
+        "time_s": 0.0001497999999999996,
+        "radius_um": 110.05025962989163,
+        "wall_velocity_m_s": -1.4028884717688008,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 12.88839047304
+      },
+      {
+        "time_s": 0.00015102499999999954,
+        "radius_um": 108.06509538558726,
+        "wall_velocity_m_s": -1.8357410829373633,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 13.187749362949681
+      },
+      {
+        "time_s": 0.00015224999999999947,
+        "radius_um": 105.56098567276398,
+        "wall_velocity_m_s": -2.2480503440223076,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 13.852385025388983
+      },
+      {
+        "time_s": 0.0001534749999999994,
+        "radius_um": 102.57250149091298,
+        "wall_velocity_m_s": -2.6229216783323497,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 14.939320716369508
+      },
+      {
+        "time_s": 0.00015469999999999934,
+        "radius_um": 99.16159330756942,
+        "wall_velocity_m_s": -2.9316468082600546,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 16.5276821472564
+      },
+      {
+        "time_s": 0.00015592499999999928,
+        "radius_um": 95.43571621099603,
+        "wall_velocity_m_s": -3.1275040559638487,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 18.699009230465798
+      },
+      {
+        "time_s": 0.0001571499999999992,
+        "radius_um": 91.57390523285672,
+        "wall_velocity_m_s": -3.1395660635857077,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 21.476250071385984
+      },
+      {
+        "time_s": 0.00015837499999999915,
+        "radius_um": 87.85720860657787,
+        "wall_velocity_m_s": -2.8737260679107193,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 24.681637699538854
+      },
+      {
+        "time_s": 0.00015959999999999908,
+        "radius_um": 84.68510986904745,
+        "wall_velocity_m_s": -2.238292780831435,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 27.712107057538137
+      },
+      {
+        "time_s": 0.00016082499999999902,
+        "radius_um": 82.53487322694039,
+        "wall_velocity_m_s": -1.2129773804905082,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 29.441587912123577
+      },
+      {
+        "time_s": 0.00016204999999999895,
+        "radius_um": 81.81960010584105,
+        "wall_velocity_m_s": 0.06707787118531144,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 28.728024165431385
+      },
+      {
+        "time_s": 0.0001632749999999989,
+        "radius_um": 82.68941711875796,
+        "wall_velocity_m_s": 1.3237329377209874,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 25.45579794088961
+      },
+      {
+        "time_s": 0.00016449999999999882,
+        "radius_um": 84.94323765149997,
+        "wall_velocity_m_s": 2.2937060527332886,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 20.789122778719975
+      },
+      {
+        "time_s": 0.00016572499999999876,
+        "radius_um": 88.1459512959846,
+        "wall_velocity_m_s": 2.8695064435112796,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 16.140322855162772
+      },
+      {
+        "time_s": 0.0001669499999999987,
+        "radius_um": 91.82715691353698,
+        "wall_velocity_m_s": 3.0885968329109414,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 12.28887764489503
+      },
+      {
+        "time_s": 0.00016817499999999863,
+        "radius_um": 95.60634833340625,
+        "wall_velocity_m_s": 3.04614771288047,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 9.383786224773004
+      },
+      {
+        "time_s": 0.00016939999999999856,
+        "radius_um": 99.22096998886184,
+        "wall_velocity_m_s": 2.833224305796744,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 7.281791921223154
+      },
+      {
+        "time_s": 0.0001706249999999985,
+        "radius_um": 102.50573813285054,
+        "wall_velocity_m_s": 2.516627097033394,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 5.780408993204919
+      },
+      {
+        "time_s": 0.00017184999999999843,
+        "radius_um": 105.36235590763197,
+        "wall_velocity_m_s": 2.1398379298695462,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4.706693714058701
+      },
+      {
+        "time_s": 0.00017307499999999837,
+        "radius_um": 107.73477110531609,
+        "wall_velocity_m_s": 1.7294595603752145,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3.9337584024707852
+      },
+      {
+        "time_s": 0.0001742999999999983,
+        "radius_um": 109.59230674457915,
+        "wall_velocity_m_s": 1.3011700961473733,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3.373887960998099
+      },
+      {
+        "time_s": 0.00017552499999999824,
+        "radius_um": 110.91904727975395,
+        "wall_velocity_m_s": 0.8639606276031914,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.9678653431913964
+      },
+      {
+        "time_s": 0.00017674999999999817,
+        "radius_um": 111.7074676005425,
+        "wall_velocity_m_s": 0.42290454317149084,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.6761327986992627
+      },
+      {
+        "time_s": 0.0001779749999999981,
+        "radius_um": 111.95480914756907,
+        "wall_velocity_m_s": -0.01904772077316541,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.472571000818608
+      },
+      {
+        "time_s": 0.00017919999999999804,
+        "radius_um": 111.66127629255355,
+        "wall_velocity_m_s": -0.45983174418931866,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.340418115896969
+      },
+      {
+        "time_s": 0.00018042499999999798,
+        "radius_um": 110.82956986368524,
+        "wall_velocity_m_s": -0.8972774927951691,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.2697185025421476
+      },
+      {
+        "time_s": 0.0001816499999999979,
+        "radius_um": 109.46561571351319,
+        "wall_velocity_m_s": -1.3281096309021685,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.2558253012523
+      },
+      {
+        "time_s": 0.00018287499999999785,
+        "radius_um": 107.58064854902666,
+        "wall_velocity_m_s": -1.7466905491473481,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.298619790907692
+      },
+      {
+        "time_s": 0.00018409999999999778,
+        "radius_um": 105.19514001661842,
+        "wall_velocity_m_s": -2.143211313859148,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.402168124458435
+      },
+      {
+        "time_s": 0.00018532499999999771,
+        "radius_um": 102.34546461297536,
+        "wall_velocity_m_s": -2.5009650825589977,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.574439072757444
+      },
+      {
+        "time_s": 0.00018654999999999765,
+        "radius_um": 99.09466036312497,
+        "wall_velocity_m_s": -2.7923410424399853,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.8262996703015175
+      },
+      {
+        "time_s": 0.00018777499999999758,
+        "radius_um": 95.54890564695431,
+        "wall_velocity_m_s": -2.9735880451958834,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3.1679968173769093
+      },
+      {
+        "time_s": 0.00018899999999999752,
+        "radius_um": 91.88042974889939,
+        "wall_velocity_m_s": -2.980110027111959,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3.599499202694428
+      },
+      {
+        "time_s": 0.00019022499999999745,
+        "radius_um": 88.35295800027515,
+        "wall_velocity_m_s": -2.7286975216641607,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4.089738583186475
+      },
+      {
+        "time_s": 0.0001914499999999974,
+        "radius_um": 85.33333610137996,
+        "wall_velocity_m_s": -2.1407861473461565,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4.546228319973216
+      },
+      {
+        "time_s": 0.00019267499999999732,
+        "radius_um": 83.25386615540546,
+        "wall_velocity_m_s": -1.2004218724960811,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4.804704267929027
+      },
+      {
+        "time_s": 0.00019389999999999726,
+        "radius_um": 82.49106207770451,
+        "wall_velocity_m_s": -0.022949896445500467,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4.700002466838113
+      },
+      {
+        "time_s": 0.0001951249999999972,
+        "radius_um": 83.19672426510004,
+        "wall_velocity_m_s": 1.1523459021857778,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 4.207704909576766
+      },
+      {
+        "time_s": 0.00019634999999999713,
+        "radius_um": 85.21440835182696,
+        "wall_velocity_m_s": 2.087786791538932,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 3.4870252516473377
+      },
+      {
+        "time_s": 0.00019757499999999706,
+        "radius_um": 88.16609211854679,
+        "wall_velocity_m_s": 2.671029002704877,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.7476167018116016
+      },
+      {
+        "time_s": 0.000198799999999997,
+        "radius_um": 91.62109535980439,
+        "wall_velocity_m_s": 2.919874685495176,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 2.118022429749636
+      },
+      {
+        "time_s": 0.0002,
+        "radius_um": 95.14259975864485,
+        "wall_velocity_m_s": 2.9153140940619053,
+        "pressure_pa": 0.0,
+        "base_pressure_pa": 0.0,
+        "active_wave_pressure_pa": 0.0,
+        "plasma_pressure_pa": 1.6408916917750846
+      }
+    ],
+    "reference_circuit": {
+      "vbus_V": 48.0,
+      "pwm_Hz": 32000.0,
+      "load_W": 72.0
+    }
+  },
+  "cumulative_break_even_policy": "Net break-even occurs only when total useful delivery plus net storage change exceeds all historical source energy. Idle accumulation cannot erase proportional converter losses. Ideal 100% pulse recapture is an upper bound, not a physical prediction."
+}

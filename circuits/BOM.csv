@@ -1,0 +1,39 @@
+subsystem,reference,qty,function,part_or_specification,unit_cost_usd,cost_provenance,datasheet_specs_or_caveat,source_url
+PRIMARY,J1,1,48V power input,Rated locking two-position terminal,5.00,estimate,">=60V, >5A; keyed & insulated",
+PRIMARY,F1,1,Fuse & holder,60V DC rated 5A fuse,3.00,estimate,Final selection after inrush/thermal analysis,
+PRIMARY,D1,1,Input TVS,"Rated DC input surge suppressor, exact type TBD",2.00,estimate,Select for transient rating and breakdown,
+PRIMARY v0.27,U1 HS+LS,2,GaN FET modules with on-package drivers,TI LMG3100R017,,TI datasheet,100-V 1.7mOhm typical per FET at 25C; both input logic channels require compatible PWM/UVLO/level interface; controller-driver interface unverified,https://www.ti.com/product/LMG3100R017
+PRIMARY v0.27,L1,1,47uH SMD low DCR inductor,Wurth 7443634700,,DigiKey catalog,"47uH, 12.2mOhm DCR, 12A heat rated, 8.5A saturation; AC core loss and temperature unmeasured",https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7443634700/2440342
+PRIMARY v0.27,U_PWM,1,Dedicated 48V synchronous buck controller (candidate),ADI LTC3895,,ADI manufacturer,"50-900kHz frequency, 140V operating input; GaN logic/dead-time/pin interface not validated; 40mW combined bias model ASSUMED, not datasheet max",https://www.analog.com/en/products/ltc3895.html
+LEGACY v0.27 (NOT INSTALLED),R_SENSE,1,Previous 2mOhm current-sense shunt; removed in v0.28,"2mOhm shunt, TBD",,engineering assumption,Removed because LTC3895 can sense through inductor DCR; old model includes its I²R loss,
+LEGACY v0.26 (NOT INSTALLED),U1,1,Integrated GaN half bridge,Texas Instruments LMG2100R026VBNR,11.25,third-party indicative,"93V DC continuous, 2.6mOhm typical / 3.5mOhm max FET",https://www.ti.com/product/LMG2100R026
+LEGACY v0.26 (NOT INSTALLED),L1,1,"Main inductor, preferred",Vishay IHLP8787MZER101M5A,10.80,catalog single-qty observed,100uH; 39.4mOhm max; 9.1A rated; 7A saturation,https://www.digikey.com/en/products/detail/vishay-dale/IHLP8787MZER101M5A/4070266
+LEGACY v0.26 (NOT INSTALLED),L1_ALT,1,"Main inductor, cheaper alternative",Vishay IHTH0750IZEB101M5A,4.93,catalog single-qty observed,100uH; 64mOhm max; 5A rated; does not meet 0.5% in model,https://www.digikey.com/en/products/detail/vishay-dale/IHTH0750IZEB101M5A/8283954
+LEGACY v0.26 (NOT INSTALLED),L1A+L1B,2,Parallel matched inductors (unverified),Vishay IHLP8787MZER101M5A,10.80,catalog indicative per part,2 x 100uH ideal uncoupled parallel -> 50uH/19.7mOhm; check current-sharing and flux coupling,https://www.digikey.com/en/products/detail/vishay-dale/IHLP8787MZER101M5A/4070266
+PRIMARY,C_IN,2,Local GaN DC link,100V low ESL ceramic/polymer capacitors,6.00,estimate,Loop inductance/ESR must be measured,
+PRIMARY,C_OUT,1,Output capacitor bank,100V 470uF total 15mOhm nominal ESR target,8.00,estimate,Unverified bank; measure ESR and ripple current,
+LEGACY v0.26 (NOT INSTALLED),R_SENSE,1,Four-terminal shunt,5mOhm low-TCR Kelvin 0.1% shunt,4.00,estimate,Dissipation included as circuit loss; calibration required,
+LEGACY v0.26 (NOT INSTALLED),U_PWM,1,PWM/dead-time control,"Low-cost MCU + failsafe logic, exact MCU TBD",6.00,estimate,Hardware overcurrent + interlock required; 5V logic,
+PRIMARY,U_MON,2,Input/output monitoring,Texas Instruments INA228,15.00,estimate per 2,1% max fullscale energy error not enough to prove 0.5% goal,https://www.ti.com/product/INA228
+PRIMARY,U_AUX,1,5V gate-bias power,Isolated/filtered 5V auxiliary supply (TBD),4.00,estimate,Explicit 60mW controller-bias assumption not qualified,
+SECONDARY,J5/PZ1,1,Piezo receiver,Waterproof piezo receiver transducer (TBD),6.00,estimate,Measure actual sensitivity/impedance & mechanical mounting,
+SECONDARY,U2,1,Boost energy-harvesting battery charger,Texas Instruments BQ25570 RGR 20-pin,6.50,indicative estimate - verify distributor,VIN >=0.6 V cold start; storage battery threshold resistors TBD; IC not validated against actual piezo waveforms; verify charge thresholds and 1S chemistry,https://www.ti.com/product/BQ25570
+SECONDARY,C5,1,Rectified buffer input capacitor,>=4.7uF low-leak capacitor,1.00,estimate,BQ25570 VIN_DC buffer; leakage critical at sub-uW source levels; native KiCad C5,
+SECONDARY,L2,1,BQ25570 boost inductor,22uH low-DCR / current-rated part TBD,2.00,estimate,BQ25570 requires 22uH between LBOOST and VIN_DC; qualify saturation and DCR,
+SECONDARY,R_LOAD (test fixture),1,Low-power receiver load,Precision load resistor / instrumented MCU,1.00,estimate,Characterize load power vs storage voltage,
+MISC,PCB,1,PCB & assembly prototype,"2-layer/4-layer prototype, quote TBD",20.00,estimate,GaN switching requires verified power-loop layout,
+INTEGRATED,PULSE_DC_FEED,1,Buck-output energy-limited pulse feed,Current-limit and switch interlock TBD,3.00,estimate,Must be qualified from actual VOUT; energy is not an independent source,
+INTEGRATED,C_PULSE,1,Finite precharged pulse reservoir,Capacitor and clamp voltage TBD,4.00,estimate,Only pulse energy E=0.5CV² is simulated; plasma ignition not predicted,
+INTEGRATED,U_PULSE,1,Pulse timing and source metering,Isolated sensing and pulse timing controller TBD,6.00,estimate,Must account actual recharge/driver loss and timing; no hardware-ready circuit,
+SECONDARY,BR1,1,Piezo bridge rectifier,Ultra-low-leakage bridge / diode network TBD,2.50,estimate,Actual diode drop can dominate nanojoule AC recovery,
+SECONDARY,C7,2,Storage rail decoupling,4.7uF + 0.1uF low-leak MLCC,1.20,estimate,BQ25570 VSTOR decoupling,
+SECONDARY,C8,1,Battery terminal filtering,>=100uF low-leak capacitor,1.20,estimate,BQ25570 VBAT requires at least 100uF equivalent capacitance,
+SECONDARY,C6,1,MPPT sample capacitor,0.01uF low-leak capacitor,0.35,estimate,BQ25570 VREF_SAMP,
+SECONDARY,R1-R2,2,BQ25570 overvoltage threshold divider,Precision high-value resistors TBD,0.65,estimate,"Requires cell chemistry protection review; exact thresholds not selected; NOT SELECTED, schematic must not be fabricated",
+SECONDARY,BT1 (external),1,Rechargeable storage,"Protected 1S Li-ion cell, 20mAh study size",8.00,estimate,"Actual chemistry, protection, qualification and shipping rules pending",
+PRIMARY v0.28,R_DCR1/R_DCR2/C_DCR,3,Inductor-DCR sense RC time-constant network,Precision filter resistors + capacitor TBD by actual winding L/DCR,,pending design,"0.1mW estimated sense network load charged in numerical model; accuracy, temperature and actual values UNVERIFIED",https://www.analog.com/media/en/technical-documentation/data-sheets/3895fa.pdf
+EXPANDO v0.29,CELL[1:224],224,Isolated microbubble chamber and independently funded excitation,Concept cell assembly,,Model quantity,One modeled cell event replicated; acoustic isolation not verified,
+EXPANDO v0.29,WALL[1:224],224,Passive coupled wall transducer,Concept transducer,,Model quantity,55% coverage; 1400 Pa s/m sheet impedance assumed; no qualified transducer,
+EXPANDO v0.29,RX_TILE,32256,Distributed acoustic collection tiles,144 concept tiles per cell,,Model quantity,224 separate shells; coupling and assembly unverified,
+EXPANDO v0.29,BANK[1:7],7,32-cell grouped receiver and supervisory electronics,BQ25570 / Ambiq Apollo / TPS62740 / TLV3691 / MLX92216 candidates,,Model quantity,One complete microcomponent budget per bank; input voltage and aggregation not validated,
+EXPANDO v0.29,POWER_PATH,1,Storage and auxiliary useful-load selection,Regulated power-path concept,,Model assumption,10 mW auxiliary demand after battery full; 85% conversion and 10 uW control budget assumed,

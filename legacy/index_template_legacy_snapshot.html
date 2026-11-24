@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BubbleForge — Pressure-to-LEO Lab + Audited Recovery</title>
+<style>
+:root{color-scheme:dark;--bg:#07121e;--panel:#0d2131;--border:#294253;--ink:#ecf5ff;--muted:#91aabd;--mint:#4de1cb;--orange:#f9b16b;--violet:#ac96ff;--red:#ff9f9d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 18% -20%,#132e43,#07121e 56%);color:var(--ink);font:13px system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}button,input{font:inherit}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1600px;padding:18px 22px;margin:auto}h1{font-weight:750;font-size:23px;letter-spacing:-.6px;margin:0 0 4px}h1 span{color:var(--mint)}.sub{color:var(--muted);font-size:12px}.flag{font-size:10px;white-space:nowrap;letter-spacing:.07em;border-radius:99px;padding:8px 11px;border:1px solid #395467;color:#a3bdc9}
+main{max-width:1600px;margin:auto;padding:0 20px 22px;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(330px,.85fr);gap:16px;align-items:start}.panel{border:1px solid var(--border);border-radius:14px;background:linear-gradient(155deg,#112537,#0b1a28);min-width:0;overflow:hidden}.left{padding:15px}.right{padding:16px 17px 20px;max-height:calc(100vh - 108px);overflow:auto;scrollbar-color:#456575 transparent}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:11px}.top h2{margin:0;font-size:14px;letter-spacing:.01em}.tag{padding:5px 9px;border:1px solid var(--border);border-radius:999px;color:#9cb3c6;font-size:10px;white-space:nowrap}
+.stage{position:relative;border:1px solid #1c3647;border-radius:10px;overflow:hidden;background:radial-gradient(ellipse at 45% 40%,#18334b 2%,#091725 74%)}canvas#scene{display:block;width:100%;height:min(52vh,500px);min-height:340px;cursor:grab;touch-action:pan-y}.stage-head{position:absolute;left:15px;top:13px;font-size:11px;color:#b5cddb;background:#0717259c;border-radius:8px;padding:7px 9px;pointer-events:none}.class-strip{position:absolute;right:12px;top:47px;background:#071725d9;border:1px solid #345064;border-radius:9px;padding:8px 10px;min-width:140px;pointer-events:none;text-align:center}.class-strip .caption{display:block;color:#9fbccc;font-size:9px;margin-bottom:4px}.class-strip .dots{display:flex;gap:6px;align-items:center;justify-content:center;min-height:30px}.class-strip .dots span{display:inline-block;border-radius:50%;background:#3d9cea80;border:1px solid #74c6ff;box-shadow:0 0 9px #2971aa77}.stage-bubble{position:absolute;bottom:12px;left:12px;right:12px;display:flex;gap:7px;flex-wrap:wrap;pointer-events:none}.chip{background:#071727d7;border:1px solid #315064;border-radius:8px;padding:7px 10px;font-size:11px;color:#c4d6e1}.chip b{color:var(--mint)}.chip.orange b{color:var(--orange)}.chip.error b{color:var(--red)}.chip .distance{color:#d7eaff}.gapreadout{font-size:10px;line-height:1.5;color:#acc6d6;background:#0b2030;border:1px solid #2a485b;border-radius:7px;padding:8px 10px;margin:-4px 0 13px} .gapreadout strong{color:#e2f7ff}
+.probe{border-radius:9px;border:1px solid #254052;background:#091c2d;padding:11px 12px;margin-top:10px;min-height:63px}.probe strong{font-size:12px}.probe p{font-size:11px;color:var(--muted);margin:6px 0 0;line-height:1.5}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.metric{background:#152c40;border:1px solid #2b485c;border-radius:8px;padding:11px;min-width:0}.metric .title{color:#90abbe;font-size:10px}.metric .val{font-size:19px;line-height:1.25;margin-top:4px;font-weight:740;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}.mint{color:var(--mint)}.violet{color:var(--violet)}.red{color:var(--red)}.fineprint{font-size:11px;color:var(--muted);line-height:1.6;margin:12px 2px 0}.fineprint strong{color:#d5e6f3}
+label{display:block;color:#9ab1c2;font-size:11px;margin:0 0 13px}label .value{float:right;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}input[type=range]{width:100%;margin:6px 0 0;accent-color:var(--mint);cursor:pointer}input[type=number]{background:#0a1b2a;border:1px solid #466072;border-radius:6px;color:#f1fbff;width:100px;min-width:0;padding:7px 8px;text-align:right;font-weight:750}.voltage-field{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:3px}.voltage-field label{margin:0;font-size:12px;font-weight:700;color:#deeefa}.voltrange{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin-bottom:12px}.presets{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:15px}button{padding:8px 10px;border-radius:7px;color:#e5f4fb;background:#173549;border:1px solid #3b5e70;cursor:pointer;font-weight:650}button:hover{background:#205067}button.primary{background:#08796c;border-color:#2fc1a9}button.primary:hover{background:#119180}button:disabled{opacity:.5;cursor:not-allowed}button.small{font-size:11px;padding:5px 9px}.section-label{font-size:10px;color:#65dcca;text-transform:uppercase;letter-spacing:.13em;font-weight:750;border-top:1px solid #253f51;padding-top:14px;margin:10px 0 14px}.section-label:first-of-type{border:0;padding:0}.buttons{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.status{font-size:11px;color:#a9c1d0;line-height:1.5;min-height:42px;padding:10px 11px;background:#081b2a;border:1px solid #284254;border-radius:8px;margin-top:11px}.status.warn{border-color:#956c44;color:#f9c79a}.status.bad{border-color:#885159;color:#ffc0bf}.smallmetrics{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:11px}.smallmetrics .metric .val{font-size:16px}.sizeTable{margin:12px 0 0;border:1px solid #284859;border-radius:8px;overflow:auto;background:#0a2131}.sizeTable table{width:100%;border-collapse:collapse;font-size:11px;white-space:nowrap}.sizeTable th{text-align:right;color:#a4c4d5;background:#132e40;padding:7px 8px;font-weight:650}.sizeTable td{text-align:right;padding:7px 8px;border-top:1px solid #234152;font-variant-numeric:tabular-nums}.sizeTable th:first-child,.sizeTable td:first-child{text-align:left}.sizeTable .pass{color:var(--mint)}.sizeTable .fail{color:var(--red)}.pressurefield{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-bottom:10px}.pressurefield input{width:125px}.physicsnote{line-height:1.55;margin-top:12px;color:#a9bdc9;font-size:10.5px} .drivelabel{margin-top:-8px;font-size:10px;color:#859eae}
+@media(max-width:1150px){main{grid-template-columns:minmax(0,1fr) minmax(310px,.82fr)}.metrics{grid-template-columns:repeat(2,1fr)}.right{max-height:none}}
+@media(max-width:880px){main{grid-template-columns:1fr}.right{max-height:none;overflow:visible}.flag{white-space:normal}.stage canvas#scene{height:400px}}
+@media(max-width:480px){header{display:block;padding:15px 15px 12px}.flag{display:inline-block;margin-top:8px}main{padding:0 12px 14px}.stage canvas#scene{height:300px;min-height:270px}.stage-head{font-size:10px}.chip{padding:5px 7px}.metric .val{font-size:17px}}
+
+.targetstrip{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border:1px solid #3d5c68;border-radius:8px;background:#0c2435;padding:11px 12px;margin-top:10px}
+.targetstrip strong{color:#53e6cc;font-size:14px}.targetstrip span{color:#b8cfe1;font-size:11px;max-width:60%}
+.targetstrip.fail strong{color:#ffaf9d}.targetstrip.pending strong{color:#d9c6a2}
+.lossbar{height:8px;margin:9px 0 12px;background:#294b54;border-radius:99px;overflow:hidden}
+.lossfill{height:100%;width:0%;background:#f1aa83;transition:width .3s}
+select{color:#e5f5ff;background:#0c2130;border:1px solid #385468;border-radius:7px;padding:9px;max-width:100%;width:100%;font-size:11px;margin-top:5px}
+
+.secondary-lab{margin-top:14px;background:#0a1e2d;border:1px solid #35647b;border-radius:10px;padding:15px}
+.secondary-header{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.secondary-header h3{margin:0;font-size:15px;color:#e1f7ff}.secondary-info{line-height:1.55;color:#9fbacf;font-size:11px;margin-top:7px}
+.secgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}
+.sec-item{background:#102c3e;border:1px solid #294f63;border-radius:8px;padding:11px}
+.sec-item .caption{font-size:10px;color:#95b4c4}.sec-item strong{font-size:17px;display:block;color:#4de1cb;margin-top:5px;overflow-wrap:anywhere}
+.secondary-trace{display:block;background:#071c2b;border:1px solid #284759;border-radius:8px;width:100%;height:162px}
+.secondary-trace text{font-size:10px;fill:#a7c9d9}
+.secondary-flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:10px 0}
+.secondary-flow span{border:1px solid #365c6e;background:#123347;border-radius:8px;padding:9px 10px;font-size:11px;color:#c8e1ec}
+.secondary-flow em{font-style:normal;color:#62e1d0}
+.vacuumlab{border:1px solid #44647b;border-radius:9px;background:#0b2535;padding:12px;margin:10px 0 14px}.vacuumlab strong{color:#74e1d3}.envfacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.envfacts div{border:1px solid #355468;border-radius:6px;padding:8px;background:#0c1e2e}.envfacts b{display:block;font-size:14px;color:#d7f7ff;margin-top:3px}.envcaveat{color:#f8bf9b;font-size:10.5px;line-height:1.45}.audit-table{font-size:11px;width:100%;border-collapse:collapse}.audit-table th,.audit-table td{padding:5px 8px;border-bottom:1px solid #2c4859}.audit-table th{text-align:left;color:#a8c7d9}.audit-table td{text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:880px){.secgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head>
+<body>
+<header><div><h1>BubbleForge <span>/</span> Pressure-to-LEO Lab · Audited Recovery</h1><div class="sub">35–4,000 V · 5–125 kHz · external vacuum separate from pressurized liquid · quantitative loss audit</div></div><div class="flag">VACUUM + POWER MODEL · NOT HARDWARE-VALIDATED</div></header>
+<main>
+<section class="panel left" aria-label="3D simulator">
+  <div class="top"><h2>Live 3D system · click a component</h2><span class="tag" id="scenehint">ROTATE · SELECT</span></div>
+  <div class="stage"><canvas id="scene" aria-label="Interactive spatial simulation of coils, resonator, microbubble and piezo receiver"></canvas>
+    <div class="stage-head">Spatial arrangement schematic · not to scale &nbsp;|&nbsp; Primary <span style="color:var(--orange)">●</span> &nbsp; Secondary <span style="color:var(--mint)">●</span> &nbsp; Bubble <span style="color:#67b8ff">●</span> &nbsp; Receiver <span style="color:var(--violet)">●</span></div>
+    <div class="class-strip" title="Calculated size candidates; icons represent alternative radii, not five physical bubbles"><span class="caption">MODEL SIZE CANDIDATES · NOT TO SCALE</span><div class="dots" id="classDots">—</div></div>
+    <div class="stage-bubble"><div class="chip orange">Derived pressure: <b id="bubblepressure">—</b></div><div class="chip">Piezo DC / size sweep: <b id="bubbleenergy">—</b></div><div class="chip">Collector pulse: <b id="bubblepulse">—</b></div><div class="chip">Calculated peak clearance: <b class="distance" id="measuredgap">—</b></div><div class="chip">Sound captured: <b id="capturepct">—</b></div><div class="chip">Minimum model gap: <b id="requiredgap">—</b></div><div class="chip">Plasma pulse DC: <b id="pulseRecovered">—</b></div><div class="chip">Plasma-expanded radius: <b id="plasmaRadius">—</b></div><div class="chip" id="bubblevalid">Model domain: <b>pending</b></div></div>
+  </div>
+  <div class="sizeTable" aria-label="Inverse-calculated bubble sizes"><table><thead><tr><th>Calculated size</th><th>Resonance</th><th>Radius</th><th>Peak radius</th><th>Piezo output / one reference event</th><th>Domain</th></tr></thead><tbody id="classRows"><tr><td colspan="6">Calculating candidate equilibrium sizes from pressure and oscillator...</td></tr></tbody></table></div>
+  <div class="vacuumlab" id="envReadout"><strong>External vacuum chamber and internal liquid are independently modeled</strong>
+    <div class="envfacts"><div>Chamber pressure<b id="extPressure">88,477 Pa</b></div><div>Internal bubble pressure<b id="intPressure">88,477 Pa</b></div><div>Vacuum gas regime<b id="gasFlow">—</b></div><div>Mean free path, N₂<b id="mfpValue">—</b></div></div>
+    <div class="envcaveat" id="envWarning">Pressure matching does not simulate microgravity, orbital atomic oxygen or vacuum thermal cooling.</div>
+  </div>
+  <div class="probe"><strong id="probename">LPRI · primary resonator</strong><p id="probeval">Select a component to inspect its simulated state.</p></div>
+  <div class="metrics">
+    <div class="metric"><div class="title">Electrical + mechanical supplied</div><div class="val" id="minput">0 J</div></div>
+    <div class="metric"><div class="title">DC delivered + bubble piezo</div><div class="val mint" id="mout">0 J</div></div>
+    <div class="metric"><div class="title">Whole-system DC transfer</div><div class="val mint" id="mtotaleta">—</div></div>
+    <div class="metric"><div class="title">Net energy change</div><div class="val red" id="mnetjoules">—</div></div>
+    <div class="metric"><div class="title">Net change (%)</div><div class="val red" id="mgain">—</div></div>
+    <div class="metric"><div class="title">Bubble extraction · reference burst sweep</div><div class="val mint" id="meff">—</div></div>
+  </div>
+  <div class="targetstrip" id="targetstrip"><strong id="targetresult">Net energy ≥0.000% target · evaluating</strong><span id="targetcontext">No hidden energy sources or recirculated-output double counting.</span></div>
+  <div class="lossbar"><div id="lossfill" class="lossfill"></div></div>
+  <div class="gapreadout" id="netbound">Calculated upper bound and shortfall will appear after Python simulation.</div>
+  <div class="gapreadout" id="lossbudget">Loss accounting by physical subsystem will appear after the Python model computes.</div>
+  <div class="vacuumlab"><strong>Audited electrical power path · independent source ledger</strong>
+    <div class="secondary-info">The 3D schematic is not a hardware netlist. Differences below are modeled dissipation, not missing wires. Stage figures use the last full Python integration.</div>
+    <table class="audit-table"><thead><tr><th>Electrical stage</th><th>Loss (J)</th><th>Source share</th></tr></thead><tbody id="auditRows"><tr><td colspan="3">Computing stage losses…</td></tr></tbody></table>
+    <p class="secondary-info" id="auditConclusion">The 130 mW gate-drive budget is an explicit assumption. The 40 mW case is a hypothetical lower-controller-power design, not hardware proof.</p>
+  </div>
+  <div class="secondary-lab" aria-label="Separate secondary acoustic and magnetic energy-storage circuit">
+    <div class="secondary-header"><h3>Independent secondary recovery · capacitor storage</h3><span class="tag">PRIMARY PULSE ENERGY DEBITED</span></div>
+    <div class="secondary-info">Independent low-power receiver: acoustic piezo and/or magnetically coupled pickup → rectifier and power manager → energy-storage capacitor → separate load. Triggering consumes harvested electricity. Repetition is a <em>real input</em> (not the coil oscillator frequency). This is an <strong>alternative routing of the plasma pulse energy</strong>, not extra power to add to the main circuit result.</div>
+    <div class="secondary-flow" role="img" aria-label="Pulse reservoir feeds plasma bubble with acoustic piezo capture and a separately budgeted inductive near-field pickup; both flow to a rectifier, capacitor and DC load"><span>Precharged primary<br>plasma pulse</span><em>→</em><span>Bubble + fields</span><em>→</em><span>Piezo / pickup</span><em>→</em><span>Rectifier + control</span><em>→</em><span>Cstore → DC load</span></div>
+    <div class="secgrid">
+      <div class="sec-item"><span class="caption">Stored capacitor voltage</span><strong id="secV">—</strong></div>
+      <div class="sec-item"><span class="caption">Predicted steady voltage</span><strong id="secPlateau">—</strong></div>
+      <div class="sec-item"><span class="caption">Net charge power</span><strong id="secPower">—</strong></div>
+      <div class="sec-item"><span class="caption">Primary pulse input</span><strong id="secPrimary">—</strong></div>
+      <div class="sec-item"><span class="caption">Capacitor energy</span><strong id="secEnergy">—</strong></div>
+      <div class="sec-item"><span class="caption">Energy delivered to load</span><strong id="secLoad">—</strong></div>
+      <div class="sec-item"><span class="caption">Ionization upfront / pulse</span><strong id="secIon">—</strong></div>
+      <div class="sec-item"><span class="caption">Plasma radiation / pulse</span><strong id="secRad">—</strong></div>
+    </div>
+    <svg id="secondaryChart" class="secondary-trace" viewBox="0 0 640 162" role="img" aria-label="Predicted secondary capacitor voltage over time">
+      <line x1="45" y1="15" x2="45" y2="135" stroke="#3d6578"/><line x1="45" y1="135" x2="620" y2="135" stroke="#3d6578"/>
+      <line x1="45" y1="75" x2="620" y2="75" stroke="#243e50" stroke-dasharray="4 5"/>
+      <polyline id="secondaryTrace" fill="none" stroke="#4de1cb" stroke-width="2.4" points="45,135"/>
+      <text x="48" y="10" id="secYAxis">V</text><text x="555" y="153" id="secXAxis">seconds</text>
+    </svg>
+    <div class="secondary-info" id="secLedger">Solving pulse frequency, plasma residual, recombination, and storage balance…</div>
+    <div class="secondary-info" id="secValidity">Hardware and breakdown are not validated. The model refuses independent-pulse recovery credit if bubble events overlap.</div>
+  </div>
+  <p class="fineprint" id="ledgernote">Whole-system recovery = recovered DC / all external electrical and precharged mechanical input. Net gain = recovery − 100%, so a passive system with losses remains below zero. Bubble recovery is a separate percentage of all individually driven bubble classes, not whole-system gain. This model uses an editable dated local station-pressure estimate for its sealed liquid and a separate external laboratory-vacuum chamber setpoint. Collector capture is a finite-disk geometric estimate, valid only when sufficiently separated from the oscillating bubble. Design case: 99% assumed isolated HV conversion, new low-loss coils and electronics; baseline: 94% assumed HV conversion. Both are simulation scenarios. Delivered coil DC is transferred external power, NOT energy newly produced by bubbles. Vacuum harvest = 0 J; shocks not resolved.</p>
+</section>
+<aside class="panel right" aria-label="Simulator controls">
+  <div class="top"><h2>Controls</h2><span class="tag">EXTERNAL SUPPLY ONLY</span></div>
+  <div class="voltage-field"><label for="volts">DC supply</label><input id="voltentry" type="number" min="35" max="4000" step="1" value="35" aria-label="Supply voltage in volts"></div>
+  <input id="volts" type="range" min="35" max="4000" step="1" value="35" aria-label="Supply voltage 35 to 4000 volts">
+  <div class="voltrange"><span>35 V</span><strong id="vlabel">35 V</strong><span>4,000 V</span></div>
+  <div class="presets" aria-label="Voltage presets"><button class="small" data-volt="35">35 V</button><button class="small" data-volt="500">500 V</button><button class="small" data-volt="1000">1 kV</button><button class="small" data-volt="2000">2 kV</button><button class="small" data-volt="4000">4 kV</button></div>
+  <div class="section-label">Model architecture</div>
+  <label>Electrical component scenario
+    <select id="scenario" aria-label="Electrical design case">
+      <option value="legacy">Original conceptual components · baseline</option>
+      <option value="design_target" selected>Redesigned high-efficiency assumptions · NOT VALIDATED</option>
+      <option value="low_controller">Controller sensitivity study · 40 mW gate allowance (unverified)</option>
+    </select>
+  </label>
+  <p class="drivelabel">The UNVERIFIED standard design assumes <strong>99% HV converter</strong>, <strong>99.5% inverter</strong>, substantially lower winding and switch resistance, and synchronous rectification. It represents a proposed <strong>new device</strong>, not measured existing hardware. 4 kV is a <strong>simulated isolated input bus</strong>, never applied directly across 35 V coils.</p>
+  <div class="section-label">Resonant circuit</div>
+  <label>Resonator oscillator frequency <span class="value" id="flabel">75 kHz</span><input id="freq" type="range" min="5" max="125" step="0.01" value="75" aria-label="Resonator oscillator frequency 5 to 125 kHz"></label>
+  <label>Fixed LC tuning <span class="value" id="tlabel">75 kHz</span><input id="tune" type="range" min="5" max="125" step="0.01" value="75" aria-label="Resonance tuning frequency 5 to 125 kHz"></label>
+  <label>DC output load <span class="value" id="llabel">200 Ω</span><input id="load" type="range" min="10" max="360" step="0.1" value="200"></label>
+  <label>Resonator drive modulation <span class="value" id="mlabel">100%</span><input id="modulation" type="range" min="20" max="100" step="0.1" value="100"></label>
+  <div class="presets"><button class="small primary" id="lowlossPreset">Sub-2% study (35 V, unverified)</button><button id="optimize" class="primary small">Tune toward 0% net change</button><button id="match" class="small">Match resonance</button><button class="small" data-freq="50000">50 kHz</button><button class="small" data-freq="100000">100 kHz</button><button class="small" data-freq="125000">125 kHz</button></div>
+  <div class="section-label">Ground lab → LEO-equivalent chamber vacuum</div>
+  <label>Vacuum pressure range, logarithmic Pa <span class="value" id="chamberLabel">88,477 Pa</span>
+    <input id="chamberExp" type="range" min="-12" max="5.079" step="any" value="4.946835" aria-label="Chamber absolute gas pressure from 10^-12 to 120,000 Pa; logarithmic slider">
+  </label>
+  <div class="pressurefield"><label for="chamberDirect">Chamber gas pressure · absolute Pa</label><input id="chamberDirect" type="number" min="1e-12" max="120000" step="any" value="88477"></div>
+  <div class="presets" aria-label="Pressure example presets"><button class="small" data-chamber="88477">Juárez ambient</button><button class="small" data-chamber="100">Rough 100 Pa</button><button class="small" data-chamber="0.001">HV 10⁻³ Pa</button><button class="small" data-chamber="0.000001">LEO ~400 km</button><button class="small" data-chamber="0.000000001">MAX IV UHV</button><button class="small" data-chamber="0.000000000002">CERN XHV example</button></div>
+  <label>Test vessel configuration
+    <select id="vesselMode" aria-label="Liquid containment in vacuum chamber">
+      <option value="sealed_liquid" selected>Sealed internal liquid cell · independent pressure</option>
+      <option value="exposed_liquid">Liquid exposed to chamber pressure · validity screened</option>
+      <option value="dry_vacuum">Dry test chamber · no bubble/acoustic credit</option>
+    </select>
+  </label>
+  <div class="gapreadout">Only the <strong>external gas vacuum</strong> can be swept to UHV/LEO levels. A sealed liquid cell retains its own independently set pressure. Exposed liquid at UHV is not treated as a stable water-bubble experiment. Ambient-pressure change alone does <strong>not</strong> improve conversion, and vacuum thermal behavior is not yet calibrated.</div>
+  <div class="section-label">El Paso / Ciudad Juárez · measured site conditions</div>
+  <div class="pressurefield"><label for="airPa">Internal <strong>liquid-vessel headspace</strong> pressure (Pa)</label><input type="number" id="airPa" min="60000" max="120000" step="10" value="88477" aria-label="Site absolute air pressure in pascals, replace estimate with measurement"></div>
+  <p class="drivelabel">Sealed-liquid default: NOAA KELP, 16 Nov 2026 16:51 MST, 30.17 inHg altimeter at 1,197 m → approximately 88,477 Pa <em>estimated station pressure</em> using ISA. Historical snapshot, not live or on-site; replace with a calibrated barometer reading.</p>
+  <label>Water depth below free surface <span class="value" id="depthlabel">0.0 m</span><input id="depth" type="range" min="0" max="5" step="0.1" value="0"></label>
+  <div class="gapreadout">Pressure preset examples are not current telemetry. Local MST/MDT observation timestamps use <strong>America/Ciudad_Juarez</strong>; El Paso uses <strong>America/Denver</strong>. The bubble feels <strong>absolute hydrostatic pressure</strong> (air + water column), not a pressure determined by time zone. <strong>Liquid absolute pressure: <span id="liquidpressure">—</span></strong>.</div>
+  <div class="section-label">Calculated bubble sizes · no manual radius</div>
+  <div class="gapreadout">The solver derives <strong>five candidate resonant radii</strong> from the coil-drive frequency, local absolute water pressure, and surface tension. Five is an internal numerical sampling grid, <strong>not a prediction of five physical bubbles</strong>. No bubble-count, initial-expansion, pressure-amplitude, acoustic-frequency, burst-cycles, or piezo-efficiency sliders are needed.</div>
+  <div class="gapreadout">Derived acoustic drive: <strong id="derivedfreq">—</strong> &nbsp;·&nbsp; Derived pressure setpoint: <strong id="derivedpressure">—</strong> &nbsp;·&nbsp; Inferred central radius: <strong id="inferredradius">—</strong></div>
+  <label>Bubble → receiver face gap <span class="value" id="cglabel">1.00 mm</span><input id="cgap" type="range" min="-5" max="-2" step="0.025" value="-3" aria-label="Bubble equilibrium surface to receiver face gap, from 10 micrometres to 10 millimetres"></label>
+  <div class="gapreadout">Geometry input from bubble <strong>equilibrium surface</strong> to receiver face. During expansion the clearance shrinks; acoustic capture uses the <strong>center-to-face distance</strong>. Closer may improve collection, but very small gaps are not validated.</div>
+  <div class="presets"><button class="small primary" id="closestgap">Closest valid gap</button><button class="small" data-gap="-4">100 µm</button><button class="small" data-gap="-3">1 mm</button><button class="small" data-gap="-2">10 mm</button></div>
+  <p class="drivelabel">The piezoelectric conversion (25%), spectral sampling bandwidth (0.7 octave), receiver area (1 mm²), and acoustic actuator pressure mapping are <strong>explicit uncalibrated model assumptions</strong>, not editable measurements. The pressure drive is capped at 5% of liquid pressure to stay in the conservative acoustic regime.</p>
+  <div class="gapreadout">New target: <strong>net electrical energy ≥0.000%</strong> compared against every externally supplied electrical input and prepared bubble energy. This is a feasibility test, not a number forced by the optimizer. The best nonideal passive device is expected to remain negative. The interface reports the missing energy, mathematical upper bound, and modeled losses. The model does not demonstrate self-powering or a positive net gain. Electromechanical and acoustic transducer calibration, loading, reflections, real-time power metering, and 4 kV insulation qualification are still required.</div>
+  <div class="section-label">Finite-reservoir plasma-assisted event · screening model</div>
+  <label><input id="plasmaEnabled" type="checkbox" checked> Include separately precharged pulse-energy reservoir</label>
+  <label>Precharged energy per modeled event <span class="value" id="plasmaEnergyLabel">1 µJ</span><input id="plasmaEnergy" type="range" min="-7" max="-3" value="-6" step="0.1" aria-label="Electrical energy stored for one modeled plasma event"></label>
+  <div class="gapreadout">This is <strong>energy supplied before the spark</strong>, not energy from empty space. Plasma ignition is NOT predicted. A separate event transfers assumed fractions into bubble expansion, acoustic pulses, heat and piezo collection. It is not an experimentally calibrated discharge or shock solver. <strong>Pulse recovery: <span id="plasmaRecovery">—</span></strong> · Model geometry: <strong id="plasmaValidity">—</strong>.</div>
+  <div class="gapreadout">A bubble may return more energy than the switching command that triggers a precharged reservoir, but <strong>never more than all input energy including reservoir charging</strong>. The 0% target always includes every source.</div>
+  <div class="section-label">Independent secondary recovery · design study</div>
+  <label>Secondary recovery pathway
+    <select id="secondaryMode">
+      <option value="acoustic">Acoustic piezo only</option>
+      <option value="hybrid" selected>Acoustic + inductive pickup (bounded)</option>
+      <option value="inductive">Inductive pickup only (bounded)</option>
+    </select>
+  </label>
+  <div class="pressurefield"><label for="pulseRate">Primary pulse repetition (Hz)</label><input type="number" min="0" max="125000" step="100" id="pulseRate" value="1000"></div>
+  <div class="presets"><button class="small" data-rate="100">100 Hz</button><button class="small" data-rate="1000">1 kHz</button><button class="small" data-rate="10000">10 kHz</button><button class="small" data-rate="125000">125 kHz screening</button></div>
+  <label>Storage capacitor (proposed, not rated)
+    <select id="secCap"><option value="0.000001">1 µF</option><option value="0.00001" selected>10 µF</option><option value="0.0001">100 µF</option><option value="0.001">1 mF</option></select>
+  </label>
+  <div class="pressurefield"><label for="secLoadOhm">Secondary DC load (Ω)</label><input type="number" min="100" max="1000000000000" step="1000" id="secLoadOhm" value="1000000"></div>
+  <div class="pressurefield"><label for="secDuration">Storage observation (s)</label><input type="number" min="0" max="86400" step="10" id="secDuration" value="120"></div>
+  <div class="presets"><button class="small primary" id="runSecondary">Simulate secondary storage</button><button class="small" id="tuneSecondary">Tune for 3.0 V steady storage</button></div>
+  <div class="gapreadout">Secondary electronics are electrically separate from the primary high-voltage source. Assumed capacitor clamp: 3.3 V; leakage: 50 MΩ; power-manager efficiency: 82%; unmeasured magnetic coupling: k=0.10. The controller pays 0.5 nJ per received event. These are design assumptions, not a wiring-ready 4 kV device.</div>
+  <div class="section-label">Simulation</div>
+  <label>Time acceleration <span class="value" id="slabel">×1</span><input id="speed" type="range" min="0" max="6" step="1" value="0"></label>
+  <div class="buttons"><button id="play" class="primary">Pause</button><button id="burst" class="primary">Simulate size sweep</button><button id="firePlasma" class="primary">Simulate plasma pulse</button><button id="reset">Reset</button><button id="recompute">Recompute</button></div>
+  <div id="status" class="status">Starting simulator…</div>
+  <div class="smallmetrics"><div class="metric"><div class="title">Simulation clock</div><div class="val" id="mtime">0.0 s</div></div><div class="metric"><div class="title">Recovered power (coil)</div><div class="val mint" id="mwatts">—</div></div></div>
+  <p class="physicsnote">Plasma mode now debits a hypothetical ionization-energy budget, evolves quasineutral ionized-pair density under expansion and recombination, and separates recombination and direct radiation losses. It still does not predict real ignition, exact species chemistry, or shocks. The size-grid results represent independently supplied reference events, not a measured population of bubbles. Each candidate is a gas bubble in water, with local-pressure-corrected linear resonance; it is not proof of long-term bubble stability. Acoustic scattering, gas diffusion, bubble nucleation, coherent group effects and acoustic interference are not solved. The input bus is <strong>not connected directly to the original coil</strong>: a hypothetical insulated converter regulates it to 35 V and accounts for losses. No high-voltage hardware has been validated. The 125 kHz oscillator uses a phasor approximation, not switching-resolved simulation. Bubble pressure and piezo response are assumed; the on-axis circular receiver uses finite-solid-angle acoustic capture with a 50% one-sided ceiling, and spacing below 10× maximum bubble radius is outside the receiver model. Shock formation is not resolved. No femtometer fluid-bubble recovery is credited.</p>
+</aside>
+</main>
+<script id="seed" type="application/json">__SEED_JSON__</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const seed=JSON.parse($('seed').textContent);
+const get=id=>Number($(id).value);
+let timeS=0,playing=true,lastT=0,speedFactor=[1,10,100,1000,1e4,1e5,1e6],
+    theta=.17,tilt=.22,drag=false,dragStartX=0,thetaStart=0,points={},selected='LPRI',
+    bubbleCount=0,plasmaCount=0,bubble=seed.bubble,population=seed.bubble_population||null,current=null,requestSerial=0,fetchTimer=null,
+    bubbleKey=null,confirmed=false;
+let meters={input:0,output:0,heat:0};
+let plasmaPulse=seed.plasma||null;
+let secondaryResult=null, secondaryRequestSerial=0;
+const PARTS={V1:['DC oscillator','VBUS → resonant primary'],RDRV:['Driver resistance','DRIVE → PRI_A'],RPRI:['Copper winding loss','PRI_A → PRI_CP'],CPRI:['Primary LC capacitor','PRI_CP → PRI_B'],LPRI:['Primary coil · 100 turns','PRI_B → PRI_RET'],LSEC:['Secondary coil · 150 turns','SEC_A → SEC_R'],CSEC:['Secondary LC capacitor','SEC_R → SEC_C'],RSEC:['Secondary copper loss','SEC_C → SEC_B'],D1:['Bridge diode 1','SEC_A → POS'],D2:['Bridge diode 2','SEC_B → POS'],D3:['Bridge diode 3','NEG → SEC_A'],D4:['Bridge diode 4','NEG → SEC_B'],RESR:['Output storage ESR','POS → CAP_INT'],CSTORE:['Output capacitor','CAP_INT → NEG'],RLOAD:['DC load','POS → NEG'],JHARV:['Recovered DC port','POS → NEG'],B_VAC_SIM:['Vacuum observer (theory only)','No measured vacuum energy input'],V_OSC:['Oscillator logic','External oscillator supply'],J_OSC:['Oscillator connector','Control net'],BUBBLE:['Gas bubble in liquid','Radial oscillation / momentum storage'],PZREC:['Acoustic receiver','Small-aperture piezo capture (assumed)']};
+const nodes=[['V1',-3.4,-.7,0],['RDRV',-2.7,-.7,.15],['RPRI',-1.85,-.7,.15],['CPRI',-1.05,-.7,.1],['LPRI',-.23,-.7,0],['LSEC',-.23,.76,0],['CSEC',.6,.76,.16],['RSEC',1.25,.76,.16],['D1',1.86,.35,.1],['D2',1.87,1.05,.1],['D3',2.30,.35,.1],['D4',2.30,1.05,.1],['RESR',2.95,.23,.1],['CSTORE',3.48,0,.12],['RLOAD',3.18,1.05,.12],['JHARV',3.77,.68,.1],['B_VAC_SIM',.55,-.12,1],['V_OSC',-3.05,1.1,.1],['J_OSC',-2.28,1.1,.1]];
+const wires=[['V1','RDRV','drive'],['RDRV','RPRI','drive'],['RPRI','CPRI','drive'],['CPRI','LPRI','drive'],['LPRI','V1','drive'],['LSEC','CSEC','pickup'],['CSEC','RSEC','pickup'],['RSEC','D2','pickup'],['LSEC','D1','pickup'],['D1','RESR','pickup'],['D2','RESR','pickup'],['D3','JHARV','pickup'],['D4','JHARV','pickup'],['RESR','CSTORE','pickup'],['CSTORE','JHARV','pickup'],['RLOAD','JHARV','pickup'],['V_OSC','J_OSC','drive'],['J_OSC','V1','drive']];
+const locations=Object.fromEntries(nodes.map(n=>[n[0],n]));
+const cv=$('scene'),g=cv.getContext('2d');
+function resize(){const d=Math.min(2,window.devicePixelRatio||1),w=cv.clientWidth,h=cv.clientHeight;if(cv.width!==Math.floor(w*d)||cv.height!==Math.floor(h*d)){cv.width=Math.floor(w*d);cv.height=Math.floor(h*d)}return{w,h,d}}
+function pos(p){let x=p[0],y=p[1],z=p[2]||0,xx=x*Math.cos(theta)-z*Math.sin(theta),zz=x*Math.sin(theta)+z*Math.cos(theta),yy=y*Math.cos(tilt)-zz*Math.sin(tilt),dep=y*Math.sin(tilt)+zz*Math.cos(tilt),sc=Math.min(cv.clientWidth/9,cv.clientHeight/4.1)/(1+.018*dep);return [cv.clientWidth*.5+xx*sc,cv.clientHeight*.49+yy*sc,dep,sc]}
+function path(a,b,color,width=2,dash=[]){let A=pos(a),B=pos(b);g.strokeStyle=color;g.lineWidth=width;g.setLineDash(dash);g.beginPath();g.moveTo(A[0],A[1]);g.lineTo(B[0],B[1]);g.stroke();g.setLineDash([])}
+function ring(x,y,z,r,color){let last=null;for(let j=0;j<=70;j++){let a=2*Math.PI*j/70,p=[x+r*Math.cos(a),y+.17*Math.sin(a),z+r*Math.sin(a)];if(last)path(last,p,color,1.1);last=p}}
+function sci(n,d=3){if(n==null||!Number.isFinite(n))return'—';if(n===0)return'0';if(Math.abs(n)<.001||Math.abs(n)>=100000)return n.toExponential(d-1);return n.toFixed(d)}
+function clock(s){return s>=3600?sci(s/3600,2)+' h':sci(s,1)+' s'}
+function key(){return [$('scenario').value,...['volts','freq','tune','load','modulation','airPa','depth','cgap'].map(id=>$(id).value),$('plasmaEnabled').checked?'pulse':'off',$('plasmaEnergy').value,$('chamberDirect').value,$('vesselMode').value].join('|')}
+function chamberPa(){return get('chamberDirect')}
+function chamberFormat(v){return v>=1000?Math.round(v).toLocaleString('en-US')+' Pa':v>=.01?sci(v,4)+' Pa':v.toExponential(2)+' Pa'}
+function lengthLabel(m){if(!Number.isFinite(m))return '—';if(Math.abs(m)<1e-3)return sci(m*1e6,1)+' µm';return sci(m*1e3,2)+' mm'}
+function drivePa(){let normalized=Math.log(get('volts')/35)/Math.log(4000/35);return Math.min(2000+22000*normalized,.05*(get('airPa')+998*9.80665*get('depth')))}
+function qfast(){let v=35,f=get('freq')*1000,tune=get('tune')*1000,R=get('load'),w=2*Math.PI*f,w0=2*Math.PI*tune;
+const lp=.000383334470789,ls=.000431956849391,M=.5897123937*Math.sqrt(lp*ls),cp=1/(w0*w0*lp),cs=1/(w0*w0*ls),
+ r1=2.2703*(1+.00393*5)*(1+.035*Math.sqrt(f/25000)),r2=5.7268*(1+.00393*5)*(1+.035*Math.sqrt(f/25000)),rl=8/Math.PI**2*R,rz=r2+.11+.18+rl,xs=w*ls-1/(w*cs),xp=w*lp-1/(w*cp),den=rz*rz+xs*xs,
+ rr=(w*M)**2*rz/den,rx=-((w*M)**2)*xs/den,pr=r1+.08+.18+rr,px=xp+rx,vr=v*get('modulation')/100*.900316316,ip=vr/Math.hypot(pr,px),is=w*M*ip/Math.sqrt(den),pac=is*is*rl,
+ pdc=Math.max(0,pac-Math.min(pac,1.3*Math.sqrt(Math.max(pac/R,0)))),ac=ip*ip*pr,
+ inputW=(ac/.94+.48)/(get('volts')>35?.94:1);
+return {inputW,outputW:pdc,primary:ip,secondary:is,outputV:Math.sqrt(Math.max(pdc*R,0)),heatW:Math.max(0,inputW-pdc),temperature:25+Math.min(1e5,Math.max(0,inputW-pdc)*1.1),cp,cs};}
+function drawScene(){let{w,h,d}=resize();g.setTransform(d,0,0,d,0,0);g.clearRect(0,0,w,h);points={};
+ for(let i=-5;i<=5;i++)path([i*.75,-1.55,-.25],[i*.75,1.55,-.25],'#1c3c50',.7);
+ for(let j=-2;j<=2;j++)path([-4,j*.75,-.25],[4,j*.75,-.25],'#1c3c50',.7);
+ for(let [a,b,k] of wires){let A=locations[a],B=locations[b],color=k==='drive'?'#edac6e':'#48dac5';path(A.slice(1),B.slice(1),color,2);if(playing){let t=(timeS*.13+(a.charCodeAt(0)%9)/11)%1,p=pos([A[1]+(B[1]-A[1])*t,A[2]+(B[2]-A[2])*t,A[3]+(B[3]-A[3])*t]);g.fillStyle=color;g.beginPath();g.arc(p[0],p[1],2.4,0,7);g.fill()}}
+ for(let a=0;a<6;a++){ring(-.23,-.70,a*.13,.38,'#bd8251');ring(-.23,.76,a*.13,.37,'#35adab')}
+ const metric=pos([.55,-.12,1]);g.strokeStyle='#a696f0';g.globalAlpha=.7;g.lineWidth=1.3;g.beginPath();g.ellipse(metric[0],metric[1],23,17,theta,0,7);g.stroke();g.globalAlpha=1;g.fillStyle='#af99ff';g.font='10px system-ui';g.fillText('FLRW · 0 W',metric[0]-28,metric[1]-22);
+ const phase=(timeS*.11)%1,center=[1.1,-.42,1.5],gapScene=.72+1.72*(get('cgap')+5)/3,receiver=[center[0]+gapScene,-.42,1.47],b=pos(center),rec=pos(receiver);
+ path([-3.4,-.7,0],center,'#547e96',1.2,[4,6]);path(center,receiver,'#638bca',1.4,[3,4]);path(receiver,[3.77,.68,.1],'#647fa2',1.2,[3,6]);
+ let osc=1+0.13*Math.sin(timeS*8);
+ if(bubbleAvailable()&&bubble?.samples?.length>10){let i=Math.floor(phase*(bubble.samples.length-1));osc=Math.max(.45,Math.min(1.7,bubble.samples[i].radius_m/(bubble.equilibrium_radius_m)));}
+ let r=15*osc,g1=g.createRadialGradient(b[0]-r*.4,b[1]-r*.3,2,b[0],b[1],r*2);g1.addColorStop(0,'#cdeaff');g1.addColorStop(.35,'#46adf9bb');g1.addColorStop(1,'#268ade00');g.fillStyle=g1;g.beginPath();g.arc(b[0],b[1],r*2,0,7);g.fill();g.strokeStyle='#68bcfd';g.lineWidth=2;g.beginPath();g.ellipse(b[0],b[1],r,r*.88,0,0,7);g.stroke();
+ for(let n=0;n<3;n++){let rr=20+((phase+n/3)%1)*65;g.strokeStyle=`rgba(107,179,251,${.55*(1-((phase+n/3)%1))})`;g.lineWidth=1.1;g.beginPath();g.arc(b[0],b[1],rr,0,7);g.stroke()}
+ // Gap dimension line follows the receiver when spacing changes. Positions
+ // are schematic; the SI distance and clearance come from the Python solver.
+ let dx=rec[0]-b[0],dy=rec[1]-b[1],len=Math.hypot(dx,dy)||1,ux=dx/len,uy=dy/len;
+ let ax=b[0]+ux*(r+5),ay=b[1]+uy*(r+5),bx=rec[0]-ux*18,by=rec[1]-uy*18;
+ if(Math.hypot(bx-ax,by-ay)>10){g.save();g.setLineDash([3,4]);g.strokeStyle='#ddf1ff';g.lineWidth=1.3;g.beginPath();g.moveTo(ax,ay);g.lineTo(bx,by);g.stroke();g.setLineDash([]);
+   let px=-uy,py=ux;g.fillStyle='#b6e9ff';g.font='10px system-ui';g.textAlign='center';g.fillText(lengthLabel(10**get('cgap')),(ax+bx)/2+px*21,(ay+by)/2+py*21);g.textAlign='left';g.restore()}
+ g.fillStyle='#203e65';g.strokeStyle='#a9b8ff';g.lineWidth=1.5;g.fillRect(rec[0]-12,rec[1]-17,24,34);g.strokeRect(rec[0]-12,rec[1]-17,24,34);g.beginPath();g.moveTo(rec[0]-6,rec[1]-13);g.lineTo(rec[0]+6,rec[1]+13);g.stroke();
+ points.BUBBLE=[b[0],b[1]];points.PZREC=[rec[0],rec[1]];
+ g.font='bold 11px system-ui';g.fillStyle='#b1e0ff';g.fillText('BUBBLE',b[0]-23,b[1]-r-12);g.fillStyle='#c3baff';g.fillText('PIEZO',rec[0]-18,rec[1]-26);
+ const drawn=nodes.filter(n=>!n[0].startsWith('L')&&n[0]!=='B_VAC_SIM').map(n=>({name:n[0],p:pos(n.slice(1))})).sort((a,b)=>a.p[2]-b.p[2]);
+ for(let n of drawn){let[x,y]=n.p,sz=n.name.startsWith('D')?7:10;points[n.name]=[x,y];g.fillStyle=selected===n.name?'#e4f8ff':n.name.startsWith('D')?'#419c96':'#1b3446';g.strokeStyle=selected===n.name?'#fff':'#658ca3';g.fillRect(x-sz,y-sz*.55,sz*2,sz*1.1);g.strokeRect(x-sz,y-sz*.55,sz*2,sz*1.1);g.fillStyle='#d6e9f3';g.font='10px system-ui';g.fillText(n.name,x-sz,y-sz-5)}
+ for(let name of ['LPRI','LSEC']){let p=pos(locations[name].slice(1));points[name]=[p[0],p[1]];g.fillStyle=name==='LPRI'?'#ffd2a5':'#84f6e1';g.font='bold 12px system-ui';g.fillText(name,p[0]-19,p[1]-16)}
+}
+cv.addEventListener('pointerdown',e=>{drag=true;dragStartX=e.clientX;thetaStart=theta;cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointermove',e=>{if(drag)theta=thetaStart+(e.clientX-dragStartX)*.008});
+cv.addEventListener('pointerup',e=>{drag=false;if(Math.abs(e.clientX-dragStartX)>9)return;let rect=cv.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;
+ let nearest=Object.entries(points).map(([k,p])=>[k,(p[0]-x)**2+(p[1]-y)**2]).sort((a,b)=>a[1]-b[1])[0];if(nearest&&nearest[1]<1200){selected=nearest[0];probe();}});
+function probe(){let k=selected,m=PARTS[k]||[k,''],q=current?.electrical,fast=qfast();let value='';
+ if(!q){$('probename').textContent=`${k} · ${m[0]}`;$('probeval').textContent='Awaiting Python model; no live power/current value is asserted from schematic graphics.';return;}
+ if(k==='BUBBLE')value=`Inferred radius ${lengthLabel(bubble?.equilibrium_radius_m)} · drive ${sci(drivePa())} Pa · peak expansion ${lengthLabel(bubble?.max_radius_m)} · peak clearance ${lengthLabel(bubble?.collector_minimum_surface_gap_m)} · ${bubble?.status||'awaiting solver'}`;
+ else if(k==='PZREC')value=`Equilibrium gap ${lengthLabel(10**get('cgap'))} · peak clearance ${lengthLabel(bubble?.collector_minimum_surface_gap_m)} · sound captured ${bubble?.collector_capture_fraction_credited==null?'—':sci(100*bubble.collector_capture_fraction_credited,2)+'%'} · batch recovered ${sci(population?.electricity_J)} J`;
+ else if(k==='LPRI')value=`Primary RMS ${sci(q?.primary_rms_A??fast.primary)} A · coil supplied from modeled 35 V link (${get('volts')} V input bus)`;
+ else if(k==='LSEC')value=`Secondary RMS ${sci(q?.secondary_rms_A??fast.secondary)} A`;
+ else if(k==='JHARV'||k==='RLOAD')value=`DC output ${sci(q?.output_V??fast.outputV)} V · coil output ${sci(q?.output_W??fast.outputW)} W`;
+ else if(k==='CPRI'||k==='CSEC')value=`LC ${sci((k==='CPRI'?fast.cp:fast.cs)*1e9)} nF · fixed tuning, not dynamic capacitor changes`;
+ else if(k==='B_VAC_SIM')value='0 J known vacuum electricity. An unverified spacetime bubble is not a physical power source.';
+ else value=`HV source ${sci(q?.input_W??fast.inputW)} W · isolated 35 V resonator supply · conversion losses included`;
+ $('probename').textContent=`${k} · ${m[0]}`;$('probeval').textContent=`${m[1]} · ${value}`;
+}
+function labels(){let V=get('volts');$('vlabel').textContent=V.toLocaleString('en-US')+' V';$('voltentry').value=V;
+ $('flabel').textContent=get('freq')+' kHz';$('tlabel').textContent=get('tune')+' kHz';$('llabel').textContent=get('load')+' Ω';$('mlabel').textContent=get('modulation')+'%';
+ $('plasmaEnergyLabel').textContent=sci(10**get('plasmaEnergy'),2)+' J (stored)';
+ $('chamberLabel').textContent=chamberFormat(chamberPa()); $('depthlabel').textContent=get('depth').toFixed(1)+' m';$('derivedfreq').textContent=get('freq')+' kHz';$('derivedpressure').textContent=sci(drivePa())+' Pa';$('cglabel').textContent=lengthLabel(10**get('cgap'));$('slabel').textContent='×'+speedFactor[get('speed')].toLocaleString();}
+function bubbleAvailable(){return bubble&&population&&bubbleKey===key()&&population.all_valid===true&&current?.environment?.bubble_model_available!==false}
+function renderClasses(){
+ const rows=population?.classes||[],tbody=$('classRows');tbody.replaceChildren();
+ const dots=$('classDots');dots.replaceChildren();
+ const reference=rows.length?Math.max(...rows.map(r=>r.equilibrium_radius_m)):1;
+ for(const row of rows){let dot=document.createElement('span'),w=Math.max(8,Math.min(26,26*row.equilibrium_radius_m/reference));dot.style.width=w+'px';dot.style.height=w+'px';dot.title='Candidate radius '+lengthLabel(row.equilibrium_radius_m);dots.appendChild(dot);}
+ if(!rows.length)dots.textContent='—';
+ if(!rows.length){let tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=6;td.textContent='Waiting for inverse sizing solver';tr.appendChild(td);tbody.appendChild(tr);return;}
+ for(const row of rows){let tr=document.createElement('tr');let fields=[`Candidate ${row.class_index}`,sci(row.target_resonance_hz/1000,1)+' kHz',lengthLabel(row.equilibrium_radius_m),lengthLabel(row.peak_radius_m),sci(row.recovered_electrical_J,3)+' J',row.valid?'IN DOMAIN':'INVALID'];
+ fields.forEach((str,i)=>{let td=document.createElement('td');td.textContent=str;if(i===5)td.className=row.valid?'pass':'fail';tr.appendChild(td)});tbody.appendChild(tr)}
+}
+function rates(){return current?{inputW:current.electrical.input_W,outputW:current.electrical.output_W,heatW:Math.max(0,current.electrical.input_W-current.electrical.output_W)}:{inputW:0,outputW:0,heatW:0};}
+function paint(){let q=rates(),b=bubbleAvailable()?bubble:null;
+ let input=meters.input+(b?bubbleCount*(population.actuator_input_J+population.precharge_J):0)+(current?.plasma?plasmaCount*current.plasma.input_J:0),
+ output=meters.output+(b?bubbleCount*population.electricity_J:0)+(current?.plasma?plasmaCount*current.plasma.recovered_J:0);
+ $('minput').textContent=sci(input)+' J';$('mout').textContent=sci(output)+' J';$('mtotaleta').textContent=input>0?sci(100*output/input,2)+'%':'—';$('mnetjoules').textContent=input>0?sci(output-input)+' J':'—';$('mgain').textContent=input>0?sci(100*(output/input-1),2)+'%':'—';let bin=b?(population.actuator_input_J+population.precharge_J):0;let eta=bin>0?100*population.electricity_J/bin:0;let meets=b&&bin>0&&eta>=.01;$('meff').textContent=b?(bin>0?sci(eta,3)+'%':'0%'):'—';$('meff').className='val '+(meets?'mint':'red');$('mtime').textContent=clock(timeS);$('mwatts').textContent=sci(q.outputW)+' W';
+ const sysLoss=input>0?100*(1-output/input):null;
+ const physicalValid=population?.all_valid===true&&current?.electrical?.violations?.length===0;
+ const modelZero=current?.net_zero;
+ const met=sysLoss!==null && sysLoss<=1e-10 && physicalValid && input>0 && output>0 && modelZero?.target_reached_in_model===true;
+ const warn=$('targetstrip');warn.className='targetstrip '+(sysLoss===null?'pending':met?'':'fail');
+ $('targetresult').textContent=sysLoss!==null?('Net energy change '+sci(-sysLoss,3)+'% · '+(met?'0% TARGET MET IN MODEL':'TARGET NOT MET')):'Net-zero target · waiting for computed energy';
+ if(modelZero && current?.parameters?.seconds>0){
+   $('netbound').textContent='Passive-system upper bound at this voltage (assuming all other losses vanish): '+sci(modelZero.idealized_upper_transfer_pct,3)+'% transfer / ≥'+sci(modelZero.idealized_min_loss_pct,3)+'% loss. Modeled deficit: '+sci(modelZero.shortfall_J,4)+' J ('+sci(modelZero.shortfall_W_averaged_over_run,4)+' W averaged). This study includes one hypothetical plasma pulse and one bubble size sweep; live meters include pulses only when clicked. Re-injection cannot create additional energy.';
+ }else {$('netbound').textContent='Run the Python model for a nonzero duration to compute the physical upper bound and energy deficit.';}
+ $('targetcontext').textContent='Design assumptions are unverified; all bubble energy is debited. Plasma reservoir precharge counted in full. No energy-creating recirculation or vacuum-source credit.';
+ $('lossfill').style.width=Math.min(100,Math.max(0,sysLoss??0))+'%';
+ const stages=current?.design_study?.losses_by_stage_J;
+ if(stages){const names={primary:'Copper primary',secondary:'Copper secondary',driver:'Drive/inverter',rectifier:'Rectifier',converter:'DC converter',controller:'Control/ESR',hv_converter:'HV regulator',bubble:'Bubble dissipated',bubble_end_mechanical:'Bubble remaining mechanical',plasma_discharge_loss:'Pulse driver',plasma_magnetic_field_unrecovered:'Magnetic field emission',plasma_ionization_stored:'Residual ionization',plasma_recombination_heat:'Recombination heat',plasma_recombination_radiation:'Recombination photons',plasma_thermal_radiation:'Direct plasma photons',plasma_thermal_heat:'Plasma thermal heat',plasma_heat_and_radiation:'Plasma thermal/radiation',plasma_collapse_heat:'Collapse damping',plasma_remaining_bubble_energy:'Remaining bubble energy',plasma_uncaptured_sound:'Uncaptured acoustic pulse',plasma_piezo_conversion_loss:'Pulse piezo loss'};
+ $('lossbudget').textContent='Energy loss ledger (one bubble size sweep + one precharged plasma pulse, Python): '+Object.entries(stages).map(([k,v])=>(names[k]||k)+' '+sci(v,3)+' J').join(' · ');
+ } else {$('lossbudget').textContent='Python loss budget pending.'}
+ $('pulseRecovered').textContent=current?.plasma?sci(current.plasma.recovered_J,3)+' J':'—';
+ $('plasmaRadius').textContent=current?.plasma?lengthLabel(current.plasma.peak_radius_estimate_m):'—';
+ $('plasmaRecovery').textContent=current?.plasma?sci(current.plasma.conversion_efficiency_pct,3)+'% of pulse reservoir':'—';
+ $('plasmaValidity').textContent=current?.plasma?(current.plasma.status==='far_field_screen_valid'?'screen valid':current.plasma.status==='off'?'disabled':'close-coupling unmodeled'):'—';
+ $('bubblepressure').textContent=sci(drivePa())+' Pa';$('bubbleenergy').textContent=b?sci(population.electricity_J)+' J':'—';$('bubblepulse').textContent=b?sci(b.peak_pressure_at_collector_Pa)+' Pa':'—';$('measuredgap').textContent=bubble&&bubbleKey===key()?lengthLabel(bubble.collector_minimum_surface_gap_m):'—';$('capturepct').textContent=b? sci(100*(b.collector_capture_fraction_credited??0),2)+'%':'—';$('requiredgap').textContent=bubble&&bubbleKey===key()?lengthLabel(bubble.collector_minimum_model_gap_m):'—';
+ let ok=bubbleAvailable(),invalid=bubbleKey===key() && population && !population.all_valid;
+ $('bubblevalid').className='chip '+(invalid?'error':ok?'':'orange');$('bubblevalid').innerHTML='Bubble recovery target: <b>'+(ok?(meets?'≥ 0.01% · PASS':'< 0.01% · NOT MET'):invalid?'out of domain':'recomputing')+'</b>';
+ $('burst').disabled=!ok; $('firePlasma').disabled=!(current?.plasma&&current.plasma.input_J>0&&current?.environment?.bubble_model_available);
+ $('runSecondary').disabled=!!current?.environment&&!current.environment.bubble_model_available; $('tuneSecondary').disabled=!!current?.environment&&!current.environment.bubble_model_available;
+ $('liquidpressure').textContent=current?.environment?.internal_liquid_pressure_pa==null?'No liquid':chamberFormat(current?.environment?.internal_liquid_pressure_pa??get('airPa')+998*9.80665*get('depth'));
+ $('inferredradius').textContent=b?lengthLabel(b.equilibrium_radius_m):'—';
+ const env=current?.environment;
+ $('extPressure').textContent=chamberFormat(env?.chamber_pressure_pa??chamberPa());
+ $('intPressure').textContent=env?.internal_liquid_pressure_pa==null?'No liquid':chamberFormat(env.internal_liquid_pressure_pa);
+ $('gasFlow').textContent=env?.flow_regime_1mm??'—';
+ $('mfpValue').textContent=env?lengthLabel(env.mean_free_path_N2_m_at_293K):'—';
+ $('envWarning').textContent=env?(env.caveats.join(' ')):'Pressure equivalence is not orbital equivalence.';
+ const audit=current?.electrical_audit,body=$('auditRows');body.replaceChildren();
+ if(audit){for(const [k,e] of Object.entries(audit.resonator_stage_losses_J)){
+   let tr=document.createElement('tr'),name=document.createElement('td'),loss=document.createElement('td'),pct=document.createElement('td');
+   name.textContent={primary:'Copper: primary',secondary:'Copper: secondary',driver:'Driver + inverter',rectifier:'Rectifier',controller:'Control + ESR',converter:'Converter'}[k]||k;
+   loss.textContent=sci(e,4);pct.textContent=sci(audit.stage_loss_fractions_of_source_pct[k],3)+'%';tr.append(name,loss,pct);body.appendChild(tr);
+ }
+ const tr=document.createElement('tr');tr.innerHTML='<th>Ledger residual</th><td></td><td></td>';
+ tr.children[1].textContent=sci(audit.stage_ledger_residual_J,3)+' J';tr.children[2].textContent='≈ 0';body.appendChild(tr);
+ $('auditConclusion').textContent='Inferred from assumed circuit equivalents; NOT real hardware wiring. Gate-driver allowance '+sci(audit.controller_assumed_gate_drive_W,3)+' W. Control and copper are paid from the source. 3D schematic does not validate traces or actual high-voltage construction.';
+ }else{let tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=3;td.textContent='Run Python simulation for power stage audit';tr.appendChild(td);body.appendChild(tr)}
+ if(selected)probe();
+}
+function statusText(message,tone=''){let el=$('status');el.textContent=message;el.className='status '+tone;}
+function onSettingChange(){labels();timeS=0;meters={input:0,output:0,heat:0};bubbleCount=0;plasmaCount=0;confirmed=false;bubbleKey=null;current=null;plasmaPulse=null;
+ const V=get('volts'),demand=drivePa();let warnings=[];
+ if(!Number.isFinite(get('airPa'))||get('airPa')<60000||get('airPa')>120000)warnings.push('Enter a measured sealed-vessel headspace pressure in 60000–120000 Pa.');
+ if(!Number.isFinite(chamberPa())||chamberPa()<1e-12||chamberPa()>120000)warnings.push('Chamber pressure must be 1e-12..120000 Pa absolute.');
+ statusText((warnings.join(' ')||'Parameters changed; simulation clock reset. Computing updated bubble and circuit…'),warnings.length?'warn':'');
+ paint();requestCompute();}
+function payload(){return{scenario:$('scenario').value,volts:get('volts'),freq_hz:get('freq')*1000,tune_hz:get('tune')*1000,load_ohm:get('load'),modulation:get('modulation')/100,seconds:Math.min(timeS,86400),air_pressure_pa:get('airPa'),water_depth_m:get('depth'),collector_gap_m:10**get('cgap'),chamber_pressure_pa:chamberPa(),vessel_mode:$('vesselMode').value,plasma_pulse_j:$('plasmaEnabled').checked?10**get('plasmaEnergy'):0}}
+function requestCompute(){clearTimeout(fetchTimer);fetchTimer=setTimeout(compute,280)}
+async function compute(){const serial=++requestSerial,requested=key(),params=payload();
+ try{let response=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(params)});let data=await response.json();
+ if(serial!==requestSerial||requested!==key())return;
+ if(!response.ok)throw Error(data.error||`HTTP ${response.status}`);
+ current=data;bubble=data.bubble;population=data.bubble_population;plasmaPulse=data.plasma;bubbleKey=requested;confirmed=true;renderClasses();
+ // Start the modeled circuit accounting at the Python-computed elapsed time.
+ const elapsed=Math.max(0,timeS-params.seconds);
+ meters.input=data.electrical.input_J+elapsed*data.electrical.input_W;meters.output=data.electrical.output_J+elapsed*data.electrical.output_W;meters.heat=data.electrical.heat_J+elapsed*Math.max(0,data.electrical.input_W-data.electrical.output_W);
+ const warnings=[...(data.electrical.violations||[])];if(data.environment && !data.environment.thermal_calibration_valid)warnings.push('VACUUM THERMAL SCREEN NOT CALIBRATED: ELECTRICAL TRANSFER IS AIR-REFERENCE SENSITIVITY ONLY');if(!population.all_valid)warnings.push('ONE OR MORE SIZE CLASSES OUTSIDE MODEL DOMAIN — UNCREDITED');
+ if(population.all_valid&&!data.recovery.minimum_target_met)warnings.push('BUBBLE RECOVERY BELOW 0.01% TARGET');
+ if(data.plasma?.status==='receiver_coupling_outside_model')warnings.push('PLASMA RECEIVER TOO CLOSE FOR UNCOUPLED MODEL: PULSE INPUT DEBITED, OUTPUT UNCREDITED');
+ if(warnings.length)statusText('MODEL CHECK: '+warnings.join(' · ')+'. 35 V resonator regulation is simulated, not a certified high-voltage circuit.','warn');
+ else statusText(`${data.design_study.scenario==='design_target'?'UNVERIFIED DESIGN STUDY':data.design_study.scenario==='low_controller'?'UNVERIFIED 40 mW CONTROLLER SENSITIVITY':'BASELINE'} · ${sci(data.design_study.whole_system_loss_pct,2)}% predicted system loss. Bubble-only ${sci(data.recovery.bubble_recovery_efficiency_pct,3)}% of its own actuator energy; no measured HV hardware or shock-wave harvesting. `);
+ paint();computeSecondary();}catch(err){if(serial!==requestSerial||requested!==key())return;
+ if(bubbleKey===null&&requested===seed.key){bubble=seed.bubble;bubbleKey=requested;}
+ statusText('Python backend offline. Coil preview is only approximate; recalculation requires python3 server.py. ('+err.message+')','warn');paint();}
+}
+function frame(t){let dt=lastT?Math.min(.10,Math.max(0,(t-lastT)/1000)):0;lastT=t;
+ if(playing){let step=Math.min(86400-timeS,dt*speedFactor[get('speed')]);if(step>0){timeS+=step;let q=rates();meters.input+=step*q.inputW;meters.output+=step*q.outputW;meters.heat+=step*q.heatW;}}else{timeS=timeS;}
+ if(!drag&&playing)theta+=dt*.09;
+ drawScene();if((Math.floor(t/140)!==Math.floor((t-dt*1000)/140)))paint();requestAnimationFrame(frame);}
+for(let id of ['volts','freq','tune','load','modulation','airPa','depth','cgap','plasmaEnergy'])$(id).addEventListener('input',onSettingChange);
+$('chamberExp').addEventListener('input',()=>{$('chamberDirect').value=(10**get('chamberExp')).toPrecision(7);onSettingChange()});
+$('chamberDirect').addEventListener('change',()=>{let p=chamberPa();if(Number.isFinite(p)&&p>0)$('chamberExp').value=Math.log10(p);onSettingChange()});
+for(let b of document.querySelectorAll('[data-chamber]'))b.addEventListener('click',()=>{$('chamberDirect').value=b.dataset.chamber;$('chamberExp').value=Math.log10(Number(b.dataset.chamber));onSettingChange()});
+$('vesselMode').addEventListener('change',onSettingChange);
+$('scenario').addEventListener('change',onSettingChange);$('plasmaEnabled').addEventListener('change',onSettingChange);
+$('speed').addEventListener('input',()=>{labels();paint();});
+$('voltentry').addEventListener('change',()=>{const raw=Number($('voltentry').value);$('volts').value=Number.isFinite(raw)?Math.max(35,Math.min(4000,Math.round(raw))):35;onSettingChange()});
+for(let b of document.querySelectorAll('[data-volt]'))b.addEventListener('click',()=>{$('volts').value=b.dataset.volt;onSettingChange()});
+$('lowlossPreset').addEventListener('click',()=>{$('scenario').value='low_controller';$('volts').value='35';$('freq').value='33.07';$('tune').value='33.07';$('load').value='140';$('modulation').value='100';onSettingChange();statusText('35 V, 33.07 kHz and 140 Ω screening point selected. Assumed 40 mW gate drive is not experimentally verified.');});
+$('optimize').addEventListener('click',async()=>{
+ const btn=$('optimize'),requestedVolts=get('volts'),snapshot=key(),duration=Math.max(1,Math.min(86400,timeS||634));
+ btn.disabled=true;statusText('Searching fixed-component frequencies, LC tuning, load and modulation for the closest feasible approach to 0% net energy…');
+ try{
+   let response=await fetch('/api/optimize',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({scenario:$('scenario').value,volts:requestedVolts,seconds:duration,air_pressure_pa:get('airPa'),water_depth_m:get('depth')})});
+   let result=await response.json();
+   if(!response.ok)throw Error(result.error||'optimization error');
+   if(snapshot!==key())return;
+   $('freq').value=result.settings.freq_hz/1000;
+   $('tune').value=result.settings.tune_hz/1000;
+   $('load').value=result.settings.load_ohm;
+   $('modulation').value=Math.round(result.settings.modulation*100);
+   $('cgap').value=Math.log10(result.settings.collector_gap_m).toFixed(3);
+   onSettingChange();timeS=duration;clearTimeout(fetchTimer);await compute();
+   statusText(`Net-zero search: ${sci(result.whole_system_net_gain_pct,3)}% net change; deficit ${sci(result.energy_deficit_J,3)} J, modeled upper bound ${sci(result.mathematically_ideal_transfer_upper_pct,3)}% transfer. ${result.net_zero_target_met?'ZERO TARGET MET':'ZERO TARGET NOT REACHED'}. Only operating controls were tuned; component losses were not falsified.`);
+ }catch(err){statusText('Optimization unavailable: '+err.message,'warn');}
+ finally{btn.disabled=false;}
+});
+$('match').addEventListener('click',()=>{$('freq').value=$('tune').value;onSettingChange()});
+for(let b of document.querySelectorAll('[data-freq]'))b.addEventListener('click',()=>{$('freq').value=Number(b.dataset.freq)/1000;$('tune').value=$('freq').value;onSettingChange()});
+for(let b of document.querySelectorAll('[data-gap]'))b.addEventListener('click',()=>{$('cgap').value=b.dataset.gap;onSettingChange()});
+$('closestgap').addEventListener('click',()=>{const rows=population?.classes||[];
+ let required=rows.length?Math.max(...rows.map(x=>10*(x.peak_radius_m||x.equilibrium_radius_m*2)*1.05-x.equilibrium_radius_m)):.001;
+ required=Math.max(1e-5,required);
+ let val=Math.min(-2,Math.max(-5,Math.ceil(Math.log10(required)/.025-1e-9)*.025));
+ $('cgap').value=val;onSettingChange();
+ statusText("Set receiver just outside the model's 10× peak-radius clearance boundary (5% margin). Closer real-world receiver loading is not modeled.");
+});
+
+function renderSecondary(data){
+ secondaryResult=data;
+ $('secV').textContent=sci(data.stored.voltage_final_V,4)+' V';
+ $('secPlateau').textContent=sci(data.secondary_steady_state_voltage_V,4)+' V';
+ $('secPower').textContent=sci(data.secondary_average_storage_charge_W,4)+' W';
+ $('secPrimary').textContent=sci(data.primary_average_pulse_drive_W,4)+' W';
+ $('secEnergy').textContent=sci(data.stored.stored_final_J,4)+' J';
+ $('secLoad').textContent=sci(data.stored.load_energy_J,4)+' J';
+ $('secIon').textContent=sci(data.plasma.ionization_upfront_J,4)+' J';
+ $('secRad').textContent=sci(data.plasma.recombination_radiation_J+data.plasma.direct_thermal_radiation_J,4)+' J';
+ const maxV=Math.max(0.25, data.storage_max_voltage_V, data.secondary_steady_state_voltage_V);
+ const pts=data.stored.points.map(p=>{
+  const x=45+575*(data.duration_s>0?p.time_s/data.duration_s:0),y=135-115*Math.min(1,p.voltage_V/maxV);
+  return x.toFixed(1)+','+y.toFixed(1)
+ });
+ $('secondaryTrace').setAttribute('points',pts.join(' '));
+ $('secYAxis').textContent=maxV.toFixed(2)+' V';
+ $('secXAxis').textContent=data.duration_s+' s';
+ $('secLedger').textContent='Pulse count '+sci(data.event_count_modeled,5)+' · pulse source '+sci(data.primary_input_total_J,5)+' J · piezo '+sci(data.credited_acoustic_per_event_J,4)+' J/event · pickup '+sci(data.credited_inductive_per_event_J,4)+' J/event · load '+sci(data.stored.load_energy_J,4)+' J · leakage '+sci(data.stored.leakage_energy_J,4)+' J · controller '+sci(data.sinks.secondary_trigger_controller_energy_J,4)+' J · clamp '+sci(data.stored.clamped_excess_J,4)+' J · closure residual '+sci(data.ledger_residual_J,2)+' J.';
+ $('secValidity').textContent=(data.recovery_credit_valid?'INDEPENDENT EVENT SCREEN VALID': 'RECOVERY NOT CREDITED: overlapping events or invalid collector spacing')+' · recombination '+sci(100*data.plasma.afterglow.recombination_fraction,3)+'% over '+sci(data.plasma.afterglow.bubble_expansion_collapse_reference_s,3)+' s · remaining ionization '+sci(data.plasma.ionization_energy_remaining_J,3)+' J/pulse · current source and EM coupling are unverified.';
+}
+async function computeSecondary(){
+ const serial=++secondaryRequestSerial;
+ if(current?.environment && !current.environment.bubble_model_available){for(let id of ['secV','secPlateau','secPower','secPrimary','secEnergy','secLoad','secIon','secRad'])$(id).textContent='—';$('secondaryTrace').setAttribute('points','');$('secLedger').textContent='No acoustic source assigned in this vessel mode.';$('secValidity').textContent='No independent acoustic bubble credit at this chamber/vessel configuration. '+current.environment.bubble_unavailable_reason;return;}
+ const c=population?.classes||[];
+ const radius=c.length?c[Math.floor(c.length/2)].equilibrium_radius_m:42e-6;
+ const request={pulse_energy_j:$('plasmaEnabled').checked?10**get('plasmaEnergy'):0,
+  frequency_hz:get('pulseRate'),seconds:get('secDuration'),radius_m:radius,
+  liquid_pressure_pa:current?.parameters?.liquid_pressure_pa??get('airPa')+998*9.80665*get('depth'),
+  receiver_gap_m:10**get('cgap'),mode:$('secondaryMode').value,
+  capacitance_f:get('secCap'),load_resistance_ohm:get('secLoadOhm'),
+  chamber_pressure_pa:chamberPa(),air_pressure_pa:get('airPa'),water_depth_m:get('depth'),vessel_mode:$('vesselMode').value};
+ try{
+  let resp=await fetch('/api/secondary',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)}),data=await resp.json();
+  if(serial!==secondaryRequestSerial)return;
+  if(!resp.ok)throw Error(data.error||'secondary calculation failed');
+  renderSecondary(data);
+ }catch(err){if(serial!==secondaryRequestSerial)return;
+  $('secValidity').textContent='Secondary model unavailable: '+err.message;
+ }
+}
+for(let id of ['secondaryMode','secCap','pulseRate','secLoadOhm','secDuration'])$(id).addEventListener('change',computeSecondary);
+$('runSecondary').addEventListener('click',computeSecondary);
+$('tuneSecondary').addEventListener('click',async()=>{
+ if(current?.environment&&!current.environment.bubble_model_available){$('secValidity').textContent=current.environment.bubble_unavailable_reason;return;}
+ const btn=$('tuneSecondary');btn.disabled=true;
+ const c=population?.classes||[];
+ const radius=c.length?c[Math.floor(c.length/2)].equilibrium_radius_m:42e-6;
+ const params={pulse_energy_j:$('plasmaEnabled').checked?10**get('plasmaEnergy'):0,
+  seconds:get('secDuration'),radius_m:radius,
+  liquid_pressure_pa:current?.parameters?.liquid_pressure_pa??get('airPa')+998*9.80665*get('depth'),
+  receiver_gap_m:10**get('cgap'),mode:$('secondaryMode').value,
+  capacitance_f:get('secCap'),load_resistance_ohm:get('secLoadOhm'),target_voltage_V:3.0,
+  chamber_pressure_pa:chamberPa(),air_pressure_pa:get('airPa'),water_depth_m:get('depth'),vessel_mode:$('vesselMode').value};
+ try{
+  const resp=await fetch('/api/tune-secondary',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(params)}),data=await resp.json();
+  if(!resp.ok)throw Error(data.error||'tuning failed');
+  $('pulseRate').value=data.recommended_frequency_hz;
+  renderSecondary(data.storage_preview);
+  $('secValidity').textContent='LOWEST-RATE TARGET SEARCH: '+(data.target_reached_in_model?'3.0 V PREDICTED':'TARGET NOT REACHED')+' · requested '+sci(data.minimum_required_frequency_hz,3)+' Hz; selected '+data.recommended_frequency_hz+' Hz; assumed primary pulse drive '+sci(data.expected_primary_pulse_power_W,4)+' W. '+data.warning;
+ }catch(err){$('secValidity').textContent='Tuning failed: '+err.message}
+ finally{btn.disabled=false}
+});
+
+for(let b of document.querySelectorAll('[data-rate]'))b.addEventListener('click',()=>{$('pulseRate').value=b.dataset.rate;computeSecondary()});
+$('play').addEventListener('click',()=>{playing=!playing;$('play').textContent=playing?'Pause':'Resume'});
+$('burst').addEventListener('click',()=>{if(!bubbleAvailable())return;bubbleCount+=1;statusText(`${bubbleCount} size sweep(s) × ${population.size_classes} independently supplied candidate event(s) accounted for: electrical input + finite precharged mechanical energy → acoustic radiation → piezo collection. ${bubble.shock_resolved?'':'Shock formation not simulated.'}`);paint();});
+$('firePlasma').addEventListener('click',()=>{if(!current?.plasma?.input_J)return;plasmaCount++;statusText(`Plasma event #${plasmaCount}: precharged reservoir debited ${sci(current.plasma.input_J,4)} J, piezo recovered ${sci(current.plasma.recovered_J,4)} J. ${current.plasma.status}. This is not net-positive energy or validated spark ignition.`);paint()});
+$('reset').addEventListener('click',()=>{timeS=0;bubbleCount=0;plasmaCount=0;meters={input:0,output:0,heat:0};statusText('Simulation clock and accumulated burst ledger reset.');paint();requestCompute();});
+$('recompute').addEventListener('click',()=>{statusText('Recomputing circuit and bubble with Python…');compute()});
+window.addEventListener('resize',drawScene);
+// Offline seed is valid ONLY for the exact default bubble inputs; never re-use after tuning.
+function init(){labels();let defaultKey=key();if(seed.key===defaultKey){bubble=seed.bubble;population=seed.bubble_population;bubbleKey=defaultKey;renderClasses()}paint();requestAnimationFrame(frame);compute()}
+init();
+</script></body></html>

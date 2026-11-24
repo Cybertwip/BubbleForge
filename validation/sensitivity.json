@@ -1,0 +1,58 @@
+[
+  {
+    "case": "nominal",
+    "loss_pct": 0.49552455059947986,
+    "pass_0p5": true,
+    "violations": [],
+    "load_W": 59.98754057755345,
+    "source_W": 60.286273865197145
+  },
+  {
+    "case": "hot_45C",
+    "loss_pct": 0.5078257112983819,
+    "pass_0p5": false,
+    "violations": [],
+    "load_W": 60.00709756650752,
+    "source_W": 60.313384440048324
+  },
+  {
+    "case": "inductance_minus_20pct",
+    "loss_pct": 0.5218206619927002,
+    "pass_0p5": false,
+    "violations": [],
+    "load_W": 59.98754254060365,
+    "source_W": 60.30221194215645
+  },
+  {
+    "case": "controller_bias_plus_50pct",
+    "loss_pct": 0.5450159079428252,
+    "pass_0p5": false,
+    "violations": [],
+    "load_W": 59.98754057755345,
+    "source_W": 60.31627386519714
+  },
+  {
+    "case": "edge_time_double",
+    "loss_pct": 0.5205519023896099,
+    "pass_0p5": false,
+    "violations": [],
+    "load_W": 59.98754057755345,
+    "source_W": 60.30144087519764
+  },
+  {
+    "case": "core_loss_double",
+    "loss_pct": 0.5103360345037111,
+    "pass_0p5": false,
+    "violations": [],
+    "load_W": 59.98754057755345,
+    "source_W": 60.29524896009052
+  },
+  {
+    "case": "trace_plus_10mohm",
+    "loss_pct": 0.5322501508774335,
+    "pass_0p5": false,
+    "violations": [],
+    "load_W": 60.01386949065649,
+    "source_W": 60.335002633203615
+  }
+]

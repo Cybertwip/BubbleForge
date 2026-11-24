@@ -1,0 +1,12 @@
+{
+  "release": "0.24.0-alpha",
+  "automated_tests_passed": 38,
+  "python_tests_command": "python3 -m unittest discover -s tests -v",
+  "javascript_syntax": "passed: node --check assets/simulator.js",
+  "browser_render_test": "not yet performed",
+  "tested_hardware": false,
+  "calibrated_plasma_or_receiver": false,
+  "optimized_loss_pct": 0.46803629767488564,
+  "target_loss_pct": 0.05,
+  "target_met": false
+}

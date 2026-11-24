@@ -1,0 +1,76 @@
+{
+  "circuit": {
+    "vin_V": 48,
+    "vout_target_V": 42.72,
+    "power_target_W": 60,
+    "frequency_Hz": 25000,
+    "inductor": "VISHAY_100u_lowDCR",
+    "stage": "gan_100v",
+    "output_cap_F": 0.00047,
+    "cap_esr_ohm": 0.015,
+    "leakage_ohm": 10000000.0,
+    "trace_ohm": 0.01,
+    "sense_ohm": 0.005,
+    "ambient_C": 25.0,
+    "core_coeff_W": 0.06,
+    "unmeasured_layout_W": 0.02,
+    "controller_bias_multiplier": 1.0,
+    "inductance_scale": 1.0,
+    "edge_time_scale": 1.0
+  },
+  "part_numbers": {
+    "bridge": "LMG2100R026",
+    "inductor": "IHLP8787MZER101M5A"
+  },
+  "time_domain": {
+    "timestep_s": 1.1111111111111111e-07,
+    "pwm_timer_ticks_per_period": 4096,
+    "cycles_computed": 160,
+    "window_cycles": 80,
+    "window_duration_s": 0.0032,
+    "inductor_peak_A": 2.3283285160315446,
+    "inductor_min_A": 0.47566743022460534,
+    "inductor_avg_A": 1.4043527778239442,
+    "inductor_ripple_pp_A": 1.8526610858069392,
+    "output_v_min_V": 42.7054973692449,
+    "output_v_max_V": 42.73975519857794,
+    "output_v_final_V": 42.725857385786206,
+    "pwm_duty_final": 0.8916015625,
+    "start_LC_J": 0.42900341348848625,
+    "end_LC_J": 0.42900341337974063,
+    "delta_LC_J": -1.0874562361706808e-10
+  },
+  "energy": {
+    "source_J": 0.19291607636863087,
+    "load_J": 0.19196012984817107,
+    "dissipation_J": 0.0009559374224990862,
+    "stored_delta_J": -1.0874562361706808e-10,
+    "residual_J": 9.206706336867786e-09,
+    "loss_stages_J": {
+      "hs": 2.257760894166399e-05,
+      "ls": 2.729010639922993e-06,
+      "winding": 0.000284880231861297,
+      "trace": 0.00010845694106394427,
+      "capacitor": 1.3791016136151293e-05,
+      "leakage": 5.838781957083128e-07,
+      "gate_charge_J": 1.264e-05,
+      "coss_hard_switch_J": 0.000129024,
+      "edge_overlap_J": 4.8534432001595514e-05,
+      "controller_bias_J": 0.000192,
+      "magnetic_core_proxy_J": 2.872030365880281e-05,
+      "layout_unmeasured_J": 0.00011200000000000001
+    },
+    "source_W": 60.286273865197145,
+    "load_W": 59.98754057755345,
+    "net_loss_pct": 0.49552455059947986,
+    "transfer_pct": 99.50447544940052
+  },
+  "violations": [],
+  "target_0p5_met": true,
+  "model_class": "switched-state buck + source-side device loss + proxy magnetics",
+  "cautions": [
+    "Not SPICE-validated or hardware measured",
+    "Gate/transition/core coefficients may vary with board, temperature and phase current",
+    "DC transfer is externally supplied electricity; not harvested bubble energy"
+  ]
+}

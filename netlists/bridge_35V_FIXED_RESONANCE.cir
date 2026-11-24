@@ -1,0 +1,60 @@
+* BubbleForge 35 V - SWITCHING-TRANSIENT H-BRIDGE / COUPLED-COIL TESTBENCH
+* This deck does NOT produce spacetime vacuum energy.
+* Input supply is explicitly connected to four idealized voltage-controlled
+* MOSFET switches (not transistor-level gate drive). Switching losses,
+* reverse-recovery, PCB parasitics and thermal coupling need vendor models.
+* Primary and secondary returns are GALVANICALLY ISOLATED (K1 only).
+* Resonant capacitors are physical FIXED values designed for 25 kHz.
+* To test detuning change FOSC only. Do NOT alter CPRI/CSEC.
+.param VDC=24
+.param FOSC=25000
+.param CPA=105.7261388n
+.param CSA=93.8252826n
+VMAIN VBUS 0 DC {VDC}
+CBUS VBUS 0 220u
+RBLEED VBUS 0 100k
+* 5 V TIMER/OSCILLATOR CONTROL: two inverse gate drive phases with dead time.
+* An Arduino/555 + real DRV8701 must replace these behavioral control voltages.
+VOSC_A OSC_A 0 PULSE(0 5 0 80n 80n {0.455/FOSC} {1/FOSC})
+VOSC_B OSC_B 0 PULSE(0 5 {0.5/FOSC} 80n 80n {0.455/FOSC} {1/FOSC})
+* H-BRIDGE POWER PATH: supply -> output A/B -> resonator -> supply return.
+.model S_MOS SW(Ron=0.09 Roff=1G Vt=2.5 Vh=.15)
+SHA VBUS OUT_A OSC_A 0 S_MOS
+SLA OUT_A 0 OSC_B 0 S_MOS
+SHB VBUS OUT_B OSC_B 0 S_MOS
+SLB OUT_B 0 OSC_A 0 S_MOS
+* Controller 5V buck + gate-drive overhead drawn from MAIN SUPPLY.
+* At VDC=0 this deck is not applicable; VDC should be 6..35V.
+I_CONTROL VBUS 0 DC {0.48/VDC}
+RPRI OUT_A PRI_C 2.27028807
+CPRI PRI_C PRI_L {CPA}
+LPRI PRI_L OUT_B 383.334470789u
+LSEC SEC_A SEC_L 431.956849391u
+RSEC SEC_L SEC_C 5.72678201
+CSEC SEC_C SEC_B {CSA}
+K1 LPRI LSEC 0.5897123937
+* Schottky bridge 100 V family; parameters illustrative, not vendor model.
+D1 SEC_A POS D100
+D2 SEC_B POS D100
+D3 NEG SEC_A D100
+D4 NEG SEC_B D100
+.model D100 D(Is=3u N=1.2 Rs=0.08 Cjo=120p Bv=100 Ibv=100u)
+RESR POS CAP_INT 0.25
+CSTORE CAP_INT NEG 470u IC=0
+RLEAK CAP_INT NEG 1Meg
+RLOAD POS NEG 52
+* Only a 1G reference resistor: no primary -> secondary galvanic connection.
+RREF NEG 0 1G
+* NO VERIFIED VACUUM-TO-ELECTRIC CURRENT: physically supported I=0.
+B_VAC_SIM POS NEG I=0
+.options reltol=1e-5 abstol=1e-10 method=gear
+.tran 0.25u 25m 0 0.25u UIC
+.control
+run
+set wr_singlescale
+set wr_vecnames
+wrdata bridge_35V_data.txt v(vbus) v(out_a,out_b) v(sec_a,sec_b) v(pos,neg) i(VMAIN)
+print v(pos,neg)
+quit
+.endc
+.end

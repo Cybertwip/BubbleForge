@@ -1,0 +1,92 @@
+{
+  "release": "0.24.0-alpha",
+  "model": "Bubble Forge \u2014 Banana Model",
+  "simulation_only": true,
+  "physics_not_calibrated": true,
+  "receiver_architecture": "distributed spherical acoustic collector",
+  "receiver_is_optimistic_screening_assumption": true,
+  "legacy_receiver_comparison": "same radiated energy, legacy fixed 1 mm\u00b2 piezo pickup at ~2 mm",
+  "fixed_waveform": "cosine",
+  "parameters": {
+    "shell_radius_m": 0.012096586,
+    "array_tiles": 144,
+    "coverage_fraction_assumed": 0.9,
+    "impedance_acceptance_assumed": 0.82,
+    "absorption_assumed": 0.8,
+    "rectifier_efficiency_assumed": 0.9,
+    "charger_efficiency_assumed": 0.85
+  },
+  "cases": {
+    "initial": {
+      "compression_contraction_pct": 16.248631131396596,
+      "event_source_j": 2.2e-06,
+      "acoustic_emission_j_per_event": 3.140211374908823e-08,
+      "legacy_receiver_rectified_j_per_event": 2.931630550093904e-12,
+      "distributed_receiver_rectified_j_per_event": 1.4396532345272675e-08,
+      "receiver_gain_factor": 4910.759421855368,
+      "fraction_of_radiated_acoustic_harvested": 0.4584574293407457,
+      "tuned_load_ohm_per_tile": 2519.8956721902014,
+      "shell_ka": 1.6217673233699639,
+      "receiver_loss_channels_j_per_event": {
+        "propagation_j": 7.596248467175077e-12,
+        "uncovered_j": 3.139451750062105e-09,
+        "impedance_reflection_j": 5.0859118351006136e-09,
+        "unabsorbed_j": 4.633830783091667e-09,
+        "mechanical_damping_j": 2.539176082063699e-09,
+        "rectification_j": 1.599614705030296e-09
+      },
+      "receiver_power_raw_W": 1.4396532345272675e-05,
+      "receiver_power_after_manager_W": 1.1305156523123594e-05,
+      "steady_useful_recovery_W": 9.657263044655054e-06,
+      "source_power_W": 72.33965016272138,
+      "converter_loss_W": 0.33703616242388534,
+      "net_loss_pct": 0.4689357833467315,
+      "after_500_simulated_s": {
+        "battery_gain_J": 0.004647126643590127,
+        "storage_buffer_J": 1.8000000000000001e-06,
+        "manager_loss_J": 0.000820081172397305,
+        "cumulative_net_loss_pct": 0.4689357826109226,
+        "ledger_residual_J": 6.536993168992922e-12
+      }
+    },
+    "optimized": {
+      "compression_contraction_pct": 16.80464694964079,
+      "event_source_j": 1.55e-06,
+      "acoustic_emission_j_per_event": 3.354512533687698e-08,
+      "legacy_receiver_rectified_j_per_event": 3.1316972809568593e-12,
+      "distributed_receiver_rectified_j_per_event": 1.5379011928857738e-08,
+      "receiver_gain_factor": 4910.7594218553695,
+      "fraction_of_radiated_acoustic_harvested": 0.4584574293407458,
+      "tuned_load_ohm_per_tile": 2519.8956721902014,
+      "shell_ka": 1.6217673233699639,
+      "receiver_loss_channels_j_per_event": {
+        "propagation_j": 8.114648235385649e-12,
+        "uncovered_j": 3.353701068864161e-09,
+        "impedance_reflection_j": 5.432995731559938e-09,
+        "unabsorbed_j": 4.9500627776434966e-09,
+        "mechanical_damping_j": 2.712460078509845e-09,
+        "rectification_j": 1.7087791032064131e-09
+      },
+      "receiver_power_raw_W": 1.537901192885774e-05,
+      "receiver_power_after_manager_W": 1.2110789781663345e-05,
+      "steady_useful_recovery_W": 1.0342051314413842e-05,
+      "source_power_W": 72.33965016272138,
+      "converter_loss_W": 0.33703616242388534,
+      "net_loss_pct": 0.46803629767488564,
+      "after_500_simulated_s": {
+        "battery_gain_J": 0.004989519090116801,
+        "storage_buffer_J": 1.8000000000000001e-06,
+        "manager_loss_J": 0.0008805033688418663,
+        "cumulative_net_loss_pct": 0.4680362969383622,
+        "ledger_residual_J": 3.382183422218077e-12
+      }
+    }
+  },
+  "constraints": {
+    "max_recovered_acoustic_energy_j_per_event": "strictly no more than acoustic_emission_j",
+    "thermal_plasma_recovery": "not modeled / not credited",
+    "wall_mechanical_capture": "not modeled / not credited",
+    "converter_loss_can_be_recovered_from_bubble": false,
+    "energy_conservation_checks": true
+  }
+}

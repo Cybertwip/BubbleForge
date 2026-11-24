@@ -1,0 +1,23 @@
+{
+  "version": "v0.28",
+  "simulated_only": true,
+  "tested_modules": {
+    "test_converter_optimizer_v028.py": 7,
+    "test_microconverter_v027.py": 6,
+    "test_microsystem_v026.py": 6,
+    "test_distributed_receiver_v024.py": 4,
+    "test_coupled_wall_harvesting_v025.py": 6,
+    "test_cumulative_break_even_v023.py": 5,
+    "test_forced_compression_live_v019.py": 14,
+    "test_active_wave_v020.py": 9,
+    "test_plasma_capture_v022.py": 6
+  },
+  "total_tests_passed": 63,
+  "javascript_syntax": "passed",
+  "python_compile": "passed",
+  "api_init_tick_play_pause_export": "passed",
+  "optimizer_no_regression": "passed",
+  "converter_model_target_met": false,
+  "optimized_full_system_target_met": false,
+  "physical_hardware_validated": false
+}

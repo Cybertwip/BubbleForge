@@ -1,0 +1,771 @@
+{
+  "version": "v0.17.0-alpha",
+  "model_status": "conditional ordinary plasma pressure wave; QGP excluded; no shock CFD, no demonstrated ignition",
+  "tests_passed": 133,
+  "docs": [
+    "docs/en/paper.pdf",
+    "docs/es/paper.pdf"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "bd2a85f816c83744e46d5c23b453a13adf5ef9506324fe0fda6956845b98de8c",
+      "size_bytes": 4497
+    },
+    {
+      "path": "RELEASE_NOTES_v0.10.0-alpha.md",
+      "sha256": "5e7d69443bd74bb19b4ff6633c47a6901fbbaecfe4f8b91ebbe14473099abefe",
+      "size_bytes": 1757
+    },
+    {
+      "path": "RELEASE_NOTES_v0.11.0-alpha.md",
+      "sha256": "029f5c1b2ac3c6e461aaa7592d3823a60e679651b49a6e90675ff48d2603d933",
+      "size_bytes": 1405
+    },
+    {
+      "path": "RELEASE_NOTES_v0.12.0-alpha.md",
+      "sha256": "807ae04f5f0c3139fbeda621019edc7e8363f7a8bea2ca48f3c32cc853f7273b",
+      "size_bytes": 1237
+    },
+    {
+      "path": "RELEASE_NOTES_v0.13.0-alpha.md",
+      "sha256": "7c686537e4af1a34bc5e8c726b9f9f0603e4441e0c13c1df8e403e9cb0054842",
+      "size_bytes": 881
+    },
+    {
+      "path": "RELEASE_NOTES_v0.13.1-alpha.md",
+      "sha256": "80cade6e4ddba6916aee9bc19ec2fbf106654879d8ba61adb7dea646e0bfdde7",
+      "size_bytes": 1283
+    },
+    {
+      "path": "RELEASE_NOTES_v0.14.0-alpha.md",
+      "sha256": "7ff9fedf249eccf5faa1d1086940ff4b6458378b203905a3607c48b534ec34db",
+      "size_bytes": 3147
+    },
+    {
+      "path": "RELEASE_NOTES_v0.15.0-alpha.md",
+      "sha256": "90709ba8c19607c8450f2c9cef2801d3553ea9d303ced0732b1a5e1d15cb3dc3",
+      "size_bytes": 1890
+    },
+    {
+      "path": "RELEASE_NOTES_v0.16.0-alpha.md",
+      "sha256": "b80e9f0e983f852734f24a5d8d8655ba59180a4adef36c72875a45919a157acd",
+      "size_bytes": 1214
+    },
+    {
+      "path": "RELEASE_NOTES_v0.17.0-alpha.md",
+      "sha256": "1c8cb5423dc6611973f554e27dce9e8f57fc6398e5eeef50be32e2acba4af8ab",
+      "size_bytes": 4001
+    },
+    {
+      "path": "RELEASE_NOTES_v0.9.0-alpha.md",
+      "sha256": "65d0ae125691e69068522d9c8b8c7dff0a16e5f8b3c05135d02b48e79feaa1f4",
+      "size_bytes": 3941
+    },
+    {
+      "path": "assets/simulator.css",
+      "sha256": "5a801f3e5827ee516b726c07acf1b8b018f1025f23a945fc0e673cd85c16d967",
+      "size_bytes": 8073
+    },
+    {
+      "path": "assets/simulator.js",
+      "sha256": "225988a2072a04683dfb486532b79e3f6b3dd5f17c66da75f4c42a2b7d818d89",
+      "size_bytes": 34603
+    },
+    {
+      "path": "build_ui.py",
+      "sha256": "d40083d309e3cfcbe6463a8bebb6021a432aaaa26c51505e962ee658835ef557",
+      "size_bytes": 858
+    },
+    {
+      "path": "circuit_validation.py",
+      "sha256": "df05bfbeddf9864daa78451a1db2ab5cd56e374e93914970d1c58c5eca729ca8",
+      "size_bytes": 16728
+    },
+    {
+      "path": "circuits/BOM.csv",
+      "sha256": "5b17773f464490f2d4594c58501739ce36c16a171357a3b29a4d57502b7fa120",
+      "size_bytes": 4937
+    },
+    {
+      "path": "circuits/PARTS_AND_PROVENANCE.md",
+      "sha256": "369104a380a42aecb145aabc5acf7426710463aadd897e90d962b65ae95880b5",
+      "size_bytes": 2815
+    },
+    {
+      "path": "circuits/integrated_energy_flow.png",
+      "sha256": "6706f4b286d49ae244af992e92fdeca42f49b966c218238eba37b6c0e2c73573",
+      "size_bytes": 62248
+    },
+    {
+      "path": "circuits/integrated_energy_flow.svg",
+      "sha256": "53eec35975137c1d96ef915fdab053658116445d225a3c43c7e477f84245e8b8",
+      "size_bytes": 3550
+    },
+    {
+      "path": "circuits/primary_buck_ngspice.cir",
+      "sha256": "d965411d60b66864c120a734f24399b99e9973908f807ddb772f69b53a470ffc",
+      "size_bytes": 759
+    },
+    {
+      "path": "circuits/primary_power_schematic.png",
+      "sha256": "12316b597b2598c94ba59067fa8a30dc00455867eb25f22d85e518ce8e1e6505",
+      "size_bytes": 111565
+    },
+    {
+      "path": "circuits/primary_power_schematic.svg",
+      "sha256": "5a36d56cbb32f712a037003d61c5e8976e3d0a28d4001763f67075ea6a9cdbc3",
+      "size_bytes": 3944
+    },
+    {
+      "path": "circuits/secondary_harvester_schematic.png",
+      "sha256": "5733b58b16d89f36cc19d40937f8dedc093778699747c0028a3878b54771571d",
+      "size_bytes": 76690
+    },
+    {
+      "path": "circuits/secondary_harvester_schematic.svg",
+      "sha256": "8a828df1ee97b25c9e7cd9932b2d6e7a95c9ef774f0c389d757f6e64c488091a",
+      "size_bytes": 2754
+    },
+    {
+      "path": "circuits/secondary_receiver_topology.cir",
+      "sha256": "7c3b49f830a5ac0264231bef29f159dc5a7c03eee918cf619ead2b023729e99f",
+      "size_bytes": 436
+    },
+    {
+      "path": "design_study.py",
+      "sha256": "5b4e8e42a92ee66ac81bc91e01e808041d109c4eca297e6d1402595806aef9c6",
+      "size_bytes": 32439
+    },
+    {
+      "path": "docs/en/paper.pdf",
+      "sha256": "bdb9aa9c03449f07d99ba1b03b655b7eaaaae45411d2b366b0eb1154142bebde",
+      "size_bytes": 377667
+    },
+    {
+      "path": "docs/es/paper.pdf",
+      "sha256": "b9fc4bdbc8873a388c5ddc24e73bac756c95c2df08c94aa9c39f5e34d9dcdc90",
+      "size_bytes": 381171
+    },
+    {
+      "path": "engine.py",
+      "sha256": "fef07824ad739e6121397de7dc54661d14bb41d4ea7068ef75a7e0de0cb3f3ad",
+      "size_bytes": 13089
+    },
+    {
+      "path": "examples/automatically_inferred_size_grid.csv",
+      "sha256": "cb8d648179ff66b0adfa6c27ed25e8cd14e92e69afedac767c075fdfe31e9053",
+      "size_bytes": 8696
+    },
+    {
+      "path": "examples/engineering_original_reference.json",
+      "sha256": "4f928dd42c6f0aeef63b28ebf6b24b179ebcb980872b0e8f7e8921d4db97f430",
+      "size_bytes": 13278
+    },
+    {
+      "path": "examples/engineering_pareto_by_frequency.csv",
+      "sha256": "412a40542ed3788c60930c537088582fe11d35aa53af18d3b9f88bea9005cd82",
+      "size_bytes": 452
+    },
+    {
+      "path": "examples/engineering_target_full_result.json",
+      "sha256": "3596916237908dabdf1fbf27e3a29583418fcb596399b3e0c6f1b19fe843c4b8",
+      "size_bytes": 13703
+    },
+    {
+      "path": "examples/engineering_target_optimized.json",
+      "sha256": "1583817b3030fb822c972af145a799fff9f0eb9f80466a12fe3148645aafea30",
+      "size_bytes": 2291
+    },
+    {
+      "path": "examples/high_frequency_125k_4kv.json",
+      "sha256": "4ee2f4e4815e5c61aca05667a123a1799897f6ee155a1358484b3a064a8f5f89",
+      "size_bytes": 167927
+    },
+    {
+      "path": "examples/leo_dry_invalid_bubble.json",
+      "sha256": "68b64c4061bbcb30516643f5a04cda736b0f0569d6b4d74c473e9ab8fe88ca54",
+      "size_bytes": 1702
+    },
+    {
+      "path": "examples/leo_reference_400km.json",
+      "sha256": "86b8d341dccf85d0d4d83f4b1e5b879dec5716142be6b60fa529cf0efb60b36e",
+      "size_bytes": 2936
+    },
+    {
+      "path": "examples/low_frequency_5k_insufficient_gap.json",
+      "sha256": "82a8db9984d462fba81c903221151ccbb484b803ca7cf363ed5c6d9fafc05d7a",
+      "size_bytes": 169761
+    },
+    {
+      "path": "examples/low_frequency_5k_valid_gap.json",
+      "sha256": "8be9df014a002c0f5b0b5af65c98d248f0e9808c717d429565783be88fb75d0f",
+      "size_bytes": 167111
+    },
+    {
+      "path": "examples/net_zero_optimization_35V.json",
+      "sha256": "3962190f230f4ec532fe37b7dcb42c024edd3a9d0fdef0beae44a21e17f2ed0c",
+      "size_bytes": 1532
+    },
+    {
+      "path": "examples/net_zero_optimization_4000V.json",
+      "sha256": "248658376a03a8d2d947ffedd7b628dde65fdc647a0e799cd09b03fd14473102",
+      "size_bytes": 1548
+    },
+    {
+      "path": "examples/plasma_pulse_reference.json",
+      "sha256": "6525b361d032757d16fe86c41d52345e39c0e1d76d28fdfcfbda878ab11d456d",
+      "size_bytes": 3475
+    },
+    {
+      "path": "examples/reference_75k_4kv.json",
+      "sha256": "a03dcb77ca0a3e7db2b55bb70d3929e3b451823f7979484b05369ae9298bcf5e",
+      "size_bytes": 168723
+    },
+    {
+      "path": "examples/secondary_inductive_only.json",
+      "sha256": "5cae4b6700cd3d5dc0ebf9910f3696a53af88c8397601f360ccdb4dc9f148ed4",
+      "size_bytes": 12935
+    },
+    {
+      "path": "examples/secondary_invalid_125kHz.json",
+      "sha256": "c0ce175dc8eb1b206469e59219f37f68c22f6cbe31b34982751b82610f4eaa43",
+      "size_bytes": 12848
+    },
+    {
+      "path": "examples/secondary_reference_1kHz.json",
+      "sha256": "a138af83831b23187a59e684586c00a3efc7117bc2b882d90dfffae4b27549d5",
+      "size_bytes": 14636
+    },
+    {
+      "path": "examples/secondary_tuned_3V.json",
+      "sha256": "37f57815d1096c25c15be836dfc411aeeb7f2fa5a79ae8b7948f29049a8f7a74",
+      "size_bytes": 14642
+    },
+    {
+      "path": "examples/secondary_tuning_summary.json",
+      "sha256": "f2271eb5d0a143a989681e2d2d936141be3ced6c8c4800301a47f75ead1a8e97",
+      "size_bytes": 604
+    },
+    {
+      "path": "examples/secondary_voltage_time.csv",
+      "sha256": "6b961cd0034698e72740f3556994cc3dac3b505136da1f5112e58fe148e547f1",
+      "size_bytes": 2493
+    },
+    {
+      "path": "feasibility_005.py",
+      "sha256": "a235e372e487f9e86dc345d4fde5e6814266696682e5f8b876e56920a7aa479f",
+      "size_bytes": 5814
+    },
+    {
+      "path": "index.html",
+      "sha256": "4659c143942ab94784aa920cc99f9b110c5da651b2bcc31eb3397ed38bf8f146",
+      "size_bytes": 20920
+    },
+    {
+      "path": "index_template.html",
+      "sha256": "4659c143942ab94784aa920cc99f9b110c5da651b2bcc31eb3397ed38bf8f146",
+      "size_bytes": 20920
+    },
+    {
+      "path": "integrated_simulation.py",
+      "sha256": "f829cba982331a27c5d3cd66f7eecb9f7b66d39f88947aeb729b73de990eba12",
+      "size_bytes": 11676
+    },
+    {
+      "path": "kicad/BubbleForge_Parallel_Inductor_Study.kicad_sch",
+      "sha256": "906a3f0522f77d9865391b6d478201d5c12070f5c4a54e8ecea4d5b5cd3cfac9",
+      "size_bytes": 20152
+    },
+    {
+      "path": "kicad/BubbleForge_Primary_48V.kicad_sch",
+      "sha256": "82d0dfef3790c3e6ae4dae32a07582ed53f9c143ebfd1af1d3e65f57df5e1cc0",
+      "size_bytes": 33895
+    },
+    {
+      "path": "kicad/BubbleForge_Secondary_Battery.kicad_sch",
+      "sha256": "99f50ef5b89deaad988dad9ee89426cec7724b8a6d3f489789af4ab8b063df86",
+      "size_bytes": 34308
+    },
+    {
+      "path": "kicad/README.md",
+      "sha256": "adc4b83ddee2292b388d034cb657eb9193dd70cfbee0dffb41b057599bdd8631",
+      "size_bytes": 1822
+    },
+    {
+      "path": "kicad/generate_kicad.py",
+      "sha256": "f0b20d386d36cbe2cef3412f93518dc99426cb616d208280b939ab640c17c452",
+      "size_bytes": 11253
+    },
+    {
+      "path": "legacy/index.html",
+      "sha256": "edaa0de2a2eedb95675e5bc281963c668894f3e86ea5b7bf11df2120b16143ef",
+      "size_bytes": 195545
+    },
+    {
+      "path": "legacy/index_template.html",
+      "sha256": "356f328aadeb46ba289032f614147eb97a5c075e7f1ce7342b7987523d60c6a6",
+      "size_bytes": 69592
+    },
+    {
+      "path": "legacy/index_template_legacy_snapshot.html",
+      "sha256": "356f328aadeb46ba289032f614147eb97a5c075e7f1ce7342b7987523d60c6a6",
+      "size_bytes": 69592
+    },
+    {
+      "path": "legacy/legacy_server.py",
+      "sha256": "69120cfa9e0938cd42b5b14ee673907868dcd145f2a0402d46bea091ca09874c",
+      "size_bytes": 5656
+    },
+    {
+      "path": "legacy/preview_legacy.png",
+      "sha256": "e4233392d4394e4869b748a869b8ba99169a18209bd72ea9a1d09f23d9db60f6",
+      "size_bytes": 818898
+    },
+    {
+      "path": "physics/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "physics/battery.py",
+      "sha256": "f1bfaabf5c8ce9382e2d2ed58cdb0165fb2d85c9737f4bd7b6d765daec027028",
+      "size_bytes": 6012
+    },
+    {
+      "path": "physics/bubble.py",
+      "sha256": "0915dfd1dd616fedb9cbf17a22233f6ee8072ad39bfcfc804d8404ae3f1750b9",
+      "size_bytes": 17279
+    },
+    {
+      "path": "physics/compressible.py",
+      "sha256": "5f107145a81ef623413f69520ebdadefbc099723eae3f78428bab640ffee9c29",
+      "size_bytes": 7389
+    },
+    {
+      "path": "physics/environment.py",
+      "sha256": "f08d5ee5efba7b519bd28df47fae7ad73ad52550b0aad337836886d2d2e4a08a",
+      "size_bytes": 4609
+    },
+    {
+      "path": "physics/inverse.py",
+      "sha256": "07c7e9acc0f8beaa300095b59898e29672e6c5a7cc3f2c48741035e2ed3adbf5",
+      "size_bytes": 5241
+    },
+    {
+      "path": "physics/plasma.py",
+      "sha256": "28bb381b47dc855e820782957f2781c694b52c559a6efc1894b86a340823494f",
+      "size_bytes": 15273
+    },
+    {
+      "path": "physics/receiver.py",
+      "sha256": "1668d719d4509a32a3ab2cc773a1f706e49527c540cce77c01696b6ec76982df",
+      "size_bytes": 3535
+    },
+    {
+      "path": "physics/secondary.py",
+      "sha256": "f05044badc80095d4c2fa9a442ab44e482a6c2e363199a8f8af7d26c46867425",
+      "size_bytes": 11646
+    },
+    {
+      "path": "physics/shock.py",
+      "sha256": "8f6bf6fe56f9d396e71ffefb0f5e5989aa899329e7d3192626413ef000c8bd4d",
+      "size_bytes": 10582
+    },
+    {
+      "path": "preview.png",
+      "sha256": "e1a4daed5204305c49df148c8f1f0db954cf2dc0bd9a2e9226df56ddb54f42f0",
+      "size_bytes": 1604545
+    },
+    {
+      "path": "requirements-circuits.txt",
+      "sha256": "2872240ad39db3fa61ea202cac35a5579c482437efa38edec506dbdc0f870942",
+      "size_bytes": 30
+    },
+    {
+      "path": "research/README.md",
+      "sha256": "c2863019ff2c7241fd0d1bea4efcb3cca26651cc84c6766c8d3777c95fa7863f",
+      "size_bytes": 4807
+    },
+    {
+      "path": "research/__init__.py",
+      "sha256": "5666bf32410fa4d88f123cf1c147ea9c85c2993841f16f5bac89770c7252c5ce",
+      "size_bytes": 58
+    },
+    {
+      "path": "research/_figures/freq.png",
+      "sha256": "4779696151e0818ab3793f92ef5a09b3ad80ac154672320847ae248a244dbe2b",
+      "size_bytes": 40543
+    },
+    {
+      "path": "research/_figures/freq_en.png",
+      "sha256": "4779696151e0818ab3793f92ef5a09b3ad80ac154672320847ae248a244dbe2b",
+      "size_bytes": 40543
+    },
+    {
+      "path": "research/_figures/freq_es.png",
+      "sha256": "2c585e06ff0906e022a6bded32326eca8d31094f752155b02e284a7f2a1818ed",
+      "size_bytes": 42022
+    },
+    {
+      "path": "research/_figures/physics_frequency.png",
+      "sha256": "6158cd9ad7088d09e9585b330757b411d6011701644035e0f90eb1485659b70c",
+      "size_bytes": 69999
+    },
+    {
+      "path": "research/_figures/physics_frequency_en.png",
+      "sha256": "a98c7645c6c75cf571b3b72aadf30aa295530bc13baef9e8b53883ab59a5191f",
+      "size_bytes": 70189
+    },
+    {
+      "path": "research/_figures/physics_frequency_es.png",
+      "sha256": "697f7ee5f1c2912cf029134b1177574ca5dd66568acc3d23e76d0a7e0598007e",
+      "size_bytes": 68986
+    },
+    {
+      "path": "research/_figures/plasma_bubble_v017_en.png",
+      "sha256": "d841ef3056d32a0458016c5557c6dfdc316e70e16269a845cdb028b61813640f",
+      "size_bytes": 46422
+    },
+    {
+      "path": "research/_figures/plasma_bubble_v017_es.png",
+      "sha256": "b0829e400110b986e5d699a5cec4b9367cd274598df7745f51b8bc23efa50d6a",
+      "size_bytes": 48775
+    },
+    {
+      "path": "research/_figures/stages.png",
+      "sha256": "1ea1fc717437e390a5bc890eb86ce35c080240c7f7aeb92784aa034ad914438a",
+      "size_bytes": 47104
+    },
+    {
+      "path": "research/_figures/stages_en.png",
+      "sha256": "1ea1fc717437e390a5bc890eb86ce35c080240c7f7aeb92784aa034ad914438a",
+      "size_bytes": 47104
+    },
+    {
+      "path": "research/_figures/stages_es.png",
+      "sha256": "66a3e7a04951705343f88f7a8e22cd0889eee3ca9635c0c2532d6d9eb8e6cbcb",
+      "size_bytes": 47587
+    },
+    {
+      "path": "research/_figures/stress.png",
+      "sha256": "dc07ac6ea0efb9c728945fb20f04577d7348f0f3433352f05b34ef372eac98ad",
+      "size_bytes": 29444
+    },
+    {
+      "path": "research/_figures/stress_en.png",
+      "sha256": "dc07ac6ea0efb9c728945fb20f04577d7348f0f3433352f05b34ef372eac98ad",
+      "size_bytes": 29444
+    },
+    {
+      "path": "research/_figures/stress_es.png",
+      "sha256": "7aeb3d17aa6800d39731bce440b95fa3bc2eefbabb73842ef513381d97cb5824",
+      "size_bytes": 29549
+    },
+    {
+      "path": "research/design_requirements.json",
+      "sha256": "e53ddc893c81da475b54c8cfd33247c1ed09f87097c1b9bf59968444ea9148db",
+      "size_bytes": 2368
+    },
+    {
+      "path": "research/design_requirements.py",
+      "sha256": "a3850dc557853b432124217fe41c45c2fd8f6b9b3e1dbc8d726e89ad55168e35",
+      "size_bytes": 2760
+    },
+    {
+      "path": "research/frequency_sweep.csv",
+      "sha256": "479eccbc1689a891c77cbf80337cc9d2d2ec1ce63c57056b8154b4f2cca88b78",
+      "size_bytes": 1004
+    },
+    {
+      "path": "research/physics_frequency_sweep.csv",
+      "sha256": "35ffb11c7ec55ca9b0102cfda3a63a2f2b2e459861d3e5a844a4a4b95ae3f6f7",
+      "size_bytes": 1485
+    },
+    {
+      "path": "research/physics_refinement.py",
+      "sha256": "12e75d981969acbbd782d8a6c38a9d98b93f64135f466aa33055a161ea7cbba9",
+      "size_bytes": 6599
+    },
+    {
+      "path": "research/physics_refinement_v016.json",
+      "sha256": "7162b13ef40c143c2ca8e517dc7b08b3b9c66ab96ab3ad433c141b36ce7b3333",
+      "size_bytes": 11676
+    },
+    {
+      "path": "research/plasma_pressure_refinement_v017.json",
+      "sha256": "a057e0c726b3c9130a9c60cad807f04e2cbd5ac1109836f7c6e6b1f9b403ad15",
+      "size_bytes": 5780
+    },
+    {
+      "path": "research/plasma_pressure_refinement_v017.py",
+      "sha256": "e0c885b3f35e9205713a1d54eaa7d312f79604598a5c34c3c0b3309ab73c8cd1",
+      "size_bytes": 4175
+    },
+    {
+      "path": "research/plasma_pressure_sweep_v017.csv",
+      "sha256": "75eb50b8ce79c49ed33e0ffcc5ef91e7832461058e64b1d3f8ae33f7341aca88",
+      "size_bytes": 2977
+    },
+    {
+      "path": "research/refine_model.py",
+      "sha256": "da56aff979159ff4e49beaf9ea817edbf8a75fbcd70d6c21c67b0e367661e94d",
+      "size_bytes": 6093
+    },
+    {
+      "path": "research/refinement_audit.json",
+      "sha256": "00c6233edda7cdb40d248086e86cdab1172b579f26b0279910794176eebef5c4",
+      "size_bytes": 13806
+    },
+    {
+      "path": "research/stress_samples.json",
+      "sha256": "fb080e396b2b0ae1b953aa1d71113f731ee875910f05daf500491bc13262304f",
+      "size_bytes": 129836
+    },
+    {
+      "path": "research/test_offline_browser.py",
+      "sha256": "bdd2819383374b292a0713e4adb0f0a2788feb2b3764053aa1c04718727ce7cf",
+      "size_bytes": 2780
+    },
+    {
+      "path": "research/v017_addendum_en.pdf",
+      "sha256": "685e5189db641a3d3317e99b93d0d6a283f0ac2116d07dd63a10aebaaeda8cfa",
+      "size_bytes": 94596
+    },
+    {
+      "path": "research/v017_addendum_es.pdf",
+      "sha256": "fe0b92f12b430dc3126150f3b47c30ae707b4ff10eda16adf34d6824d1f90323",
+      "size_bytes": 96799
+    },
+    {
+      "path": "server.py",
+      "sha256": "d4f0c1307623a97f9b7e2c4e82026674b7c6e863a75cecf9ad42be8d74a94e07",
+      "size_bytes": 5214
+    },
+    {
+      "path": "simulator.py",
+      "sha256": "ecfa16ffa708bed60d81c938a0456d2e9f0a300b39ec97fec7bdb3e70b137b11",
+      "size_bytes": 21960
+    },
+    {
+      "path": "system_projection.py",
+      "sha256": "caffb727d65d123d92e3926180a66fc1a4ff808f239e2cb8cb69815ec7eb73b7",
+      "size_bytes": 3336
+    },
+    {
+      "path": "tests/test_battery_kicad_v013.py",
+      "sha256": "d13cde9f9e5755a537c9fd5a72a57fb847da82dd9d221a14e0200081360754ca",
+      "size_bytes": 4686
+    },
+    {
+      "path": "tests/test_circuit_validation.py",
+      "sha256": "e47603b83f3f00d8d5f7d9894effc60883316b752f7e028c8bc8e04fbc327019",
+      "size_bytes": 4932
+    },
+    {
+      "path": "tests/test_derating_regression_v0131.py",
+      "sha256": "ce6bf8b80c4e92e624863fdca6bdbc8ca0e72db852d575339ddd9bf4b2aa41d9",
+      "size_bytes": 1882
+    },
+    {
+      "path": "tests/test_design_target.py",
+      "sha256": "315c1db80972c13be47ea556551f4677e4161a6003c6b4f63e825ff5b6715cb6",
+      "size_bytes": 4072
+    },
+    {
+      "path": "tests/test_integrated_v012.py",
+      "sha256": "648a3198c102c36516855c8217a4e0fba8d10aeb4e31e179d65b6ad1a77a77b7",
+      "size_bytes": 4437
+    },
+    {
+      "path": "tests/test_inverse_auto.py",
+      "sha256": "c2c695feae2b7a6fe78923020911628b40322d0480d1ff5e29f388c297e8fd60",
+      "size_bytes": 5850
+    },
+    {
+      "path": "tests/test_leo_vacuum_audit.py",
+      "sha256": "cdcf0b2e350d7af90b253302a413ab20c19a2db3033a8d53885c93578466d60e",
+      "size_bytes": 5287
+    },
+    {
+      "path": "tests/test_net_zero.py",
+      "sha256": "57dc403f3267cec5a7341f01def198cdf74ac64d26762ce2c0338981d75adedf",
+      "size_bytes": 2932
+    },
+    {
+      "path": "tests/test_physics_refinement_v016.py",
+      "sha256": "5370adf2052cbc8cb27fc636b12ba4210680067c64818f79c7df02500d972f5c",
+      "size_bytes": 3736
+    },
+    {
+      "path": "tests/test_plasma_incident_wave_v017.py",
+      "sha256": "1f2ea78e4c23cfa4910d7a8639970542e1e79c9a69d9969e915d4e81d2fe0013",
+      "size_bytes": 4098
+    },
+    {
+      "path": "tests/test_plasma_pulse.py",
+      "sha256": "73447d2c0b74e5661350c52630c09b314a8ba6bfadaca687e3ad24db688ee10d",
+      "size_bytes": 3222
+    },
+    {
+      "path": "tests/test_research_audit_v015.py",
+      "sha256": "21fb9836d6455cece372eaad81ddc455cc21b36aef1f85f859340f56faf6cb72",
+      "size_bytes": 2190
+    },
+    {
+      "path": "tests/test_secondary.py",
+      "sha256": "5c539e181618f50e6c0cdcc4da5ea766d432e55f1eae24b8e5da6b7bffb5998d",
+      "size_bytes": 5032
+    },
+    {
+      "path": "tests/test_simulator.py",
+      "sha256": "78a94d11c7641de15a8251100107ec25cd1885fbf59e6595320690fe0e93d6fa",
+      "size_bytes": 10870
+    },
+    {
+      "path": "tests/test_target005.py",
+      "sha256": "47f990edcd0e349658884cca20177a95cd4ebdabfb826fad24379c8330536833",
+      "size_bytes": 3026
+    },
+    {
+      "path": "tools/build_paper.py",
+      "sha256": "b416951d4139a59078afb92cf9a279d6dd713fa6a43f26afa41b9018ab3fc02c",
+      "size_bytes": 14299
+    },
+    {
+      "path": "tools/build_research_papers.py",
+      "sha256": "0b32c8f75555514f80c0d1c9013867fb913ceb625032060ac655d44866a70a9b",
+      "size_bytes": 54681
+    },
+    {
+      "path": "tools/build_v017_papers.py",
+      "sha256": "8991e69463fc984e69ffd358c8e7b4953f918007d89904635e9cc7401b701462",
+      "size_bytes": 14338
+    },
+    {
+      "path": "turbo_engine.py",
+      "sha256": "02e5b741d23bad605d5920ba6dbe69c976bfaf60c868aded26c3d516d7e7091a",
+      "size_bytes": 7641
+    },
+    {
+      "path": "validation/README_RESULTS.md",
+      "sha256": "e22060aa01fce17da8f51717fc679090a9547b8b8d1ac91899c4f75eaf6483e2",
+      "size_bytes": 1583
+    },
+    {
+      "path": "validation/bubble_system_projection.json",
+      "sha256": "3f24507ea6cb2f4b0da28f4bda59093fd5b1405dbc31818d7f2e04e4ae0b0a1f",
+      "size_bytes": 5338
+    },
+    {
+      "path": "validation/build_hardware_artifacts.py",
+      "sha256": "4e964760102f95b2d66c594cab0ded607251f2ad137fd712b673640bafe7b62c",
+      "size_bytes": 12259
+    },
+    {
+      "path": "validation/comparison.json",
+      "sha256": "7e812ee17e35f0ba3ccee0e16e10497e44d27f9dce60ec3007fb8d56fcb1799d",
+      "size_bytes": 3616
+    },
+    {
+      "path": "validation/historical/best_feasible.json",
+      "sha256": "2bde7cb880c2e7c0944ee03f9fafa14b224cac39da86e38856aa2043bda043a2",
+      "size_bytes": 10121
+    },
+    {
+      "path": "validation/historical/fine_sweep_summary.json",
+      "sha256": "55c8926e61f0e7b7db6235bbe2162436b9ac5871100c61e0319f35d68686df95",
+      "size_bytes": 5636
+    },
+    {
+      "path": "validation/historical/pre_lowDCR_coarse_sweep.csv",
+      "sha256": "83b0e32c95bba370d189e7cfeb052346e7db4654eeaaf97d86e0a1ba82a57aaf",
+      "size_bytes": 286561
+    },
+    {
+      "path": "validation/historical/pre_lowDCR_fine_sweep.csv",
+      "sha256": "bd8aa75b12b2cb38be213639b07de7edcabc35a4592e1dc7bfce7a1ef2f8c677",
+      "size_bytes": 102207
+    },
+    {
+      "path": "validation/historical/revised_best.json",
+      "sha256": "7f451e2d6636d50894b91cec1f7f4966f65a2f0210ab27a7088bfe585853b7ba",
+      "size_bytes": 2427
+    },
+    {
+      "path": "validation/historical/revised_high_f.json",
+      "sha256": "4bb22e4676455745e1b2b4bc1fb991f63322b97b6c1ae045fabc32ae29dc6b97",
+      "size_bytes": 2447
+    },
+    {
+      "path": "validation/historical/revised_low_f.json",
+      "sha256": "cd2d9d4b91a94c97b42264ff784b4fdb714cecd91afea70b508580208b10d555",
+      "size_bytes": 2446
+    },
+    {
+      "path": "validation/historical/revised_standard.json",
+      "sha256": "d9d79926184b39f563f159307bc791651b277a7e3a4e74c0f16149d5d48eff0b",
+      "size_bytes": 2422
+    },
+    {
+      "path": "validation/integrated_reference.json",
+      "sha256": "29d04cb8f8e31ee96e958ac7c766cf5e37658bcbe68e0243076ef0b0a0a54e04",
+      "size_bytes": 41944
+    },
+    {
+      "path": "validation/main.js",
+      "sha256": "6a69a3ab5c5a50d87f948d573bf6ca6f686bc8cc2e85753cb343f68a91c0041b",
+      "size_bytes": 5107
+    },
+    {
+      "path": "validation/nominal_lowDCR.json",
+      "sha256": "cde4b46dc1e4ada45e4c269d581a2d28d49d8c1f0984cc0535458869bb754bba",
+      "size_bytes": 2502
+    },
+    {
+      "path": "validation/run_005_study.py",
+      "sha256": "7bbd3cf904bc2cf6b0e53a284b00522acf935367bcb7bf8efe08ad1615c618a6",
+      "size_bytes": 1172
+    },
+    {
+      "path": "validation/run_current_benchmarks.py",
+      "sha256": "2cac4e45d2b1145dfbeed8fed164e88c31a1f5dd574de11490e246acc6b2d7bb",
+      "size_bytes": 2556
+    },
+    {
+      "path": "validation/sensitivity.json",
+      "sha256": "8ad712123e0a03fb44d218acb04bf917f270bfa023c9b65fdf27743ede88f338",
+      "size_bytes": 1327
+    },
+    {
+      "path": "validation/sensitivity_tuned.json",
+      "sha256": "2c5adb2395d3817cfd370bbd961cd97136f5482be25ac856be28023e611fd39b",
+      "size_bytes": 1319
+    },
+    {
+      "path": "validation/target_0p05_study.json",
+      "sha256": "86f3ab39fd7720aaa7904cc8a1290861097ec2f632ca1d3d6d984dfb6dd6db2d",
+      "size_bytes": 14164
+    },
+    {
+      "path": "validation/target_0p05_top_candidates.csv",
+      "sha256": "f17de704a33758b25fb4cf1c87b30981ba35d7de552770444d8e3b02f9222645",
+      "size_bytes": 1840
+    },
+    {
+      "path": "validation/targeted_search.py",
+      "sha256": "c630e6115bc1779cd236fcfa76381e97ca18fff2bf8e5f665bb9dcf45d8c59fb",
+      "size_bytes": 1270
+    },
+    {
+      "path": "validation/tuned_72W.json",
+      "sha256": "f434a1bd38875086c768ec6b9fdbd59b6825c1d8b0f6af845971708ac14bc53c",
+      "size_bytes": 2539
+    },
+    {
+      "path": "validation/v013_default.json",
+      "sha256": "dd8f67d213bf79bd32593ec2f7c06ee1e98be327804e7d788c37d1051494f110",
+      "size_bytes": 164459
+    }
+  ]
+}

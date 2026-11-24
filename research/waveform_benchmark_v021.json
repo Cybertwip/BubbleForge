@@ -1,0 +1,89 @@
+{
+  "benchmark": "five waveform equal-input contraction comparison",
+  "comparison_case": {
+    "radius_m": 9.6586e-05,
+    "liquid_pressure_pa": 88477.0,
+    "pulse_energy_j": 1e-06,
+    "active_wave_source_j": 2e-07,
+    "active_wave_fraction": 0.05,
+    "active_rise_s": 8e-08,
+    "active_decay_s": 2.3e-07,
+    "active_spacing_s": 3.8e-07,
+    "wave_fraction": 0.05,
+    "source_distance_m": 0.002,
+    "receiver_gap_m": 0.002,
+    "pulse_sigma_s": 3.5e-07,
+    "tensile_fraction": 0.3,
+    "repetition_hz": 1000.0,
+    "liquid_density": 998.0,
+    "liquid_sound_speed_m_s": 1480.0,
+    "viscosity_pa_s": 0.001,
+    "surface_tension_n_m": 0.072,
+    "vapor_pressure_pa": 2339.0,
+    "gamma": 1.4,
+    "duration_s": 0.0002,
+    "steps_per_sigma": 8
+  },
+  "selected_locked_waveform": "square",
+  "modeled_best_for_reference_case": "square",
+  "best_matches_production": true,
+  "comparison_priority": "maximize screened bubble contraction, not harvested net energy",
+  "caution": "EM-to-acoustic conversion 5% is unmeasured; no 3-D EM/acoustic shock CFD; square is not proven globally optimal",
+  "profiles": [
+    {
+      "waveform": "triangle",
+      "valid": true,
+      "source_energy_j_per_event": 1.2e-06,
+      "contraction_pct": 2.0017437838206864,
+      "bubble_min_radius_um": 94.65259574895896,
+      "active_peak_pressure_kpa": 23.810450194727704,
+      "receiver_rectified_j_per_event": 4.469198883511913e-14,
+      "acoustic_energy_j_per_event": 4.787175236076178e-10,
+      "shock_resolved": false
+    },
+    {
+      "waveform": "sine",
+      "valid": true,
+      "source_energy_j_per_event": 1.2e-06,
+      "contraction_pct": 2.004584537608878,
+      "bubble_min_radius_um": 94.64985197850508,
+      "active_peak_pressure_kpa": 20.33645117166567,
+      "receiver_rectified_j_per_event": 4.4540174558470006e-14,
+      "acoustic_energy_j_per_event": 4.77091367411395e-10,
+      "shock_resolved": false
+    },
+    {
+      "waveform": "cosine",
+      "valid": true,
+      "source_energy_j_per_event": 1.2e-06,
+      "contraction_pct": 1.9790646531141598,
+      "bubble_min_radius_um": 94.67450061414316,
+      "active_peak_pressure_kpa": 23.762534625766204,
+      "receiver_rectified_j_per_event": 4.4078388710664696e-14,
+      "acoustic_energy_j_per_event": 4.721449556883908e-10,
+      "shock_resolved": false
+    },
+    {
+      "waveform": "sawtooth",
+      "valid": true,
+      "source_energy_j_per_event": 1.2e-06,
+      "contraction_pct": 2.0453032566084217,
+      "bubble_min_radius_um": 94.61052339657219,
+      "active_peak_pressure_kpa": 23.810297230860712,
+      "receiver_rectified_j_per_event": 4.720282594678657e-14,
+      "acoustic_energy_j_per_event": 5.056123151711345e-10,
+      "shock_resolved": false
+    },
+    {
+      "waveform": "square",
+      "valid": true,
+      "source_energy_j_per_event": 1.2e-06,
+      "contraction_pct": 2.070474692302293,
+      "bubble_min_radius_um": 94.58621131369291,
+      "active_peak_pressure_kpa": 14.643750302004278,
+      "receiver_rectified_j_per_event": 4.731280994774761e-14,
+      "acoustic_energy_j_per_event": 5.06790407038354e-10,
+      "shock_resolved": false
+    }
+  ]
+}

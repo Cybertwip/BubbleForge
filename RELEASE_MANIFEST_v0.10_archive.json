@@ -1,0 +1,339 @@
+{
+  "release": "v0.10.0-alpha",
+  "date": "2026-11-17",
+  "title": "BubbleForge LEO-equivalent vacuum pressure and electrical stage loss audit",
+  "status": "research-only, not a flight/thermal/HV qualified device",
+  "validation": {
+    "unittests_passed": 60,
+    "python_backend_api": "checked",
+    "node_syntax": "checked",
+    "offline_browser_controls": "checked",
+    "local_server_browser_navigation": "blocked by administrator",
+    "pdf_rendered_pages": 4
+  },
+  "prescribed_pressure_lower_bound_pa": 1e-12,
+  "prescribed_pressure_upper_bound_pa": 120000.0,
+  "note": "LEO pressure is illustrative, not real orbit telemetry. Modeled low controller loss <2% requires an unverified gate driver assumption.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 18632,
+      "sha256": "fdf496cb66f0a2d1c98e20e8f5f3a02f981a53f727db63143ce5f441b1bfed10"
+    },
+    {
+      "path": "RELEASE_NOTES_v0.10.0-alpha.md",
+      "bytes": 1757,
+      "sha256": "5e7d69443bd74bb19b4ff6633c47a6901fbbaecfe4f8b91ebbe14473099abefe"
+    },
+    {
+      "path": "RELEASE_NOTES_v0.9.0-alpha.md",
+      "bytes": 3941,
+      "sha256": "65d0ae125691e69068522d9c8b8c7dff0a16e5f8b3c05135d02b48e79feaa1f4"
+    },
+    {
+      "path": "build_ui.py",
+      "bytes": 790,
+      "sha256": "bfef3ad157540e19c8b936f4a2d23430d15a02e1a980c0c602f1d3d458d4bf65"
+    },
+    {
+      "path": "design_study.py",
+      "bytes": 32439,
+      "sha256": "5b4e8e42a92ee66ac81bc91e01e808041d109c4eca297e6d1402595806aef9c6"
+    },
+    {
+      "path": "docs/01_Research_Brief_for_External_Review.pdf",
+      "bytes": 49285,
+      "sha256": "254d1cadc7be3ad4870a79ecf9b432ffb1d6eafc0f9f199cb77da59836fc2616"
+    },
+    {
+      "path": "docs/02_Inverse_Physics_and_Validation_Note.pdf",
+      "bytes": 54602,
+      "sha256": "25bee117fe41d91136a6d8bb04c9ba074723e7b68a71366079834a7018eccaba"
+    },
+    {
+      "path": "docs/03_Texas_Chihuahua_Experiment_Validation_Plan.pdf",
+      "bytes": 49150,
+      "sha256": "44638a2db73054e5921d16985f27ee2a60764d38ac1989eb9752ddefd302e13a"
+    },
+    {
+      "path": "docs/04_95_Percent_Target_Optimization_and_Loss_Budget.pdf",
+      "bytes": 9871,
+      "sha256": "e7e1264595a8d58ae031a380b4d0cab3b50c2ff8e7f1c121dc974e1f53937979"
+    },
+    {
+      "path": "docs/05_Plasma_Pulse_Energy_Balance.pdf",
+      "bytes": 7225,
+      "sha256": "0bc324cd05da63b285370abad489ebd81dcb8ab1ebddea1f78eead53451073d7"
+    },
+    {
+      "path": "docs/06_Independent_Secondary_Plasma_Storage_and_Energy_Audit.pdf",
+      "bytes": 12969,
+      "sha256": "0906a8ed0a5ba48c2932595300445463b72cae043fe68196087f252d17025091"
+    },
+    {
+      "path": "docs/07_Independent_Secondary_Circuit_Concept.pdf",
+      "bytes": 4388,
+      "sha256": "6a5213f38b6ff96616264737f17a4e8b5f88737bcc0bc7a220f9feb32412a473"
+    },
+    {
+      "path": "docs/08_LEO_Vacuum_and_Circuit_Loss_Audit.pdf",
+      "bytes": 10300,
+      "sha256": "79c6e9ab0ea573990372c3de0128b259f76e7430066c693613144d6b1972e145"
+    },
+    {
+      "path": "docs/Electrical_Wiring_and_Loss_Audit.md",
+      "bytes": 2957,
+      "sha256": "bc952610d5c43061a2f2ed8a02559787c20839a94f4863518cfd9256cffc6704"
+    },
+    {
+      "path": "docs/Inverse_Method.md",
+      "bytes": 2273,
+      "sha256": "c72db76a893fcca894d1660766d63ee2f7482d8ff74fc16730cf046783130509"
+    },
+    {
+      "path": "docs/LEO_Vacuum_Method.md",
+      "bytes": 3930,
+      "sha256": "f6b9995b38f8c47f99bf0399d4e39e3c6fbfb8929221dad690facd0c2cbad735"
+    },
+    {
+      "path": "docs/Pressure_Provenance.md",
+      "bytes": 1394,
+      "sha256": "228b28c96f02013db57d5ccb55064a93fc47c5555d5feebfdc6e5082fc04974d"
+    },
+    {
+      "path": "docs/REVIEW_PACKAGE_MANIFEST.md",
+      "bytes": 3467,
+      "sha256": "d91d843110c94a362cddcec22be1a7365e0b4b29d5823da7f127bb2bd1078640"
+    },
+    {
+      "path": "docs/Secondary_Model_Method.md",
+      "bytes": 4577,
+      "sha256": "f157db6527a56769ac0534ad85d46530f6f0bf54ff4a516fd29359298030b392"
+    },
+    {
+      "path": "docs/build_95_study.py",
+      "bytes": 12267,
+      "sha256": "d3f8131abe0972b03622263f366e102d29de54869f40b70a1e8ef29cc18c7400"
+    },
+    {
+      "path": "docs/build_leo_report.py",
+      "bytes": 12032,
+      "sha256": "a4ab64a767f6af661f6c381fb3686783631d337bc306fb59c5396745bc63e426"
+    },
+    {
+      "path": "docs/build_pdfs.py",
+      "bytes": 24125,
+      "sha256": "bb33f2ec9bd6b2d51c08fbb63dbb37cff61d9a4cfbbfeaadf2c9fa27dd9fa0f2"
+    },
+    {
+      "path": "docs/build_plasma_report.py",
+      "bytes": 10608,
+      "sha256": "a3956e59104d7f5ec766c2a26536fe21c28919fc05b850a3edb50a83be0c34bb"
+    },
+    {
+      "path": "docs/build_secondary_report.py",
+      "bytes": 18119,
+      "sha256": "a3f7de0be7f7d737f6384fdbcbda73dd8f021ec0be61748cb0165bdcdba1569e"
+    },
+    {
+      "path": "engine.py",
+      "bytes": 13089,
+      "sha256": "fef07824ad739e6121397de7dc54661d14bb41d4ea7068ef75a7e0de0cb3f3ad"
+    },
+    {
+      "path": "examples/automatically_inferred_size_grid.csv",
+      "bytes": 8696,
+      "sha256": "cb8d648179ff66b0adfa6c27ed25e8cd14e92e69afedac767c075fdfe31e9053"
+    },
+    {
+      "path": "examples/engineering_original_reference.json",
+      "bytes": 13278,
+      "sha256": "4f928dd42c6f0aeef63b28ebf6b24b179ebcb980872b0e8f7e8921d4db97f430"
+    },
+    {
+      "path": "examples/engineering_pareto_by_frequency.csv",
+      "bytes": 452,
+      "sha256": "412a40542ed3788c60930c537088582fe11d35aa53af18d3b9f88bea9005cd82"
+    },
+    {
+      "path": "examples/engineering_target_full_result.json",
+      "bytes": 13703,
+      "sha256": "3596916237908dabdf1fbf27e3a29583418fcb596399b3e0c6f1b19fe843c4b8"
+    },
+    {
+      "path": "examples/engineering_target_optimized.json",
+      "bytes": 2291,
+      "sha256": "1583817b3030fb822c972af145a799fff9f0eb9f80466a12fe3148645aafea30"
+    },
+    {
+      "path": "examples/high_frequency_125k_4kv.json",
+      "bytes": 167927,
+      "sha256": "4ee2f4e4815e5c61aca05667a123a1799897f6ee155a1358484b3a064a8f5f89"
+    },
+    {
+      "path": "examples/leo_dry_invalid_bubble.json",
+      "bytes": 1702,
+      "sha256": "68b64c4061bbcb30516643f5a04cda736b0f0569d6b4d74c473e9ab8fe88ca54"
+    },
+    {
+      "path": "examples/leo_reference_400km.json",
+      "bytes": 2936,
+      "sha256": "86b8d341dccf85d0d4d83f4b1e5b879dec5716142be6b60fa529cf0efb60b36e"
+    },
+    {
+      "path": "examples/low_frequency_5k_insufficient_gap.json",
+      "bytes": 169761,
+      "sha256": "82a8db9984d462fba81c903221151ccbb484b803ca7cf363ed5c6d9fafc05d7a"
+    },
+    {
+      "path": "examples/low_frequency_5k_valid_gap.json",
+      "bytes": 167111,
+      "sha256": "8be9df014a002c0f5b0b5af65c98d248f0e9808c717d429565783be88fb75d0f"
+    },
+    {
+      "path": "examples/net_zero_optimization_35V.json",
+      "bytes": 1532,
+      "sha256": "3962190f230f4ec532fe37b7dcb42c024edd3a9d0fdef0beae44a21e17f2ed0c"
+    },
+    {
+      "path": "examples/net_zero_optimization_4000V.json",
+      "bytes": 1548,
+      "sha256": "248658376a03a8d2d947ffedd7b628dde65fdc647a0e799cd09b03fd14473102"
+    },
+    {
+      "path": "examples/plasma_pulse_reference.json",
+      "bytes": 3475,
+      "sha256": "6525b361d032757d16fe86c41d52345e39c0e1d76d28fdfcfbda878ab11d456d"
+    },
+    {
+      "path": "examples/reference_75k_4kv.json",
+      "bytes": 168723,
+      "sha256": "a03dcb77ca0a3e7db2b55bb70d3929e3b451823f7979484b05369ae9298bcf5e"
+    },
+    {
+      "path": "examples/secondary_inductive_only.json",
+      "bytes": 12935,
+      "sha256": "5cae4b6700cd3d5dc0ebf9910f3696a53af88c8397601f360ccdb4dc9f148ed4"
+    },
+    {
+      "path": "examples/secondary_invalid_125kHz.json",
+      "bytes": 12848,
+      "sha256": "c0ce175dc8eb1b206469e59219f37f68c22f6cbe31b34982751b82610f4eaa43"
+    },
+    {
+      "path": "examples/secondary_reference_1kHz.json",
+      "bytes": 14636,
+      "sha256": "a138af83831b23187a59e684586c00a3efc7117bc2b882d90dfffae4b27549d5"
+    },
+    {
+      "path": "examples/secondary_tuned_3V.json",
+      "bytes": 14642,
+      "sha256": "37f57815d1096c25c15be836dfc411aeeb7f2fa5a79ae8b7948f29049a8f7a74"
+    },
+    {
+      "path": "examples/secondary_tuning_summary.json",
+      "bytes": 604,
+      "sha256": "f2271eb5d0a143a989681e2d2d936141be3ced6c8c4800301a47f75ead1a8e97"
+    },
+    {
+      "path": "examples/secondary_voltage_time.csv",
+      "bytes": 2493,
+      "sha256": "6b961cd0034698e72740f3556994cc3dac3b505136da1f5112e58fe148e547f1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 195545,
+      "sha256": "edaa0de2a2eedb95675e5bc281963c668894f3e86ea5b7bf11df2120b16143ef"
+    },
+    {
+      "path": "index_template.html",
+      "bytes": 69592,
+      "sha256": "356f328aadeb46ba289032f614147eb97a5c075e7f1ce7342b7987523d60c6a6"
+    },
+    {
+      "path": "physics/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "physics/bubble.py",
+      "bytes": 17279,
+      "sha256": "0915dfd1dd616fedb9cbf17a22233f6ee8072ad39bfcfc804d8404ae3f1750b9"
+    },
+    {
+      "path": "physics/environment.py",
+      "bytes": 4608,
+      "sha256": "9c7e8554e4c98a73f018172ca8d6c9499197f112f0cd5031c32cff4d980a85d3"
+    },
+    {
+      "path": "physics/inverse.py",
+      "bytes": 5241,
+      "sha256": "07c7e9acc0f8beaa300095b59898e29672e6c5a7cc3f2c48741035e2ed3adbf5"
+    },
+    {
+      "path": "physics/plasma.py",
+      "bytes": 8738,
+      "sha256": "a06db4f9a21548b988782139a81e4906aa7010880b57f3dcb9795edec02b0b46"
+    },
+    {
+      "path": "physics/secondary.py",
+      "bytes": 10768,
+      "sha256": "94e70c7c24ab1e3b52efaf8d496538a8dd3800a90b0838e1e9fd65d9d97d8678"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 818898,
+      "sha256": "e4233392d4394e4869b748a869b8ba99169a18209bd72ea9a1d09f23d9db60f6"
+    },
+    {
+      "path": "server.py",
+      "bytes": 4056,
+      "sha256": "213024cd02985dbc5f004ca6651083d315b48b95d640949a04c6582d26684086"
+    },
+    {
+      "path": "simulator.py",
+      "bytes": 21960,
+      "sha256": "ecfa16ffa708bed60d81c938a0456d2e9f0a300b39ec97fec7bdb3e70b137b11"
+    },
+    {
+      "path": "tests/test_design_target.py",
+      "bytes": 4065,
+      "sha256": "2875f427047c5a0aef4cf654fb6c3344efa40d4c618fbd0819a5db37de1f5504"
+    },
+    {
+      "path": "tests/test_inverse_auto.py",
+      "bytes": 5843,
+      "sha256": "4ec2386222c9d5c5c3dbd71d95b0ae8947b7fd6357a9aa36ea696b79ba2f7398"
+    },
+    {
+      "path": "tests/test_leo_vacuum_audit.py",
+      "bytes": 5278,
+      "sha256": "b666f949e10d925a625007ca66d8680778a0c7d0a3dc269f4ddc1b6db21cad96"
+    },
+    {
+      "path": "tests/test_net_zero.py",
+      "bytes": 2925,
+      "sha256": "7ea4ad3890034d80c58723cfcb6f594b0f99f92290ec09b6bba51a5fcd43548b"
+    },
+    {
+      "path": "tests/test_plasma_pulse.py",
+      "bytes": 3201,
+      "sha256": "a2c33a98f69880487cf528ad0736f6cfd31d611e1ff9bc537e0934226aacc749"
+    },
+    {
+      "path": "tests/test_secondary.py",
+      "bytes": 5011,
+      "sha256": "34fdcc7fff55bfbbc293cb5e1609a2cd546a55423d9bee8398d5a0d67f99f469"
+    },
+    {
+      "path": "tests/test_simulator.py",
+      "bytes": 10852,
+      "sha256": "82d5226d3659525c5d77abc572ad6ba9d7413108556b38134f204635508360a4"
+    },
+    {
+      "path": "turbo_engine.py",
+      "bytes": 7641,
+      "sha256": "02e5b741d23bad605d5920ba6dbe69c976bfaf60c868aded26c3d516d7e7091a"
+    }
+  ]
+}

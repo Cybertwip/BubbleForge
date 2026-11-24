@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100d22">
+<title>Bubble Forge — Banana Model | Continuous 3D</title>
+<link rel="stylesheet" href="assets/simulator.css">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="mark">BF<span>∴</span></div><div><div class="eyebrow">BUBBLE FORGE <i> / </i> BANANA MODEL</div><h1>Expando microbubble recovery<span class="mid"> · </span>continuous simulation</h1></div></div>
+    <div class="health" id="health"><span class="health-dot"></span><span id="healthText">Connecting to physics engine</span></div>
+  </header>
+  <main class="layout">
+    <section class="viewport card" aria-label="Continuous three-dimensional model">
+      <div class="scene-caption"><div class="scene-title">CIRCUIT / ISOLATED MICROCELLS / RECOVERY</div><div class="state" id="phase">Preparing expansion</div></div>
+      <canvas id="scene" aria-label="3D functional schematic of source, power converter, controlled compression source, plasma injector, ultra-low-power MCU and microcomponent controller, water bubble, passive coupled wall harvester, distributed spherical acoustic receiver and battery. Drag to rotate; scroll to zoom."></canvas>
+      <div class="scene-overlay">
+        <div class="scene-pill"><small>IN</small><b id="bus">48 V</b></div>
+        <div class="scene-pill"><small>PWM</small><b id="frequency">50 kHz</b></div>
+        <div class="scene-pill"><small>RADIUS</small><b id="radius">—</b></div>
+        <div class="scene-pill"><small>ACTIVE WAVE</small><b id="forcing">—</b></div>
+      </div>
+      <div class="scene-foot"><span>Drag to orbit · scroll to zoom · select component</span><span>One representative array cell shown in slow motion; radial deviation ×5 (clamped)</span></div>
+      <div class="probe"><div><small id="probeLabel">SELECTED COMPONENT</small><strong id="probeTitle">Bubble chamber</strong></div><span id="probeValue">Expands, then forced inward</span></div>
+    </section>
+    <aside class="side">
+      <section class="card actions" aria-label="Simulation controls">
+        <div class="section-heading"><span>CONTROL</span><span class="running-label" id="runningLabel">INITIALIZING</span></div>
+        <label for="speed">Simulation speed <strong id="speedValue">1.0×</strong></label>
+        <input id="speed" type="range" min="0.1" max="32" step="0.1" value="1" aria-label="Simulation speed multiplier">
+        <div class="slider-ticks"><span>0.1×</span><span>8×</span><span>32×</span></div>
+        <button type="button" id="optimize">Optimize microbubble array <span aria-hidden="true">↗</span></button>
+        <div id="optimizerNote" class="subnote">Screens isolated receiver banks for ≥0.01% useful return and ≥14% contraction. Net loss is tracked separately.</div>
+      </section>
+      <section class="card live" aria-label="Live model metrics">
+        <div class="section-heading"><span>LIVE ENERGY ACCOUNTING</span><span class="tiny">SIMULATED</span></div>
+        <div class="main-metric"><span>Current operating-point loss</span><strong id="net">—</strong><small id="verdict">External input and every pulse drive counted</small><small id="rate">Locked wave: finite-bandwidth cosine</small>
+          <div class="balance-audit" aria-live="off"><div><span>CUMULATIVE NET LOSS</span><b id="cumulativeLoss">—</b></div><div><span>ACCUMULATED DEFICIT</span><b id="cumulativeDeficit">—</b></div><small id="breakEven">Break-even audit pending</small></div></div>
+        <div class="stat-grid">
+          <div class="stat"><small>Source energy</small><b id="source">—</b></div>
+          <div class="stat"><small>Useful energy</small><b id="useful">—</b></div>
+          <div class="stat"><small>Battery ΔE</small><b id="battery">—</b></div>
+          <div class="stat"><small>Battery SOC</small><b id="soc">—</b></div>
+          <div class="stat"><small>Bubble sound / event</small><b id="sound">—</b></div>
+          <div class="stat"><small>Wall + receiver / cell event</small><b id="piezo">—</b></div>
+        </div>
+        <div class="runtime"><div><small>Continuous model time</small><strong id="clock">0.0 s</strong></div><span class="orbit" aria-label="Running simulation">∞</span></div>
+      </section>
+    </aside>
+  </main>
+  <footer class="footer" aria-label="Simulation session controls"><button type="button" id="dumpProfiles" class="footer-btn" disabled title="Export accepted and attempted simulation profiles with a source-energy audit">Dump profiles</button><button type="button" id="playPause" class="footer-btn footer-primary" disabled aria-pressed="false" title="Pause simulation clock and energy ledger">Pause</button></footer>
+</div>
+<script src="assets/simulator.js" defer></script>
+</body></html>

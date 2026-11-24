@@ -1,0 +1,253 @@
+{
+  "version": "v0.27",
+  "status": "simulation only, not component-qualified hardware",
+  "operating_point": {
+    "Vin_V": 48,
+    "Vout_target_V": 42.72,
+    "Pout_target_W": 72
+  },
+  "baseline_v026": {
+    "input_W": 72.33965016272138,
+    "output_W": 72.0026140002975,
+    "loss_W": 0.33703616242388534,
+    "loss_pct": 0.4659079241684849,
+    "passes_safety_screens": true,
+    "loss_channels_W": {
+      "hs": 0.011069434684377032,
+      "ls": 0.0013384155421906922,
+      "winding": 0.06983847127525251,
+      "trace": 0.053176500971005014,
+      "capacitor": 0.010566485167081405,
+      "leakage": 0.00018250644990898892,
+      "gate_charge_J": 0.005056,
+      "coss_hard_switch_J": 0.05160959999999999,
+      "edge_overlap_J": 0.023299357002912337,
+      "controller_bias_J": 0.05999999999999999,
+      "magnetic_core_proxy_J": 0.01589669167866006,
+      "layout_unmeasured_J": 0.035
+    },
+    "parts": {
+      "bridge": "LMG2100R026",
+      "inductor": "2x IHLP8787MZER101M5A (parallel study)",
+      "controller": "controller not fixed"
+    },
+    "frequency_Hz": 32000.0
+  },
+  "microconverter_v027": {
+    "input_W": 72.2342301236012,
+    "output_W": 71.98240564374069,
+    "loss_W": 0.2518244798605025,
+    "loss_pct": 0.34862208599661937,
+    "passes_safety_screens": true,
+    "loss_channels_W": {
+      "hs": 0.004800838094527794,
+      "ls": 0.0005881422989633398,
+      "winding": 0.03867385929446573,
+      "trace": 0.022189919267316296,
+      "capacitor": 0.0033011781534350868,
+      "leakage": 0.0001824552399319996,
+      "gate_charge_J": 0.00465,
+      "coss_hard_switch_J": 0.0508032,
+      "edge_overlap_J": 0.0364001379464221,
+      "controller_bias_J": 0.04000000000000001,
+      "magnetic_core_proxy_J": 0.023233588612129416,
+      "layout_unmeasured_J": 0.027
+    },
+    "parts": {
+      "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+      "inductor": "7443634700",
+      "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+    },
+    "frequency_Hz": 50000.0
+  },
+  "absolute_loss_reduction_W": 0.08521168256338285,
+  "relative_converter_loss_reduction_pct": 25.28265274282746,
+  "optimized_system": {
+    "loss_pct": 0.3507398889145825,
+    "converter_only_loss_pct": 0.34862208599661937,
+    "main_pulse_power_W": 0.00155,
+    "harvest_power_W": 2.90085606854693e-05,
+    "wall_contraction_pct": 14.436362141691239,
+    "target_0p05_met": false
+  },
+  "scenarios": {
+    "reference_25C": {
+      "input_W": 72.2342301236012,
+      "output_W": 71.98240564374069,
+      "loss_W": 0.2518244798605025,
+      "loss_pct": 0.34862208599661937,
+      "passes_safety_screens": true,
+      "loss_channels_W": {
+        "hs": 0.004800838094527794,
+        "ls": 0.0005881422989633398,
+        "winding": 0.03867385929446573,
+        "trace": 0.022189919267316296,
+        "capacitor": 0.0033011781534350868,
+        "leakage": 0.0001824552399319996,
+        "gate_charge_J": 0.00465,
+        "coss_hard_switch_J": 0.0508032,
+        "edge_overlap_J": 0.0364001379464221,
+        "controller_bias_J": 0.04000000000000001,
+        "magnetic_core_proxy_J": 0.023233588612129416,
+        "layout_unmeasured_J": 0.027
+      },
+      "parts": {
+        "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+        "inductor": "7443634700",
+        "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+      },
+      "frequency_Hz": 50000.0
+    },
+    "warm_55C": {
+      "input_W": 72.26947645299227,
+      "output_W": 72.01255029326536,
+      "loss_W": 0.2569261597269019,
+      "loss_pct": 0.3555113062068904,
+      "passes_safety_screens": true,
+      "loss_channels_W": {
+        "hs": 0.0053783046221536355,
+        "ls": 0.0006571574948246748,
+        "winding": 0.04323210390071121,
+        "trace": 0.02218919895947889,
+        "capacitor": 0.00328825638760908,
+        "leakage": 0.00018253164819097045,
+        "gate_charge_J": 0.00465,
+        "coss_hard_switch_J": 0.0508032,
+        "edge_overlap_J": 0.03640775893826665,
+        "controller_bias_J": 0.04000000000000001,
+        "magnetic_core_proxy_J": 0.023136357901484456,
+        "layout_unmeasured_J": 0.027
+      },
+      "parts": {
+        "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+        "inductor": "7443634700",
+        "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+      },
+      "frequency_Hz": 50000.0
+    },
+    "layout_loss_doubled": {
+      "input_W": 72.2492301236012,
+      "output_W": 71.98240564374069,
+      "loss_W": 0.26682447986050306,
+      "loss_pct": 0.36931117384091383,
+      "passes_safety_screens": true,
+      "loss_channels_W": {
+        "hs": 0.004800838094527794,
+        "ls": 0.0005881422989633398,
+        "winding": 0.03867385929446573,
+        "trace": 0.022189919267316296,
+        "capacitor": 0.0033011781534350868,
+        "leakage": 0.0001824552399319996,
+        "gate_charge_J": 0.00465,
+        "coss_hard_switch_J": 0.0508032,
+        "edge_overlap_J": 0.0364001379464221,
+        "controller_bias_J": 0.04000000000000001,
+        "magnetic_core_proxy_J": 0.023233588612129416,
+        "layout_unmeasured_J": 0.041999999999999996
+      },
+      "parts": {
+        "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+        "inductor": "7443634700",
+        "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+      },
+      "frequency_Hz": 50000.0
+    },
+    "core_loss_doubled": {
+      "input_W": 72.25746371221332,
+      "output_W": 71.98240564374069,
+      "loss_W": 0.2750580684726316,
+      "loss_pct": 0.3806638848660948,
+      "passes_safety_screens": true,
+      "loss_channels_W": {
+        "hs": 0.004800838094527794,
+        "ls": 0.0005881422989633398,
+        "winding": 0.03867385929446573,
+        "trace": 0.022189919267316296,
+        "capacitor": 0.0033011781534350868,
+        "leakage": 0.0001824552399319996,
+        "gate_charge_J": 0.00465,
+        "coss_hard_switch_J": 0.0508032,
+        "edge_overlap_J": 0.0364001379464221,
+        "controller_bias_J": 0.04000000000000001,
+        "magnetic_core_proxy_J": 0.04646717722425883,
+        "layout_unmeasured_J": 0.027
+      },
+      "parts": {
+        "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+        "inductor": "7443634700",
+        "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+      },
+      "frequency_Hz": 50000.0
+    },
+    "gate_overlap_2x": {
+      "input_W": 72.27063026154762,
+      "output_W": 71.98240564374069,
+      "loss_W": 0.2882246178069323,
+      "loss_pct": 0.3988129296283116,
+      "passes_safety_screens": true,
+      "loss_channels_W": {
+        "hs": 0.004800838094527794,
+        "ls": 0.0005881422989633398,
+        "winding": 0.03867385929446573,
+        "trace": 0.022189919267316296,
+        "capacitor": 0.0033011781534350868,
+        "leakage": 0.0001824552399319996,
+        "gate_charge_J": 0.00465,
+        "coss_hard_switch_J": 0.0508032,
+        "edge_overlap_J": 0.0728002758928442,
+        "controller_bias_J": 0.04000000000000001,
+        "magnetic_core_proxy_J": 0.023233588612129416,
+        "layout_unmeasured_J": 0.027
+      },
+      "parts": {
+        "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+        "inductor": "7443634700",
+        "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+      },
+      "frequency_Hz": 50000.0
+    },
+    "bridge_bias_2x": {
+      "input_W": 72.2742301236012,
+      "output_W": 71.98240564374069,
+      "loss_W": 0.29182447986050875,
+      "loss_pct": 0.40377390303768523,
+      "passes_safety_screens": true,
+      "loss_channels_W": {
+        "hs": 0.004800838094527794,
+        "ls": 0.0005881422989633398,
+        "winding": 0.03867385929446573,
+        "trace": 0.022189919267316296,
+        "capacitor": 0.0033011781534350868,
+        "leakage": 0.0001824552399319996,
+        "gate_charge_J": 0.00465,
+        "coss_hard_switch_J": 0.0508032,
+        "edge_overlap_J": 0.0364001379464221,
+        "controller_bias_J": 0.08000000000000002,
+        "magnetic_core_proxy_J": 0.023233588612129416,
+        "layout_unmeasured_J": 0.027
+      },
+      "parts": {
+        "bridge": "2x TI LMG3100R017 (100-V GaN FET with driver)",
+        "inductor": "7443634700",
+        "controller": "Analog Devices LTC3895 (50 kHz min) - GaN logic/level interface unverified"
+      },
+      "frequency_Hz": 50000.0
+    }
+  },
+  "controller": "LTC3895, 50-kHz minimum: 100V GaN power-stage level shift and firmware/driver interface NOT qualified",
+  "unmeasured": {
+    "GaN driver bias_W": 0.04,
+    "GaN switching_extra_W": 0.012,
+    "magnetic_core_coeff_W": 0.06,
+    "board_layout_W": 0.015,
+    "GaN transition_edge_ns": 18,
+    "controller_firmware": true,
+    "converter_hardware": true
+  },
+  "notes": [
+    "Catalog Rds (25C) and DCR are not a full efficiency validation.",
+    "MCU sleep currents do not replace switching-controller active power.",
+    "Core, PCB, switching overlap, sensor resistance and DC output ESR must be measured.",
+    "No plasma or energy source is created by the converter."
+  ]
+}

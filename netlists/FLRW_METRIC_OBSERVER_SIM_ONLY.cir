@@ -1,0 +1,25 @@
+* BubbleForge FLRW metric observer - SPICE behavioral ANALOG DISPLAY, NOT HARDWARE
+* V(H_VIEW) = H*1e18 (plotting scale); V(A_VIEW) = exp(H*t).
+* Outputs are isolated test voltages. No field-to-copper energy transfer model exists.
+* V(ENERGY_VIEW) = vacuum inventory scaled by 1e63 for readability.
+.param G=6.67430e-11
+.param C0=299792458
+.param EPSVAC=5.244697829924281e-10
+.param RADIUS=1e-18
+.param HREF={sqrt(8*3.141592653589793*G*EPSVAC/(3*C0*C0))}
+B_H_VIEW H_VIEW 0 V={HREF*1e18}
+B_A_VIEW A_VIEW 0 V={exp(HREF*time)}
+B_ENERGY_VIEW ENERGY_VIEW 0 V={(4*3.141592653589793/3)*RADIUS**3*EPSVAC*exp(3*HREF*time)*1e63}
+R_H_VIEW H_VIEW 0 1T
+R_A_VIEW A_VIEW 0 1T
+R_E_VIEW ENERGY_VIEW 0 1T
+* Never connect these voltage analogs to the real energy rail.
+.tran 0.1 522
+.control
+run
+set wr_singlescale
+set wr_vecnames
+wrdata flrw_observer.csv v(h_view) v(a_view) v(energy_view)
+quit
+.endc
+.end

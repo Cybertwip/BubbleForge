@@ -1,0 +1,1418 @@
+{
+  "status": "conditional_model",
+  "electrical": {
+    "circuit": {
+      "vin_V": 48,
+      "vout_target_V": 42.72,
+      "power_target_W": 72,
+      "frequency_Hz": 22000,
+      "inductor": "VISHAY_100u_lowDCR",
+      "stage": "gan_100v",
+      "output_cap_F": 0.00047,
+      "cap_esr_ohm": 0.015,
+      "leakage_ohm": 10000000.0,
+      "trace_ohm": 0.01,
+      "sense_ohm": 0.005,
+      "ambient_C": 25.0,
+      "core_coeff_W": 0.06,
+      "unmeasured_layout_W": 0.02,
+      "controller_bias_multiplier": 1.0,
+      "inductance_scale": 1.0,
+      "edge_time_scale": 1.0
+    },
+    "part_numbers": {
+      "bridge": "LMG2100R026",
+      "inductor": "IHLP8787MZER101M5A"
+    },
+    "waveform": [
+      {
+        "phase": 0.002777777777777778,
+        "inductor_A": 0.6370371934364275,
+        "output_V": 42.719960450963846,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.011111111111111112,
+        "inductor_A": 0.6568964786121904,
+        "output_V": 42.71942144613928,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.019444444444444445,
+        "inductor_A": 0.6767534199484481,
+        "output_V": 42.718898427328085,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.027777777777777776,
+        "inductor_A": 0.6966079574190218,
+        "output_V": 42.71839139120848,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.03611111111111111,
+        "inductor_A": 0.7164600310235685,
+        "output_V": 42.71790033441078,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.044444444444444446,
+        "inductor_A": 0.7363095807877555,
+        "output_V": 42.71742525351749,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.05277777777777778,
+        "inductor_A": 0.7561565467634369,
+        "output_V": 42.71696614506327,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.06111111111111111,
+        "inductor_A": 0.7760008690288279,
+        "output_V": 42.71652300553498,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.06944444444444445,
+        "inductor_A": 0.7958424876886808,
+        "output_V": 42.716095831371725,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.07777777777777778,
+        "inductor_A": 0.8156813428744598,
+        "output_V": 42.71568461896485,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.08611111111111111,
+        "inductor_A": 0.8355173747445158,
+        "output_V": 42.71528936465799,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.09444444444444444,
+        "inductor_A": 0.8553505234842615,
+        "output_V": 42.71491006474708,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.10277777777777777,
+        "inductor_A": 0.8751807293063459,
+        "output_V": 42.71454671548038,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.1111111111111111,
+        "inductor_A": 0.8950079324508288,
+        "output_V": 42.714199313058515,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.11944444444444445,
+        "inductor_A": 0.914832073185355,
+        "output_V": 42.7138678536345,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.12777777777777777,
+        "inductor_A": 0.9346530918053289,
+        "output_V": 42.71355233331374,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.1361111111111111,
+        "inductor_A": 0.9544709286340883,
+        "output_V": 42.7132527481541,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.14444444444444443,
+        "inductor_A": 0.9742855240230787,
+        "output_V": 42.7129690941659,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.1527777777777778,
+        "inductor_A": 0.9940968183520267,
+        "output_V": 42.712701367311944,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.16111111111111112,
+        "inductor_A": 1.0139047520291142,
+        "output_V": 42.712449563507576,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.16944444444444445,
+        "inductor_A": 1.0337092654911515,
+        "output_V": 42.71221367862064,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.17777777777777778,
+        "inductor_A": 1.0535102992037508,
+        "output_V": 42.7119937084716,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.18611111111111112,
+        "inductor_A": 1.0733077936614996,
+        "output_V": 42.7117896488335,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.19444444444444445,
+        "inductor_A": 1.093101689388134,
+        "output_V": 42.71160149543199,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.20277777777777778,
+        "inductor_A": 1.1128919269367108,
+        "output_V": 42.711429243945425,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2111111111111111,
+        "inductor_A": 1.1326784468897817,
+        "output_V": 42.71127289000479,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.21944444444444444,
+        "inductor_A": 1.152461189859565,
+        "output_V": 42.71113242919382,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.22777777777777777,
+        "inductor_A": 1.172240096488118,
+        "output_V": 42.71100785704895,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2361111111111111,
+        "inductor_A": 1.192015107447511,
+        "output_V": 42.71089916905941,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.24444444444444444,
+        "inductor_A": 1.211786163439997,
+        "output_V": 42.71080636066721,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.25277777777777777,
+        "inductor_A": 1.2315532051981855,
+        "output_V": 42.71072942726721,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2611111111111111,
+        "inductor_A": 1.251316173485215,
+        "output_V": 42.71066836420709,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.26944444444444443,
+        "inductor_A": 1.2710750090949232,
+        "output_V": 42.710623166787414,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2777777777777778,
+        "inductor_A": 1.2908296528520198,
+        "output_V": 42.71059383026167,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.2861111111111111,
+        "inductor_A": 1.3105800456122578,
+        "output_V": 42.710580349836285,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.29444444444444445,
+        "inductor_A": 1.3303261282626044,
+        "output_V": 42.710582720670644,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.30277777777777776,
+        "inductor_A": 1.3500678417214127,
+        "output_V": 42.710600937877125,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3111111111111111,
+        "inductor_A": 1.3698051269385925,
+        "output_V": 42.71063499652116,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3194444444444444,
+        "inductor_A": 1.3895379248957822,
+        "output_V": 42.71068489162118,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3277777777777778,
+        "inductor_A": 1.409266176606518,
+        "output_V": 42.710750618148765,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.33611111111111114,
+        "inductor_A": 1.4289898231164062,
+        "output_V": 42.710832171028585,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.34444444444444444,
+        "inductor_A": 1.4487088055032915,
+        "output_V": 42.710929545138455,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3527777777777778,
+        "inductor_A": 1.46842306487743,
+        "output_V": 42.711042735309356,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3611111111111111,
+        "inductor_A": 1.488132542381657,
+        "output_V": 42.71117173632548,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.36944444444444446,
+        "inductor_A": 1.507837179191559,
+        "output_V": 42.711316542924266,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.37777777777777777,
+        "inductor_A": 1.5275369165156423,
+        "output_V": 42.71147714979642,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.3861111111111111,
+        "inductor_A": 1.5472316955955026,
+        "output_V": 42.71165355158594,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.39444444444444443,
+        "inductor_A": 1.5669214577059956,
+        "output_V": 42.71184574289014,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4027777777777778,
+        "inductor_A": 1.5866061441554058,
+        "output_V": 42.712053718259696,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4111111111111111,
+        "inductor_A": 1.6062856962856156,
+        "output_V": 42.71227747219869,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.41944444444444445,
+        "inductor_A": 1.6259600554722744,
+        "output_V": 42.71251699916461,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.42777777777777776,
+        "inductor_A": 1.6456291631249684,
+        "output_V": 42.71277229356843,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4361111111111111,
+        "inductor_A": 1.6652929606873885,
+        "output_V": 42.71304334977454,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4444444444444444,
+        "inductor_A": 1.6849513896374992,
+        "output_V": 42.71333016210091,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4527777777777778,
+        "inductor_A": 1.7046043914877074,
+        "output_V": 42.713632724819036,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.46111111111111114,
+        "inductor_A": 1.7242519077850296,
+        "output_V": 42.71395103215398,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.46944444444444444,
+        "inductor_A": 1.7438938801112613,
+        "output_V": 42.714285078284426,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4777777777777778,
+        "inductor_A": 1.7635302500831451,
+        "output_V": 42.7146348573427,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.4861111111111111,
+        "inductor_A": 1.7831609593525377,
+        "output_V": 42.7150003634148,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.49444444444444446,
+        "inductor_A": 1.8027859496065777,
+        "output_V": 42.71538159054044,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5027777777777778,
+        "inductor_A": 1.8224051625678537,
+        "output_V": 42.715778532713074,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5111111111111111,
+        "inductor_A": 1.8420185399945712,
+        "output_V": 42.716191183879914,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5194444444444445,
+        "inductor_A": 1.8616260236807198,
+        "output_V": 42.71661953794199,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5277777777777778,
+        "inductor_A": 1.8812275554562408,
+        "output_V": 42.71706358875417,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5361111111111111,
+        "inductor_A": 1.9008230771871932,
+        "output_V": 42.71752333012519,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5444444444444444,
+        "inductor_A": 1.9204125307759217,
+        "output_V": 42.717998755817696,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5527777777777778,
+        "inductor_A": 1.9399958581612213,
+        "output_V": 42.71848985954826,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5611111111111111,
+        "inductor_A": 1.9595730013185062,
+        "output_V": 42.71899663498743,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5694444444444444,
+        "inductor_A": 1.9791439022599737,
+        "output_V": 42.719519075759756,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5777777777777777,
+        "inductor_A": 1.9987085030347718,
+        "output_V": 42.720057175443856,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5861111111111111,
+        "inductor_A": 2.0182667457291643,
+        "output_V": 42.72061092757237,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.5944444444444444,
+        "inductor_A": 2.0378185724666977,
+        "output_V": 42.72118032563209,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6027777777777777,
+        "inductor_A": 2.0573639254083647,
+        "output_V": 42.72176536306391,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6111111111111112,
+        "inductor_A": 2.076902746752772,
+        "output_V": 42.72236603326292,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6194444444444445,
+        "inductor_A": 2.096434978736304,
+        "output_V": 42.722982329578414,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6277777777777778,
+        "inductor_A": 2.115960563633288,
+        "output_V": 42.72361424531395,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6361111111111111,
+        "inductor_A": 2.1354794437561586,
+        "output_V": 42.724261773727314,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6444444444444445,
+        "inductor_A": 2.154991561455626,
+        "output_V": 42.72492490803065,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6527777777777778,
+        "inductor_A": 2.174496859120835,
+        "output_V": 42.72560364139042,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6611111111111111,
+        "inductor_A": 2.193995279179534,
+        "output_V": 42.7262979669275,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6694444444444444,
+        "inductor_A": 2.2134867640982363,
+        "output_V": 42.72700787771715,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6777777777777778,
+        "inductor_A": 2.2329712563823865,
+        "output_V": 42.727733366789096,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6861111111111111,
+        "inductor_A": 2.252448698576522,
+        "output_V": 42.728474427127566,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.6944444444444444,
+        "inductor_A": 2.2719190332644397,
+        "output_V": 42.72923105167128,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7027777777777777,
+        "inductor_A": 2.2913822030693565,
+        "output_V": 42.73000323331355,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7111111111111111,
+        "inductor_A": 2.3108381506540745,
+        "output_V": 42.73079096490227,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7194444444444444,
+        "inductor_A": 2.330286818721144,
+        "output_V": 42.731594239239946,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7277777777777777,
+        "inductor_A": 2.3497281500130254,
+        "output_V": 42.73241304908379,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7361111111111112,
+        "inductor_A": 2.369162087312254,
+        "output_V": 42.73324738714567,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7444444444444445,
+        "inductor_A": 2.3885885734416017,
+        "output_V": 42.73409724609221,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7527777777777778,
+        "inductor_A": 2.40800755126424,
+        "output_V": 42.73496261854485,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7611111111111111,
+        "inductor_A": 2.4274189636839,
+        "output_V": 42.73584349707977,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7694444444444445,
+        "inductor_A": 2.4468227536450384,
+        "output_V": 42.73673987422806,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7777777777777778,
+        "inductor_A": 2.466218864132997,
+        "output_V": 42.73765174247566,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7861111111111111,
+        "inductor_A": 2.4856072381741656,
+        "output_V": 42.738579094263436,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.7944444444444444,
+        "inductor_A": 2.504987818836142,
+        "output_V": 42.73952192198723,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8027777777777778,
+        "inductor_A": 2.5243605492278953,
+        "output_V": 42.74048021799786,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8111111111111111,
+        "inductor_A": 2.5437253724999276,
+        "output_V": 42.74145397460121,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8194444444444444,
+        "inductor_A": 2.5630822318444326,
+        "output_V": 42.74244318405817,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8277777777777777,
+        "inductor_A": 2.58243107049546,
+        "output_V": 42.74344783858481,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8361111111111111,
+        "inductor_A": 2.6017718317290717,
+        "output_V": 42.74446793035231,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8444444444444444,
+        "inductor_A": 2.6211044588635075,
+        "output_V": 42.74550345148703,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8527777777777777,
+        "inductor_A": 2.640428895259342,
+        "output_V": 42.74655439407057,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8611111111111112,
+        "inductor_A": 2.659745084319646,
+        "output_V": 42.747620750139774,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8694444444444445,
+        "inductor_A": 2.6790529694901455,
+        "output_V": 42.748702511686794,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8777777777777778,
+        "inductor_A": 2.698352494259385,
+        "output_V": 42.74979967065912,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8861111111111111,
+        "inductor_A": 2.717643602158882,
+        "output_V": 42.750912218959606,
+        "high_side_on": true
+      },
+      {
+        "phase": 0.8944444444444445,
+        "inductor_A": 2.6855551347073554,
+        "output_V": 42.75126373607763,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9027777777777778,
+        "inductor_A": 2.523050525203263,
+        "output_V": 42.74956577087167,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9111111111111111,
+        "inductor_A": 2.3605882296935223,
+        "output_V": 42.74773754583688,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9194444444444444,
+        "inductor_A": 2.198168732166866,
+        "output_V": 42.745779106671314,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9277777777777778,
+        "inductor_A": 2.0357925163320836,
+        "output_V": 42.74369049945734,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9361111111111111,
+        "inductor_A": 1.8734600656166276,
+        "output_V": 42.74147177066132,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9444444444444444,
+        "inductor_A": 1.7111718631652213,
+        "output_V": 42.73912296713342,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9527777777777777,
+        "inductor_A": 1.5489283918384675,
+        "output_V": 42.736644136107294,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9611111111111111,
+        "inductor_A": 1.3867301342114586,
+        "output_V": 42.734035325199855,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9694444444444444,
+        "inductor_A": 1.2245775725723886,
+        "output_V": 42.731296582410984,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9777777777777777,
+        "inductor_A": 1.062471188921166,
+        "output_V": 42.728427956123305,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9861111111111112,
+        "inductor_A": 0.9004114649680275,
+        "output_V": 42.72542949510188,
+        "high_side_on": false
+      },
+      {
+        "phase": 0.9944444444444445,
+        "inductor_A": 0.7383988821321539,
+        "output_V": 42.722301248493956,
+        "high_side_on": false
+      },
+      {
+        "phase": 1.0,
+        "inductor_A": 0.6304169206900251,
+        "output_V": 42.72014367209487,
+        "high_side_on": false
+      }
+    ],
+    "time_domain": {
+      "timestep_s": 1.2626262626262626e-07,
+      "pwm_timer_ticks_per_period": 4096,
+      "cycles_computed": 160,
+      "window_cycles": 80,
+      "window_duration_s": 0.0036363636363636364,
+      "inductor_peak_A": 2.7309892122183888,
+      "inductor_min_A": 0.6337271127473806,
+      "inductor_avg_A": 1.685504910915214,
+      "inductor_ripple_pp_A": 2.097262099471008,
+      "output_v_min_V": 42.710579326658035,
+      "output_v_max_V": 42.751691170700106,
+      "output_v_final_V": 42.735977836650484,
+      "pwm_duty_final": 0.89208984375,
+      "start_LC_J": 0.4292153645267723,
+      "end_LC_J": 0.4292153646635447,
+      "delta_LC_J": 1.3677242671761292e-10
+    },
+    "energy": {
+      "source_J": 0.2631278942217609,
+      "load_J": 0.2618515663766653,
+      "dissipation_J": 0.001276316315345004,
+      "stored_delta_J": 1.3677242671761292e-10,
+      "residual_J": 1.1392978195405579e-08,
+      "loss_stages_J": {
+        "hs": 3.6461062831866306e-05,
+        "ls": 4.382681385006884e-06,
+        "winding": 0.00045978386346994584,
+        "trace": 0.00017504461807231489,
+        "capacitor": 2.0084968373637093e-05,
+        "leakage": 6.637203721984218e-07,
+        "gate_charge_J": 1.2639999999999998e-05,
+        "coss_hard_switch_J": 0.000129024,
+        "edge_overlap_J": 5.8251049721229794e-05,
+        "controller_bias_J": 0.00021818181818181818,
+        "magnetic_core_proxy_J": 3.452580566425929e-05,
+        "layout_unmeasured_J": 0.00012727272727272728
+      },
+      "source_W": 72.36017091098425,
+      "load_W": 72.00918075358295,
+      "net_loss_pct": 0.485059878911942,
+      "transfer_pct": 99.51494012108806
+    },
+    "violations": [],
+    "target_0p5_met": true,
+    "model_class": "switched-state buck + source-side device loss + proxy magnetics",
+    "cautions": [
+      "Not SPICE-validated or hardware measured",
+      "Gate/transition/core coefficients may vary with board, temperature and phase current",
+      "DC transfer is externally supplied electricity; not harvested bubble energy"
+    ]
+  },
+  "environment": {
+    "chamber_pressure_pa": 88477.0,
+    "internal_headspace_pressure_pa": 88477.0,
+    "internal_liquid_pressure_pa": 88477.0,
+    "vessel_mode": "sealed_liquid",
+    "bubble_model_available": true,
+    "bubble_unavailable_reason": "",
+    "state": "sealed pressurized liquid cell (internal liquid pressure independent of chamber vacuum)",
+    "mean_free_path_N2_m_at_293K": 7.72844629260444e-08,
+    "knudsen_number_1mm": 7.728446292604441e-05,
+    "flow_regime_1mm": "continuum",
+    "gas_temperature_reference_K": 293.15,
+    "water_vapor_pressure_20C_pa": 2339.0,
+    "water_surface_vaporization_risk": false,
+    "thermal_calibration_valid": true,
+    "external_pressure_changes_resonator_efficiency": false,
+    "orbital_environment_reproduced": false,
+    "caveats": [
+      "Pressure equivalence alone does NOT reproduce LEO microgravity, atomic oxygen, UV, orbital velocity, plasma or radiative heat transfer."
+    ],
+    "vacuum_source_electrical_power_W": 0.0,
+    "pressure_provenance": "user-set/illustrative; NOT live barometric or orbital telemetry"
+  },
+  "bubble": {
+    "available": true,
+    "candidate_radius_m": 0.00014021162656160333,
+    "reference_resonance_hz": 22000,
+    "receiver_gap_m": 0.002,
+    "independent_plasma_event_validation": false,
+    "reason": ""
+  },
+  "secondary": {
+    "mode": "hybrid",
+    "event_energy_source_J": 1e-06,
+    "pulse_repetition_hz": 1000.0,
+    "duration_s": 120,
+    "event_count_modeled": 120000.0,
+    "primary_input_total_J": 0.12,
+    "single_pulse_acoustic_dc_before_storage_J": 1.4989212936859176e-09,
+    "single_pulse_magnetic_field_budget_J": 1.9999999999999994e-08,
+    "single_pulse_magnetic_dc_before_storage_J": 1.3e-10,
+    "credited_acoustic_per_event_J": 1.4989212936859176e-09,
+    "credited_inductive_per_event_J": 1.3e-10,
+    "credited_secondary_dc_before_manager_per_event_J": 1.6289212936859176e-09,
+    "stored_per_event_after_controller_J": 8.357154608224523e-10,
+    "secondary_average_input_W": 1.6289212936859176e-06,
+    "secondary_average_storage_charge_W": 8.357154608224522e-07,
+    "primary_average_pulse_drive_W": 0.001,
+    "secondary_steady_state_voltage_V": 0.9051678756779136,
+    "capacitor_F": 1e-05,
+    "storage_max_voltage_V": 3.3,
+    "load_resistance_ohm": 1000000.0,
+    "stored": {
+      "stored_final_J": 4.0966444157006374e-06,
+      "stored_initial_J": 0,
+      "stored_delta_J": 4.0966444157006374e-06,
+      "voltage_final_V": 0.9051678756673412,
+      "voltage_equilibrium_V": 0.9051678756779136,
+      "time_constant_s": 4.901960784313726,
+      "load_energy_J": 9.430314792450357e-05,
+      "leakage_energy_J": 1.8860629584900712e-06,
+      "clamped_excess_J": 0.0,
+      "clamped": false,
+      "points": [
+        {
+          "time_s": 0.0,
+          "voltage_V": 0.0
+        },
+        {
+          "time_s": 1.2,
+          "voltage_V": 0.4217916270910687
+        },
+        {
+          "time_s": 2.4,
+          "voltage_V": 0.5631922998921145
+        },
+        {
+          "time_s": 3.6,
+          "voltage_V": 0.6528555863696551
+        },
+        {
+          "time_s": 4.8,
+          "voltage_V": 0.715247900167507
+        },
+        {
+          "time_s": 6.0,
+          "voltage_V": 0.7605287043123476
+        },
+        {
+          "time_s": 7.2,
+          "voltage_V": 0.794177621801958
+        },
+        {
+          "time_s": 8.4,
+          "voltage_V": 0.8195564867818709
+        },
+        {
+          "time_s": 9.6,
+          "voltage_V": 0.8388889721907896
+        },
+        {
+          "time_s": 10.8,
+          "voltage_V": 0.8537181621457216
+        },
+        {
+          "time_s": 12.0,
+          "voltage_V": 0.8651499917085221
+        },
+        {
+          "time_s": 13.2,
+          "voltage_V": 0.8739951820126413
+        },
+        {
+          "time_s": 14.4,
+          "voltage_V": 0.880857755386719
+        },
+        {
+          "time_s": 15.6,
+          "voltage_V": 0.8861931111962096
+        },
+        {
+          "time_s": 16.8,
+          "voltage_V": 0.8903476419205526
+        },
+        {
+          "time_s": 18.0,
+          "voltage_V": 0.8935865828149787
+        },
+        {
+          "time_s": 19.2,
+          "voltage_V": 0.8961140537999526
+        },
+        {
+          "time_s": 20.4,
+          "voltage_V": 0.8980877485842259
+        },
+        {
+          "time_s": 21.6,
+          "voltage_V": 0.8996298556306039
+        },
+        {
+          "time_s": 22.8,
+          "voltage_V": 0.9008352689620696
+        },
+        {
+          "time_s": 24.0,
+          "voltage_V": 0.9017778157014625
+        },
+        {
+          "time_s": 25.2,
+          "voltage_V": 0.9025150119264789
+        },
+        {
+          "time_s": 26.4,
+          "voltage_V": 0.9030917142116901
+        },
+        {
+          "time_s": 27.6,
+          "voltage_V": 0.9035429351161851
+        },
+        {
+          "time_s": 28.8,
+          "voltage_V": 0.9038960212148633
+        },
+        {
+          "time_s": 30.0,
+          "voltage_V": 0.9041723423608977
+        },
+        {
+          "time_s": 31.2,
+          "voltage_V": 0.904388604518156
+        },
+        {
+          "time_s": 32.4,
+          "voltage_V": 0.9045578716648273
+        },
+        {
+          "time_s": 33.6,
+          "voltage_V": 0.9046903622272959
+        },
+        {
+          "time_s": 34.8,
+          "voltage_V": 0.9047940703949015
+        },
+        {
+          "time_s": 36.0,
+          "voltage_V": 0.9048752511896662
+        },
+        {
+          "time_s": 37.2,
+          "voltage_V": 0.9049387993932408
+        },
+        {
+          "time_s": 38.4,
+          "voltage_V": 0.9049885456953417
+        },
+        {
+          "time_s": 39.6,
+          "voltage_V": 0.9050274882316309
+        },
+        {
+          "time_s": 40.8,
+          "voltage_V": 0.9050579736588753
+        },
+        {
+          "time_s": 42.0,
+          "voltage_V": 0.9050818387972366
+        },
+        {
+          "time_s": 43.2,
+          "voltage_V": 0.9051005214464413
+        },
+        {
+          "time_s": 44.4,
+          "voltage_V": 0.905115147096532
+        },
+        {
+          "time_s": 45.6,
+          "voltage_V": 0.9051265967840466
+        },
+        {
+          "time_s": 46.8,
+          "voltage_V": 0.9051355601978741
+        },
+        {
+          "time_s": 48.0,
+          "voltage_V": 0.9051425772438918
+        },
+        {
+          "time_s": 49.2,
+          "voltage_V": 0.9051480705782564
+        },
+        {
+          "time_s": 50.4,
+          "voltage_V": 0.9051523710727453
+        },
+        {
+          "time_s": 51.6,
+          "voltage_V": 0.90515573774831
+        },
+        {
+          "time_s": 52.8,
+          "voltage_V": 0.9051583733788897
+        },
+        {
+          "time_s": 54.0,
+          "voltage_V": 0.9051604367061752
+        },
+        {
+          "time_s": 55.2,
+          "voltage_V": 0.9051620520015505
+        },
+        {
+          "time_s": 56.4,
+          "voltage_V": 0.9051633165514448
+        },
+        {
+          "time_s": 57.6,
+          "voltage_V": 0.9051643065171266
+        },
+        {
+          "time_s": 58.8,
+          "voltage_V": 0.9051650815219886
+        },
+        {
+          "time_s": 60.0,
+          "voltage_V": 0.9051656882426802
+        },
+        {
+          "time_s": 61.2,
+          "voltage_V": 0.9051661632204212
+        },
+        {
+          "time_s": 62.4,
+          "voltage_V": 0.9051665350618416
+        },
+        {
+          "time_s": 63.6,
+          "voltage_V": 0.9051668261619167
+        },
+        {
+          "time_s": 64.8,
+          "voltage_V": 0.9051670540527746
+        },
+        {
+          "time_s": 66.0,
+          "voltage_V": 0.9051672324596212
+        },
+        {
+          "time_s": 67.2,
+          "voltage_V": 0.9051673721273757
+        },
+        {
+          "time_s": 68.4,
+          "voltage_V": 0.905167481467812
+        },
+        {
+          "time_s": 69.6,
+          "voltage_V": 0.9051675670661765
+        },
+        {
+          "time_s": 70.8,
+          "voltage_V": 0.9051676340778002
+        },
+        {
+          "time_s": 72.0,
+          "voltage_V": 0.9051676865385898
+        },
+        {
+          "time_s": 73.2,
+          "voltage_V": 0.9051677276080988
+        },
+        {
+          "time_s": 74.4,
+          "voltage_V": 0.9051677597598184
+        },
+        {
+          "time_s": 75.6,
+          "voltage_V": 0.9051677849301479
+        },
+        {
+          "time_s": 76.8,
+          "voltage_V": 0.9051678046350191
+        },
+        {
+          "time_s": 78.0,
+          "voltage_V": 0.9051678200611959
+        },
+        {
+          "time_s": 79.2,
+          "voltage_V": 0.9051678321377494
+        },
+        {
+          "time_s": 80.4,
+          "voltage_V": 0.9051678415920131
+        },
+        {
+          "time_s": 81.6,
+          "voltage_V": 0.9051678489933883
+        },
+        {
+          "time_s": 82.8,
+          "voltage_V": 0.905167854787637
+        },
+        {
+          "time_s": 84.0,
+          "voltage_V": 0.9051678593237289
+        },
+        {
+          "time_s": 85.2,
+          "voltage_V": 0.9051678628748586
+        },
+        {
+          "time_s": 86.4,
+          "voltage_V": 0.9051678656549
+        },
+        {
+          "time_s": 87.6,
+          "voltage_V": 0.9051678678312862
+        },
+        {
+          "time_s": 88.8,
+          "voltage_V": 0.9051678695350943
+        },
+        {
+          "time_s": 90.0,
+          "voltage_V": 0.9051678708689394
+        },
+        {
+          "time_s": 91.2,
+          "voltage_V": 0.9051678719131547
+        },
+        {
+          "time_s": 92.4,
+          "voltage_V": 0.9051678727306304
+        },
+        {
+          "time_s": 93.6,
+          "voltage_V": 0.9051678733706002
+        },
+        {
+          "time_s": 94.8,
+          "voltage_V": 0.9051678738716077
+        },
+        {
+          "time_s": 96.0,
+          "voltage_V": 0.9051678742638269
+        },
+        {
+          "time_s": 97.2,
+          "voltage_V": 0.9051678745708802
+        },
+        {
+          "time_s": 98.4,
+          "voltage_V": 0.9051678748112603
+        },
+        {
+          "time_s": 99.6,
+          "voltage_V": 0.9051678749994444
+        },
+        {
+          "time_s": 100.8,
+          "voltage_V": 0.9051678751467664
+        },
+        {
+          "time_s": 102.0,
+          "voltage_V": 0.9051678752620991
+        },
+        {
+          "time_s": 103.2,
+          "voltage_V": 0.9051678753523886
+        },
+        {
+          "time_s": 104.4,
+          "voltage_V": 0.9051678754230728
+        },
+        {
+          "time_s": 105.6,
+          "voltage_V": 0.9051678754784086
+        },
+        {
+          "time_s": 106.8,
+          "voltage_V": 0.9051678755217288
+        },
+        {
+          "time_s": 108.0,
+          "voltage_V": 0.9051678755556427
+        },
+        {
+          "time_s": 109.2,
+          "voltage_V": 0.9051678755821925
+        },
+        {
+          "time_s": 110.4,
+          "voltage_V": 0.9051678756029772
+        },
+        {
+          "time_s": 111.6,
+          "voltage_V": 0.9051678756192488
+        },
+        {
+          "time_s": 112.8,
+          "voltage_V": 0.9051678756319872
+        },
+        {
+          "time_s": 114.0,
+          "voltage_V": 0.9051678756419597
+        },
+        {
+          "time_s": 115.2,
+          "voltage_V": 0.9051678756497666
+        },
+        {
+          "time_s": 116.4,
+          "voltage_V": 0.9051678756558784
+        },
+        {
+          "time_s": 117.6,
+          "voltage_V": 0.9051678756606631
+        },
+        {
+          "time_s": 118.8,
+          "voltage_V": 0.9051678756644089
+        },
+        {
+          "time_s": 120.0,
+          "voltage_V": 0.9051678756673412
+        }
+      ]
+    },
+    "sinks": {
+      "primary_unrecovered_thermal_acoustic_radiative_field_J": 0.11980452944475768,
+      "secondary_rectifier_and_power_manager_loss_J": 3.518469994361584e-05,
+      "secondary_trigger_controller_energy_J": 6e-05,
+      "storage_leakage_J": 1.8860629584900712e-06,
+      "dc_load_delivered_J": 9.430314792450357e-05,
+      "storage_clamp_shunt_J": 0.0,
+      "stored_capacitor_energy_J": 4.0966444157006374e-06
+    },
+    "ledger_residual_J": 0.0,
+    "apparent_recovery_percent": 0.08199982695017018,
+    "net_energy_change_J": -0.11990160020765979,
+    "independent_pulse_approximation_valid": true,
+    "acoustic_geometry_valid": true,
+    "recovery_credit_valid": true,
+    "controller_energy_shortfall_per_event_J": 0.0,
+    "plasma": {
+      "status": "far_field_screen_valid",
+      "input_J": 1e-06,
+      "stored_electrical_reservoir_input_J": 1e-06,
+      "delivered_plasma_energy_J": 7.5e-07,
+      "driver_loss_J": 2.4999999999999994e-07,
+      "magnetic_field_energy_available_J": 1.9999999999999994e-08,
+      "ionization_upfront_J": 9e-08,
+      "recombination_radiation_J": 5.491778613827134e-10,
+      "recombination_heat_J": 3.661185742551423e-10,
+      "ionization_energy_remaining_J": 8.908470356436215e-08,
+      "direct_thermal_radiation_J": 5.28e-08,
+      "thermal_heat_J": 1.7820000000000002e-07,
+      "direct_acoustic_J": 2.97e-07,
+      "bubble_expansion_energy_J": 1.3200000000000002e-07,
+      "collapse_acoustic_J": 6.600000000000001e-08,
+      "outgoing_acoustic_J": 3.6300000000000006e-07,
+      "peak_radius_estimate_m": 0.00014609035708281382,
+      "initial_radius_m": 0.00014021162656160333,
+      "receiver_center_distance_m": 0.0021402116265616033,
+      "receiver_required_min_distance_m": 0.0014609035708281382,
+      "receiver_valid_for_uncoupled_model": true,
+      "geometric_capture_fraction": 0.016517039048880633,
+      "credited_capture_fraction": 0.016517039048880633,
+      "acoustic_intercepted_J": 5.9956851747436705e-09,
+      "recovered_J": 1.4989212936859176e-09,
+      "net_energy_change_J": -9.98501078706314e-07,
+      "conversion_efficiency_pct": 0.14989212936859175,
+      "energy_loss_and_storage_J": {
+        "plasma_discharge_loss": 2.2999999999999994e-07,
+        "plasma_magnetic_field_unrecovered": 1.9999999999999994e-08,
+        "plasma_ionization_stored": 8.908470356436215e-08,
+        "plasma_recombination_heat": 3.661185742551423e-10,
+        "plasma_recombination_radiation": 5.491778613827134e-10,
+        "plasma_thermal_heat": 1.7820000000000002e-07,
+        "plasma_thermal_radiation": 5.28e-08,
+        "plasma_collapse_heat": 3.9600000000000004e-08,
+        "plasma_remaining_bubble_energy": 2.6400000000000005e-08,
+        "plasma_uncaptured_sound": 3.570043148252564e-07,
+        "plasma_piezo_conversion_loss": 4.496763881057753e-09
+      },
+      "energy_balance_residual_J": 0.0,
+      "afterglow": {
+        "ion_pairs_initial": 44582207674.71974,
+        "ion_pairs_remaining": 44128808388.30266,
+        "initial_pair_number_density_m3": 3.861187386861773e+21,
+        "peak_radius_pair_number_density_m3_without_recombination": 3.4135660414064976e+21,
+        "final_pair_number_density_m3": 3.821919264055946e+21,
+        "recombination_fraction": 0.010169960395976174,
+        "bubble_expansion_collapse_reference_s": 2.8770156566810166e-05,
+        "recombination_coefficient_m3_s_assumed": 1e-19,
+        "density_interpretation": "number density of ionized pairs, not uncompensated net charge"
+      },
+      "assumptions": {
+        "discharge_to_water": 0.75,
+        "water_energy_to_ionization": 0.12,
+        "effective_ionization_eV": 12.6,
+        "recombination_rate_m3_s": 1e-19,
+        "thermal_to_expansion": 0.2,
+        "thermal_to_direct_acoustic": 0.45,
+        "thermal_to_direct_radiation": 0.08,
+        "collapse_to_sound": 0.5,
+        "receiver_aperture_m2": 1e-06,
+        "piezo_electric_conversion": 0.25,
+        "fractions_are_measured": false,
+        "ignition_or_plasma_formation_predicted": false,
+        "compressible_shock_or_receiver_back_reaction_resolved": false
+      },
+      "caveat": "Uncalibrated quasineutral ion-pair kinetics and prescribed radial trajectory. No validated plasma ignition, species chemistry, sheath fields, direct electrical plasma harvesting, shock CFD, 4-kV hardware, magnetic-field capture, or near-boundary receiver coupling. Magnetic field fraction is an energy-budget upper-bound placeholder, not evidence of measurable leakage or useful induced EMF."
+    },
+    "engineering_note": "Storage plateau is equilibrium between finite received power, load, leakage and clamp. The primary pulse generator and original resonator are externally powered. This is a hypothetical receiver feasibility model; magnetic coupling, rectifier efficiency, pulse formation, plasma kinetics, and reservoir charging must be measured. No claimed self-sustaining, net-positive, or validated high-voltage hardware.",
+    "assumptions": {
+      "manager_efficiency_unmeasured": 0.82,
+      "magnetic_capture_k_squared_unmeasured": 0.010000000000000002,
+      "inductive_rectifier_efficiency_unmeasured": 0.65,
+      "storage_leakage_resistance_ohm": 50000000.0,
+      "controller_energy_per_event_J": 5e-10,
+      "clamp_V_assumed": 3.3,
+      "steady_state_is_only_model_prediction": true
+    }
+  },
+  "combined": {
+    "duration_s": 120,
+    "dc_source_J": 8683.220509318111,
+    "buck_delivered_before_pulses_J": 8641.101690429954,
+    "pulse_reservoir_debited_from_buck_J": 0.12,
+    "main_dc_load_after_pulses_J": 8640.981690429953,
+    "secondary_dc_load_J": 9.430314792450357e-05,
+    "secondary_stored_delta_J": 4.0966444157006374e-06,
+    "secondary_useful_J": 9.839979234020421e-05,
+    "total_useful_J": 8640.981788829746,
+    "total_net_loss_J": 42.23872048836529,
+    "total_net_loss_pct": 0.4864407214240178,
+    "total_transfer_pct": 99.51355927857598,
+    "dc_stage_losses_J": {
+      "hs": 1.203215073451588,
+      "ls": 0.14462848570522716,
+      "winding": 15.172867494508212,
+      "trace": 5.776472396386391,
+      "capacitor": 0.6628039563300241,
+      "leakage": 0.021902772282547917,
+      "gate_charge_J": 0.41711999999999994,
+      "coss_hard_switch_J": 4.257791999999999,
+      "edge_overlap_J": 1.9222846408005831,
+      "controller_bias_J": 7.199999999999999,
+      "magnetic_core_proxy_J": 1.1393515869205566,
+      "layout_unmeasured_J": 4.2
+    },
+    "dc_stored_delta_J": 4.513490081681226e-06,
+    "pulse_unrecovered_J": 0.11990160020765979,
+    "integrated_ledger_residual_J": 0.0003759682824124866,
+    "circuit_ledger_residual_scaled_J": 0.0003759682804483841,
+    "target_0p5_met": true,
+    "source_of_pulse_energy": "Buck DC output: pulse reservoir reduces main DC load before any acoustic/pickup recovery credit"
+  },
+  "warnings": [],
+  "model_limits": [
+    "The switched-state buck is not a manufacturer transistor/SPICE/PCB-validated power model",
+    "The 3D circuit is an interactive functional schematic, not a manufacturable wiring diagram",
+    "Scaling a periodic PWM result over seconds ignores transient heating and battery behavior",
+    "The acoustic sizing frequency is hypothetical: PWM oscillation does not prove a pressure wave exists",
+    "Plasma ignition, plasma-to-acoustic fraction, coupling, pickup conversion, and storage efficiency are uncalibrated",
+    "External vacuum does not change sealed-liquid pressure or reproduce LEO radiation/microgravity",
+    "Neither the electrical DC transfer nor bubble recovery is experimentally verified"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "valid": 1348,
+  "target_met": 0,
+  "top": [
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 60.0,
+      "frequency_Hz": 25000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.5920349117571777,
+      "peak_A": 2.3309288591678885
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 60.0,
+      "frequency_Hz": 20000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6015617053063749,
+      "peak_A": 2.5626758698204526
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 60.0,
+      "frequency_Hz": 35000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6052370162596743,
+      "peak_A": 2.0654920650685513
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 60.0,
+      "frequency_Hz": 25000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6102039621979416,
+      "peak_A": 2.4578976505946875
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 60.0,
+      "frequency_Hz": 35000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6188492806824208,
+      "peak_A": 2.1695259002937397
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 60.0,
+      "frequency_Hz": 20000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6245243862626149,
+      "peak_A": 2.7096979069706153
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 90.0,
+      "frequency_Hz": 25000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6281306034074841,
+      "peak_A": 3.027567646749273
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 90.0,
+      "frequency_Hz": 20000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6328254754321416,
+      "peak_A": 3.259314406722827
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 90.0,
+      "frequency_Hz": 35000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.640287020251562,
+      "peak_A": 2.762130994083848
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 60.0,
+      "frequency_Hz": 15000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6438985182771417,
+      "peak_A": 2.947928224466121
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 40.8,
+      "power_target_W": 60.0,
+      "frequency_Hz": 35000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6488994644032853,
+      "peak_A": 2.3097031455034873
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 60.0,
+      "frequency_Hz": 50000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6495830505722111,
+      "peak_A": 1.8659861112657596
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 40.8,
+      "power_target_W": 60.0,
+      "frequency_Hz": 25000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6499428697815834,
+      "peak_A": 2.641967084618985
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 90.0,
+      "frequency_Hz": 25000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6507549130448598,
+      "peak_A": 3.177594808693906
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 90.0,
+      "frequency_Hz": 20000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6586319621979198,
+      "peak_A": 3.4293947762805828
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 90.0,
+      "frequency_Hz": 15000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6594434172779273,
+      "peak_A": 3.6445658970177917
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 90.0,
+      "frequency_Hz": 35000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6599086933256615,
+      "peak_A": 2.889223222030759
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 60.0,
+      "frequency_Hz": 50000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6601965445143021,
+      "peak_A": 1.9528032288914148
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 42.72,
+      "power_target_W": 90.0,
+      "frequency_Hz": 50000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6749162594679503,
+      "peak_A": 2.5626250835876574
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 40.8,
+      "power_target_W": 60.0,
+      "frequency_Hz": 20000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6753001863161634,
+      "peak_A": 2.9321595420065862
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 60.0,
+      "frequency_Hz": 15000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6767620257946638,
+      "peak_A": 3.128353457632638
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 40.8,
+      "power_target_W": 60.0,
+      "frequency_Hz": 50000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6851591088613551,
+      "peak_A": 2.0600427738874427
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 40.8,
+      "power_target_W": 90.0,
+      "frequency_Hz": 25000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6886388900347207,
+      "peak_A": 3.376595736282909
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 40.8,
+      "power_target_W": 90.0,
+      "frequency_Hz": 35000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6914063056876807,
+      "peak_A": 3.044332000530236
+    },
+    {
+      "vin_V": 48.0,
+      "vout_V": 41.76,
+      "power_target_W": 90.0,
+      "frequency_Hz": 15000.0,
+      "inductor": "VISHAY_100u",
+      "loss_pct": 0.6918481589810455,
+      "peak_A": 3.8480493351818703
+    }
+  ]
+}

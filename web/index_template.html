@@ -1,0 +1,190 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BubbleForge | FLRW Circuit Research</title>
+<style>
+:root{color-scheme:dark;--bg:#07121e;--panel:#102234;--panel2:#142a3f;--line:#284356;--text:#e9f4ff;--muted:#90a9bf;--a:#51dcc6;--b:#f6ae61;--purple:#af94fc}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--text);font:14px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0}header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--line);gap:15px}h1{font-size:21px;margin:0;letter-spacing:-.5px}.sub{color:var(--muted);font-size:12px}main{max-width:1600px;margin:auto;padding:18px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(325px,.76fr);gap:16px}section{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0}.full{grid-column:1/-1}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}h2{font-size:14px;font-weight:650;letter-spacing:.2px;margin:0}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--muted);font-size:11px}.canvaswrap{position:relative;background:radial-gradient(ellipse at 55% 45%,#16314b 0%,#091724 70%);border-radius:9px;overflow:hidden}.canvaswrap canvas{display:block;width:100%;height:390px;cursor:grab}.corner{position:absolute;left:14px;bottom:10px;color:var(--muted);font-size:11px;pointer-events:none}.caption{color:var(--muted);font-size:11px;line-height:1.6}.form{display:grid;gap:14px}label{display:block;font-size:12px;color:var(--muted)}label strong{color:var(--text);float:right}input[type=range]{width:100%;accent-color:#51dcc6;margin-top:7px}button{border:1px solid #416475;background:#173448;color:#e7f9ff;border-radius:7px;padding:9px 12px;cursor:pointer;font-weight:600}button:hover{background:#20516a}.primary{background:#0c786f;border-color:#32bba6}.primary:hover{background:#119085}.controls{display:flex;gap:8px;flex-wrap:wrap}select{background:#173448;border:1px solid var(--line);border-radius:6px;color:var(--text);padding:8px}#status{font-size:12px;color:var(--muted);min-height:18px}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:11px}.metric{border:1px solid #294459;background:var(--panel2);border-radius:8px;padding:12px;min-width:0}.metric .k{color:var(--muted);font-size:11px}.metric .v{font-weight:700;font-size:19px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.teal{color:var(--a)}.orange{color:var(--b)}.purple{color:var(--purple)}.warn{color:#f59892}.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.probe{border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:12px;background:#0a1b2a}.probe h3{font-size:13px;margin:0 0 7px}.probetext{color:var(--muted);font-size:12px;line-height:1.7}.chart{width:100%;height:200px;border:1px solid #27425a;border-radius:8px;background:#0a1a29}img.diagram{width:100%;max-height:510px;object-fit:contain;background:#fff;border-radius:8px}code,pre{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}pre{white-space:pre-wrap;overflow:auto;max-height:300px;background:#071622;padding:13px;border-radius:8px;color:#c7dae5}a{color:#6fe6d5}nav{display:flex;gap:15px;flex-wrap:wrap}.note{line-height:1.6;color:#c6d5e2;font-size:12px}footer{max-width:1600px;margin:auto;color:var(--muted);padding:14px 22px 30px;font-size:11px}@media(max-width:1020px){main{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.row2{grid-template-columns:1fr}}@media(max-width:530px){header{display:block}h1{font-size:18px}.canvaswrap canvas{height:270px}.metrics{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<header><div><h1>BubbleForge <span class="teal">/</span> FLRW Circuit Lab</h1><div class="sub">35 V resonator · driven liquid microbubble → outgoing sound → piezoelectric recovery · independent GR observer</div></div><div class="pill">PARAMETERIZED PHYSICAL RESEARCH MODEL · NOT A VALIDATED DEVICE</div></header>
+<main><section><div class="top"><h2>Live 3D wiring &amp; components</h2><span class="pill" id="fps">ROTATE · SELECT</span></div><div class="canvaswrap"><canvas id="scene"></canvas><div class="corner">Primary (orange) · Secondary (cyan) · Metric observer (violet, SIM ONLY)</div></div><div class="probe"><h3 id="probename">Select a component</h3><div class="probetext" id="probeval">Click any 3D component to view its net connections and estimated electrical measurements.</div></div><div class="metrics">
+<div class="metric"><div class="k">Source energy</div><div class="v" id="minput">—</div></div><div class="metric"><div class="k">JHARV recovered</div><div class="v teal" id="mout">—</div></div><div class="metric"><div class="k">Net gain</div><div class="v warn" id="mgain">—</div></div><div class="metric"><div class="k">Known vacuum harvest</div><div class="v purple" id="mvac">0 J</div></div>
+</div></section>
+<section><div class="top"><h2>Controls</h2><span class="pill">External supply only</span></div><div class="form">
+<label>DC supply <strong id="vlabel">35 V</strong><input id="volts" type="range" min="0" max="35" value="35" step="0.5"></label>
+<label>Oscillator frequency <strong id="flabel">25 kHz</strong><input id="freq" type="range" min="5" max="50" value="25" step="0.5"></label>
+<label>Fixed LC tuning <strong id="tlabel">25 kHz</strong><input id="tune" type="range" min="5" max="50" value="25" step="0.5"></label>
+<label>DC load <strong id="llabel">52 Ω</strong><input id="load" type="range" min="10" max="200" value="52" step="1"></label>
+<label>Model radius <strong id="rlabel">10⁻¹⁸ m</strong><input id="radius" type="range" min="-24" max="-15" value="-18" step="1"></label>
+<label>Vacuum density (theory) <strong id="elabel">10⁻⁹·³ J/m³</strong><input id="epsilon" type="range" min="-15" max="15" value="-9.28" step="0.02"></label>
+<label>Optional Ni-63 mass (independent source) <strong id="nilabel">0 µg</strong><input id="ni63" type="range" min="0" max="10" value="0" step="0.1"></label>
+<label>Time acceleration <strong id="slabel">×1000</strong><input id="speed" type="range" min="0" max="7" value="3" step="1"></label>
+<div class="controls"><button class="primary" id="play">Pause</button><button id="reset">Reset clock</button><button id="recompute">Recompute with Python</button></div><div id="status">Offline model preview. Start python server.py for authoritative recalculation.</div>
+<div class="row2"><div class="metric"><div class="k">Simulation clock</div><div class="v" id="mtime">0 s</div></div><div class="metric"><div class="k">Recovered power</div><div class="v teal" id="mwatts">—</div></div></div></div>
+</section>
+<section class="full"><div class="top"><h2>Energy &amp; FLRW diagnostics</h2><span class="pill">Thermal + horizon</span></div><div class="metrics" style="margin:0 0 13px">
+<div class="metric"><div class="k">Hubble rate H (theory)</div><div class="v purple" id="mh">—</div></div><div class="metric"><div class="k">Horizon length c/H</div><div class="v purple" id="mhorizon">—</div></div><div class="metric"><div class="k">Vacuum inventory in sphere</div><div class="v purple" id="minventory">—</div></div><div class="metric"><div class="k">Peak modeled temperature</div><div class="v orange" id="mtemp">—</div></div>
+</div><div class="row2"><div><h2 style="margin:0 0 8px">Input vs recovered energy</h2><canvas class="chart" id="energychart"></canvas><p class="caption">Two independent vertical scales. Average electrical power from resonant-phasor model; time runs faster than wall-clock.</p></div><div><h2 style="margin:0 0 8px">Model boundaries</h2><div class="note">The physical circuit transfers externally supplied energy through a resonant transformer and diode bridge. The 3D violet metric sphere is an observer visualization, not a component producing power. A local bubble is not automatically described by FLRW; causal isolation and gravity disconnection have not been demonstrated.<p><strong>FLRW:</strong> H² = 8πGρ/3 + Λc²/3. In the vacuum-only spatially flat limit, a(t) = a₀eᴴᵗ. Positive vacuum energy increases its associated volume inventory; that change is not electricity.</p><p>Research model: <span class="purple">I(B_VAC_SIM) = 0 A</span>. No unverified voltage is silently injected at JHARV.</p></div></div></div></section>
+<section class="full" id="microbubble-section"><div class="top"><h2>Radial bubble momentum → acoustic pulse → piezoelectric recovery</h2><span class="pill">DRIVEN LIQUID BUBBLE · NOT SPACETIME</span></div>
+<div class="row2"><div class="form">
+<label>Equilibrium bubble radius <strong id="brlabel">10 µm</strong><input id="bradius" type="range" min="-15" max="-4" value="-5" step="0.25"></label>
+<label>Initially expanded radius <strong id="bilabel">1.00 × equilibrium</strong><input id="binitial" type="range" min="1" max="1.3" value="1" step="0.05"></label>
+<label>Acoustic pressure drive <strong id="bplabel">2 kPa</strong><input id="bpressure" type="range" min="0" max="25" value="2" step="0.25"></label>
+<label>Acoustic drive frequency <strong id="bflabel">340 kHz</strong><input id="bfrequency" type="range" min="100" max="1000" value="340" step="10"></label>
+<label>Cycles per excitation burst <strong id="bclabel">40</strong><input id="bcycles" type="range" min="10" max="100" value="40" step="5"></label>
+<label>Piezo conversion efficiency (assumed) <strong id="belabel">25%</strong><input id="beff" type="range" min="0" max="80" value="25" step="5"></label>
+<div class="note">A prescribed pressure actuator drives a physical gas cavity in water. Wall momentum pushes fluid outward; elastic compression and inertia drive collapse; outward acoustic energy is sampled at a collector 1 mm away, with a 1 mm² aperture. No electrical connection to the coil netlist is assumed.</div>
+</div><div><canvas class="chart" style="height:255px" id="bubblechart"></canvas><p class="caption">Python-derived microbubble radius and outgoing sound at the collector (independent vertical scales). A femtometer radius deliberately disables continuum predictions.</p>
+<pre id="bledger">Loading reference microbubble run…</pre><p class="caption" id="bstatus">The embedded reference is computed at default parameters. Use 0 kPa drive and initial factor >1 to see finite bubble energy released without active forcing. Change a parameter and select “Recompute with Python” to run the physical solver.</p></div></div>
+<div class="metrics"><div class="metric"><div class="k">Radial radius range</div><div class="v orange" id="brange">—</div></div>
+<div class="metric"><div class="k">Peak outgoing pressure at collector</div><div class="v" id="bpeak">—</div></div>
+<div class="metric"><div class="k">Radiated acoustic energy</div><div class="v" id="bacoustic">—</div></div>
+<div class="metric"><div class="k">Recoverable electricity / burst</div><div class="v teal" id="belectric">—</div></div></div>
+<p class="caption" style="margin:12px 0 0">This is a Rayleigh–Plesset model with approximate linear monopole-radiation damping, not a shock-resolving compressible CFD calculation. A sharp collapse pulse is not necessarily a shock. The 35 V supply does not fund this actuator in the original schematic; its required electrical work is counted separately.</p></section>
+<section class="full"><div class="top"><h2>Recoverable nuclear-scale energy · Ni-63 → Si</h2><span class="pill">SEPARATE PORT · FINITE RADIOACTIVE INVENTORY</span></div>
+<div class="metrics" style="margin:0 0 13px">
+<div class="metric"><div class="k">Ni-63 activity at current time</div><div class="v orange" id="nactivity">—</div></div>
+<div class="metric"><div class="k">Beta energy emitted</div><div class="v" id="nbeta">—</div></div>
+<div class="metric"><div class="k">Electrical power to storage</div><div class="v teal" id="npower">—</div></div>
+<div class="metric"><div class="k">Electrical energy stored</div><div class="v teal" id="nenergy">—</div></div>
+</div><div class="row2"><div class="note"><strong>Nuclear event:</strong> a Ni-63 nucleus of radius approximately 4.77 femtometers decays to Cu-63 and emits a beta electron plus antineutrino. The beta electron can be absorbed in silicon, create electron–hole pairs, and yield real DC electricity after diode and converter losses.
+<p><strong>Not a femtometer-sized collector:</strong> conversion requires a physically larger semiconductor device. Neutrino energy, escaped particles, recombination and electrical losses are never counted as recovered output.</p><p><strong>Independent finite reservoir:</strong> the Ni-63 source is not energized by the 35 V oscillator and is not a vacuum-energy source.</p></div>
+<div><pre id="nledger">Nuclear ledger pending…</pre><p class="caption" id="nstatus">Offline preview uses assumed absorption and diode parameters; Python validates the independent decay energy ledger.</p><p class="caption">Ni-63 is regulated radioactive material. These settings are research assumptions, not source-fabrication or safety instructions. Diagram remains the original separate coil circuit, not a wired Ni-63 design.</p></div></div></section>
+<section class="full"><div class="top"><h2>Full native KiCad wiring</h2><span class="pill">20 components · 59 wires · 40/40 pins structurally checked</span></div><img class="diagram" src="kicad/BubbleForge_FLRW_35V_Wired_Preview.png" alt="Wired 35 volt resonant circuit showing the oscillator control, full-wave rectifier and simulation-only field observer"><nav style="margin-top:13px"><a href="kicad/BubbleForge_FLRW_35V_Testbench.kicad_sch">KiCad schematic</a><a href="netlists/bridge_35V_FIXED_RESONANCE.cir">Switching SPICE</a><a href="netlists/FLRW_METRIC_OBSERVER_SIM_ONLY.cir">Friedmann observer SPICE</a><a href="docs/SCIENTIFIC_BOUNDARIES.md">Theory / caveats</a><a href="docs/BUBBLE_ACOUSTIC_HARVEST.md">Microbubble momentum and recovery</a><a href="docs/NUCLEAR_HARVEST.md">Nuclear conversion model</a></nav></section>
+<section class="full"><div class="top"><h2>Output/netlist instrumentation</h2><span class="pill">Accessible named nets: VBUS, PRI_RET, SEC_A/B, POS, NEG, CAP_INT</span></div><div class="row2"><pre id="netdisplay">LPRI 383.334u H
+LSEC 431.957u H
+K1 LPRI LSEC 0.5897123937
+CPRI 105.726nF fixed
+CSEC 93.825nF fixed
+D1..D4 Full bridge
+CSTORE 470uF
+JHARV POS NEG
+B_VAC_SIM POS NEG I=0</pre><pre id="telemetry">Waiting for readings...</pre></div></section>
+</main><footer>Local/offline research testbench · The DC resonator, acoustic pressure actuator, and optional nuclear source have independent energy ledgers · No vacuum extraction · Semiconductor transport parameters not calibrated · Radioactive material requires licensed controls.</footer>
+<script id="reference" type="application/json">__REFERENCE_JSON__</script><script>
+'use strict';
+const BASE=JSON.parse(document.getElementById('reference').textContent);
+const $=id=>document.getElementById(id);let current=BASE; let bubbleResult=BASE.bubble||null; let verifiedNuclear=null; let playing=true,simt=0, theta=.1,tilt=.26,drag=false,startX=0,startTheta=0,selected='LPRI',samples=[],lastFrame=0,frameSeq=0,hasPython=false;
+const get=id=>Number($(id).value);
+const labels={V1:['Oscillator H-bridge','DRIVE → PRI_RET'],RDRV:['Drive resistance','DRIVE → PRI_A'],RPRI:['Primary winding copper','PRI_A → PRI_CP'],CPRI:['Primary tuned capacitor','PRI_CP → PRI_B'],LPRI:['Primary coil · 100 turns','PRI_B → PRI_RET'],LSEC:['Secondary coil · 150 turns','SEC_A → SEC_R'],CSEC:['Secondary tuned capacitor','SEC_R → SEC_C'],RSEC:['Secondary winding copper','SEC_C → SEC_B'],D1:['Schottky rectifier #1','SEC_A → POS'],D2:['Schottky rectifier #2','SEC_B → POS'],D3:['Schottky rectifier #3','NEG → SEC_A'],D4:['Schottky rectifier #4','NEG → SEC_B'],RESR:['Storage ESR','POS → CAP_INT'],CSTORE:['Storage capacitor','CAP_INT → NEG'],RLOAD:['Output load','POS → NEG'],JHARV:['Harvest DC connector','POS → NEG'],RLEAK:['Leakage','CAP_INT → NEG'],B_VAC_SIM:['Theoretical metric observer · zero current','POS → NEG; I=0 A'],V_OSC:['Oscillator logic equivalent','OSC_5V → OSC_RET'],J_OSC:['Control connector','OSC_5V → OSC_RET']};
+// Full 3D component topology; this is a conceptual spatial assembly, not routed PCB CAD.
+const nodes=[['V1',-3.4,-.7,0],['RDRV',-2.7,-.7,.15],['RPRI',-1.85,-.7,.15],['CPRI',-1.05,-.7,.1],['LPRI',-.23,-.7,0],['LSEC',-.23,.76,0],['CSEC',.6,.76,.16],['RSEC',1.25,.76,.16],['D1',1.86,.35,.10],['D2',1.87,1.05,.10],['D3',2.30,.35,.10],['D4',2.30,1.05,.10],['RESR',2.95,.23,.1],['CSTORE',3.48,.0,.12],['RLOAD',3.18,1.05,.12],['JHARV',3.77,.68,.10],['RLEAK',3.62,1.30,.13],['B_VAC_SIM',.55,-.12,1],['V_OSC',-3.05,1.1,.1],['J_OSC',-2.28,1.1,.1]];
+const netlines=[['V1','RDRV','source'],['RDRV','RPRI','source'],['RPRI','CPRI','source'],['CPRI','LPRI','source'],['LPRI','V1','source'],['LSEC','CSEC','pickup'],['CSEC','RSEC','pickup'],['RSEC','D2','pickup'],['LSEC','D1','pickup'],['D1','RESR','pickup'],['D2','RESR','pickup'],['D3','JHARV','pickup'],['D4','JHARV','pickup'],['RESR','CSTORE','pickup'],['CSTORE','JHARV','pickup'],['RLOAD','JHARV','pickup'],['B_VAC_SIM','JHARV','theory'],['V_OSC','J_OSC','source'],['J_OSC','V1','source']];
+const nd=Object.fromEntries(nodes.map(x=>[x[0],x]));let points={};const scene=$('scene'),ctx=scene.getContext('2d');
+function resize(c){const d=window.devicePixelRatio||1;let w=c.clientWidth,h=c.clientHeight;if(c.width!==Math.floor(w*d)||c.height!==Math.floor(h*d)){c.width=Math.floor(w*d);c.height=Math.floor(h*d)}return {w,h,d};}
+function project(p){const x=p[0],y=p[1],z=p[2]||0;const xx=x*Math.cos(theta)-z*Math.sin(theta),zz=x*Math.sin(theta)+z*Math.cos(theta);const yy=y*Math.cos(tilt)-zz*Math.sin(tilt);const depth=y*Math.sin(tilt)+zz*Math.cos(tilt);const sc=Math.min(scene.clientWidth/9.7,scene.clientHeight/4.25)*(1/(1+depth*.018));return [scene.clientWidth/2+xx*sc,scene.clientHeight/2+yy*sc,depth,sc];}
+function path3(a,b,color,width=2){const A=project(a),B=project(b);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.beginPath();ctx.moveTo(A[0],A[1]);ctx.lineTo(B[0],B[1]);ctx.stroke();}
+function ring(x,y,z,rad,color,angle=0){let last=null;for(let i=0;i<=70;i++){let q=i/70*Math.PI*2+angle;let pt=[x+rad*Math.cos(q),y+.18*Math.sin(q),z+rad*Math.sin(q)];if(last)path3(last,pt,color,1.3);last=pt;}}
+function color(kind){return kind==='source'?'#f5a959':kind==='pickup'?'#50d9c9':'#aa93ff'}
+function draw3d(){let {w,h,d}=resize(scene);ctx.setTransform(d,0,0,d,0,0);ctx.clearRect(0,0,w,h);points={};
+for(let i=-5;i<=5;i++){path3([i*.74,-1.50,-.16],[i*.74,1.70,-.16],'#203b4e',.5)}for(let j=-2;j<=2;j++){path3([-3.9,j*.8,-.16],[4.1,j*.8,-.16],'#203b4e',.5)}
+for(const [a,b,k] of netlines){const A=nd[a],B=nd[b];path3(A.slice(1),B.slice(1),color(k),k==='theory'?1.2:2.25);if(k!=='theory'){let t=(simt*.8+iHash(a))%1;let xyz=[1,2,3].map(i=>A[i]+(B[i]-A[i])*t);let p=project(xyz);ctx.beginPath();ctx.arc(p[0],p[1],2.6,0,7);ctx.fillStyle=color(k);ctx.fill()}}
+ring(-.23,-.7,0,.46,'#e8a45d',simt*.2);ring(-.23,.76,0,.44,'#55f3da',-simt*.16);
+for(let i=0;i<6;i++){let t=i*.19;ring(-.23,-.7,t,.40,'#c88344');ring(-.23,.76,t,.38,'#2ba5ab')}
+let q=project([.55,-.12,1]);let R=Math.max(12,Math.min(36,q[3]*.36));let grad=ctx.createRadialGradient(q[0],q[1],1,q[0],q[1],R*1.3);grad.addColorStop(0,'#a991ff66');grad.addColorStop(1,'#a991ff00');ctx.fillStyle=grad;ctx.beginPath();ctx.arc(q[0],q[1],R*1.3,0,7);ctx.fill();ctx.strokeStyle='#a18cff';ctx.beginPath();ctx.ellipse(q[0],q[1],R,R*.72,theta,0,7);ctx.stroke();
+let draw=nodes.filter(x=>!x[0].startsWith('L')).map(x=>({...{name:x[0],P:project(x.slice(1))}})).sort((a,b)=>a.P[2]-b.P[2]);
+for(let node of draw){let [x,y,depth,sc]=node.P;points[node.name]=[x,y];const sz= node.name==='B_VAC_SIM'?4.5:node.name.startsWith('D')?9:12;ctx.fillStyle=node.name===selected?'#d4ecff':node.name==='B_VAC_SIM'?'#9c8bef':node.name.startsWith('D')?'#47bdaf':'#203a4f';ctx.strokeStyle=node.name===selected?'#fff':'#6792a7';ctx.lineWidth=1.5;ctx.fillRect(x-sz,y-sz*.58,sz*2,sz*1.16);ctx.strokeRect(x-sz,y-sz*.58,sz*2,sz*1.16);ctx.font='11px system-ui';ctx.fillStyle='#e5f3ff';ctx.fillText(node.name,x-sz,y-sz*.58-7)}
+for(const name of ['LPRI','LSEC']){let p=project(nd[name].slice(1));points[name]=[p[0],p[1]];ctx.font='bold 13px system-ui';ctx.fillStyle=name==='LPRI'?'#ffd09e':'#69e8d6';ctx.fillText(name,p[0]-19,p[1]-16)}
+}
+function iHash(s){let n=0;for(const c of s)n+=c.charCodeAt(0);return n/131}
+scene.addEventListener('pointerdown',e=>{drag=true;startX=e.clientX;startTheta=theta;scene.setPointerCapture(e.pointerId)});
+scene.addEventListener('pointermove',e=>{if(drag){theta=startTheta+(e.clientX-startX)*.008}});
+scene.addEventListener('pointerup',e=>{let dist=e.clientX-startX;drag=false;if(Math.abs(dist)>9)return;let rc=scene.getBoundingClientRect(),x=e.clientX-rc.left,y=e.clientY-rc.top;let near=Object.entries(points).map(([k,p])=>[k,(p[0]-x)**2+(p[1]-y)**2]).sort((a,b)=>a[1]-b[1])[0];if(near&&near[1]<1250){selected=near[0];refreshProbe()}});
+function sci(v,digits=3){if(v===null||v===undefined)return'—';if(!Number.isFinite(v))return'∞';if(v===0)return'0';if(Math.abs(v)<.001||Math.abs(v)>=100000)return v.toExponential(digits-1);return v.toFixed(digits)}
+function secondsfmt(s){if(s<3600)return sci(s,1)+' s';if(s<86400)return sci(s/3600,2)+' h';return sci(s/86400,2)+' d'}
+const rates={};let state={input:0,output:0,heat:0,temp:25,ip:0,is:0,vout:0};
+function approx(){// Ambient-temperature phasor: fast offline preview, not full switching/thermal transient.
+let v=get('volts'),f=get('freq')*1000,ft=get('tune')*1000,R=get('load'),w=2*Math.PI*f,w0=2*Math.PI*ft;
+const lp=.000383334470789,ls=.000431956849391,M=.5897123937*Math.sqrt(lp*ls),cp=1/(w0*w0*lp),cs=1/(w0*w0*ls);
+const r1=2.2703*(1+.00393*(25-20))*(1+.035*Math.sqrt(f/25000)),r2=5.7268*(1+.00393*5)*(1+.035*Math.sqrt(f/25000)),ra=r2+.11+.18+8/Math.PI**2*R;
+let xi=w*ls-1/(w*cs),den=ra*ra+xi*xi,refR=(w*M)**2*ra/den,refX=-((w*M)**2)*xi/den;
+let pr=r1+.08+.18+refR,px=w*lp-1/(w*cp)+refX,vr=v*.55*.900316316,ip=vr/Math.hypot(pr,px),is=w*M*ip/Math.sqrt(den);
+let ac=ip*ip*pr+ip*ip*.0+ip*ip*px*0; // real power determined by resistance only
+ac=ip*ip*pr;let pac=is*is*(8/Math.PI**2)*R,drop=Math.min(pac,1.3*Math.sqrt(Math.max(pac/R,0))),out=Math.max(0,pac-drop);
+let driver=ac/.94+(v>0?.48:0),heat=Math.max(0,driver-out);
+return{inputW:driver,outputW:out,heatW:heat,ip,is,vout:Math.sqrt(Math.max(0,out*R)),temp:25+Math.min(85,heat*.95),cp,cs};}
+function flrw(){let r=Math.pow(10,get('radius')),e=Math.pow(10,get('epsilon')),G=6.67430e-11,C=299792458,h=Math.sqrt(8*Math.PI*G*e/(3*C*C)),base=e*4*Math.PI/3*r**3;return{h,base,horizon:C/h,delta:base*Math.expm1(3*h*simt),factor:Math.exp(h*simt),radius:r,energyH:C**4*r/(2*G)};}
+// Self-contained beta-decay / Si single-diode preview. Python's energy ledger is authoritative.
+// Nuclear radius is femtometer; charge collection is macroscopic, not an fm circuit.
+function nuclearPreview(t, micrograms){
+ const e=1.602176634e-19, k=1.380649e-23, n0=micrograms*1e-6/62.92967*6.02214076e23;
+ const lam=Math.log(2)/(100.1*365.25*86400), duTot=lam*t;
+ function atU(u){let activity=n0*lam*Math.exp(-u), beta=activity*17426*e, abs=beta*.45*.80, ph=abs/3.6*.70;
+  if(ph<=0)return {activity,beta,abs,ph,output:0,voc:0,vmpp:0};
+  const vt=1.7*k*300/e, is=1e-14,voc=vt*Math.log1p(ph/is);let lo=0,hi=voc;
+  for(let j=0;j<45;j++){let v=(lo+hi)/2,ex=Math.exp(v/vt),der=ph-is*(ex-1)-v*is*ex/vt;if(der>0)lo=v;else hi=v;}
+  let vmpp=(lo+hi)/2,impp=Math.max(0,ph-is*Math.expm1(vmpp/vt));return {activity,beta,abs,ph,output:.80*vmpp*impp,voc,vmpp};}
+ const now=atU(duTot),start=atU(0), released=-n0*Math.expm1(-duTot)*66945*e;
+ let stored=0;
+ if(t>0&&micrograms>0){if(duTot<1e-8)stored=atU(duTot/2).output*t;else{
+  const end=Math.min(duTot,36),n=48,h=end/n;let sm=start.output+atU(end).output;
+  for(let i=1;i<n;i++)sm+=(i%2?4:2)*atU(i*h).output;
+  stored=sm*h/(3*lam);
+ }}
+ stored=Math.min(stored,1000);
+ return {...now,stored,released,nuclideNuclei:n0,nuclearRadius:1.2e-15*Math.cbrt(63)};
+}
+function paintNuclear(){const ug=get('ni63');let n=nuclearPreview(simt,ug);
+ if(verifiedNuclear && Math.abs(verifiedNuclear.t-simt)<1e-8 && verifiedNuclear.ug===ug){
+   const r=verifiedNuclear.data;
+   n={...n,activity:r.final_decay_activity_Bq,beta:r.end_diode.beta_emission_W,
+      output:r.end_electrical_W,stored:r.recovered_electrical_J,released:r.depleted_decay_energy_J};
+ }
+ $('nactivity').textContent=sci(n.activity)+' Bq';$('nbeta').textContent=sci(n.beta)+' W';
+ $('npower').textContent=sci(n.output)+' W';$('nenergy').textContent=sci(n.stored)+' J';
+ $('nledger').textContent=`Nuclear event radius: ${sci(n.nuclearRadius)} m\nNi-63 source mass: ${sci(ug)} µg\nDecay Q energy consumed: ${sci(n.released)} J\nElectrical energy recovered: ${sci(n.stored)} J\nOther decay energy / escapes: ${sci(n.released-n.stored)} J\nDiode modeled open circuit: ${sci(n.voc)} V\nSelected maximum-power point: ${sci(n.vmpp)} V\nVacuum energy contribution: 0 J`;
+}
+function drawBubbleChart(){
+ let cv=$('bubblechart'),{w,h,d}=resize(cv),g=cv.getContext('2d');g.setTransform(d,0,0,d,0,0);g.clearRect(0,0,w,h);
+ g.strokeStyle='#244255';for(let n=1;n<5;n++){let y=n*h/5;g.beginPath();g.moveTo(10,y);g.lineTo(w-10,y);g.stroke()}
+ let a=bubbleResult?.samples;if(!a||a.length<2)return;
+ const lo=Math.min(...a.map(x=>x.radius_m)),hi=Math.max(...a.map(x=>x.radius_m));
+ const pm=Math.max(...a.map(x=>Math.abs(x.collector_pressure_Pa)),1e-30);
+ const duration=a[a.length-1].time_s;
+ for(let [field,color] of [['radius_m','#51dcc6'],['collector_pressure_Pa','#f6ae61']]){
+  g.strokeStyle=color;g.lineWidth=2;g.beginPath();for(let i=0;i<a.length;i++){
+   let q=a[i],x=10+(w-20)*(q.time_s/duration);
+   let ny=field==='radius_m'?(q.radius_m-lo)/Math.max(hi-lo,1e-30):.5+.45*q.collector_pressure_Pa/pm;
+   let y=h-12-(h-24)*ny;i?g.lineTo(x,y):g.moveTo(x,y);
+  }g.stroke();
+ }
+ g.font='11px system-ui';g.fillStyle='#51dcc6';g.fillText('Radius (cyan, relative)',15,17);
+ g.fillStyle='#f6ae61';g.fillText('Pressure (orange, ± scale)',15,32);
+}
+function paintBubble(){
+ let b=bubbleResult;if(!b)return;
+ $('brange').textContent=sci(b.min_radius_m)+' – '+sci(b.max_radius_m)+' m';
+ $('bpeak').textContent=sci(b.peak_pressure_at_collector_Pa)+' Pa';
+ $('bacoustic').textContent=sci(b.acoustic_radiated_J)+' J';
+ $('belectric').textContent=sci(b.recovered_electrical_J)+' J';
+ $('bledger').textContent=`Status: ${b.status}\nBurst duration: ${sci(b.burst_duration_s)} s\nResonance: ${sci(b.resonance_frequency_Hz)} Hz\nPeak wall speed: ${sci(b.peak_wall_speed_m_s)} m/s\nGeneralized radial momentum: ${sci(b.peak_mechanical_radial_momentum_kg_m_s)} kg m/s\nPeak displaced volume: ${sci(b.max_displaced_volume_m3)} m³\nAcoustic actuator electric input: ${sci(b.acoustic_actuator_electric_input_J)} J\nPre-expanded bubble energy: ${sci(b.initial_preexpanded_bubble_energy_J)} J\nOutgoing acoustic energy: ${sci(b.acoustic_radiated_J)} J\nStored electrical energy: ${sci(b.recovered_electrical_J)} J\nEnergy balance residual: ${sci(b.energy_residual_J)} J\nShock candidate index (≥1): ${b.shock_steepening_indicator===null?'not evaluated':sci(b.shock_steepening_indicator)}\n1 nJ goal (ideal repeated bursts): ${b.target_bursts_needed===null?'unreachable':b.target_bursts_needed}\n\n${b.warning}`;
+ drawBubbleChart();
+}
+function refreshProbe(){let info=labels[selected]||['Unknown',''];let suffix='';let q=state;
+if(selected==='JHARV'||selected==='RLOAD')suffix=`Output ${sci(q.vout)} V · ${sci(q.outputW)} W · ${sci(q.output)} J accumulated`;
+else if(selected==='LPRI')suffix=`Primary RMS ${sci(q.ip)} A · ${sci(q.temp,1)} °C approximate`;
+else if(selected==='LSEC')suffix=`Secondary RMS ${sci(q.is)} A`;
+else if(selected==='CPRI')suffix=`Fixed capacitor ${sci(q.cp*1e9)} nF`;
+else if(selected==='CSEC')suffix=`Fixed capacitor ${sci(q.cs*1e9)} nF`;
+else if(selected==='B_VAC_SIM')suffix=`Research-only current 0 A · Known converted energy 0 J · Radius ${sci(flrw().radius)} m`;
+else suffix=`Source ${sci(q.inputW)} W · Output ${sci(q.outputW)} W`;
+$('probename').textContent=`${selected} · ${info[0]}`;$('probeval').textContent=`${info[1]} • ${suffix}`;
+}
+function paintText(){let q=state;let fs=flrw();
+$('minput').textContent=sci(q.input)+' J';$('mout').textContent=sci(q.output)+' J';let gain=q.input>0?100*(q.output/q.input-1):0;
+$('mgain').textContent=sci(gain,2)+'%';$('mvac').textContent='0 J';$('mtime').textContent=secondsfmt(simt);$('mwatts').textContent=sci(q.outputW)+' W';$('mh').textContent=sci(fs.h)+' s⁻¹';$('mhorizon').textContent=sci(fs.horizon)+' m';$('minventory').textContent=sci(fs.base+fs.delta)+' J';$('mtemp').textContent=sci(q.temp,1)+' °C';
+$('telemetry').textContent=`Source: ${sci(q.inputW)} W     Output: ${sci(q.outputW)} W\nPrimary: ${sci(q.ip)} A rms  Secondary: ${sci(q.is)} A rms\nJHARV: ${sci(q.vout)} V     Heat: ${sci(q.heatW)} W\nSource energy: ${sci(q.input)} J     Recovered: ${sci(q.output)} J\nTheoretical radius: ${sci(fs.radius)} m\nVacuum inventory ΔE: ${sci(fs.delta)} J (not electricity)\nHorizon matching E-scale: ${sci(fs.energyH)} J\nKnown vacuum electric transfer: 0 J`;
+refreshProbe();paintNuclear();}
+function drawChart(){let cv=$('energychart'),{w,h,d}=resize(cv);let g=cv.getContext('2d');g.setTransform(d,0,0,d,0,0);g.clearRect(0,0,w,h);g.strokeStyle='#244255';g.lineWidth=1;for(let n=0;n<5;n++){let y=(n+.5)*h/5;g.beginPath();g.moveTo(10,y);g.lineTo(w-10,y);g.stroke()}if(samples.length<2)return;let maxT=samples[samples.length-1][0]||1;
+for(let [ix,color] of [[1,'#f5a959'],[2,'#50d9c9']]){let mx=Math.max(...samples.map(x=>x[ix]),1e-12);g.strokeStyle=color;g.lineWidth=2.2;g.beginPath();samples.forEach((row,i)=>{let x=12+(w-24)*(row[0]/maxT),y=h-14-(h-32)*row[ix]/mx;i?g.lineTo(x,y):g.moveTo(x,y)});g.stroke();g.font='11px system-ui';g.fillStyle=color;g.fillText(ix===1?'Input (left scale)':'JHARV (right scale)',15,ix===1?18:34)}}
+function updateLabels(){for(const [a,b,unit,scale] of [['volts','vlabel',' V',1],['freq','flabel',' kHz',1],['tune','tlabel',' kHz',1],['load','llabel',' Ω',1],['radius','rlabel',' m',1],['epsilon','elabel',' J/m³',1],['ni63','nilabel',' µg',1]]){$(b).textContent=a==='radius'?`10^${get(a)} m`:a==='epsilon'?`10^${get(a).toFixed(2)} J/m³`:get(a)+unit;}$('brlabel').textContent=sci(Math.pow(10,get('bradius')))+' m';
+ $('bplabel').textContent=get('bpressure')+' kPa';$('bflabel').textContent=get('bfrequency')+' kHz';
+ $('bilabel').textContent=get('binitial').toFixed(2)+' × equilibrium';$('bclabel').textContent=get('bcycles')+' cycles';$('belabel').textContent=get('beff')+'%';
+ let speeds=[1,10,100,1000,1e4,1e5,1e6,1e7];$('slabel').textContent='×'+speeds[get('speed')].toLocaleString();}
+function frame(time){let dt=lastFrame?Math.min(.09,(time-lastFrame)/1000):0;lastFrame=time;let speeds=[1,10,100,1000,1e4,1e5,1e6,1e7];if(playing){let step=dt*speeds[get('speed')];simt+=step;let q=approx();state={...q,input:state.input+step*q.inputW,output:state.output+step*q.outputW,heat:state.heat+step*q.heatW};if(frameSeq++%8===0){samples.push([simt,state.input,state.output]);if(samples.length>250)samples.shift()}}
+if(!drag)theta+=dt*.16;draw3d();if(frameSeq%7===0){paintText();drawChart()}requestAnimationFrame(frame)}
+let recomputeBusy=false;
+async function recalc(){if(recomputeBusy)return;recomputeBusy=true;$('status').textContent='Running detailed Python thermal/circuit calculation…';try{const req={volts:get('volts'),freq:get('freq')*1000,tune:get('tune')*1000,load:get('load'),radius:Math.pow(10,get('radius')),vacuum_density:Math.pow(10,get('epsilon')),seconds:Math.min(simt,3.15e10),gr:false,ni63_micrograms:get('ni63'),bubble_radius_m:Math.pow(10,get('bradius')),bubble_initial_radius_factor:get('binitial'),bubble_pressure_Pa:get('bpressure')*1000,bubble_frequency_Hz:get('bfrequency')*1000,bubble_cycles:get('bcycles'),bubble_piezo_efficiency:get('beff')/100};let res=await fetch('/api/run',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(req)});let d=await res.json();if(!res.ok)throw new Error(d.error||'server');current=d;bubbleResult=d.bubble;paintBubble();$('bstatus').textContent='Python burst simulation complete. Energy and momentum are separately recorded, shock not CFD-resolved.';hasPython=true;verifiedNuclear={t:simt,ug:get('ni63'),data:d.nuclear};const r=d.electrical;state.input=r.input_J;state.output=r.harvested_load_J;state.heat=r.losses_J;state.temp=Math.max(...Object.values(r.temperatures_C));state.ip=r.primary_current_A;state.is=r.secondary_current_A;state.vout=r.output_V;state.inputW=r.source_W;state.outputW=r.load_W;state.heatW=r.source_W-r.load_W;$('status').textContent='Python solver verified at '+secondsfmt(simt)+'; live animation otherwise uses fast average model.';paintText();$('nstatus').textContent='Python energy ledger verified at '+secondsfmt(simt)+'; animation thereafter uses offline diode preview.';}catch(e){$('status').textContent='Python server unavailable; continuing offline fast preview. ('+e.message+')'}finally{recomputeBusy=false}}
+for(let id of ['volts','freq','tune','load','radius','epsilon','ni63','speed','bradius','binitial','bpressure','bfrequency','bcycles','beff'])$(id).addEventListener('input',()=>{updateLabels();if(id==='ni63'){verifiedNuclear=null;paintNuclear();}if(['bradius','binitial','bpressure','bfrequency','bcycles','beff'].includes(id)){$('bstatus').textContent='Parameters changed. Displayed burst is from the previous solver run; select Recompute with Python.';}if(id==='freq')$('status').textContent='Frequency changed; physical LC capacitor values remain fixed.';if(id==='tune')$('status').textContent='LC tuning changed: the model now assumes different fixed capacitors, not automatic retuning.'});
+$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Resume'};
+$('reset').onclick=()=>{simt=0;verifiedNuclear=null;samples=[];state={...approx(),input:0,output:0,heat:0};paintText();drawChart()};
+$('recompute').onclick=recalc;
+window.addEventListener('resize',()=>{draw3d();drawChart();drawBubbleChart()});updateLabels();paintBubble();state={...approx(),input:0,output:0,heat:0};paintText();requestAnimationFrame(frame);
+</script></body></html>

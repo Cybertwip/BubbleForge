@@ -1,0 +1,15 @@
+{
+  "version": "v0.22-alpha",
+  "test_command": "python3 -m unittest discover -s tests -v",
+  "unit_tests_passed": 29,
+  "unit_tests_failed": 0,
+  "js_syntax_check": "node --check assets/simulator.js: passed",
+  "http_integration": "init, optimize (improvement applied), repeat optimize (no regression), profiles export: passed",
+  "browser_rendering": "NOT VERIFIED; headless Chromium timed out in test environment",
+  "numerical_targets": "Neither <=0.05% nor +/-0.01% loss was met",
+  "waveform": "cosine (locked)",
+  "assumed_plasma_capture_fraction": 0.85,
+  "assumed_plasma_thermalization_fraction": 0.65,
+  "plasma_ignition_or_particle_capture_measured": false,
+  "shock_front_resolved": false
+}
